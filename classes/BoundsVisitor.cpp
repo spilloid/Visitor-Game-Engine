@@ -5,7 +5,8 @@
     void BoundsVisitor::visit(SpriteProxy* sp ){
         int ox = sp->getX();
         int oy = sp->getY();
-        int nx, ny;
+        int nx = ox;
+        int ny = oy;
         //check bounds of x and y coords, setting to max/min of breaking threshold
         if(ox > maxX)
             nx = this->maxX;

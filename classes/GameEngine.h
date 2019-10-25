@@ -21,6 +21,11 @@ class GameEngine{
          * 
          */
         sf::RenderWindow* window;
+        /**
+         * @brief game engine update interval
+         * 
+         */
+        int interval;
     public:
     /**
      * @brief Construct a new Game Engine object
@@ -32,8 +37,9 @@ class GameEngine{
          * 
          * @param height specify game window height
          * @param width specify game window width
+         * @param fps Frames per second
          */
-        GameEngine(int height, int width);
+        GameEngine(int height, int width, float fps);
         /**
          * @brief Destroy the Game Engine object
          * 
