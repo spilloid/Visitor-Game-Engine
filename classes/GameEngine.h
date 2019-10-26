@@ -4,6 +4,7 @@
 #include "DrawingVisitor.h"
 #include "Scene.h"
 #include <list>
+#include <thread>
 class GameEngine{
     private:
         /**
@@ -22,10 +23,20 @@ class GameEngine{
          */
         sf::RenderWindow* window;
         /**
+         * @brief renderer which draws to window
+         * 
+         */
+        DrawingVisitor* renderer;
+        /**
          * @brief game engine update interval
          * 
          */
         int interval;
+        /**
+         * @brief a clock to watch updates
+         * 
+         */
+        sf::Clock clock; // starts the clock
     public:
     /**
      * @brief Construct a new Game Engine object
@@ -56,15 +67,18 @@ class GameEngine{
          */
         void addSprite(SpriteProxy*);
         /**
-         * @brief Manually update window 
          * 
          */
-        void update();
-        /**
-         * @brief start game engine
-         * 
-         */
-        void start();
 
+
+        /**
+         * @brief updates game engine window. 
+         * 
+         * Plop this in your main game loop,
+         * the clock will make sure it only updates at most as often as the fps set
+         * @return true window is open
+         * @return false window is closed
+         */
+        bool update();
 };
 #endif

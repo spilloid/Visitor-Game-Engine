@@ -5,7 +5,6 @@
 #include "./classes/BoundsVisitor.h"
 #include "./classes/WrapBoundsVisitor.h"
 #include "./classes/ForceVisitor.h"
-
 int main()
 {
     //declare sprites
@@ -25,14 +24,16 @@ int main()
     ge->addSprite(bx);
 
     //apply forces
-    fv->applyForce(bbox,20,0);
+    fv->applyForce(bbox,rand()%10,rand()%360);
 
     //add visitors to scene
     ge->addVisitor(gv);
     ge->addVisitor(fv);
     //ge->addVisitor(bv);
     ge->addVisitor(wbv);
-    //start the engine
-    ge->start();
+    //start the game
+    while(ge->update()){
+
+    }
     return 0;
 }
