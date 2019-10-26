@@ -3,6 +3,8 @@
 #include "./classes/SpriteProxy.h"
 #include "./classes/GravityVisitor.h"
 #include "./classes/BoundsVisitor.h"
+#include "./classes/WrapBoundsVisitor.h"
+#include "./classes/ForceVisitor.h"
 
 int main()
 {
@@ -12,6 +14,8 @@ int main()
     //declare sprites
     GravityVisitor* gv = new GravityVisitor(-10);
     BoundsVisitor* bv = new BoundsVisitor(0,640,0,480);
+    WrapBoundsVisitor* wbv = new WrapBoundsVisitor(0,640,0,480);
+    ForceVisitor* fv = new ForceVisitor();
 
     //declare game engine
     GameEngine* ge = new GameEngine(480,640,30);
@@ -20,9 +24,14 @@ int main()
     ge->addSprite(bbox);
     ge->addSprite(bx);
 
+    //apply forces
+    fv->applyForce(bbox,20,0);
+
     //add visitors to scene
     ge->addVisitor(gv);
-    ge->addVisitor(bv);
+    ge->addVisitor(fv);
+    //ge->addVisitor(bv);
+    ge->addVisitor(wbv);
     //start the engine
     ge->start();
     return 0;
