@@ -10,9 +10,9 @@ int main()
     //declare sprites
     SpriteProxy* bbox = new SpriteProxy("./assets/img/bbox.png",200,200,50,50);
     SpriteProxy* bx = new SpriteProxy("./assets/img/blueX.png",250,250,50,50);
-    //declare sprites
+
+    //declare visitors
     GravityVisitor* gv = new GravityVisitor(-10);
-    BoundsVisitor* bv = new BoundsVisitor(0,640,0,480);
     WrapBoundsVisitor* wbv = new WrapBoundsVisitor(0,640,0,480);
     ForceVisitor* fv = new ForceVisitor();
 
@@ -23,17 +23,35 @@ int main()
     ge->addSprite(bbox);
     ge->addSprite(bx);
 
-    //apply forces
-    fv->applyForce(bbox,rand()%10,rand()%360);
 
     //add visitors to scene
-    ge->addVisitor(gv);
+    //ge->addVisitor(gv);
     ge->addVisitor(fv);
-    //ge->addVisitor(bv);
     ge->addVisitor(wbv);
-    //start the game
-    while(ge->update()){
 
+    //I want a clock
+    sf::Clock tick;
+    //start the game
+    fv->applyForce(bbox,10,0);
+    srand(time(NULL));
+    while(ge->update()){
+        if(tick.getElapsedTime().asMilliseconds() > 100){
+            //apply a random force every 5 seconds
+            //TODO: events aren't straight..... fix the math in forcevisitor
+            tick.restart();
+            if(sf::Keyboard::isKeyPressed(sf::Keyboard::Right)){
+                fv->applyForce(bbox,1,90);
+            }
+            if(sf::Keyboard::isKeyPressed(sf::Keyboard::Up)){
+                fv->applyForce(bbox,1,0);
+            }
+            if(sf::Keyboard::isKeyPressed(sf::Keyboard::Down)){
+                fv->applyForce(bbox,1,180);
+            }
+            if(sf::Keyboard::isKeyPressed(sf::Keyboard::Left)){
+                fv->applyForce(bbox,1,270);
+            }
+        }
     }
     return 0;
 }

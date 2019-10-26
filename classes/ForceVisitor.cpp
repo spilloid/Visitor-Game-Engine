@@ -11,12 +11,27 @@ void ForceVisitor::visit(SpriteProxy* s){
     }
 }
 void ForceVisitor::applyForce(SpriteProxy* s, double magnitude, float angle){
-    double dx,dy;
+    double dx=0,dy=0;
+    //is this sprite already moving?
+    std::map<SpriteProxy*,sf::Vector2f>::iterator old = this->forceList.find(s);
+    if (old != this->forceList.end() ) {
+        std::cout << "updating from old" << std::endl;
+        dx = old->second.x;
+        dy = old->second.y;
+    } //end if ; if not moving, we infer dx/dy is 0.
+
     //convert to radians because we're math people
-    double radianAngle = angle * M_PI / 180 - 90;
+    double radianAngle = angle * M_PI / 180.f - 90.f;
+
     //calc dx & dy like our lord and savior Pythagreous taught us
     dx += magnitude * cos(radianAngle);
     dy += magnitude * sin(radianAngle);
+
     //keep state stored on visitor
     this->forceList[s] = sf::Vector2f(dx,dy);
+    std::cout << "dx: " << dx << " dy: " << dy << " radianAngle: " << radianAngle << std::endl;
+}
+
+void ForceVisitor::stop(SpriteProxy* s){
+    this->forceList[s] = sf::Vector2f(0,0);
 }

@@ -25,5 +25,11 @@ class ForceVisitor : public Visitor{
      * @param angle angle of operation, in degrees
      */
     void applyForce(SpriteProxy* s, double magnitude, float angle);
+    /**
+     * @brief Stop the sprite from moving
+     * 
+     * @param s 
+     */
+    void stop(SpriteProxy* s);
 };
 #endif
