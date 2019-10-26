@@ -27,16 +27,6 @@ class GameEngine{
          * 
          */
         DrawingVisitor* renderer;
-        /**
-         * @brief game engine update interval
-         * 
-         */
-        int interval;
-        /**
-         * @brief a clock to watch updates
-         * 
-         */
-        sf::Clock clock; // starts the clock
     public:
     /**
      * @brief Construct a new Game Engine object
@@ -48,9 +38,8 @@ class GameEngine{
          * 
          * @param height specify game window height
          * @param width specify game window width
-         * @param fps Frames per second
          */
-        GameEngine(int height, int width, float fps);
+        GameEngine(int height, int width);
         /**
          * @brief Destroy the Game Engine object
          * 
@@ -75,7 +64,6 @@ class GameEngine{
          * @brief updates game engine window. 
          * 
          * Plop this in your main game loop,
-         * the clock will make sure it only updates at most as often as the fps set
          * @return true window is open
          * @return false window is closed
          */

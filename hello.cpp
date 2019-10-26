@@ -5,6 +5,8 @@
 #include "./classes/BoundsVisitor.h"
 #include "./classes/WrapBoundsVisitor.h"
 #include "./classes/ForceVisitor.h"
+#include "./classes/BoundingBoxCollisionVisitor.h"
+#include <list>
 int main()
 {
     //declare sprites
@@ -15,27 +17,30 @@ int main()
     GravityVisitor* gv = new GravityVisitor(-10);
     WrapBoundsVisitor* wbv = new WrapBoundsVisitor(0,640,0,480);
     ForceVisitor* fv = new ForceVisitor();
+    BoundingBoxCollisionVisitor* bbcv = new BoundingBoxCollisionVisitor();
 
     //declare game engine
-    GameEngine* ge = new GameEngine(480,640,30);
+    GameEngine* ge = new GameEngine(480,640);
 
     //add sprites to scene
     ge->addSprite(bbox);
     ge->addSprite(bx);
 
+    //tweak visitors
+    bbcv->setWatched(bx);
 
     //add visitors to scene
-    //ge->addVisitor(gv);
+    ge->addVisitor(bbcv);
     ge->addVisitor(fv);
     ge->addVisitor(wbv);
 
     //I want a clock
     sf::Clock tick;
     //start the game
-    fv->applyForce(bbox,10,0);
     srand(time(NULL));
-    while(ge->update()){
-        if(tick.getElapsedTime().asMilliseconds() > 100){
+    bool keepGoing = true;
+    while(keepGoing){
+        if(tick.getElapsedTime().asMilliseconds() > 10){
             //apply a random force every 5 seconds
             //TODO: events aren't straight..... fix the math in forcevisitor
             tick.restart();
@@ -51,6 +56,17 @@ int main()
             if(sf::Keyboard::isKeyPressed(sf::Keyboard::Left)){
                 fv->applyForce(bbox,1,270);
             }
+            if(sf::Keyboard::isKeyPressed(sf::Keyboard::Space)){
+                fv->stop(bbox);
+            }
+
+            std::list<SpriteProxy*> l = bbcv->getCollisions();
+            for(std::list<SpriteProxy *>::iterator c = l.begin(); c != l.end(); c++){
+                std::cout << "moving : " << *c << std::endl;
+                (*c)->setXY(0,0);
+                fv->stop(*c);
+            }
+            keepGoing = ge->update();
         }
     }
     return 0;
