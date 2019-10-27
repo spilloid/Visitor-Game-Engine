@@ -2,6 +2,7 @@
 #define SPRITEPROXY_H
 #include <SFML/Graphics.hpp>
 #include <iostream>
+//TODO: fix, this is gross.
 class SpriteProxy {
 private:
   int x;

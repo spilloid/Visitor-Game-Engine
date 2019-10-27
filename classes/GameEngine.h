@@ -4,6 +4,7 @@
 #include "DrawingVisitor.h"
 #include "Scene.h"
 #include <list>
+#include <thread>
 class GameEngine{
     private:
         /**
@@ -22,10 +23,10 @@ class GameEngine{
          */
         sf::RenderWindow* window;
         /**
-         * @brief game engine update interval
+         * @brief renderer which draws to window
          * 
          */
-        int interval;
+        DrawingVisitor* renderer;
     public:
     /**
      * @brief Construct a new Game Engine object
@@ -37,9 +38,8 @@ class GameEngine{
          * 
          * @param height specify game window height
          * @param width specify game window width
-         * @param fps Frames per second
          */
-        GameEngine(int height, int width, float fps);
+        GameEngine(int height, int width);
         /**
          * @brief Destroy the Game Engine object
          * 
@@ -56,15 +56,17 @@ class GameEngine{
          */
         void addSprite(SpriteProxy*);
         /**
-         * @brief Manually update window 
          * 
          */
-        void update();
-        /**
-         * @brief start game engine
-         * 
-         */
-        void start();
 
+
+        /**
+         * @brief updates game engine window. 
+         * 
+         * Plop this in your main game loop,
+         * @return true window is open
+         * @return false window is closed
+         */
+        bool update();
 };
 #endif

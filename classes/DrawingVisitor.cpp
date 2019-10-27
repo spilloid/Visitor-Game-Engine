@@ -20,6 +20,7 @@ void DrawingVisitor::visit(SpriteProxy* s){
         this->window->draw(stemp);
     }
     ////DEBUGGING://///
+    //TODO: make it so this is modular, ideally maybe visitors can visit the drawing vistor and draw other things?
     sf::Font mono;
     sf::Text text;
     if(mono.loadFromFile("assets/fonts/RobotoMono-Regular.ttf")){
