@@ -27,7 +27,7 @@ int main()
     ge->addSprite(bx);
 
     //tweak visitors
-    bbcv->setWatched(bx);
+    bbcv->setWatched(bbox);
 
     //add visitors to scene
     ge->addVisitor(bbcv);
@@ -40,7 +40,7 @@ int main()
     srand(time(NULL));
     bool keepGoing = true;
     while(keepGoing){
-        if(tick.getElapsedTime().asMilliseconds() > 10){
+        if(tick.getElapsedTime().asMilliseconds() > 50){
             //apply a random force every 5 seconds
             //TODO: events aren't straight..... fix the math in forcevisitor
             tick.restart();
@@ -63,6 +63,7 @@ int main()
             std::list<SpriteProxy*> l = bbcv->getCollisions();
             for(std::list<SpriteProxy *>::iterator c = l.begin(); c != l.end(); c++){
                 std::cout << "moving : " << *c << std::endl;
+                std::printf("BBox: %p BX: %p \n",bbox,bx);
                 (*c)->setXY(0,0);
                 fv->stop(*c);
             }

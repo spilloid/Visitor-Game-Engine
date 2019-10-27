@@ -21,8 +21,7 @@ void ForceVisitor::applyForce(SpriteProxy* s, double magnitude, float angle){
     } //end if ; if not moving, we infer dx/dy is 0.
 
     //convert to radians because we're math people
-    double radianAngle = angle * M_PI / 180.f - 90.f;
-
+    double radianAngle = (angle-90.f) * M_PI / 180.f;
     //calc dx & dy like our lord and savior Pythagreous taught us
     dx += magnitude * cos(radianAngle);
     dy += magnitude * sin(radianAngle);
