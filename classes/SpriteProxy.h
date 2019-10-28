@@ -5,9 +5,11 @@
 #include <memory>
 //TODO: fix, this is gross.
 class SpriteProxy {
-private:
+protected:
   int x;
+  int dx;
   int y;
+  int dy;
   int height;
   int width;
   sf::Texture texture;
@@ -54,6 +56,9 @@ public:
    * @param Y new Y value of Sprite
    */
   void setXY(int X, int Y);
+  double getDX();
+  double getDY();
+  void setDXY(double x, double y);
   int getHeight();
   int getWidth();
 };

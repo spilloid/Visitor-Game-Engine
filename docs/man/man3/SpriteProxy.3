@@ -1,0 +1,124 @@
+.TH "SpriteProxy" 3 "Mon Oct 28 2019" "Video Game Final Project" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+SpriteProxy
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherited by \fBTextSpriteProxy\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBSpriteProxy\fP ()"
+.br
+.RI "Construct a new Sprite object\&. "
+.ti -1c
+.RI "\fBSpriteProxy\fP (std::string fileLocation, int x, int y, int height, int width)"
+.br
+.RI "Construct a new Sprite object\&. "
+.ti -1c
+.RI "sf::Sprite \fBgetSprite\fP ()"
+.br
+.RI "Get the Sprite object\&. "
+.ti -1c
+.RI "int \fBgetX\fP ()"
+.br
+.ti -1c
+.RI "int \fBgetY\fP ()"
+.br
+.ti -1c
+.RI "void \fBsetXY\fP (int X, int Y)"
+.br
+.RI "set new coords of sprite "
+.ti -1c
+.RI "double \fBgetDX\fP ()"
+.br
+.ti -1c
+.RI "double \fBgetDY\fP ()"
+.br
+.ti -1c
+.RI "void \fBsetDXY\fP (double x, double y)"
+.br
+.ti -1c
+.RI "int \fBgetHeight\fP ()"
+.br
+.ti -1c
+.RI "int \fBgetWidth\fP ()"
+.br
+.in -1c
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "SpriteProxy::SpriteProxy ()"
+
+.PP
+Construct a new Sprite object\&. 
+.SS "SpriteProxy::SpriteProxy (std::string fileLocation, int x, int y, int height, int width)"
+
+.PP
+Construct a new Sprite object\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIfileLocation\fP : relative file location of image file 
+.br
+\fIx\fP : x location of sprite relative to size of window 
+.br
+\fIy\fP : y location of sprite relative to size of window 
+.br
+\fIheight\fP : height of sprite in pixels 
+.br
+\fIwidth\fP : width of sprite in pixels 
+.RE
+.PP
+
+.SH "Member Function Documentation"
+.PP 
+.SS "sf::Sprite SpriteProxy::getSprite ()"
+
+.PP
+Get the Sprite object\&. 
+.PP
+\fBReturns\fP
+.RS 4
+sf::Sprite 
+.RE
+.PP
+
+.SS "int SpriteProxy::getX ()"
+
+.PP
+\fBReturns\fP
+.RS 4
+int x position of sprite 
+.RE
+.PP
+
+.SS "int SpriteProxy::getY ()"
+
+.PP
+\fBReturns\fP
+.RS 4
+int y Position of sprite 
+.RE
+.PP
+
+.SS "void SpriteProxy::setXY (int X, int Y)"
+
+.PP
+set new coords of sprite 
+.PP
+\fBParameters\fP
+.RS 4
+\fIX\fP new X value of Sprite 
+.br
+\fIY\fP new Y value of Sprite 
+.RE
+.PP
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Video Game Final Project from the source code\&.

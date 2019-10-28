@@ -19,23 +19,5 @@ void DrawingVisitor::visit(std::shared_ptr<SpriteProxy> s){
         ));
         this->window->draw(stemp);
     }
-    ////DEBUGGING://///
-    //TODO: make it so this is modular, ideally maybe visitors can visit the drawing vistor and draw other things?
-    sf::Font mono;
-    sf::Text text;
-    if(mono.loadFromFile("assets/fonts/RobotoMono-Regular.ttf")){
-        std::string debugOutput = "DEBUGGING";
-        text.setFont(mono);
-        text.setCharacterSize(11);
-        text.setFillColor(sf::Color::Black);
-        text.setPosition(sf::Vector2f(0,0));
-        for(std::_List_iterator<std::shared_ptr<SpriteProxy>> s = this->renderList.begin(); s!=this->renderList.end(); s++){
-            sf::Vector2f spx = (*s)->getSprite().getPosition();
-            debugOutput += "\nX: " + std::to_string(spx.x) + " | Y: " + std::to_string(spx.y);
-        }
-        text.setString(debugOutput);
-        this->window->draw(text);
-    }
-    ///////////////////
     this->window->display();
 }

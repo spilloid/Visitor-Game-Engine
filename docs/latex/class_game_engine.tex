@@ -1,0 +1,105 @@
+\hypertarget{class_game_engine}{}\doxysection{Game\+Engine Class Reference}
+\label{class_game_engine}\index{GameEngine@{GameEngine}}
+
+
+Collaboration diagram for Game\+Engine\+:
+% FIG 0
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_game_engine_a64c430f74d72e2745646fdbffbd97930}{Game\+Engine}} ()
+\begin{DoxyCompactList}\small\item\em Construct a new Game Engine object. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_game_engine_a3b147a91807d7a88d621dc73f3041eb8}{Game\+Engine}} (int height, int width)
+\begin{DoxyCompactList}\small\item\em Construct a new Game Engine object. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_game_engine_a8e59d8341ef9d2dcc62eee1437e37f14}{$\sim$\+Game\+Engine}} ()
+\begin{DoxyCompactList}\small\item\em Destroy the Game Engine object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_game_engine_abf2bd8184324bd3d38058c71afe68dc3}{add\+Visitor}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_visitor}{Visitor}} $>$)
+\begin{DoxyCompactList}\small\item\em Add visitor operation for scene. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_game_engine_a574808fda9e9a3fb5d2a8a14a123d350}{add\+Sprite}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_sprite_proxy}{Sprite\+Proxy}} $>$)
+\begin{DoxyCompactList}\small\item\em Add Sprite to scene. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_game_engine_a2f0e84b7f70f82b9c6a8cf1b6c7715bf}{update}} ()
+\begin{DoxyCompactList}\small\item\em updates game engine window. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_game_engine_a64c430f74d72e2745646fdbffbd97930}\label{class_game_engine_a64c430f74d72e2745646fdbffbd97930}} 
+\index{GameEngine@{GameEngine}!GameEngine@{GameEngine}}
+\index{GameEngine@{GameEngine}!GameEngine@{GameEngine}}
+\doxysubsubsection{\texorpdfstring{GameEngine()}{GameEngine()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Game\+Engine\+::\+Game\+Engine (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Construct a new Game Engine object. 
+
+\mbox{\Hypertarget{class_game_engine_a3b147a91807d7a88d621dc73f3041eb8}\label{class_game_engine_a3b147a91807d7a88d621dc73f3041eb8}} 
+\index{GameEngine@{GameEngine}!GameEngine@{GameEngine}}
+\index{GameEngine@{GameEngine}!GameEngine@{GameEngine}}
+\doxysubsubsection{\texorpdfstring{GameEngine()}{GameEngine()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Game\+Engine\+::\+Game\+Engine (\begin{DoxyParamCaption}\item[{int}]{height,  }\item[{int}]{width }\end{DoxyParamCaption})}
+
+
+
+Construct a new Game Engine object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em height} & specify game window height \\
+\hline
+{\em width} & specify game window width \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_game_engine_a8e59d8341ef9d2dcc62eee1437e37f14}\label{class_game_engine_a8e59d8341ef9d2dcc62eee1437e37f14}} 
+\index{GameEngine@{GameEngine}!````~GameEngine@{$\sim$GameEngine}}
+\index{````~GameEngine@{$\sim$GameEngine}!GameEngine@{GameEngine}}
+\doxysubsubsection{\texorpdfstring{$\sim$GameEngine()}{~GameEngine()}}
+{\footnotesize\ttfamily Game\+Engine\+::$\sim$\+Game\+Engine (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Destroy the Game Engine object. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_game_engine_a574808fda9e9a3fb5d2a8a14a123d350}\label{class_game_engine_a574808fda9e9a3fb5d2a8a14a123d350}} 
+\index{GameEngine@{GameEngine}!addSprite@{addSprite}}
+\index{addSprite@{addSprite}!GameEngine@{GameEngine}}
+\doxysubsubsection{\texorpdfstring{addSprite()}{addSprite()}}
+{\footnotesize\ttfamily void Game\+Engine\+::add\+Sprite (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_sprite_proxy}{Sprite\+Proxy}} $>$}]{s }\end{DoxyParamCaption})}
+
+
+
+Add Sprite to scene. 
+
+\mbox{\Hypertarget{class_game_engine_abf2bd8184324bd3d38058c71afe68dc3}\label{class_game_engine_abf2bd8184324bd3d38058c71afe68dc3}} 
+\index{GameEngine@{GameEngine}!addVisitor@{addVisitor}}
+\index{addVisitor@{addVisitor}!GameEngine@{GameEngine}}
+\doxysubsubsection{\texorpdfstring{addVisitor()}{addVisitor()}}
+{\footnotesize\ttfamily void Game\+Engine\+::add\+Visitor (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_visitor}{Visitor}} $>$}]{v }\end{DoxyParamCaption})}
+
+
+
+Add visitor operation for scene. 
+
+\mbox{\Hypertarget{class_game_engine_a2f0e84b7f70f82b9c6a8cf1b6c7715bf}\label{class_game_engine_a2f0e84b7f70f82b9c6a8cf1b6c7715bf}} 
+\index{GameEngine@{GameEngine}!update@{update}}
+\index{update@{update}!GameEngine@{GameEngine}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily bool Game\+Engine\+::update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+updates game engine window. 
+
+Plop this in your main game loop, \begin{DoxyReturn}{Returns}
+true window is open 
+
+false window is closed 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+classes/Game\+Engine.\+h\item 
+classes/Game\+Engine.\+cpp\end{DoxyCompactItemize}

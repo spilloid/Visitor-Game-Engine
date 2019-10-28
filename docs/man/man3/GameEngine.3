@@ -1,0 +1,86 @@
+.TH "GameEngine" 3 "Mon Oct 28 2019" "Video Game Final Project" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+GameEngine
+.SH SYNOPSIS
+.br
+.PP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBGameEngine\fP ()"
+.br
+.RI "Construct a new Game Engine object\&. "
+.ti -1c
+.RI "\fBGameEngine\fP (int height, int width)"
+.br
+.RI "Construct a new Game Engine object\&. "
+.ti -1c
+.RI "\fB~GameEngine\fP ()"
+.br
+.RI "Destroy the Game Engine object\&. "
+.ti -1c
+.RI "void \fBaddVisitor\fP (std::shared_ptr< \fBVisitor\fP >)"
+.br
+.RI "Add visitor operation for scene\&. "
+.ti -1c
+.RI "void \fBaddSprite\fP (std::shared_ptr< \fBSpriteProxy\fP >)"
+.br
+.RI "Add Sprite to scene\&. "
+.ti -1c
+.RI "bool \fBupdate\fP ()"
+.br
+.RI "updates game engine window\&. "
+.in -1c
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "GameEngine::GameEngine ()"
+
+.PP
+Construct a new Game Engine object\&. 
+.SS "GameEngine::GameEngine (int height, int width)"
+
+.PP
+Construct a new Game Engine object\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIheight\fP specify game window height 
+.br
+\fIwidth\fP specify game window width 
+.RE
+.PP
+
+.SS "GameEngine::~GameEngine ()"
+
+.PP
+Destroy the Game Engine object\&. 
+.SH "Member Function Documentation"
+.PP 
+.SS "void GameEngine::addSprite (std::shared_ptr< \fBSpriteProxy\fP > s)"
+
+.PP
+Add Sprite to scene\&. 
+.SS "void GameEngine::addVisitor (std::shared_ptr< \fBVisitor\fP > v)"
+
+.PP
+Add visitor operation for scene\&. 
+.SS "bool GameEngine::update ()"
+
+.PP
+updates game engine window\&. Plop this in your main game loop, 
+.PP
+\fBReturns\fP
+.RS 4
+true window is open 
+.PP
+false window is closed 
+.RE
+.PP
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Video Game Final Project from the source code\&.
