@@ -5,6 +5,6 @@ class BoundsVisitor : public Visitor{
     int minX, maxX, minY, maxY;
     public:
     BoundsVisitor(int minX,int maxX, int minY, int maxY);
-    void visit(SpriteProxy* sp);
+    void visit(std::shared_ptr<SpriteProxy> sp);
 };
 #endif

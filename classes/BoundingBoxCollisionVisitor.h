@@ -4,8 +4,8 @@
 #include <list>
 class BoundingBoxCollisionVisitor : public Visitor{
     private:
-       std::list<SpriteProxy*> collisions;
-       SpriteProxy* watched; 
+       std::list<std::shared_ptr<SpriteProxy>> collisions;
+       std::shared_ptr<SpriteProxy> watched; 
     public:
     /**
      * @brief Construct a new Bounding Box Collision Visitor object
@@ -17,24 +17,24 @@ class BoundingBoxCollisionVisitor : public Visitor{
      * check for collisions with this sprite
      * @param s 
      */
-    BoundingBoxCollisionVisitor(SpriteProxy* s);
+    BoundingBoxCollisionVisitor(std::shared_ptr<SpriteProxy> s);
     /**
      * @brief update currently colliding list
      * 
      * @param s 
      */
-    void visit(SpriteProxy* s);
+    void visit(std::shared_ptr<SpriteProxy> s);
     /**
      * @brief 
      * 
      * @return std::list<SpriteProxy*> list of all sprites that collided with watched since last check
      */
-    std::list<SpriteProxy*> getCollisions();
+    std::list<std::shared_ptr<SpriteProxy>> getCollisions();
     /**
      * @brief Set the Watched object
      * 
      * @param s 
      */
-    void setWatched(SpriteProxy* s);
+    void setWatched(std::shared_ptr<SpriteProxy> s);
 };
 #endif

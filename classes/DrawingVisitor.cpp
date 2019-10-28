@@ -1,16 +1,16 @@
 #include "DrawingVisitor.h"
-DrawingVisitor::DrawingVisitor(sf::RenderWindow* w)
+DrawingVisitor::DrawingVisitor(std::shared_ptr<sf::RenderWindow> w)
 :window(w)
 {}
-void DrawingVisitor::visit(SpriteProxy* s){
+void DrawingVisitor::visit(std::shared_ptr<SpriteProxy> s){
     //add sprite to local drawing cache if not duplicate
-    std::_List_iterator<SpriteProxy*> duplicate = std::find(this->renderList.begin(),this->renderList.end(),s);
+    std::_List_iterator<std::shared_ptr<SpriteProxy>> duplicate = std::find(this->renderList.begin(),this->renderList.end(),s);
     if(duplicate == this->renderList.end()){
         this->renderList.push_back(s);
     }
     //refresh window
     this->window->clear(sf::Color::White);
-    for(std::_List_iterator<SpriteProxy*> s = this->renderList.begin(); s!=this->renderList.end(); s++){
+    for(std::_List_iterator<std::shared_ptr<SpriteProxy>> s = this->renderList.begin(); s!=this->renderList.end(); s++){
         //move the sprite before drawing so the x/y are centered
         sf::Sprite stemp = (*s)->getSprite();
         stemp.setPosition(sf::Vector2f(
@@ -29,7 +29,7 @@ void DrawingVisitor::visit(SpriteProxy* s){
         text.setCharacterSize(11);
         text.setFillColor(sf::Color::Black);
         text.setPosition(sf::Vector2f(0,0));
-        for(std::_List_iterator<SpriteProxy*> s = this->renderList.begin(); s!=this->renderList.end(); s++){
+        for(std::_List_iterator<std::shared_ptr<SpriteProxy>> s = this->renderList.begin(); s!=this->renderList.end(); s++){
             sf::Vector2f spx = (*s)->getSprite().getPosition();
             debugOutput += "\nX: " + std::to_string(spx.x) + " | Y: " + std::to_string(spx.y);
         }

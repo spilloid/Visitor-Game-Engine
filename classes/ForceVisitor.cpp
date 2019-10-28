@@ -1,8 +1,8 @@
 #include "ForceVisitor.h"
-void ForceVisitor::visit(SpriteProxy* s){
+void ForceVisitor::visit(std::shared_ptr<SpriteProxy> s){
     //for every object with a force on it
-    for(std::map<SpriteProxy*,sf::Vector2f>::iterator oim = this->forceList.begin(); oim!=this->forceList.end(); oim++){
-        SpriteProxy* st = oim->first;
+    for(std::map<std::shared_ptr<SpriteProxy>,sf::Vector2f>::iterator oim = this->forceList.begin(); oim!=this->forceList.end(); oim++){
+        std::shared_ptr<SpriteProxy> st = oim->first;
         //update the sprite position based on dx & dy
         st->setXY(
             st->getX() + oim->second.x,
@@ -10,10 +10,10 @@ void ForceVisitor::visit(SpriteProxy* s){
         );
     }
 }
-void ForceVisitor::applyForce(SpriteProxy* s, double magnitude, float angle){
+void ForceVisitor::applyForce(std::shared_ptr<SpriteProxy> s, double magnitude, float angle){
     double dx=0,dy=0;
     //is this sprite already moving?
-    std::map<SpriteProxy*,sf::Vector2f>::iterator old = this->forceList.find(s);
+    std::map<std::shared_ptr<SpriteProxy>,sf::Vector2f>::iterator old = this->forceList.find(s);
     if (old != this->forceList.end() ) {
         std::cout << "updating from old" << std::endl;
         dx = old->second.x;
@@ -31,6 +31,6 @@ void ForceVisitor::applyForce(SpriteProxy* s, double magnitude, float angle){
     std::cout << "dx: " << dx << " dy: " << dy << " radianAngle: " << radianAngle << std::endl;
 }
 
-void ForceVisitor::stop(SpriteProxy* s){
+void ForceVisitor::stop(std::shared_ptr<SpriteProxy> s){
     this->forceList[s] = sf::Vector2f(0,0);
 }

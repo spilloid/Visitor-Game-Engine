@@ -2,6 +2,7 @@
 #define SPRITEPROXY_H
 #include <SFML/Graphics.hpp>
 #include <iostream>
+#include <memory>
 //TODO: fix, this is gross.
 class SpriteProxy {
 private:
@@ -10,7 +11,7 @@ private:
   int height;
   int width;
   sf::Texture texture;
-  sf::Sprite *sprite;
+  std::shared_ptr<sf::Sprite> sprite;
 
 public:
   /**

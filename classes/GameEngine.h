@@ -11,7 +11,7 @@ class GameEngine{
          * @brief visitors that operate on the scene as a whole
          * 
          */
-        std::list<Visitor*> sceneVisitors;
+        std::list<std::shared_ptr<Visitor>> sceneVisitors;
         /**
          * @brief scene which holds the sprites
          * 
@@ -21,12 +21,12 @@ class GameEngine{
          * @brief SFML rendering window to draw to
          * 
          */
-        sf::RenderWindow* window;
+        std::shared_ptr<sf::RenderWindow> window;
         /**
          * @brief renderer which draws to window
          * 
          */
-        DrawingVisitor* renderer;
+        std::shared_ptr<DrawingVisitor> renderer;
     public:
     /**
      * @brief Construct a new Game Engine object
@@ -49,12 +49,12 @@ class GameEngine{
          * @brief Add visitor operation for scene
          * 
          */
-        void addVisitor(Visitor*);
+        void addVisitor(std::shared_ptr<Visitor>);
         /**
          * @brief Add Sprite to scene
          * 
          */
-        void addSprite(SpriteProxy*);
+        void addSprite(std::shared_ptr<SpriteProxy>);
         /**
          * 
          */

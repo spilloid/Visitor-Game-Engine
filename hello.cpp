@@ -7,32 +7,44 @@
 #include "./classes/ForceVisitor.h"
 #include "./classes/BoundingBoxCollisionVisitor.h"
 #include <list>
+#include <memory>
 int main()
 {
+    const int MAXX=500,MINX=0,MAXY=500,MINY=0;
     //declare sprites
-    SpriteProxy* bbox = new SpriteProxy("./assets/img/bbox.png",200,200,50,50);
-    SpriteProxy* bx = new SpriteProxy("./assets/img/blueX.png",250,250,50,50);
+    std::shared_ptr<SpriteProxy> player1 = std::make_shared<SpriteProxy>(
+        "./assets/img/bbox.png",
+        MINX + 10,MINY+10,
+        100,10);
+    std::shared_ptr<SpriteProxy> player2 = std::make_shared<SpriteProxy>(
+        "./assets/img/bbox.png",
+        MINX + 10,MINY+10,
+        100,10);
+    std::shared_ptr<SpriteProxy> ball = std::make_shared<SpriteProxy>(
+        "./assets/img/bbox.png",
+        MAXX / 2,MAXY / 2,
+        10,10);
 
     //declare visitors
-    GravityVisitor* gv = new GravityVisitor(-10);
-    WrapBoundsVisitor* wbv = new WrapBoundsVisitor(0,640,0,480);
-    ForceVisitor* fv = new ForceVisitor();
-    BoundingBoxCollisionVisitor* bbcv = new BoundingBoxCollisionVisitor();
+    std::shared_ptr<BoundsVisitor> bv = std::make_shared<BoundsVisitor>(MINX,MAXX,MINY,MAXY);
+    std::shared_ptr<ForceVisitor> fv = std::make_shared<ForceVisitor>();
+    std::shared_ptr<BoundingBoxCollisionVisitor> bbcv = std::make_shared<BoundingBoxCollisionVisitor>();
 
     //declare game engine
-    GameEngine* ge = new GameEngine(480,640);
+    GameEngine* ge = new GameEngine(MAXY,MAXX);
 
     //add sprites to scene
-    ge->addSprite(bbox);
-    ge->addSprite(bx);
+    ge->addSprite(player1);
+    ge->addSprite(player2);
+    ge->addSprite(ball);
 
     //tweak visitors
-    bbcv->setWatched(bbox);
+    bbcv->setWatched(ball);
 
     //add visitors to scene
     ge->addVisitor(bbcv);
     ge->addVisitor(fv);
-    ge->addVisitor(wbv);
+    ge->addVisitor(bv);
 
     //I want a clock
     sf::Clock tick;
@@ -44,27 +56,13 @@ int main()
             //apply a random force every 5 seconds
             //TODO: events aren't straight..... fix the math in forcevisitor
             tick.restart();
-            if(sf::Keyboard::isKeyPressed(sf::Keyboard::Right)){
-                fv->applyForce(bbox,1,90);
-            }
             if(sf::Keyboard::isKeyPressed(sf::Keyboard::Up)){
-                fv->applyForce(bbox,1,0);
             }
             if(sf::Keyboard::isKeyPressed(sf::Keyboard::Down)){
-                fv->applyForce(bbox,1,180);
-            }
-            if(sf::Keyboard::isKeyPressed(sf::Keyboard::Left)){
-                fv->applyForce(bbox,1,270);
-            }
-            if(sf::Keyboard::isKeyPressed(sf::Keyboard::Space)){
-                fv->stop(bbox);
             }
 
-            std::list<SpriteProxy*> l = bbcv->getCollisions();
-            for(std::list<SpriteProxy *>::iterator c = l.begin(); c != l.end(); c++){
-                std::cout << "moving : " << *c << std::endl;
-                std::printf("BBox: %p BX: %p \n",bbox,bx);
-                (*c)->setXY(0,0);
+            std::list<std::shared_ptr<SpriteProxy>> l = bbcv->getCollisions();
+            for(std::list<std::shared_ptr<SpriteProxy >>::iterator c = l.begin(); c != l.end(); c++){
                 fv->stop(*c);
             }
             keepGoing = ge->update();

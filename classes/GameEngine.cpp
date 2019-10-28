@@ -1,11 +1,11 @@
 #include "GameEngine.h"
 GameEngine::GameEngine(int height, int width) {
-  this->window = new sf::RenderWindow(sf::VideoMode(width, height), "Game");
-  this->renderer = new DrawingVisitor(this->window);
+  this->window = std::make_shared<sf::RenderWindow>(sf::VideoMode(width, height), "Game");
+  this->renderer = std::make_shared<DrawingVisitor>(this->window);
 }
-GameEngine::~GameEngine() { delete this->window; }
-void GameEngine::addVisitor(Visitor *v) { this->sceneVisitors.push_back(v); }
-void GameEngine::addSprite(SpriteProxy *s) { this->scene.addSprite(s); }
+GameEngine::~GameEngine() {  }
+void GameEngine::addVisitor(std::shared_ptr<Visitor> v) { this->sceneVisitors.push_back(v); }
+void GameEngine::addSprite(std::shared_ptr<SpriteProxy> s) { this->scene.addSprite(s); }
 bool GameEngine::update() {
   if (this->window->isOpen()) {
     sf::Event event;
@@ -17,7 +17,7 @@ bool GameEngine::update() {
       }               // end if; window is closed
     }                 // end if ; check event poll
     // operating on scene
-    for (auto scv = this->sceneVisitors.begin();
+    for (std::list<std::shared_ptr<Visitor>>::iterator scv = this->sceneVisitors.begin();
          scv != this->sceneVisitors.end(); scv++)
       this->scene.accept(*scv);
     // always draw last

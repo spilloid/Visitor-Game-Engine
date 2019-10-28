@@ -6,6 +6,6 @@ class WrapBoundsVisitor : public Visitor{
     int minX,maxX,minY,maxY;
     public:
     WrapBoundsVisitor(int minX,int maxX,int minY,int maxY);
-    void visit(SpriteProxy* s);
+    void visit(std::shared_ptr<SpriteProxy> s);
 };
 #endif

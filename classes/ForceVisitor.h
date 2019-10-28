@@ -14,9 +14,9 @@ class ForceVisitor : public Visitor{
          * should be effecient since pointers are just memory addresses (small)
          * 
          */
-        std::map<SpriteProxy*,sf::Vector2f> forceList;
+        std::map<std::shared_ptr<SpriteProxy>,sf::Vector2f> forceList;
     public:
-    virtual void visit(SpriteProxy* s);
+    virtual void visit(std::shared_ptr<SpriteProxy> s);
     /**
      * @brief apply a force to the sprite
      * 
@@ -24,12 +24,12 @@ class ForceVisitor : public Visitor{
      * @param magnitude force magnitude
      * @param angle angle of operation, in degrees
      */
-    void applyForce(SpriteProxy* s, double magnitude, float angle);
+    void applyForce(std::shared_ptr<SpriteProxy> s, double magnitude, float angle);
     /**
      * @brief Stop the sprite from moving
      * 
      * @param s 
      */
-    void stop(SpriteProxy* s);
+    void stop(std::shared_ptr<SpriteProxy> s);
 };
 #endif

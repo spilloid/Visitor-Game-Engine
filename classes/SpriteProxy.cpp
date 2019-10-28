@@ -3,7 +3,7 @@ SpriteProxy::SpriteProxy() {}
 SpriteProxy::SpriteProxy(std::string fileLocation, int x, int y, int height,
                          int width)
     : x(x), y(y), height(height), width(width) {
-  this->sprite = new sf::Sprite();
+  this->sprite = std::make_shared<sf::Sprite>();
   if (this->texture.loadFromFile(fileLocation,
                                  sf::IntRect(0, 0, height, width))) {
     this->sprite->setTexture(this->texture);
