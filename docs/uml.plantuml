@@ -11,6 +11,10 @@ class Scene{
     +void addSprite()
     +void accept()
 }
+class TextureFactory{
+        +bool loadTexture(string);
+        +sf::Texture> getTexture(string);
+}
 class SpriteProxy{
     -int x
     -int y
@@ -18,7 +22,6 @@ class SpriteProxy{
     -int dx
     -int height
     -int WrapWidth
-    -Texture texture
     -Sprite* sprite
 
     +getters()
@@ -59,4 +62,8 @@ Visitor <|-- WrapBoundsVisitor
 Visitor <|-- BoundingBoxCollisionVisitor
 Visitor <|-- RayCastCollisionVisitor
 Visitor <|-- DrawingVisitor
+DrawingVisitor <--- TextureFactory
+hello <--- GameEngine
+hello <--- Visitor
+hello <--- SpriteProxy
 @enduml
