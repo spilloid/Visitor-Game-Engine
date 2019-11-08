@@ -1,4 +1,4 @@
-.TH "GameEngine" 3 "Mon Oct 28 2019" "Video Game Final Project" \" -*- nroff -*-
+.TH "GameEngine" 3 "Fri Nov 8 2019" "Version 1.5" "Video Game Final Project: Engine" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -14,10 +14,6 @@ GameEngine
 .br
 .RI "Construct a new Game Engine object\&. "
 .ti -1c
-.RI "\fBGameEngine\fP (int height, int width)"
-.br
-.RI "Construct a new Game Engine object\&. "
-.ti -1c
 .RI "\fB~GameEngine\fP ()"
 .br
 .RI "Destroy the Game Engine object\&. "
@@ -30,9 +26,9 @@ GameEngine
 .br
 .RI "Add Sprite to scene\&. "
 .ti -1c
-.RI "bool \fBupdate\fP ()"
+.RI "void \fBupdate\fP ()"
 .br
-.RI "updates game engine window\&. "
+.RI "Let visitors visit the scene\&. "
 .in -1c
 .SH "Constructor & Destructor Documentation"
 .PP 
@@ -40,19 +36,6 @@ GameEngine
 
 .PP
 Construct a new Game Engine object\&. 
-.SS "GameEngine::GameEngine (int height, int width)"
-
-.PP
-Construct a new Game Engine object\&. 
-.PP
-\fBParameters\fP
-.RS 4
-\fIheight\fP specify game window height 
-.br
-\fIwidth\fP specify game window width 
-.RE
-.PP
-
 .SS "GameEngine::~GameEngine ()"
 
 .PP
@@ -67,20 +50,11 @@ Add Sprite to scene\&.
 
 .PP
 Add visitor operation for scene\&. 
-.SS "bool GameEngine::update ()"
+.SS "void GameEngine::update ()"
 
 .PP
-updates game engine window\&. Plop this in your main game loop, 
-.PP
-\fBReturns\fP
-.RS 4
-true window is open 
-.PP
-false window is closed 
-.RE
-.PP
-
+Let visitors visit the scene\&. 
 
 .SH "Author"
 .PP 
-Generated automatically by Doxygen for Video Game Final Project from the source code\&.
+Generated automatically by Doxygen for Video Game Final Project: Engine from the source code\&.

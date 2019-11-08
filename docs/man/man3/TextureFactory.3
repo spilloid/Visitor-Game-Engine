@@ -1,0 +1,58 @@
+.TH "TextureFactory" 3 "Fri Nov 8 2019" "Version 1.5" "Video Game Final Project: Engine" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+TextureFactory
+.SH SYNOPSIS
+.br
+.PP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "bool \fBloadTexture\fP (std::string s)"
+.br
+.RI "cache the texture for access later, hard loads on each call "
+.ti -1c
+.RI "std::shared_ptr< sf::Texture > \fBgetTexture\fP (std::string s)"
+.br
+.RI "Get the Texture object, check if cached first\&. "
+.in -1c
+.SH "Member Function Documentation"
+.PP 
+.SS "std::shared_ptr< sf::Texture > TextureFactory::getTexture (std::string s)"
+
+.PP
+Get the Texture object, check if cached first\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIs\fP file location 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+std::shared_ptr<sf::Texture> Texture loaded from file 
+.RE
+.PP
+
+.SS "bool TextureFactory::loadTexture (std::string s)"
+
+.PP
+cache the texture for access later, hard loads on each call 
+.PP
+\fBParameters\fP
+.RS 4
+\fIs\fP file location 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+bool True on success 
+.RE
+.PP
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Video Game Final Project: Engine from the source code\&.

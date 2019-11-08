@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['raycastcollisionvisitor_13',['RayCastCollisionVisitor',['../class_ray_cast_collision_visitor.html',1,'']]]
+  ['height_22',['height',['../class_sprite_proxy.html#a7ba68cb31f2142980da736118ea43184',1,'SpriteProxy']]]
 ];

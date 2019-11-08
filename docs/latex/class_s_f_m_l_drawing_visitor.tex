@@ -1,0 +1,100 @@
+\hypertarget{class_s_f_m_l_drawing_visitor}{}\doxysection{S\+F\+M\+L\+Drawing\+Visitor Class Reference}
+\label{class_s_f_m_l_drawing_visitor}\index{SFMLDrawingVisitor@{SFMLDrawingVisitor}}
+Inheritance diagram for S\+F\+M\+L\+Drawing\+Visitor\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_s_f_m_l_drawing_visitor}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_s_f_m_l_drawing_visitor_a68112df170f685e9da6a6fb1368ce37d}{S\+F\+M\+L\+Drawing\+Visitor}} (int width, int height)
+\begin{DoxyCompactList}\small\item\em Construct a new \mbox{\hyperlink{class_s_f_m_l_drawing_visitor}{S\+F\+M\+L\+Drawing\+Visitor}} object. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_s_f_m_l_drawing_visitor_affc928db69d8762b84ca1c57c4d34c97}{visit}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_sprite_proxy}{Sprite\+Proxy}} $>$ s)
+\begin{DoxyCompactList}\small\item\em Caches sprite and draws to sfml window. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{class_s_f_m_l_drawing_visitor_a65e69df1e108073052315b80eb0b5514}{is\+Open}} ()
+\begin{DoxyCompactList}\small\item\em check if sfml window is open \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_s_f_m_l_drawing_visitor_a26218dc60bc0a3f264ca11f9307a909f}{draw}} ()
+\begin{DoxyCompactList}\small\item\em draw all sprites to scene \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_s_f_m_l_drawing_visitor_a68112df170f685e9da6a6fb1368ce37d}\label{class_s_f_m_l_drawing_visitor_a68112df170f685e9da6a6fb1368ce37d}} 
+\index{SFMLDrawingVisitor@{SFMLDrawingVisitor}!SFMLDrawingVisitor@{SFMLDrawingVisitor}}
+\index{SFMLDrawingVisitor@{SFMLDrawingVisitor}!SFMLDrawingVisitor@{SFMLDrawingVisitor}}
+\doxysubsubsection{\texorpdfstring{SFMLDrawingVisitor()}{SFMLDrawingVisitor()}}
+{\footnotesize\ttfamily S\+F\+M\+L\+Drawing\+Visitor\+::\+S\+F\+M\+L\+Drawing\+Visitor (\begin{DoxyParamCaption}\item[{int}]{width,  }\item[{int}]{height }\end{DoxyParamCaption})}
+
+
+
+Construct a new \mbox{\hyperlink{class_s_f_m_l_drawing_visitor}{S\+F\+M\+L\+Drawing\+Visitor}} object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em width} & width of window \\
+\hline
+{\em height} & height of window \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_s_f_m_l_drawing_visitor_a26218dc60bc0a3f264ca11f9307a909f}\label{class_s_f_m_l_drawing_visitor_a26218dc60bc0a3f264ca11f9307a909f}} 
+\index{SFMLDrawingVisitor@{SFMLDrawingVisitor}!draw@{draw}}
+\index{draw@{draw}!SFMLDrawingVisitor@{SFMLDrawingVisitor}}
+\doxysubsubsection{\texorpdfstring{draw()}{draw()}}
+{\footnotesize\ttfamily void S\+F\+M\+L\+Drawing\+Visitor\+::draw (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+draw all sprites to scene 
+
+
+
+Implements \mbox{\hyperlink{class_abstract_drawing_visitor_a08ecda9a55f34afbfa1797be9bd115ea}{Abstract\+Drawing\+Visitor}}.
+
+\mbox{\Hypertarget{class_s_f_m_l_drawing_visitor_a65e69df1e108073052315b80eb0b5514}\label{class_s_f_m_l_drawing_visitor_a65e69df1e108073052315b80eb0b5514}} 
+\index{SFMLDrawingVisitor@{SFMLDrawingVisitor}!isOpen@{isOpen}}
+\index{isOpen@{isOpen}!SFMLDrawingVisitor@{SFMLDrawingVisitor}}
+\doxysubsubsection{\texorpdfstring{isOpen()}{isOpen()}}
+{\footnotesize\ttfamily bool S\+F\+M\+L\+Drawing\+Visitor\+::is\+Open (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+check if sfml window is open 
+
+\begin{DoxyReturn}{Returns}
+true yep 
+
+false nope 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_abstract_drawing_visitor_ae9abaeedd78440c6a0cccf6e36020602}{Abstract\+Drawing\+Visitor}}.
+
+\mbox{\Hypertarget{class_s_f_m_l_drawing_visitor_affc928db69d8762b84ca1c57c4d34c97}\label{class_s_f_m_l_drawing_visitor_affc928db69d8762b84ca1c57c4d34c97}} 
+\index{SFMLDrawingVisitor@{SFMLDrawingVisitor}!visit@{visit}}
+\index{visit@{visit}!SFMLDrawingVisitor@{SFMLDrawingVisitor}}
+\doxysubsubsection{\texorpdfstring{visit()}{visit()}}
+{\footnotesize\ttfamily void S\+F\+M\+L\+Drawing\+Visitor\+::visit (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_sprite_proxy}{Sprite\+Proxy}} $>$}]{s }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Caches sprite and draws to sfml window. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em s} & sprite to visit \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{class_abstract_drawing_visitor_ad2d22d0a5d3b0728368fdf0931bef103}{Abstract\+Drawing\+Visitor}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+classes/S\+F\+M\+L\+Drawing\+Visitor.\+h\item 
+classes/S\+F\+M\+L\+Drawing\+Vistor.\+cpp\end{DoxyCompactItemize}

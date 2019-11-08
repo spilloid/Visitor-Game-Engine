@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.16"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Video Game Final Project: classes/ForceVisitor.h Source File</title>
+<title>Video Game Final Project: Engine: classes/ForceVisitor.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -29,7 +29,8 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">Video Game Final Project
+   <div id="projectname">Video Game Final Project: Engine
+   &#160;<span id="projectnumber">1.5</span>
    </div>
   </td>
  </tr>
@@ -97,13 +98,14 @@ $(document).ready(function(){initNavTree('_force_visitor_8h_source.html','');});
 <div class="line"><a name="l00006"></a><span class="lineno"><a class="line" href="class_force_visitor.html">    6</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_force_visitor.html">ForceVisitor</a> : <span class="keyword">public</span> <a class="code" href="class_visitor.html">Visitor</a>{</div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;    <span class="keyword">private</span>:</div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;    <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> visit(std::shared_ptr&lt;SpriteProxy&gt; s);</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_force_visitor.html#a86c86353d83ce63e8e36c19f412d98d7">applyForce</a>(std::shared_ptr&lt;SpriteProxy&gt; s, <span class="keywordtype">double</span> magnitude, <span class="keywordtype">float</span> angle);</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_force_visitor.html#ab44d016e0899b5139c72855a388b18d2">stop</a>(std::shared_ptr&lt;SpriteProxy&gt; s);</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;};</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_force_visitor.html#a9438e99fc1acf8d4bda515983ff7fdd7">visit</a>(std::shared_ptr&lt;SpriteProxy&gt; s);</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_force_visitor.html#a86c86353d83ce63e8e36c19f412d98d7">applyForce</a>(std::shared_ptr&lt;SpriteProxy&gt; s, <span class="keywordtype">double</span> magnitude, <span class="keywordtype">float</span> angle);</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_force_visitor.html#ab44d016e0899b5139c72855a388b18d2">stop</a>(std::shared_ptr&lt;SpriteProxy&gt; s);</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;};</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="preprocessor">#endif</span></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
+<div class="ttc" id="aclass_force_visitor_html_a9438e99fc1acf8d4bda515983ff7fdd7"><div class="ttname"><a href="class_force_visitor.html#a9438e99fc1acf8d4bda515983ff7fdd7">ForceVisitor::visit</a></div><div class="ttdeci">virtual void visit(std::shared_ptr&lt; SpriteProxy &gt; s)</div><div class="ttdoc">update force data on sprite (move it dx/dy)</div><div class="ttdef"><b>Definition:</b> ForceVisitor.cpp:2</div></div>
 <div class="ttc" id="aclass_force_visitor_html_ab44d016e0899b5139c72855a388b18d2"><div class="ttname"><a href="class_force_visitor.html#ab44d016e0899b5139c72855a388b18d2">ForceVisitor::stop</a></div><div class="ttdeci">void stop(std::shared_ptr&lt; SpriteProxy &gt; s)</div><div class="ttdoc">Stop the sprite from moving.</div><div class="ttdef"><b>Definition:</b> ForceVisitor.cpp:20</div></div>
 <div class="ttc" id="aclass_force_visitor_html"><div class="ttname"><a href="class_force_visitor.html">ForceVisitor</a></div><div class="ttdef"><b>Definition:</b> ForceVisitor.h:6</div></div>
 <div class="ttc" id="aclass_force_visitor_html_a86c86353d83ce63e8e36c19f412d98d7"><div class="ttname"><a href="class_force_visitor.html#a86c86353d83ce63e8e36c19f412d98d7">ForceVisitor::applyForce</a></div><div class="ttdeci">void applyForce(std::shared_ptr&lt; SpriteProxy &gt; s, double magnitude, float angle)</div><div class="ttdoc">apply a force to the sprite</div><div class="ttdef"><b>Definition:</b> ForceVisitor.cpp:10</div></div>

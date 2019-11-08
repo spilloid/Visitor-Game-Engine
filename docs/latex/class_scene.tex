@@ -1,18 +1,72 @@
 \hypertarget{class_scene}{}\doxysection{Scene Class Reference}
 \label{class_scene}\index{Scene@{Scene}}
-
-
-Collaboration diagram for Scene\+:
-% FIG 0
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{class_scene_aee59b03171628b0611eec0606146ddd8}\label{class_scene_aee59b03171628b0611eec0606146ddd8}} 
-void {\bfseries add\+Sprite} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_sprite_proxy}{Sprite\+Proxy}} $>$ s)
-\item 
+\mbox{\hyperlink{class_scene_ad10176d75a9cc0da56626f682d083507}{Scene}} ()
+\begin{DoxyCompactList}\small\item\em Construct a new \mbox{\hyperlink{class_scene}{Scene}} object. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_scene_a3b8cec2e32546713915f8c6303c951f1}{$\sim$\+Scene}} ()
+\begin{DoxyCompactList}\small\item\em Destroy the \mbox{\hyperlink{class_scene}{Scene}} object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_scene_aee59b03171628b0611eec0606146ddd8}{add\+Sprite}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_sprite_proxy}{Sprite\+Proxy}} $>$ s)
+\begin{DoxyCompactList}\small\item\em add a sprite to the scene \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_scene_acc3db965964cf0ad927a77af889d8495}{accept}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_visitor}{Visitor}} $>$ v)
+\begin{DoxyCompactList}\small\item\em iterate through sprites in scene letting each visitor visit sprites \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_scene_ad10176d75a9cc0da56626f682d083507}\label{class_scene_ad10176d75a9cc0da56626f682d083507}} 
+\index{Scene@{Scene}!Scene@{Scene}}
+\index{Scene@{Scene}!Scene@{Scene}}
+\doxysubsubsection{\texorpdfstring{Scene()}{Scene()}}
+{\footnotesize\ttfamily Scene\+::\+Scene (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Construct a new \mbox{\hyperlink{class_scene}{Scene}} object. 
+
+\mbox{\Hypertarget{class_scene_a3b8cec2e32546713915f8c6303c951f1}\label{class_scene_a3b8cec2e32546713915f8c6303c951f1}} 
+\index{Scene@{Scene}!````~Scene@{$\sim$Scene}}
+\index{````~Scene@{$\sim$Scene}!Scene@{Scene}}
+\doxysubsubsection{\texorpdfstring{$\sim$Scene()}{~Scene()}}
+{\footnotesize\ttfamily Scene\+::$\sim$\+Scene (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Destroy the \mbox{\hyperlink{class_scene}{Scene}} object. 
+
+
+
+\doxysubsection{Member Function Documentation}
 \mbox{\Hypertarget{class_scene_acc3db965964cf0ad927a77af889d8495}\label{class_scene_acc3db965964cf0ad927a77af889d8495}} 
-void {\bfseries accept} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_visitor}{Visitor}} $>$ v)
-\end{DoxyCompactItemize}
+\index{Scene@{Scene}!accept@{accept}}
+\index{accept@{accept}!Scene@{Scene}}
+\doxysubsubsection{\texorpdfstring{accept()}{accept()}}
+{\footnotesize\ttfamily void Scene\+::accept (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_visitor}{Visitor}} $>$}]{v }\end{DoxyParamCaption})}
+
+
+
+iterate through sprites in scene letting each visitor visit sprites 
+
+
+\begin{DoxyParams}{Parameters}
+{\em v} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_scene_aee59b03171628b0611eec0606146ddd8}\label{class_scene_aee59b03171628b0611eec0606146ddd8}} 
+\index{Scene@{Scene}!addSprite@{addSprite}}
+\index{addSprite@{addSprite}!Scene@{Scene}}
+\doxysubsubsection{\texorpdfstring{addSprite()}{addSprite()}}
+{\footnotesize\ttfamily void Scene\+::add\+Sprite (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_sprite_proxy}{Sprite\+Proxy}} $>$}]{s }\end{DoxyParamCaption})}
+
+
+
+add a sprite to the scene 
+
+
+\begin{DoxyParams}{Parameters}
+{\em s} & \\
+\hline
+\end{DoxyParams}
 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}

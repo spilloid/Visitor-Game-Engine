@@ -8,17 +8,39 @@
 #include "TextureFactory.h"
 class SFMLDrawingVisitor : public AbstractDrawingVisitor {
 private:
+/**
+ * @brief SFML window
+ * 
+ */
   std::shared_ptr<sf::RenderWindow> window;
+  /**
+   * @brief cache for what to draw to screen
+   * 
+   */
   std::map<std::shared_ptr<SpriteProxy>, std::shared_ptr<sf::Sprite>>
       renderList;
+      /**
+       * @brief Factory for grabbing textures
+       * 
+       */
   std::shared_ptr<TextureFactory> tf;
+  /**
+   * @brief Status of window 
+   * 
+   */
   bool open;
 public:
+/**
+ * @brief Construct a new SFMLDrawingVisitor object
+ * 
+ * @param width  width of window
+ * @param height height of window
+ */
   SFMLDrawingVisitor(int width, int height);
   /**
    * @brief Caches sprite and draws to sfml window
    *
-   * @param s
+   * @param s sprite to visit
    */
   virtual void visit(std::shared_ptr<SpriteProxy> s);
   /**
@@ -28,6 +50,10 @@ public:
    * @return false  nope
    */
   virtual bool isOpen();
+  /**
+   * @brief draw all sprites to scene
+   * 
+   */
   virtual void draw();
 };
 #endif

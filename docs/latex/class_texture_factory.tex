@@ -1,0 +1,54 @@
+\hypertarget{class_texture_factory}{}\doxysection{Texture\+Factory Class Reference}
+\label{class_texture_factory}\index{TextureFactory@{TextureFactory}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{class_texture_factory_af79f6706d47abaade1d99f915d5d92c1}{load\+Texture}} (std\+::string s)
+\begin{DoxyCompactList}\small\item\em cache the texture for access later, hard loads on each call \end{DoxyCompactList}\item 
+std\+::shared\+\_\+ptr$<$ sf\+::\+Texture $>$ \mbox{\hyperlink{class_texture_factory_a425d42f75624dc52e8a5c2f2b48002dd}{get\+Texture}} (std\+::string s)
+\begin{DoxyCompactList}\small\item\em Get the Texture object, check if cached first. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_texture_factory_a425d42f75624dc52e8a5c2f2b48002dd}\label{class_texture_factory_a425d42f75624dc52e8a5c2f2b48002dd}} 
+\index{TextureFactory@{TextureFactory}!getTexture@{getTexture}}
+\index{getTexture@{getTexture}!TextureFactory@{TextureFactory}}
+\doxysubsubsection{\texorpdfstring{getTexture()}{getTexture()}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$ sf\+::\+Texture $>$ Texture\+Factory\+::get\+Texture (\begin{DoxyParamCaption}\item[{std\+::string}]{s }\end{DoxyParamCaption})}
+
+
+
+Get the Texture object, check if cached first. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em s} & file location \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+std\+::shared\+\_\+ptr$<$sf\+::\+Texture$>$ Texture loaded from file 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_texture_factory_af79f6706d47abaade1d99f915d5d92c1}\label{class_texture_factory_af79f6706d47abaade1d99f915d5d92c1}} 
+\index{TextureFactory@{TextureFactory}!loadTexture@{loadTexture}}
+\index{loadTexture@{loadTexture}!TextureFactory@{TextureFactory}}
+\doxysubsubsection{\texorpdfstring{loadTexture()}{loadTexture()}}
+{\footnotesize\ttfamily bool Texture\+Factory\+::load\+Texture (\begin{DoxyParamCaption}\item[{std\+::string}]{s }\end{DoxyParamCaption})}
+
+
+
+cache the texture for access later, hard loads on each call 
+
+
+\begin{DoxyParams}{Parameters}
+{\em s} & file location \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool True on success 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+classes/Texture\+Factory.\+h\item 
+classes/Texture\+Factory.\+cpp\end{DoxyCompactItemize}

@@ -1,4 +1,4 @@
-.TH "Visitor" 3 "Mon Oct 28 2019" "Video Game Final Project" \" -*- nroff -*-
+.TH "Visitor" 3 "Fri Nov 8 2019" "Version 1.5" "Video Game Final Project: Engine" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -7,15 +7,31 @@ Visitor
 .br
 .PP
 .PP
-Inherited by \fBBoundingBoxCollisionVisitor\fP, \fBBoundsVisitor\fP, \fBDrawingVisitor\fP, \fBForceVisitor\fP, \fBGravityVisitor\fP, \fBRayCastCollisionVisitor\fP, and \fBWrapBoundsVisitor\fP\&.
+Inherited by \fBAbstractDrawingVisitor\fP, \fBBounceBoundsVisitor\fP, \fBBoundingBoxCollisionVisitor\fP, \fBForceVisitor\fP, \fBGravityVisitor\fP, \fBRayCastCollisionVisitor\fP, and \fBWrapBoundsVisitor\fP\&.
 .SS "Public Member Functions"
 
 .in +1c
 .ti -1c
 .RI "virtual void \fBvisit\fP (std::shared_ptr< \fBSpriteProxy\fP > sp)"
 .br
+.RI "visit sprite "
 .in -1c
+.SH "Member Function Documentation"
+.PP 
+.SS "void Visitor::visit (std::shared_ptr< \fBSpriteProxy\fP > sp)\fC [virtual]\fP"
+
+.PP
+visit sprite 
+.PP
+\fBParameters\fP
+.RS 4
+\fIsp\fP 
+.RE
+.PP
+
+.PP
+Reimplemented in \fBGravityVisitor\fP, \fBBounceBoundsVisitor\fP, \fBAbstractDrawingVisitor\fP, \fBSFMLDrawingVisitor\fP, \fBBoundingBoxCollisionVisitor\fP, \fBWrapBoundsVisitor\fP, and \fBForceVisitor\fP\&.
 
 .SH "Author"
 .PP 
-Generated automatically by Doxygen for Video Game Final Project from the source code\&.
+Generated automatically by Doxygen for Video Game Final Project: Engine from the source code\&.

@@ -5,6 +5,10 @@
 #include <SFML/Graphics.hpp>
 class TextureFactory{
     private:
+    /**
+     * @brief cache of textures to minimize ram usage
+     * 
+     */
         std::map <std::string,std::shared_ptr<sf::Texture>> cache;
     public:
         TextureFactory();

@@ -1,0 +1,70 @@
+.TH "AbstractDrawingVisitor" 3 "Fri Nov 8 2019" "Version 1.5" "Video Game Final Project: Engine" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+AbstractDrawingVisitor
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits \fBVisitor\fP\&.
+.PP
+Inherited by \fBSFMLDrawingVisitor\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "virtual void \fBdraw\fP ()=0"
+.br
+.RI "Draw cache to screen\&. "
+.ti -1c
+.RI "virtual bool \fBisOpen\fP ()=0"
+.br
+.RI "is the screen window open? "
+.ti -1c
+.RI "virtual void \fBvisit\fP (std::shared_ptr< \fBSpriteProxy\fP > s)=0"
+.br
+.RI "cache a sprite for later drawing "
+.in -1c
+.SH "Member Function Documentation"
+.PP 
+.SS "virtual void AbstractDrawingVisitor::draw ()\fC [pure virtual]\fP"
+
+.PP
+Draw cache to screen\&. 
+.PP
+Implemented in \fBSFMLDrawingVisitor\fP\&.
+.SS "virtual bool AbstractDrawingVisitor::isOpen ()\fC [pure virtual]\fP"
+
+.PP
+is the screen window open? 
+.PP
+\fBReturns\fP
+.RS 4
+true 
+.PP
+false 
+.RE
+.PP
+
+.PP
+Implemented in \fBSFMLDrawingVisitor\fP\&.
+.SS "virtual void AbstractDrawingVisitor::visit (std::shared_ptr< \fBSpriteProxy\fP > s)\fC [pure virtual]\fP"
+
+.PP
+cache a sprite for later drawing 
+.PP
+\fBParameters\fP
+.RS 4
+\fIs\fP 
+.RE
+.PP
+
+.PP
+Reimplemented from \fBVisitor\fP\&.
+.PP
+Implemented in \fBSFMLDrawingVisitor\fP\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Video Game Final Project: Engine from the source code\&.

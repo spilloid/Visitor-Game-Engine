@@ -1,5 +1,101 @@
 \hypertarget{class_bounding_box_collision_visitor}{}\doxysection{Bounding\+Box\+Collision\+Visitor Class Reference}
 \label{class_bounding_box_collision_visitor}\index{BoundingBoxCollisionVisitor@{BoundingBoxCollisionVisitor}}
+Inheritance diagram for Bounding\+Box\+Collision\+Visitor\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_bounding_box_collision_visitor}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_bounding_box_collision_visitor_a36c48ca3b6f9f94d1113a17d27016b92}{Bounding\+Box\+Collision\+Visitor}} ()
+\begin{DoxyCompactList}\small\item\em Construct a new Bounding Box Collision \mbox{\hyperlink{class_visitor}{Visitor}} object. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_bounding_box_collision_visitor_a49b58bc6806b472d3065f86e7a549782}{Bounding\+Box\+Collision\+Visitor}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_sprite_proxy}{Sprite\+Proxy}} $>$ s)
+\begin{DoxyCompactList}\small\item\em Construct a new Bounding Box Collision \mbox{\hyperlink{class_visitor}{Visitor}} object check for collisions with this sprite. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_bounding_box_collision_visitor_a059b61d1100c84601cdb078931ca24d6}{visit}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_sprite_proxy}{Sprite\+Proxy}} $>$ s)
+\begin{DoxyCompactList}\small\item\em update currently colliding list \end{DoxyCompactList}\item 
+std\+::list$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_sprite_proxy}{Sprite\+Proxy}} $>$ $>$ \mbox{\hyperlink{class_bounding_box_collision_visitor_a08106fb5198d18744a1d5a5d76b6743e}{get\+Collisions}} ()
+\item 
+void \mbox{\hyperlink{class_bounding_box_collision_visitor_a2926d24683596bb7630accdad159210e}{set\+Watched}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_sprite_proxy}{Sprite\+Proxy}} $>$ s)
+\begin{DoxyCompactList}\small\item\em Set the Watched object. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
-Inheritance diagram for Bounding\+Box\+Collision\+Visitor\+:
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_bounding_box_collision_visitor_a36c48ca3b6f9f94d1113a17d27016b92}\label{class_bounding_box_collision_visitor_a36c48ca3b6f9f94d1113a17d27016b92}} 
+\index{BoundingBoxCollisionVisitor@{BoundingBoxCollisionVisitor}!BoundingBoxCollisionVisitor@{BoundingBoxCollisionVisitor}}
+\index{BoundingBoxCollisionVisitor@{BoundingBoxCollisionVisitor}!BoundingBoxCollisionVisitor@{BoundingBoxCollisionVisitor}}
+\doxysubsubsection{\texorpdfstring{BoundingBoxCollisionVisitor()}{BoundingBoxCollisionVisitor()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Bounding\+Box\+Collision\+Visitor\+::\+Bounding\+Box\+Collision\+Visitor (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Construct a new Bounding Box Collision \mbox{\hyperlink{class_visitor}{Visitor}} object. 
+
+\mbox{\Hypertarget{class_bounding_box_collision_visitor_a49b58bc6806b472d3065f86e7a549782}\label{class_bounding_box_collision_visitor_a49b58bc6806b472d3065f86e7a549782}} 
+\index{BoundingBoxCollisionVisitor@{BoundingBoxCollisionVisitor}!BoundingBoxCollisionVisitor@{BoundingBoxCollisionVisitor}}
+\index{BoundingBoxCollisionVisitor@{BoundingBoxCollisionVisitor}!BoundingBoxCollisionVisitor@{BoundingBoxCollisionVisitor}}
+\doxysubsubsection{\texorpdfstring{BoundingBoxCollisionVisitor()}{BoundingBoxCollisionVisitor()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Bounding\+Box\+Collision\+Visitor\+::\+Bounding\+Box\+Collision\+Visitor (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_sprite_proxy}{Sprite\+Proxy}} $>$}]{s }\end{DoxyParamCaption})}
+
+
+
+Construct a new Bounding Box Collision \mbox{\hyperlink{class_visitor}{Visitor}} object check for collisions with this sprite. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em s} & \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_bounding_box_collision_visitor_a08106fb5198d18744a1d5a5d76b6743e}\label{class_bounding_box_collision_visitor_a08106fb5198d18744a1d5a5d76b6743e}} 
+\index{BoundingBoxCollisionVisitor@{BoundingBoxCollisionVisitor}!getCollisions@{getCollisions}}
+\index{getCollisions@{getCollisions}!BoundingBoxCollisionVisitor@{BoundingBoxCollisionVisitor}}
+\doxysubsubsection{\texorpdfstring{getCollisions()}{getCollisions()}}
+{\footnotesize\ttfamily std\+::list$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_sprite_proxy}{Sprite\+Proxy}} $>$ $>$ Bounding\+Box\+Collision\+Visitor\+::get\+Collisions (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+std\+::list$<$\+Sprite\+Proxy$\ast$$>$ list of all sprites that collided with watched since last check 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_bounding_box_collision_visitor_a2926d24683596bb7630accdad159210e}\label{class_bounding_box_collision_visitor_a2926d24683596bb7630accdad159210e}} 
+\index{BoundingBoxCollisionVisitor@{BoundingBoxCollisionVisitor}!setWatched@{setWatched}}
+\index{setWatched@{setWatched}!BoundingBoxCollisionVisitor@{BoundingBoxCollisionVisitor}}
+\doxysubsubsection{\texorpdfstring{setWatched()}{setWatched()}}
+{\footnotesize\ttfamily void Bounding\+Box\+Collision\+Visitor\+::set\+Watched (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_sprite_proxy}{Sprite\+Proxy}} $>$}]{s }\end{DoxyParamCaption})}
+
+
+
+Set the Watched object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em s} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_bounding_box_collision_visitor_a059b61d1100c84601cdb078931ca24d6}\label{class_bounding_box_collision_visitor_a059b61d1100c84601cdb078931ca24d6}} 
+\index{BoundingBoxCollisionVisitor@{BoundingBoxCollisionVisitor}!visit@{visit}}
+\index{visit@{visit}!BoundingBoxCollisionVisitor@{BoundingBoxCollisionVisitor}}
+\doxysubsubsection{\texorpdfstring{visit()}{visit()}}
+{\footnotesize\ttfamily void Bounding\+Box\+Collision\+Visitor\+::visit (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_sprite_proxy}{Sprite\+Proxy}} $>$}]{s }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+update currently colliding list 
+
+
+\begin{DoxyParams}{Parameters}
+{\em s} & \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{class_visitor_a27f944d3c965296299e354021ea8c82a}{Visitor}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+classes/Bounding\+Box\+Collision\+Visitor.\+h\item 
+classes/Bounding\+Box\+Collision\+Visitor.\+cpp\end{DoxyCompactItemize}

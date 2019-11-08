@@ -4,7 +4,15 @@
 #include <list>
 class BoundingBoxCollisionVisitor : public Visitor{
     private:
+    /**
+     * @brief list of sprites colliding with watched since last check
+     * 
+     */
        std::list<std::shared_ptr<SpriteProxy>> collisions;
+       /**
+        * @brief sprite to watch and compare for collisionss
+        * 
+        */
        std::shared_ptr<SpriteProxy> watched; 
     public:
     /**

@@ -1,19 +1,38 @@
 \hypertarget{class_visitor}{}\doxysection{Visitor Class Reference}
 \label{class_visitor}\index{Visitor@{Visitor}}
-
-
-Inheritance diagram for Visitor\+:
-% FIG 0
-
-
-Collaboration diagram for Visitor\+:
-% FIG 1
+Inheritance diagram for Visitor\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=1.348315cm]{class_visitor}
+\end{center}
+\end{figure}
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
+virtual void \mbox{\hyperlink{class_visitor_a27f944d3c965296299e354021ea8c82a}{visit}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_sprite_proxy}{Sprite\+Proxy}} $>$ sp)
+\begin{DoxyCompactList}\small\item\em visit sprite \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
 \mbox{\Hypertarget{class_visitor_a27f944d3c965296299e354021ea8c82a}\label{class_visitor_a27f944d3c965296299e354021ea8c82a}} 
-virtual void {\bfseries visit} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_sprite_proxy}{Sprite\+Proxy}} $>$ sp)
-\end{DoxyCompactItemize}
+\index{Visitor@{Visitor}!visit@{visit}}
+\index{visit@{visit}!Visitor@{Visitor}}
+\doxysubsubsection{\texorpdfstring{visit()}{visit()}}
+{\footnotesize\ttfamily void Visitor\+::visit (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_sprite_proxy}{Sprite\+Proxy}} $>$}]{sp }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+visit sprite 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sp} & \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented in \mbox{\hyperlink{class_gravity_visitor_a3d09af8bdccae9bc490359eecae023bd}{Gravity\+Visitor}}, \mbox{\hyperlink{class_bounce_bounds_visitor_af14fb2e998cf6cc66c0c54938c957bac}{Bounce\+Bounds\+Visitor}}, \mbox{\hyperlink{class_abstract_drawing_visitor_ad2d22d0a5d3b0728368fdf0931bef103}{Abstract\+Drawing\+Visitor}}, \mbox{\hyperlink{class_s_f_m_l_drawing_visitor_affc928db69d8762b84ca1c57c4d34c97}{S\+F\+M\+L\+Drawing\+Visitor}}, \mbox{\hyperlink{class_bounding_box_collision_visitor_a059b61d1100c84601cdb078931ca24d6}{Bounding\+Box\+Collision\+Visitor}}, \mbox{\hyperlink{class_wrap_bounds_visitor_ab50858ae5de70810003ea444e64b897d}{Wrap\+Bounds\+Visitor}}, and \mbox{\hyperlink{class_force_visitor_a9438e99fc1acf8d4bda515983ff7fdd7}{Force\+Visitor}}.
+
 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}

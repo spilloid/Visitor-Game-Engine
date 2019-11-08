@@ -22,14 +22,15 @@ for the JavaScript code in this file
 */
 var NAVTREE =
 [
-  [ "Video Game Final Project", "index.html", [
+  [ "Video Game Final Project: Engine", "index.html", [
     [ "Classes", "annotated.html", [
       [ "Class List", "annotated.html", "annotated_dup" ],
       [ "Class Index", "classes.html", null ],
       [ "Class Hierarchy", "hierarchy.html", "hierarchy" ],
       [ "Class Members", "functions.html", [
         [ "All", "functions.html", null ],
-        [ "Functions", "functions_func.html", null ]
+        [ "Functions", "functions_func.html", null ],
+        [ "Variables", "functions_vars.html", null ]
       ] ]
     ] ],
     [ "Files", "files.html", [
@@ -40,7 +41,7 @@ var NAVTREE =
 
 var NAVTREEINDEX =
 [
-"_bounding_box_collision_visitor_8h_source.html"
+"_abstract_drawing_visitor_8h_source.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

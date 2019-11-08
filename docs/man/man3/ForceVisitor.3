@@ -1,4 +1,4 @@
-.TH "ForceVisitor" 3 "Mon Oct 28 2019" "Video Game Final Project" \" -*- nroff -*-
+.TH "ForceVisitor" 3 "Fri Nov 8 2019" "Version 1.5" "Video Game Final Project: Engine" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -14,6 +14,7 @@ Inherits \fBVisitor\fP\&.
 .ti -1c
 .RI "virtual void \fBvisit\fP (std::shared_ptr< \fBSpriteProxy\fP > s)"
 .br
+.RI "update force data on sprite (move it dx/dy) "
 .ti -1c
 .RI "void \fBapplyForce\fP (std::shared_ptr< \fBSpriteProxy\fP > s, double magnitude, float angle)"
 .br
@@ -51,7 +52,20 @@ Stop the sprite from moving\&.
 .RE
 .PP
 
+.SS "void ForceVisitor::visit (std::shared_ptr< \fBSpriteProxy\fP > s)\fC [virtual]\fP"
+
+.PP
+update force data on sprite (move it dx/dy) 
+.PP
+\fBParameters\fP
+.RS 4
+\fIs\fP 
+.RE
+.PP
+
+.PP
+Reimplemented from \fBVisitor\fP\&.
 
 .SH "Author"
 .PP 
-Generated automatically by Doxygen for Video Game Final Project from the source code\&.
+Generated automatically by Doxygen for Video Game Final Project: Engine from the source code\&.

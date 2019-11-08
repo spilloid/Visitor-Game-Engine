@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.16"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Video Game Final Project: WrapBoundsVisitor Class Reference</title>
+<title>Video Game Final Project: Engine: WrapBoundsVisitor Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -29,7 +29,8 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">Video Game Final Project
+   <div id="projectname">Video Game Final Project: Engine
+   &#160;<span id="projectnumber">1.5</span>
    </div>
   </td>
  </tr>
@@ -95,25 +96,111 @@ $(document).ready(function(){initNavTree('class_wrap_bounds_visitor.html','');})
 <div class="dynheader">
 Inheritance diagram for WrapBoundsVisitor:</div>
 <div class="dyncontent">
-<div class="center"><img src="class_wrap_bounds_visitor__inherit__graph.png" border="0" usemap="#_wrap_bounds_visitor_inherit__map" alt="Inheritance graph"/></div>
-<!-- MAP 0 -->
-</div>
-<div class="dynheader">
-Collaboration diagram for WrapBoundsVisitor:</div>
-<div class="dyncontent">
-<div class="center"><img src="class_wrap_bounds_visitor__coll__graph.png" border="0" usemap="#_wrap_bounds_visitor_coll__map" alt="Collaboration graph"/></div>
-<!-- MAP 1 -->
-</div>
+ <div class="center">
+  <img src="class_wrap_bounds_visitor.png" usemap="#WrapBoundsVisitor_map" alt=""/>
+  <map id="WrapBoundsVisitor_map" name="WrapBoundsVisitor_map">
+<area href="class_visitor.html" alt="Visitor" shape="rect" coords="0,0,120,24"/>
+  </map>
+</div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a988575b85dc0c37c9dc24773e9259fc7"><td class="memItemLeft" align="right" valign="top"><a id="a988575b85dc0c37c9dc24773e9259fc7"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>WrapBoundsVisitor</b> (int minX, int maxX, int minY, int maxY)</td></tr>
+<tr class="memitem:a988575b85dc0c37c9dc24773e9259fc7"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_wrap_bounds_visitor.html#a988575b85dc0c37c9dc24773e9259fc7">WrapBoundsVisitor</a> (int minX, int maxX, int minY, int maxY)</td></tr>
+<tr class="memdesc:a988575b85dc0c37c9dc24773e9259fc7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a new Wrap Bounds <a class="el" href="class_visitor.html">Visitor</a> object.  <a href="class_wrap_bounds_visitor.html#a988575b85dc0c37c9dc24773e9259fc7">More...</a><br /></td></tr>
 <tr class="separator:a988575b85dc0c37c9dc24773e9259fc7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab50858ae5de70810003ea444e64b897d"><td class="memItemLeft" align="right" valign="top"><a id="ab50858ae5de70810003ea444e64b897d"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>visit</b> (std::shared_ptr&lt; <a class="el" href="class_sprite_proxy.html">SpriteProxy</a> &gt; s)</td></tr>
+<tr class="memitem:ab50858ae5de70810003ea444e64b897d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_wrap_bounds_visitor.html#ab50858ae5de70810003ea444e64b897d">visit</a> (std::shared_ptr&lt; <a class="el" href="class_sprite_proxy.html">SpriteProxy</a> &gt; s)</td></tr>
+<tr class="memdesc:ab50858ae5de70810003ea444e64b897d"><td class="mdescLeft">&#160;</td><td class="mdescRight">if sprite is outside of bounds, move it into bounds then have it WRAP  <a href="class_wrap_bounds_visitor.html#ab50858ae5de70810003ea444e64b897d">More...</a><br /></td></tr>
 <tr class="separator:ab50858ae5de70810003ea444e64b897d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a988575b85dc0c37c9dc24773e9259fc7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a988575b85dc0c37c9dc24773e9259fc7">&#9670;&nbsp;</a></span>WrapBoundsVisitor()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">WrapBoundsVisitor::WrapBoundsVisitor </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>minX</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>maxX</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>minY</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>maxY</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Construct a new Wrap Bounds <a class="el" href="class_visitor.html">Visitor</a> object. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">minX</td><td>minimum X of sprite </td></tr>
+    <tr><td class="paramname">maxX</td><td>maximum X of sprite </td></tr>
+    <tr><td class="paramname">minY</td><td>minimum Y of sprite </td></tr>
+    <tr><td class="paramname">maxY</td><td>maximum Y of sprite </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="ab50858ae5de70810003ea444e64b897d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab50858ae5de70810003ea444e64b897d">&#9670;&nbsp;</a></span>visit()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void WrapBoundsVisitor::visit </td>
+          <td>(</td>
+          <td class="paramtype">std::shared_ptr&lt; <a class="el" href="class_sprite_proxy.html">SpriteProxy</a> &gt;&#160;</td>
+          <td class="paramname"><em>s</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>if sprite is outside of bounds, move it into bounds then have it WRAP </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">s</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Reimplemented from <a class="el" href="class_visitor.html#a27f944d3c965296299e354021ea8c82a">Visitor</a>.</p>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li>classes/<a class="el" href="_wrap_bounds_visitor_8h_source.html">WrapBoundsVisitor.h</a></li>
 <li>classes/WrapBoundsVisitor.cpp</li>

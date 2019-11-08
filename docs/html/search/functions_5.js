@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['visit_52',['visit',['../class_bounding_box_collision_visitor.html#a059b61d1100c84601cdb078931ca24d6',1,'BoundingBoxCollisionVisitor']]]
+  ['loadtexture_76',['loadTexture',['../class_texture_factory.html#af79f6706d47abaade1d99f915d5d92c1',1,'TextureFactory']]]
 ];

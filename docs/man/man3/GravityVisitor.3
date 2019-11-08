@@ -1,4 +1,4 @@
-.TH "GravityVisitor" 3 "Mon Oct 28 2019" "Video Game Final Project" \" -*- nroff -*-
+.TH "GravityVisitor" 3 "Fri Nov 8 2019" "Version 1.5" "Video Game Final Project: Engine" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -18,6 +18,7 @@ Inherits \fBVisitor\fP\&.
 .ti -1c
 .RI "void \fBvisit\fP (std::shared_ptr< \fBSpriteProxy\fP >)"
 .br
+.RI "add arbitrary dy up to move sprite simulating gravity "
 .in -1c
 .SH "Constructor & Destructor Documentation"
 .PP 
@@ -32,7 +33,15 @@ Construct a new Gravity \fBVisitor\fP object\&.
 .RE
 .PP
 
+.SH "Member Function Documentation"
+.PP 
+.SS "void GravityVisitor::visit (std::shared_ptr< \fBSpriteProxy\fP > s)\fC [virtual]\fP"
+
+.PP
+add arbitrary dy up to move sprite simulating gravity 
+.PP
+Reimplemented from \fBVisitor\fP\&.
 
 .SH "Author"
 .PP 
-Generated automatically by Doxygen for Video Game Final Project from the source code\&.
+Generated automatically by Doxygen for Video Game Final Project: Engine from the source code\&.

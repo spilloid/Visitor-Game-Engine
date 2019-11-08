@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['textspriteproxy_19',['TextSpriteProxy',['../class_text_sprite_proxy.html',1,'']]]
+  ['loadtexture_24',['loadTexture',['../class_texture_factory.html#af79f6706d47abaade1d99f915d5d92c1',1,'TextureFactory']]]
 ];

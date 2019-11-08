@@ -1,43 +1,47 @@
 \hypertarget{class_sprite_proxy}{}\doxysection{Sprite\+Proxy Class Reference}
 \label{class_sprite_proxy}\index{SpriteProxy@{SpriteProxy}}
-
-
-Inheritance diagram for Sprite\+Proxy\+:
-% FIG 0
-
-
-Collaboration diagram for Sprite\+Proxy\+:
-% FIG 1
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{class_sprite_proxy_ac583daf0e2a7ce3f1cb2cfe2ec96f115}{Sprite\+Proxy}} ()
 \begin{DoxyCompactList}\small\item\em Construct a new Sprite object. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{class_sprite_proxy_ae1ce54d6d942a7867bcb25fd471ed403}{Sprite\+Proxy}} (std\+::string file\+Location, int x, int y, int height, int width)
+\mbox{\hyperlink{class_sprite_proxy_a066bf07e912cdfcadb3e28b9b2b9bc40}{Sprite\+Proxy}} (std\+::string \mbox{\hyperlink{class_sprite_proxy_a638e48f6bdf4583a1d546bd20d0f600d}{texture\+Loc}}, int \mbox{\hyperlink{class_sprite_proxy_a0a98e6c64d0020e924a553051f73026f}{x}}, int \mbox{\hyperlink{class_sprite_proxy_a4220cc99dc517ab7d0cf8a39fb94b9b0}{y}}, int \mbox{\hyperlink{class_sprite_proxy_aec6b8555563458f6ab937d09911722c2}{width}}, int \mbox{\hyperlink{class_sprite_proxy_a7ba68cb31f2142980da736118ea43184}{height}})
 \begin{DoxyCompactList}\small\item\em Construct a new Sprite object. \end{DoxyCompactList}\item 
-sf\+::\+Sprite \mbox{\hyperlink{class_sprite_proxy_afc482f11e7255a594b11d7b3e89f4d9d}{get\+Sprite}} ()
-\begin{DoxyCompactList}\small\item\em Get the Sprite object. \end{DoxyCompactList}\item 
 int \mbox{\hyperlink{class_sprite_proxy_a0e84a7235e9fa53b54c7ae15c567b44d}{getX}} ()
 \item 
 int \mbox{\hyperlink{class_sprite_proxy_ad85cedf675d5f27f37095e2e74577dfe}{getY}} ()
 \item 
 void \mbox{\hyperlink{class_sprite_proxy_ac78ce8e42f131eac83a5116a9531c2e8}{set\+XY}} (int X, int Y)
 \begin{DoxyCompactList}\small\item\em set new coords of sprite \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{class_sprite_proxy_ad0c952c9a275a0862c3f25efc97f617a}\label{class_sprite_proxy_ad0c952c9a275a0862c3f25efc97f617a}} 
-double {\bfseries get\+DX} ()
+double \mbox{\hyperlink{class_sprite_proxy_ad0c952c9a275a0862c3f25efc97f617a}{get\+DX}} ()
+\begin{DoxyCompactList}\small\item\em get dx \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_sprite_proxy_a45019dc275f651b436e79b72be4c4296}{get\+DY}} ()
+\begin{DoxyCompactList}\small\item\em get dy \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_sprite_proxy_a9a1489fffd7f224a02bbc491365d5fa5}{set\+D\+XY}} (double \mbox{\hyperlink{class_sprite_proxy_a0a98e6c64d0020e924a553051f73026f}{x}}, double \mbox{\hyperlink{class_sprite_proxy_a4220cc99dc517ab7d0cf8a39fb94b9b0}{y}})
+\begin{DoxyCompactList}\small\item\em set dx and dy \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_sprite_proxy_aac44e21082672e751487fc9e57fadd81}{get\+Height}} ()
+\begin{DoxyCompactList}\small\item\em Get the Height object. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_sprite_proxy_acd0628df707093a24e9eeefe21fa13bf}{get\+Width}} ()
+\begin{DoxyCompactList}\small\item\em Get the Width object. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_sprite_proxy_ad27c5ad34174bf9d269f0031226e77ee}{get\+Texture\+Location}} ()
+\begin{DoxyCompactList}\small\item\em Get the Texture Location object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{class_sprite_proxy_a45019dc275f651b436e79b72be4c4296}\label{class_sprite_proxy_a45019dc275f651b436e79b72be4c4296}} 
-double {\bfseries get\+DY} ()
-\item 
-\mbox{\Hypertarget{class_sprite_proxy_a9a1489fffd7f224a02bbc491365d5fa5}\label{class_sprite_proxy_a9a1489fffd7f224a02bbc491365d5fa5}} 
-void {\bfseries set\+D\+XY} (double x, double y)
-\item 
-\mbox{\Hypertarget{class_sprite_proxy_aac44e21082672e751487fc9e57fadd81}\label{class_sprite_proxy_aac44e21082672e751487fc9e57fadd81}} 
-int {\bfseries get\+Height} ()
-\item 
-\mbox{\Hypertarget{class_sprite_proxy_acd0628df707093a24e9eeefe21fa13bf}\label{class_sprite_proxy_acd0628df707093a24e9eeefe21fa13bf}} 
-int {\bfseries get\+Width} ()
-\end{DoxyCompactItemize}
+int \mbox{\hyperlink{class_sprite_proxy_a0a98e6c64d0020e924a553051f73026f}{x}}
+\begin{DoxyCompactList}\small\item\em x position \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_sprite_proxy_a95a7aff197c1e567a9cadc6e389575eb}{dx}}
+\begin{DoxyCompactList}\small\item\em change in x ; updated on interval in force\+Visitor T\+O\+DO\+: perhaps update dx not on force visitor? \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_sprite_proxy_a4220cc99dc517ab7d0cf8a39fb94b9b0}{y}}
+\begin{DoxyCompactList}\small\item\em y position \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_sprite_proxy_ab8b296a2c5f768542a15e9846db94edf}{dy}}
+\begin{DoxyCompactList}\small\item\em change in y ; updated on interval in force\+Visitor T\+O\+DO\+: perhaps update dy not on force visitor? \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_sprite_proxy_a7ba68cb31f2142980da736118ea43184}{height}}
+\begin{DoxyCompactList}\small\item\em height of sprite \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_sprite_proxy_aec6b8555563458f6ab937d09911722c2}{width}}
+\begin{DoxyCompactList}\small\item\em width of sprite \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_sprite_proxy_a638e48f6bdf4583a1d546bd20d0f600d}{texture\+Loc}}
+\begin{DoxyCompactList}\small\item\em location of image for sprite texture \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Constructor \& Destructor Documentation}
@@ -51,11 +55,11 @@ int {\bfseries get\+Width} ()
 
 Construct a new Sprite object. 
 
-\mbox{\Hypertarget{class_sprite_proxy_ae1ce54d6d942a7867bcb25fd471ed403}\label{class_sprite_proxy_ae1ce54d6d942a7867bcb25fd471ed403}} 
+\mbox{\Hypertarget{class_sprite_proxy_a066bf07e912cdfcadb3e28b9b2b9bc40}\label{class_sprite_proxy_a066bf07e912cdfcadb3e28b9b2b9bc40}} 
 \index{SpriteProxy@{SpriteProxy}!SpriteProxy@{SpriteProxy}}
 \index{SpriteProxy@{SpriteProxy}!SpriteProxy@{SpriteProxy}}
 \doxysubsubsection{\texorpdfstring{SpriteProxy()}{SpriteProxy()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
-{\footnotesize\ttfamily Sprite\+Proxy\+::\+Sprite\+Proxy (\begin{DoxyParamCaption}\item[{std\+::string}]{file\+Location,  }\item[{int}]{x,  }\item[{int}]{y,  }\item[{int}]{height,  }\item[{int}]{width }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily Sprite\+Proxy\+::\+Sprite\+Proxy (\begin{DoxyParamCaption}\item[{std\+::string}]{texture\+Loc,  }\item[{int}]{x,  }\item[{int}]{y,  }\item[{int}]{width,  }\item[{int}]{height }\end{DoxyParamCaption})}
 
 
 
@@ -63,32 +67,84 @@ Construct a new Sprite object.
 
 
 \begin{DoxyParams}{Parameters}
-{\em file\+Location} & \+: relative file location of image file \\
+{\em texture\+Loc} & \+: file location for texture \\
 \hline
 {\em x} & \+: x location of sprite relative to size of window \\
 \hline
 {\em y} & \+: y location of sprite relative to size of window \\
 \hline
-{\em height} & \+: height of sprite in pixels \\
-\hline
 {\em width} & \+: width of sprite in pixels \\
+\hline
+{\em height} & \+: height of sprite in pixels \\
 \hline
 \end{DoxyParams}
 
 
 \doxysubsection{Member Function Documentation}
-\mbox{\Hypertarget{class_sprite_proxy_afc482f11e7255a594b11d7b3e89f4d9d}\label{class_sprite_proxy_afc482f11e7255a594b11d7b3e89f4d9d}} 
-\index{SpriteProxy@{SpriteProxy}!getSprite@{getSprite}}
-\index{getSprite@{getSprite}!SpriteProxy@{SpriteProxy}}
-\doxysubsubsection{\texorpdfstring{getSprite()}{getSprite()}}
-{\footnotesize\ttfamily sf\+::\+Sprite Sprite\+Proxy\+::get\+Sprite (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+\mbox{\Hypertarget{class_sprite_proxy_ad0c952c9a275a0862c3f25efc97f617a}\label{class_sprite_proxy_ad0c952c9a275a0862c3f25efc97f617a}} 
+\index{SpriteProxy@{SpriteProxy}!getDX@{getDX}}
+\index{getDX@{getDX}!SpriteProxy@{SpriteProxy}}
+\doxysubsubsection{\texorpdfstring{getDX()}{getDX()}}
+{\footnotesize\ttfamily double Sprite\+Proxy\+::get\+DX (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 
 
-Get the Sprite object. 
+get dx 
 
 \begin{DoxyReturn}{Returns}
-sf\+::\+Sprite 
+double 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_sprite_proxy_a45019dc275f651b436e79b72be4c4296}\label{class_sprite_proxy_a45019dc275f651b436e79b72be4c4296}} 
+\index{SpriteProxy@{SpriteProxy}!getDY@{getDY}}
+\index{getDY@{getDY}!SpriteProxy@{SpriteProxy}}
+\doxysubsubsection{\texorpdfstring{getDY()}{getDY()}}
+{\footnotesize\ttfamily double Sprite\+Proxy\+::get\+DY (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+get dy 
+
+\begin{DoxyReturn}{Returns}
+double 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_sprite_proxy_aac44e21082672e751487fc9e57fadd81}\label{class_sprite_proxy_aac44e21082672e751487fc9e57fadd81}} 
+\index{SpriteProxy@{SpriteProxy}!getHeight@{getHeight}}
+\index{getHeight@{getHeight}!SpriteProxy@{SpriteProxy}}
+\doxysubsubsection{\texorpdfstring{getHeight()}{getHeight()}}
+{\footnotesize\ttfamily int Sprite\+Proxy\+::get\+Height (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Get the Height object. 
+
+\begin{DoxyReturn}{Returns}
+int 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_sprite_proxy_ad27c5ad34174bf9d269f0031226e77ee}\label{class_sprite_proxy_ad27c5ad34174bf9d269f0031226e77ee}} 
+\index{SpriteProxy@{SpriteProxy}!getTextureLocation@{getTextureLocation}}
+\index{getTextureLocation@{getTextureLocation}!SpriteProxy@{SpriteProxy}}
+\doxysubsubsection{\texorpdfstring{getTextureLocation()}{getTextureLocation()}}
+{\footnotesize\ttfamily std\+::string Sprite\+Proxy\+::get\+Texture\+Location (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Get the Texture Location object. 
+
+\begin{DoxyReturn}{Returns}
+std\+::string 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_sprite_proxy_acd0628df707093a24e9eeefe21fa13bf}\label{class_sprite_proxy_acd0628df707093a24e9eeefe21fa13bf}} 
+\index{SpriteProxy@{SpriteProxy}!getWidth@{getWidth}}
+\index{getWidth@{getWidth}!SpriteProxy@{SpriteProxy}}
+\doxysubsubsection{\texorpdfstring{getWidth()}{getWidth()}}
+{\footnotesize\ttfamily int Sprite\+Proxy\+::get\+Width (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Get the Width object. 
+
+\begin{DoxyReturn}{Returns}
+int 
 \end{DoxyReturn}
 \mbox{\Hypertarget{class_sprite_proxy_a0e84a7235e9fa53b54c7ae15c567b44d}\label{class_sprite_proxy_a0e84a7235e9fa53b54c7ae15c567b44d}} 
 \index{SpriteProxy@{SpriteProxy}!getX@{getX}}
@@ -108,6 +164,23 @@ int x position of sprite
 \begin{DoxyReturn}{Returns}
 int y Position of sprite 
 \end{DoxyReturn}
+\mbox{\Hypertarget{class_sprite_proxy_a9a1489fffd7f224a02bbc491365d5fa5}\label{class_sprite_proxy_a9a1489fffd7f224a02bbc491365d5fa5}} 
+\index{SpriteProxy@{SpriteProxy}!setDXY@{setDXY}}
+\index{setDXY@{setDXY}!SpriteProxy@{SpriteProxy}}
+\doxysubsubsection{\texorpdfstring{setDXY()}{setDXY()}}
+{\footnotesize\ttfamily void Sprite\+Proxy\+::set\+D\+XY (\begin{DoxyParamCaption}\item[{double}]{x,  }\item[{double}]{y }\end{DoxyParamCaption})}
+
+
+
+set dx and dy 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & new dx \\
+\hline
+{\em y} & new dy \\
+\hline
+\end{DoxyParams}
 \mbox{\Hypertarget{class_sprite_proxy_ac78ce8e42f131eac83a5116a9531c2e8}\label{class_sprite_proxy_ac78ce8e42f131eac83a5116a9531c2e8}} 
 \index{SpriteProxy@{SpriteProxy}!setXY@{setXY}}
 \index{setXY@{setXY}!SpriteProxy@{SpriteProxy}}
@@ -125,6 +198,79 @@ set new coords of sprite
 {\em Y} & new Y value of Sprite \\
 \hline
 \end{DoxyParams}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_sprite_proxy_a95a7aff197c1e567a9cadc6e389575eb}\label{class_sprite_proxy_a95a7aff197c1e567a9cadc6e389575eb}} 
+\index{SpriteProxy@{SpriteProxy}!dx@{dx}}
+\index{dx@{dx}!SpriteProxy@{SpriteProxy}}
+\doxysubsubsection{\texorpdfstring{dx}{dx}}
+{\footnotesize\ttfamily int Sprite\+Proxy\+::dx\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+change in x ; updated on interval in force\+Visitor T\+O\+DO\+: perhaps update dx not on force visitor? 
+
+\mbox{\Hypertarget{class_sprite_proxy_ab8b296a2c5f768542a15e9846db94edf}\label{class_sprite_proxy_ab8b296a2c5f768542a15e9846db94edf}} 
+\index{SpriteProxy@{SpriteProxy}!dy@{dy}}
+\index{dy@{dy}!SpriteProxy@{SpriteProxy}}
+\doxysubsubsection{\texorpdfstring{dy}{dy}}
+{\footnotesize\ttfamily int Sprite\+Proxy\+::dy\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+change in y ; updated on interval in force\+Visitor T\+O\+DO\+: perhaps update dy not on force visitor? 
+
+\mbox{\Hypertarget{class_sprite_proxy_a7ba68cb31f2142980da736118ea43184}\label{class_sprite_proxy_a7ba68cb31f2142980da736118ea43184}} 
+\index{SpriteProxy@{SpriteProxy}!height@{height}}
+\index{height@{height}!SpriteProxy@{SpriteProxy}}
+\doxysubsubsection{\texorpdfstring{height}{height}}
+{\footnotesize\ttfamily int Sprite\+Proxy\+::height\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+height of sprite 
+
+\mbox{\Hypertarget{class_sprite_proxy_a638e48f6bdf4583a1d546bd20d0f600d}\label{class_sprite_proxy_a638e48f6bdf4583a1d546bd20d0f600d}} 
+\index{SpriteProxy@{SpriteProxy}!textureLoc@{textureLoc}}
+\index{textureLoc@{textureLoc}!SpriteProxy@{SpriteProxy}}
+\doxysubsubsection{\texorpdfstring{textureLoc}{textureLoc}}
+{\footnotesize\ttfamily std\+::string Sprite\+Proxy\+::texture\+Loc\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+location of image for sprite texture 
+
+\mbox{\Hypertarget{class_sprite_proxy_aec6b8555563458f6ab937d09911722c2}\label{class_sprite_proxy_aec6b8555563458f6ab937d09911722c2}} 
+\index{SpriteProxy@{SpriteProxy}!width@{width}}
+\index{width@{width}!SpriteProxy@{SpriteProxy}}
+\doxysubsubsection{\texorpdfstring{width}{width}}
+{\footnotesize\ttfamily int Sprite\+Proxy\+::width\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+width of sprite 
+
+\mbox{\Hypertarget{class_sprite_proxy_a0a98e6c64d0020e924a553051f73026f}\label{class_sprite_proxy_a0a98e6c64d0020e924a553051f73026f}} 
+\index{SpriteProxy@{SpriteProxy}!x@{x}}
+\index{x@{x}!SpriteProxy@{SpriteProxy}}
+\doxysubsubsection{\texorpdfstring{x}{x}}
+{\footnotesize\ttfamily int Sprite\+Proxy\+::x\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+x position 
+
+\mbox{\Hypertarget{class_sprite_proxy_a4220cc99dc517ab7d0cf8a39fb94b9b0}\label{class_sprite_proxy_a4220cc99dc517ab7d0cf8a39fb94b9b0}} 
+\index{SpriteProxy@{SpriteProxy}!y@{y}}
+\index{y@{y}!SpriteProxy@{SpriteProxy}}
+\doxysubsubsection{\texorpdfstring{y}{y}}
+{\footnotesize\ttfamily int Sprite\+Proxy\+::y\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+y position 
+
 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}

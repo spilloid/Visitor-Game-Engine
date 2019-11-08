@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.16"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Video Game Final Project: GravityVisitor Class Reference</title>
+<title>Video Game Final Project: Engine: GravityVisitor Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -29,7 +29,8 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">Video Game Final Project
+   <div id="projectname">Video Game Final Project: Engine
+   &#160;<span id="projectnumber">1.5</span>
    </div>
   </td>
  </tr>
@@ -95,23 +96,20 @@ $(document).ready(function(){initNavTree('class_gravity_visitor.html','');});
 <div class="dynheader">
 Inheritance diagram for GravityVisitor:</div>
 <div class="dyncontent">
-<div class="center"><img src="class_gravity_visitor__inherit__graph.png" border="0" usemap="#_gravity_visitor_inherit__map" alt="Inheritance graph"/></div>
-<!-- MAP 0 -->
-</div>
-<div class="dynheader">
-Collaboration diagram for GravityVisitor:</div>
-<div class="dyncontent">
-<div class="center"><img src="class_gravity_visitor__coll__graph.png" border="0" usemap="#_gravity_visitor_coll__map" alt="Collaboration graph"/></div>
-<!-- MAP 1 -->
-</div>
+ <div class="center">
+  <img src="class_gravity_visitor.png" usemap="#GravityVisitor_map" alt=""/>
+  <map id="GravityVisitor_map" name="GravityVisitor_map">
+<area href="class_visitor.html" alt="Visitor" shape="rect" coords="0,0,89,24"/>
+  </map>
+</div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:ae22e7ba086e20c0e33849798dc1898a4"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_gravity_visitor.html#ae22e7ba086e20c0e33849798dc1898a4">GravityVisitor</a> (double intensity)</td></tr>
 <tr class="memdesc:ae22e7ba086e20c0e33849798dc1898a4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a new Gravity <a class="el" href="class_visitor.html">Visitor</a> object.  <a href="class_gravity_visitor.html#ae22e7ba086e20c0e33849798dc1898a4">More...</a><br /></td></tr>
 <tr class="separator:ae22e7ba086e20c0e33849798dc1898a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3d09af8bdccae9bc490359eecae023bd"><td class="memItemLeft" align="right" valign="top"><a id="a3d09af8bdccae9bc490359eecae023bd"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>visit</b> (std::shared_ptr&lt; <a class="el" href="class_sprite_proxy.html">SpriteProxy</a> &gt;)</td></tr>
+<tr class="memitem:a3d09af8bdccae9bc490359eecae023bd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_gravity_visitor.html#a3d09af8bdccae9bc490359eecae023bd">visit</a> (std::shared_ptr&lt; <a class="el" href="class_sprite_proxy.html">SpriteProxy</a> &gt;)</td></tr>
+<tr class="memdesc:a3d09af8bdccae9bc490359eecae023bd"><td class="mdescLeft">&#160;</td><td class="mdescRight">add arbitrary dy up to move sprite simulating gravity  <a href="class_gravity_visitor.html#a3d09af8bdccae9bc490359eecae023bd">More...</a><br /></td></tr>
 <tr class="separator:a3d09af8bdccae9bc490359eecae023bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
@@ -138,6 +136,37 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>visit</b> (std::share
   </table>
   </dd>
 </dl>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="a3d09af8bdccae9bc490359eecae023bd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3d09af8bdccae9bc490359eecae023bd">&#9670;&nbsp;</a></span>visit()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void GravityVisitor::visit </td>
+          <td>(</td>
+          <td class="paramtype">std::shared_ptr&lt; <a class="el" href="class_sprite_proxy.html">SpriteProxy</a> &gt;&#160;</td>
+          <td class="paramname"><em>s</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>add arbitrary dy up to move sprite simulating gravity </p>
+
+<p>Reimplemented from <a class="el" href="class_visitor.html#a27f944d3c965296299e354021ea8c82a">Visitor</a>.</p>
 
 </div>
 </div>

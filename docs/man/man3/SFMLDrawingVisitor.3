@@ -1,0 +1,85 @@
+.TH "SFMLDrawingVisitor" 3 "Fri Nov 8 2019" "Version 1.5" "Video Game Final Project: Engine" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+SFMLDrawingVisitor
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits \fBAbstractDrawingVisitor\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBSFMLDrawingVisitor\fP (int width, int height)"
+.br
+.RI "Construct a new \fBSFMLDrawingVisitor\fP object\&. "
+.ti -1c
+.RI "virtual void \fBvisit\fP (std::shared_ptr< \fBSpriteProxy\fP > s)"
+.br
+.RI "Caches sprite and draws to sfml window\&. "
+.ti -1c
+.RI "virtual bool \fBisOpen\fP ()"
+.br
+.RI "check if sfml window is open "
+.ti -1c
+.RI "virtual void \fBdraw\fP ()"
+.br
+.RI "draw all sprites to scene "
+.in -1c
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "SFMLDrawingVisitor::SFMLDrawingVisitor (int width, int height)"
+
+.PP
+Construct a new \fBSFMLDrawingVisitor\fP object\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIwidth\fP width of window 
+.br
+\fIheight\fP height of window 
+.RE
+.PP
+
+.SH "Member Function Documentation"
+.PP 
+.SS "void SFMLDrawingVisitor::draw ()\fC [virtual]\fP"
+
+.PP
+draw all sprites to scene 
+.PP
+Implements \fBAbstractDrawingVisitor\fP\&.
+.SS "bool SFMLDrawingVisitor::isOpen ()\fC [virtual]\fP"
+
+.PP
+check if sfml window is open 
+.PP
+\fBReturns\fP
+.RS 4
+true yep 
+.PP
+false nope 
+.RE
+.PP
+
+.PP
+Implements \fBAbstractDrawingVisitor\fP\&.
+.SS "void SFMLDrawingVisitor::visit (std::shared_ptr< \fBSpriteProxy\fP > s)\fC [virtual]\fP"
+
+.PP
+Caches sprite and draws to sfml window\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIs\fP sprite to visit 
+.RE
+.PP
+
+.PP
+Implements \fBAbstractDrawingVisitor\fP\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Video Game Final Project: Engine from the source code\&.

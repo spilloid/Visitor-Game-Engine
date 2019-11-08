@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.16"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Video Game Final Project: classes/WrapBoundsVisitor.h Source File</title>
+<title>Video Game Final Project: Engine: classes/WrapBoundsVisitor.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -29,7 +29,8 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">Video Game Final Project
+   <div id="projectname">Video Game Final Project: Engine
+   &#160;<span id="projectnumber">1.5</span>
    </div>
   </td>
  </tr>
@@ -94,15 +95,17 @@ $(document).ready(function(){initNavTree('_wrap_bounds_visitor_8h_source.html','
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &quot;Visitor.h&quot;</span></div>
 <div class="line"><a name="l00004"></a><span class="lineno"><a class="line" href="class_wrap_bounds_visitor.html">    4</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_wrap_bounds_visitor.html">WrapBoundsVisitor</a> : <span class="keyword">public</span> <a class="code" href="class_visitor.html">Visitor</a>{</div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;    <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;    <span class="keywordtype">int</span> minX,maxX,minY,maxY;</div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;    <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;    <a class="code" href="class_wrap_bounds_visitor.html">WrapBoundsVisitor</a>(<span class="keywordtype">int</span> minX,<span class="keywordtype">int</span> maxX,<span class="keywordtype">int</span> minY,<span class="keywordtype">int</span> maxY);</div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;    <span class="keywordtype">void</span> visit(std::shared_ptr&lt;SpriteProxy&gt; s);</div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;};</div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    <span class="keywordtype">int</span> minX,maxX,minY,maxY;</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <a class="code" href="class_wrap_bounds_visitor.html#a988575b85dc0c37c9dc24773e9259fc7">WrapBoundsVisitor</a>(<span class="keywordtype">int</span> minX,<span class="keywordtype">int</span> maxX,<span class="keywordtype">int</span> minY,<span class="keywordtype">int</span> maxY);</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_wrap_bounds_visitor.html#ab50858ae5de70810003ea444e64b897d">visit</a>(std::shared_ptr&lt;SpriteProxy&gt; s);</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;};</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="preprocessor">#endif</span></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
+<div class="ttc" id="aclass_wrap_bounds_visitor_html_ab50858ae5de70810003ea444e64b897d"><div class="ttname"><a href="class_wrap_bounds_visitor.html#ab50858ae5de70810003ea444e64b897d">WrapBoundsVisitor::visit</a></div><div class="ttdeci">void visit(std::shared_ptr&lt; SpriteProxy &gt; s)</div><div class="ttdoc">if sprite is outside of bounds, move it into bounds then have it WRAP</div><div class="ttdef"><b>Definition:</b> WrapBoundsVisitor.cpp:5</div></div>
 <div class="ttc" id="aclass_wrap_bounds_visitor_html"><div class="ttname"><a href="class_wrap_bounds_visitor.html">WrapBoundsVisitor</a></div><div class="ttdef"><b>Definition:</b> WrapBoundsVisitor.h:4</div></div>
+<div class="ttc" id="aclass_wrap_bounds_visitor_html_a988575b85dc0c37c9dc24773e9259fc7"><div class="ttname"><a href="class_wrap_bounds_visitor.html#a988575b85dc0c37c9dc24773e9259fc7">WrapBoundsVisitor::WrapBoundsVisitor</a></div><div class="ttdeci">WrapBoundsVisitor(int minX, int maxX, int minY, int maxY)</div><div class="ttdoc">Construct a new Wrap Bounds Visitor object.</div><div class="ttdef"><b>Definition:</b> WrapBoundsVisitor.cpp:2</div></div>
 <div class="ttc" id="aclass_visitor_html"><div class="ttname"><a href="class_visitor.html">Visitor</a></div><div class="ttdef"><b>Definition:</b> Visitor.h:6</div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
