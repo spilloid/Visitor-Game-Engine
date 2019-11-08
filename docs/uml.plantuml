@@ -1,0 +1,62 @@
+@startuml FinalProject
+class GameEngine {
+    -list<Visitor> sceneVisitors
+    -Scene scene
+    +addVisitor(Visitor)
+    +addSprite(SpriteProxy)
+    +bool update()
+}
+class Scene{
+    -list<SpriteProxy> spriteList
+    +void addSprite()
+    +void accept()
+}
+class SpriteProxy{
+    -int x
+    -int y
+    -int dy
+    -int dx
+    -int height
+    -int WrapWidth
+    -Texture texture
+    -Sprite* sprite
+
+    +getters()
+    +setters()
+}
+class Visitor{
+    +virtual void visit(SpriteProxy)
+}
+class BoundsVisitor{
+    void visit()
+}
+class WrapBoundsVisitor{
+    void visit()
+    }
+class BoundingBoxCollisionVisitor{
+    void visit()
+    }
+class DrawingVisitor{
+    void visit()
+    }
+class ForceVisitor{
+    void visit()
+    }
+class GravityVisitor{
+    void visit()
+    }
+class RayCastCollisionVisitor{
+    void visit()
+    }
+GameEngine --> Visitor
+GameEngine --> Scene
+Scene --> SpriteProxy
+Visitor -- SpriteProxy
+Visitor <|-- ForceVisitor
+Visitor <|-- GravityVisitor
+Visitor <|-- BoundsVisitor
+Visitor <|-- WrapBoundsVisitor
+Visitor <|-- BoundingBoxCollisionVisitor
+Visitor <|-- RayCastCollisionVisitor
+Visitor <|-- DrawingVisitor
+@enduml

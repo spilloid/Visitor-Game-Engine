@@ -1,6 +1,6 @@
 #include "TextSpriteProxy.h"
 TextSpriteProxy::TextSpriteProxy(int x, int y, int fontSize){
-    if(mono.loadFromFile("assets/fonts/RobotoMono-Regular.ttf")){
+   /* if(mono.loadFromFile("assets/fonts/RobotoMono-Regular.ttf")){
         std::string debugOutput = "DEBUGGING";
         text.setFont(mono);
         text.setCharacterSize(fontSize);
@@ -8,6 +8,6 @@ TextSpriteProxy::TextSpriteProxy(int x, int y, int fontSize){
         text.setPosition(sf::Vector2f(x,y));
         text.setString(debugOutput);
         this->sprite->setTexture(text);
-    }
+    }*/
 
 }
