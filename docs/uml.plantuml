@@ -1,0 +1,79 @@
+@startuml FinalProject
+class GameEngine {
+    -list<Visitor> sceneVisitors
+    -Scene scene
+    +addVisitor(Visitor)
+    +addSprite(SpriteProxy)
+    +bool update()
+}
+class Scene{
+    -list<SpriteProxy> spriteList
+    +void addSprite()
+    +void accept()
+}
+class TextureFactory{
+        +bool loadTexture(string);
+        +sf::Texture> getTexture(string);
+}
+class SpriteProxy{
+    -int x
+    -int y
+    -int dy
+    -int dx
+    -int height
+    -int WrapWidth
+    -string textureLoc
+    +getters()
+    +setters()
+}
+class Visitor{
+    +virtual void visit(SpriteProxy)
+}
+class BounceBoundsVisitor{
+    void visit()
+}
+class WrapBoundsVisitor{
+    void visit()
+    }
+class BoundingBoxCollisionVisitor{
+    void visit()
+    }
+class AbstractDrawingVisitor{
+    +void draw()=0
+    +void visit()=0
+    +bool isOpen()=0
+}
+class SFMLDrawingVisitor{
+    -sf::RenderWindow window
+    -map<SpriteProxy,sf::Sprite> text
+    +void visit()
+    +void draw()
+    +bool isOpen()
+    }
+class ForceVisitor{
+    void visit()
+    }
+class GravityVisitor{
+    void visit()
+    }
+class RayCastCollisionVisitor{
+    void visit()
+    }
+hello <--- GameEngine
+hello <--- Visitor
+hello <--- SpriteProxy
+GameEngine --> Visitor
+GameEngine --> Scene
+Scene --> SpriteProxy
+Visitor -- SpriteProxy
+Visitor <|-- ForceVisitor
+Visitor <|-- GravityVisitor
+Visitor <|-- BounceBoundsVisitor
+Visitor <|-- WrapBoundsVisitor
+Visitor <|-- BoundingBoxCollisionVisitor
+Visitor <|-- RayCastCollisionVisitor
+Visitor <|-- AbstractDrawingVisitor
+Visitor<|-- AbstractDrawingVisitor
+AbstractDrawingVisitor <|-- SFMLDrawingVisitor
+SFMLDrawingVisitor <--- TextureFactory
+@enduml

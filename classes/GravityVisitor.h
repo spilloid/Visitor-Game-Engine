@@ -11,6 +11,6 @@ class GravityVisitor : public Visitor{
      * @param intensity intensity of gravity
      */
     GravityVisitor(double intensity);
-    void visit(SpriteProxy*);
+    void visit(std::shared_ptr<SpriteProxy>);
 };
 #endif

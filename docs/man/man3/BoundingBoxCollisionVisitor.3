@@ -1,0 +1,89 @@
+.TH "BoundingBoxCollisionVisitor" 3 "Mon Oct 28 2019" "Video Game Final Project" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+BoundingBoxCollisionVisitor
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits \fBVisitor\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBBoundingBoxCollisionVisitor\fP ()"
+.br
+.RI "Construct a new Bounding Box Collision \fBVisitor\fP object\&. "
+.ti -1c
+.RI "\fBBoundingBoxCollisionVisitor\fP (std::shared_ptr< \fBSpriteProxy\fP > s)"
+.br
+.RI "Construct a new Bounding Box Collision \fBVisitor\fP object check for collisions with this sprite\&. "
+.ti -1c
+.RI "void \fBvisit\fP (std::shared_ptr< \fBSpriteProxy\fP > s)"
+.br
+.RI "update currently colliding list "
+.ti -1c
+.RI "std::list< std::shared_ptr< \fBSpriteProxy\fP > > \fBgetCollisions\fP ()"
+.br
+.ti -1c
+.RI "void \fBsetWatched\fP (std::shared_ptr< \fBSpriteProxy\fP > s)"
+.br
+.RI "Set the Watched object\&. "
+.in -1c
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "BoundingBoxCollisionVisitor::BoundingBoxCollisionVisitor ()"
+
+.PP
+Construct a new Bounding Box Collision \fBVisitor\fP object\&. 
+.SS "BoundingBoxCollisionVisitor::BoundingBoxCollisionVisitor (std::shared_ptr< \fBSpriteProxy\fP > s)"
+
+.PP
+Construct a new Bounding Box Collision \fBVisitor\fP object check for collisions with this sprite\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIs\fP 
+.RE
+.PP
+
+.SH "Member Function Documentation"
+.PP 
+.SS "std::list< std::shared_ptr< \fBSpriteProxy\fP > > BoundingBoxCollisionVisitor::getCollisions ()"
+
+.PP
+\fBReturns\fP
+.RS 4
+std::list<SpriteProxy*> list of all sprites that collided with watched since last check 
+.RE
+.PP
+
+.SS "void BoundingBoxCollisionVisitor::setWatched (std::shared_ptr< \fBSpriteProxy\fP > s)"
+
+.PP
+Set the Watched object\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIs\fP 
+.RE
+.PP
+
+.SS "void BoundingBoxCollisionVisitor::visit (std::shared_ptr< \fBSpriteProxy\fP > s)\fC [virtual]\fP"
+
+.PP
+update currently colliding list 
+.PP
+\fBParameters\fP
+.RS 4
+\fIs\fP 
+.RE
+.PP
+
+.PP
+Reimplemented from \fBVisitor\fP\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Video Game Final Project from the source code\&.

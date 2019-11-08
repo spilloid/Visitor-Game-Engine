@@ -1,34 +1,28 @@
 #include "SpriteProxy.h"
 SpriteProxy::SpriteProxy() {}
-SpriteProxy::SpriteProxy(std::string fileLocation, int x, int y, int height,
-                         int width)
-    : x(x), y(y), height(height), width(width) {
-  this->sprite = new sf::Sprite();
-  if (this->texture.loadFromFile(fileLocation,
-                                 sf::IntRect(0, 0, height, width))) {
-    this->sprite->setTexture(this->texture);
-    this->sprite->setPosition(x, y);
-  } else {
-    std::cout << "Error loading texture!" << std::endl;
-  }
-}
-sf::Sprite SpriteProxy::getSprite() { return *this->sprite; }
-int SpriteProxy::getY() {
-  const sf::Vector2f ty = this->sprite->getPosition();
-  return ty.y;
-}
-int SpriteProxy::getX() {
-  const sf::Vector2f tx = this->sprite->getPosition();
-  return tx.x;
-}
+
+SpriteProxy::SpriteProxy(std::string fileLoc, int x, int y,int width, int height)
+    :textureLoc(fileLoc), x(x), y(y), width(width),height(height){}
+
+int SpriteProxy::getX() { return this->x; }
+
+double SpriteProxy::getDX() { return this->dx; }
+
+int SpriteProxy::getY() { return this->y; }
+
+double SpriteProxy::getDY() { return this->dy; }
+
 void SpriteProxy::setXY(int x, int y) {
-  this->sprite->setPosition(x, y);
   this->x = x;
   this->y = y;
 }
-int SpriteProxy::getHeight(){
-  return this->height;
+
+void SpriteProxy::setDXY(double dx, double dy) {
+  this->dx = dx;
+  this->dy = dy;
 }
-int SpriteProxy::getWidth(){
-  return this->width;
-}
+
+int SpriteProxy::getHeight() { return this->height; }
+
+int SpriteProxy::getWidth() { return this->width; }
+std::string SpriteProxy::getTextureLocation() { return this->textureLoc; }
