@@ -22,15 +22,14 @@ class SpriteProxy{
     -int dx
     -int height
     -int WrapWidth
-    -Sprite* sprite
-
+    -string textureLoc
     +getters()
     +setters()
 }
 class Visitor{
     +virtual void visit(SpriteProxy)
 }
-class BoundsVisitor{
+class BounceBoundsVisitor{
     void visit()
 }
 class WrapBoundsVisitor{
@@ -39,8 +38,17 @@ class WrapBoundsVisitor{
 class BoundingBoxCollisionVisitor{
     void visit()
     }
-class DrawingVisitor{
-    void visit()
+class AbstractDrawingVisitor{
+    +void draw()=0
+    +void visit()=0
+    +bool isOpen()=0
+}
+class SFMLDrawingVisitor{
+    -sf::RenderWindow window
+    -map<SpriteProxy,sf::Sprite> text
+    +void visit()
+    +void draw()
+    +bool isOpen()
     }
 class ForceVisitor{
     void visit()
@@ -51,19 +59,21 @@ class GravityVisitor{
 class RayCastCollisionVisitor{
     void visit()
     }
+hello <--- GameEngine
+hello <--- Visitor
+hello <--- SpriteProxy
 GameEngine --> Visitor
 GameEngine --> Scene
 Scene --> SpriteProxy
 Visitor -- SpriteProxy
 Visitor <|-- ForceVisitor
 Visitor <|-- GravityVisitor
-Visitor <|-- BoundsVisitor
+Visitor <|-- BounceBoundsVisitor
 Visitor <|-- WrapBoundsVisitor
 Visitor <|-- BoundingBoxCollisionVisitor
 Visitor <|-- RayCastCollisionVisitor
-Visitor <|-- DrawingVisitor
-DrawingVisitor <--- TextureFactory
-hello <--- GameEngine
-hello <--- Visitor
-hello <--- SpriteProxy
+Visitor <|-- AbstractDrawingVisitor
+Visitor<|-- AbstractDrawingVisitor
+AbstractDrawingVisitor <|-- SFMLDrawingVisitor
+SFMLDrawingVisitor <--- TextureFactory
 @enduml
