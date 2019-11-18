@@ -8,6 +8,7 @@ TARGET   := program
 INCLUDE  := -Iinclude/
 SRC      :=                      \
    $(wildcard classes/*.cpp) \
+   $(wildcard classes/games/*.cpp) \
    hello.cpp \
 
 OBJECTS := $(SRC:%.cpp=$(OBJ_DIR)/%.o)

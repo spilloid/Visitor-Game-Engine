@@ -1,4 +1,5 @@
-#include "./games/Pong.cpp"
+#include "./classes/games/Quoridor.h"
 int main(){
-    game();
+    std::shared_ptr<Game> g = std::make_shared<Quoridor>();
+    g->start();
 }
