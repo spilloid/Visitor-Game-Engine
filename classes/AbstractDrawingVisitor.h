@@ -2,7 +2,7 @@
 #define ABSTRACTDRAWINGVISITOR_H
 #include "Visitor.h"
 class AbstractDrawingVisitor : public Visitor{
-    virtual void visit(std::shared_ptr<SpriteProxy> s)=0;
+
     private:
     //you'll probably want a cache of some kind here for drawing
     public: 
@@ -18,5 +18,11 @@ class AbstractDrawingVisitor : public Visitor{
      * @return false 
      */
     virtual bool isOpen()=0;
+    /**
+     * @brief cache a sprite for later drawing
+     * 
+     * @param s 
+     */
+    virtual void visit(std::shared_ptr<SpriteProxy> s)=0;
 };
 #endif // ABSTRACTDRAWINGVISITOR_H

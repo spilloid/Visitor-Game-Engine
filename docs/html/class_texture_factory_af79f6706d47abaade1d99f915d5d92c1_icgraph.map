@@ -1,4 +1,0 @@
-<map id="TextureFactory::loadTexture" name="TextureFactory::loadTexture">
-<area shape="rect" id="node1" title="cache the texture for access later, hard loads on each call" alt="" coords="248,5,449,32"/>
-<area shape="rect" id="node2" href="$class_texture_factory.html#a425d42f75624dc52e8a5c2f2b48002dd" title="Get the Texture object, check if cached first." alt="" coords="5,5,200,32"/>
-</map>

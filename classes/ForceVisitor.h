@@ -6,6 +6,11 @@
 class ForceVisitor : public Visitor{
     private:
     public:
+    /**
+     * @brief update force data on sprite (move it dx/dy)
+     * 
+     * @param s 
+     */
     virtual void visit(std::shared_ptr<SpriteProxy> s);
     /**
      * @brief apply a force to the sprite

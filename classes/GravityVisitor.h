@@ -11,6 +11,10 @@ class GravityVisitor : public Visitor{
      * @param intensity intensity of gravity
      */
     GravityVisitor(double intensity);
+    /**
+     * @brief add arbitrary dy up to move sprite simulating gravity
+     * 
+     */
     void visit(std::shared_ptr<SpriteProxy>);
 };
 #endif
