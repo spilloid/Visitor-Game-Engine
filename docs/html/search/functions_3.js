@@ -1,7 +1,9 @@
 var searchData=
 [
-  ['setwatched_47',['setWatched',['../class_bounding_box_collision_visitor.html#a2926d24683596bb7630accdad159210e',1,'BoundingBoxCollisionVisitor']]],
-  ['setxy_48',['setXY',['../class_sprite_proxy.html#ac78ce8e42f131eac83a5116a9531c2e8',1,'SpriteProxy']]],
-  ['spriteproxy_49',['SpriteProxy',['../class_sprite_proxy.html#ac583daf0e2a7ce3f1cb2cfe2ec96f115',1,'SpriteProxy::SpriteProxy()'],['../class_sprite_proxy.html#ae1ce54d6d942a7867bcb25fd471ed403',1,'SpriteProxy::SpriteProxy(std::string fileLocation, int x, int y, int height, int width)']]],
-  ['stop_50',['stop',['../class_force_visitor.html#ab44d016e0899b5139c72855a388b18d2',1,'ForceVisitor']]]
+  ['gameengine_47',['GameEngine',['../class_game_engine.html#a64c430f74d72e2745646fdbffbd97930',1,'GameEngine']]],
+  ['getcollisions_48',['getCollisions',['../class_bounding_box_collision_visitor.html#a08106fb5198d18744a1d5a5d76b6743e',1,'BoundingBoxCollisionVisitor']]],
+  ['gettexture_49',['getTexture',['../class_texture_factory.html#a425d42f75624dc52e8a5c2f2b48002dd',1,'TextureFactory']]],
+  ['getx_50',['getX',['../class_sprite_proxy.html#a0e84a7235e9fa53b54c7ae15c567b44d',1,'SpriteProxy']]],
+  ['gety_51',['getY',['../class_sprite_proxy.html#ad85cedf675d5f27f37095e2e74577dfe',1,'SpriteProxy']]],
+  ['gravityvisitor_52',['GravityVisitor',['../class_gravity_visitor.html#ae22e7ba086e20c0e33849798dc1898a4',1,'GravityVisitor']]]
 ];

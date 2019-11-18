@@ -1,0 +1,70 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.16">
+  <compounddef id="_bounding_box_collision_visitor_8h" kind="file" language="C++">
+    <compoundname>BoundingBoxCollisionVisitor.h</compoundname>
+    <includes refid="_visitor_8h" local="yes">Visitor.h</includes>
+    <includes local="no">list</includes>
+    <includedby refid="_bounding_box_collision_visitor_8cpp" local="yes">classes/BoundingBoxCollisionVisitor.cpp</includedby>
+    <incdepgraph>
+      <node id="6">
+        <label>list</label>
+      </node>
+      <node id="2">
+        <label>Visitor.h</label>
+        <link refid="_visitor_8h_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>classes/BoundingBoxCollisionVisitor.h</label>
+        <link refid="_bounding_box_collision_visitor_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>SpriteProxy.h</label>
+        <link refid="_sprite_proxy_8h_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>iostream</label>
+      </node>
+      <node id="5">
+        <label>memory</label>
+      </node>
+    </incdepgraph>
+    <innerclass refid="class_bounding_box_collision_visitor" prot="public">BoundingBoxCollisionVisitor</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>BOUNDINGBOXCOLLISIONVISITOR_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>BOUNDINGBOXCOLLISIONVISITOR_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;Visitor.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;list&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5" refid="class_bounding_box_collision_visitor" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_bounding_box_collision_visitor" kindref="compound">BoundingBoxCollisionVisitor</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="class_visitor" kindref="compound">Visitor</ref>{</highlight></codeline>
+<codeline lineno="6"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="7"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::list&lt;std::shared_ptr&lt;SpriteProxy&gt;&gt;<sp/>collisions;</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::shared_ptr&lt;SpriteProxy&gt;<sp/>watched;<sp/></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_bounding_box_collision_visitor_1a36c48ca3b6f9f94d1113a17d27016b92" kindref="member">BoundingBoxCollisionVisitor</ref>();</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_bounding_box_collision_visitor_1a36c48ca3b6f9f94d1113a17d27016b92" kindref="member">BoundingBoxCollisionVisitor</ref>(std::shared_ptr&lt;SpriteProxy&gt;<sp/>s);</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_bounding_box_collision_visitor_1a059b61d1100c84601cdb078931ca24d6" kindref="member">visit</ref>(std::shared_ptr&lt;SpriteProxy&gt;<sp/>s);</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/>std::list&lt;std::shared_ptr&lt;SpriteProxy&gt;&gt;<sp/><ref refid="class_bounding_box_collision_visitor_1a08106fb5198d18744a1d5a5d76b6743e" kindref="member">getCollisions</ref>();</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_bounding_box_collision_visitor_1a2926d24683596bb7630accdad159210e" kindref="member">setWatched</ref>(std::shared_ptr&lt;SpriteProxy&gt;<sp/>s);</highlight></codeline>
+<codeline lineno="39"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="classes/BoundingBoxCollisionVisitor.h"/>
+  </compounddef>
+</doxygen>

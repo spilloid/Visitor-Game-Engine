@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['textspriteproxy_19',['TextSpriteProxy',['../class_text_sprite_proxy.html',1,'']]]
+  ['raycastcollisionvisitor_16',['RayCastCollisionVisitor',['../class_ray_cast_collision_visitor.html',1,'']]]
 ];

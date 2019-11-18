@@ -1,0 +1,190 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.16">
+  <compounddef id="class_bounding_box_collision_visitor" kind="class" language="C++" prot="public">
+    <compoundname>BoundingBoxCollisionVisitor</compoundname>
+    <basecompoundref refid="class_visitor" prot="public" virt="non-virtual">Visitor</basecompoundref>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_bounding_box_collision_visitor_1adae13acdb0a3357aeef4afb786cdd9b8" prot="private" static="no" mutable="no">
+        <type>std::list&lt; std::shared_ptr&lt; <ref refid="class_sprite_proxy" kindref="compound">SpriteProxy</ref> &gt; &gt;</type>
+        <definition>std::list&lt;std::shared_ptr&lt;SpriteProxy&gt; &gt; BoundingBoxCollisionVisitor::collisions</definition>
+        <argsstring></argsstring>
+        <name>collisions</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="classes/BoundingBoxCollisionVisitor.h" line="7" column="18" bodyfile="classes/BoundingBoxCollisionVisitor.h" bodystart="7" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_bounding_box_collision_visitor_1a578b0c17cb1c296614f063fefcaad060" prot="private" static="no" mutable="no">
+        <type>std::shared_ptr&lt; <ref refid="class_sprite_proxy" kindref="compound">SpriteProxy</ref> &gt;</type>
+        <definition>std::shared_ptr&lt;SpriteProxy&gt; BoundingBoxCollisionVisitor::watched</definition>
+        <argsstring></argsstring>
+        <name>watched</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="classes/BoundingBoxCollisionVisitor.h" line="8" column="24" bodyfile="classes/BoundingBoxCollisionVisitor.h" bodystart="8" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_bounding_box_collision_visitor_1a36c48ca3b6f9f94d1113a17d27016b92" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>BoundingBoxCollisionVisitor::BoundingBoxCollisionVisitor</definition>
+        <argsstring>()</argsstring>
+        <name>BoundingBoxCollisionVisitor</name>
+        <briefdescription>
+<para>Construct a new Bounding Box Collision <ref refid="class_visitor" kindref="compound">Visitor</ref> object. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="classes/BoundingBoxCollisionVisitor.h" line="14" column="5" bodyfile="classes/BoundingBoxCollisionVisitor.cpp" bodystart="2" bodyend="2"/>
+      </memberdef>
+      <memberdef kind="function" id="class_bounding_box_collision_visitor_1a49b58bc6806b472d3065f86e7a549782" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>BoundingBoxCollisionVisitor::BoundingBoxCollisionVisitor</definition>
+        <argsstring>(std::shared_ptr&lt; SpriteProxy &gt; s)</argsstring>
+        <name>BoundingBoxCollisionVisitor</name>
+        <param>
+          <type>std::shared_ptr&lt; <ref refid="class_sprite_proxy" kindref="compound">SpriteProxy</ref> &gt;</type>
+          <declname>s</declname>
+        </param>
+        <briefdescription>
+<para>Construct a new Bounding Box Collision <ref refid="class_visitor" kindref="compound">Visitor</ref> object check for collisions with this sprite. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>s</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="classes/BoundingBoxCollisionVisitor.h" line="20" column="5" bodyfile="classes/BoundingBoxCollisionVisitor.cpp" bodystart="28" bodyend="29"/>
+      </memberdef>
+      <memberdef kind="function" id="class_bounding_box_collision_visitor_1a059b61d1100c84601cdb078931ca24d6" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void BoundingBoxCollisionVisitor::visit</definition>
+        <argsstring>(std::shared_ptr&lt; SpriteProxy &gt; s)</argsstring>
+        <name>visit</name>
+        <reimplements refid="class_visitor_1a27f944d3c965296299e354021ea8c82a">visit</reimplements>
+        <param>
+          <type>std::shared_ptr&lt; <ref refid="class_sprite_proxy" kindref="compound">SpriteProxy</ref> &gt;</type>
+          <declname>s</declname>
+        </param>
+        <briefdescription>
+<para>update currently colliding list </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>s</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="classes/BoundingBoxCollisionVisitor.h" line="26" column="10" bodyfile="classes/BoundingBoxCollisionVisitor.cpp" bodystart="4" bodyend="26"/>
+      </memberdef>
+      <memberdef kind="function" id="class_bounding_box_collision_visitor_1a08106fb5198d18744a1d5a5d76b6743e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::list&lt; std::shared_ptr&lt; <ref refid="class_sprite_proxy" kindref="compound">SpriteProxy</ref> &gt; &gt;</type>
+        <definition>std::list&lt; std::shared_ptr&lt; SpriteProxy &gt; &gt; BoundingBoxCollisionVisitor::getCollisions</definition>
+        <argsstring>()</argsstring>
+        <name>getCollisions</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>std::list&lt;SpriteProxy*&gt; list of all sprites that collided with watched since last check </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="classes/BoundingBoxCollisionVisitor.h" line="32" column="15" bodyfile="classes/BoundingBoxCollisionVisitor.cpp" bodystart="31" bodyend="35"/>
+      </memberdef>
+      <memberdef kind="function" id="class_bounding_box_collision_visitor_1a2926d24683596bb7630accdad159210e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void BoundingBoxCollisionVisitor::setWatched</definition>
+        <argsstring>(std::shared_ptr&lt; SpriteProxy &gt; s)</argsstring>
+        <name>setWatched</name>
+        <param>
+          <type>std::shared_ptr&lt; <ref refid="class_sprite_proxy" kindref="compound">SpriteProxy</ref> &gt;</type>
+          <declname>s</declname>
+        </param>
+        <briefdescription>
+<para>Set the Watched object. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>s</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="classes/BoundingBoxCollisionVisitor.h" line="38" column="10" bodyfile="classes/BoundingBoxCollisionVisitor.cpp" bodystart="37" bodyend="39"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>BoundingBoxCollisionVisitor</label>
+        <link refid="class_bounding_box_collision_visitor"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>Visitor</label>
+        <link refid="class_visitor"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>BoundingBoxCollisionVisitor</label>
+        <link refid="class_bounding_box_collision_visitor"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>Visitor</label>
+        <link refid="class_visitor"/>
+      </node>
+    </collaborationgraph>
+    <location file="classes/BoundingBoxCollisionVisitor.h" line="5" column="49" bodyfile="classes/BoundingBoxCollisionVisitor.h" bodystart="5" bodyend="39"/>
+    <listofallmembers>
+      <member refid="class_bounding_box_collision_visitor_1a36c48ca3b6f9f94d1113a17d27016b92" prot="public" virt="non-virtual"><scope>BoundingBoxCollisionVisitor</scope><name>BoundingBoxCollisionVisitor</name></member>
+      <member refid="class_bounding_box_collision_visitor_1a49b58bc6806b472d3065f86e7a549782" prot="public" virt="non-virtual"><scope>BoundingBoxCollisionVisitor</scope><name>BoundingBoxCollisionVisitor</name></member>
+      <member refid="class_bounding_box_collision_visitor_1adae13acdb0a3357aeef4afb786cdd9b8" prot="private" virt="non-virtual"><scope>BoundingBoxCollisionVisitor</scope><name>collisions</name></member>
+      <member refid="class_bounding_box_collision_visitor_1a08106fb5198d18744a1d5a5d76b6743e" prot="public" virt="non-virtual"><scope>BoundingBoxCollisionVisitor</scope><name>getCollisions</name></member>
+      <member refid="class_bounding_box_collision_visitor_1a2926d24683596bb7630accdad159210e" prot="public" virt="non-virtual"><scope>BoundingBoxCollisionVisitor</scope><name>setWatched</name></member>
+      <member refid="class_bounding_box_collision_visitor_1a059b61d1100c84601cdb078931ca24d6" prot="public" virt="virtual"><scope>BoundingBoxCollisionVisitor</scope><name>visit</name></member>
+      <member refid="class_bounding_box_collision_visitor_1a578b0c17cb1c296614f063fefcaad060" prot="private" virt="non-virtual"><scope>BoundingBoxCollisionVisitor</scope><name>watched</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,95 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.16">
+  <compounddef id="class_scene" kind="class" language="C++" prot="public">
+    <compoundname>Scene</compoundname>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_scene_1af907e6efd9e86b878c185512d74d27ea" prot="private" static="no" mutable="no">
+        <type>std::list&lt; std::shared_ptr&lt; <ref refid="class_sprite_proxy" kindref="compound">SpriteProxy</ref> &gt; &gt;</type>
+        <definition>std::list&lt;std::shared_ptr&lt;SpriteProxy&gt; &gt; Scene::spriteList</definition>
+        <argsstring></argsstring>
+        <name>spriteList</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="classes/Scene.h" line="9" column="19" bodyfile="classes/Scene.h" bodystart="9" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_scene_1ad10176d75a9cc0da56626f682d083507" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Scene::Scene</definition>
+        <argsstring>()</argsstring>
+        <name>Scene</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="classes/Scene.h" line="11" column="9" bodyfile="classes/Scene.cpp" bodystart="2" bodyend="3"/>
+      </memberdef>
+      <memberdef kind="function" id="class_scene_1a3b8cec2e32546713915f8c6303c951f1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Scene::~Scene</definition>
+        <argsstring>()</argsstring>
+        <name>~Scene</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="classes/Scene.h" line="12" column="9" bodyfile="classes/Scene.cpp" bodystart="4" bodyend="5"/>
+      </memberdef>
+      <memberdef kind="function" id="class_scene_1aee59b03171628b0611eec0606146ddd8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Scene::addSprite</definition>
+        <argsstring>(std::shared_ptr&lt; SpriteProxy &gt; s)</argsstring>
+        <name>addSprite</name>
+        <param>
+          <type>std::shared_ptr&lt; <ref refid="class_sprite_proxy" kindref="compound">SpriteProxy</ref> &gt;</type>
+          <declname>s</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="classes/Scene.h" line="13" column="14" bodyfile="classes/Scene.cpp" bodystart="12" bodyend="14"/>
+      </memberdef>
+      <memberdef kind="function" id="class_scene_1acc3db965964cf0ad927a77af889d8495" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Scene::accept</definition>
+        <argsstring>(std::shared_ptr&lt; Visitor &gt; v)</argsstring>
+        <name>accept</name>
+        <param>
+          <type>std::shared_ptr&lt; <ref refid="class_visitor" kindref="compound">Visitor</ref> &gt;</type>
+          <declname>v</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="classes/Scene.h" line="14" column="14" bodyfile="classes/Scene.cpp" bodystart="7" bodyend="11"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="classes/Scene.h" line="7" column="12" bodyfile="classes/Scene.h" bodystart="7" bodyend="15"/>
+    <listofallmembers>
+      <member refid="class_scene_1acc3db965964cf0ad927a77af889d8495" prot="public" virt="non-virtual"><scope>Scene</scope><name>accept</name></member>
+      <member refid="class_scene_1aee59b03171628b0611eec0606146ddd8" prot="public" virt="non-virtual"><scope>Scene</scope><name>addSprite</name></member>
+      <member refid="class_scene_1ad10176d75a9cc0da56626f682d083507" prot="public" virt="non-virtual"><scope>Scene</scope><name>Scene</name></member>
+      <member refid="class_scene_1af907e6efd9e86b878c185512d74d27ea" prot="private" virt="non-virtual"><scope>Scene</scope><name>spriteList</name></member>
+      <member refid="class_scene_1a3b8cec2e32546713915f8c6303c951f1" prot="public" virt="non-virtual"><scope>Scene</scope><name>~Scene</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

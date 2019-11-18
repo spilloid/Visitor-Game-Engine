@@ -1,0 +1,374 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.16">
+  <compounddef id="class_sprite_proxy" kind="class" language="C++" prot="public">
+    <compoundname>SpriteProxy</compoundname>
+      <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="class_sprite_proxy_1a0a98e6c64d0020e924a553051f73026f" prot="protected" static="no" mutable="no">
+        <type>int</type>
+        <definition>int SpriteProxy::x</definition>
+        <argsstring></argsstring>
+        <name>x</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="classes/SpriteProxy.h" line="7" column="7" bodyfile="classes/SpriteProxy.h" bodystart="7" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_sprite_proxy_1a95a7aff197c1e567a9cadc6e389575eb" prot="protected" static="no" mutable="no">
+        <type>int</type>
+        <definition>int SpriteProxy::dx</definition>
+        <argsstring></argsstring>
+        <name>dx</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="classes/SpriteProxy.h" line="8" column="7" bodyfile="classes/SpriteProxy.h" bodystart="8" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_sprite_proxy_1a4220cc99dc517ab7d0cf8a39fb94b9b0" prot="protected" static="no" mutable="no">
+        <type>int</type>
+        <definition>int SpriteProxy::y</definition>
+        <argsstring></argsstring>
+        <name>y</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="classes/SpriteProxy.h" line="9" column="7" bodyfile="classes/SpriteProxy.h" bodystart="9" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_sprite_proxy_1ab8b296a2c5f768542a15e9846db94edf" prot="protected" static="no" mutable="no">
+        <type>int</type>
+        <definition>int SpriteProxy::dy</definition>
+        <argsstring></argsstring>
+        <name>dy</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="classes/SpriteProxy.h" line="10" column="7" bodyfile="classes/SpriteProxy.h" bodystart="10" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_sprite_proxy_1a7ba68cb31f2142980da736118ea43184" prot="protected" static="no" mutable="no">
+        <type>int</type>
+        <definition>int SpriteProxy::height</definition>
+        <argsstring></argsstring>
+        <name>height</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="classes/SpriteProxy.h" line="11" column="7" bodyfile="classes/SpriteProxy.h" bodystart="11" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_sprite_proxy_1aec6b8555563458f6ab937d09911722c2" prot="protected" static="no" mutable="no">
+        <type>int</type>
+        <definition>int SpriteProxy::width</definition>
+        <argsstring></argsstring>
+        <name>width</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="classes/SpriteProxy.h" line="12" column="7" bodyfile="classes/SpriteProxy.h" bodystart="12" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_sprite_proxy_1a638e48f6bdf4583a1d546bd20d0f600d" prot="protected" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string SpriteProxy::textureLoc</definition>
+        <argsstring></argsstring>
+        <name>textureLoc</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="classes/SpriteProxy.h" line="13" column="15" bodyfile="classes/SpriteProxy.h" bodystart="13" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_sprite_proxy_1ac583daf0e2a7ce3f1cb2cfe2ec96f115" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>SpriteProxy::SpriteProxy</definition>
+        <argsstring>()</argsstring>
+        <name>SpriteProxy</name>
+        <briefdescription>
+<para>Construct a new Sprite object. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="classes/SpriteProxy.h" line="19" column="3" bodyfile="classes/SpriteProxy.cpp" bodystart="2" bodyend="2"/>
+      </memberdef>
+      <memberdef kind="function" id="class_sprite_proxy_1a066bf07e912cdfcadb3e28b9b2b9bc40" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>SpriteProxy::SpriteProxy</definition>
+        <argsstring>(std::string textureLoc, int x, int y, int width, int height)</argsstring>
+        <name>SpriteProxy</name>
+        <param>
+          <type>std::string</type>
+          <declname>textureLoc</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>y</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>width</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>height</declname>
+        </param>
+        <briefdescription>
+<para>Construct a new Sprite object. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>textureLoc</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>: file location for texture </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>x</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>: x location of sprite relative to size of window </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>y</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>: y location of sprite relative to size of window </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>width</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>: width of sprite in pixels </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>height</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>: height of sprite in pixels </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="classes/SpriteProxy.h" line="28" column="3" bodyfile="classes/SpriteProxy.cpp" bodystart="4" bodyend="5"/>
+      </memberdef>
+      <memberdef kind="function" id="class_sprite_proxy_1a0e84a7235e9fa53b54c7ae15c567b44d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int SpriteProxy::getX</definition>
+        <argsstring>()</argsstring>
+        <name>getX</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>int x position of sprite </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="classes/SpriteProxy.h" line="34" column="7" bodyfile="classes/SpriteProxy.cpp" bodystart="7" bodyend="7"/>
+      </memberdef>
+      <memberdef kind="function" id="class_sprite_proxy_1ad85cedf675d5f27f37095e2e74577dfe" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int SpriteProxy::getY</definition>
+        <argsstring>()</argsstring>
+        <name>getY</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>int y Position of sprite </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="classes/SpriteProxy.h" line="40" column="7" bodyfile="classes/SpriteProxy.cpp" bodystart="11" bodyend="11"/>
+      </memberdef>
+      <memberdef kind="function" id="class_sprite_proxy_1ac78ce8e42f131eac83a5116a9531c2e8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void SpriteProxy::setXY</definition>
+        <argsstring>(int X, int Y)</argsstring>
+        <name>setXY</name>
+        <param>
+          <type>int</type>
+          <declname>X</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>Y</declname>
+        </param>
+        <briefdescription>
+<para>set new coords of sprite </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>X</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>new X value of Sprite </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Y</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>new Y value of Sprite </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="classes/SpriteProxy.h" line="47" column="8" bodyfile="classes/SpriteProxy.cpp" bodystart="15" bodyend="18"/>
+      </memberdef>
+      <memberdef kind="function" id="class_sprite_proxy_1ad0c952c9a275a0862c3f25efc97f617a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double SpriteProxy::getDX</definition>
+        <argsstring>()</argsstring>
+        <name>getDX</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="classes/SpriteProxy.h" line="48" column="10" bodyfile="classes/SpriteProxy.cpp" bodystart="9" bodyend="9"/>
+      </memberdef>
+      <memberdef kind="function" id="class_sprite_proxy_1a45019dc275f651b436e79b72be4c4296" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double SpriteProxy::getDY</definition>
+        <argsstring>()</argsstring>
+        <name>getDY</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="classes/SpriteProxy.h" line="49" column="10" bodyfile="classes/SpriteProxy.cpp" bodystart="13" bodyend="13"/>
+      </memberdef>
+      <memberdef kind="function" id="class_sprite_proxy_1a9a1489fffd7f224a02bbc491365d5fa5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void SpriteProxy::setDXY</definition>
+        <argsstring>(double x, double y)</argsstring>
+        <name>setDXY</name>
+        <param>
+          <type>double</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>y</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="classes/SpriteProxy.h" line="50" column="8" bodyfile="classes/SpriteProxy.cpp" bodystart="20" bodyend="23"/>
+      </memberdef>
+      <memberdef kind="function" id="class_sprite_proxy_1aac44e21082672e751487fc9e57fadd81" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int SpriteProxy::getHeight</definition>
+        <argsstring>()</argsstring>
+        <name>getHeight</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="classes/SpriteProxy.h" line="51" column="7" bodyfile="classes/SpriteProxy.cpp" bodystart="25" bodyend="25"/>
+      </memberdef>
+      <memberdef kind="function" id="class_sprite_proxy_1acd0628df707093a24e9eeefe21fa13bf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int SpriteProxy::getWidth</definition>
+        <argsstring>()</argsstring>
+        <name>getWidth</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="classes/SpriteProxy.h" line="52" column="7" bodyfile="classes/SpriteProxy.cpp" bodystart="27" bodyend="27"/>
+      </memberdef>
+      <memberdef kind="function" id="class_sprite_proxy_1ad27c5ad34174bf9d269f0031226e77ee" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string SpriteProxy::getTextureLocation</definition>
+        <argsstring>()</argsstring>
+        <name>getTextureLocation</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="classes/SpriteProxy.h" line="53" column="15" bodyfile="classes/SpriteProxy.cpp" bodystart="28" bodyend="28"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="classes/SpriteProxy.h" line="5" column="18" bodyfile="classes/SpriteProxy.h" bodystart="5" bodyend="54"/>
+    <listofallmembers>
+      <member refid="class_sprite_proxy_1a95a7aff197c1e567a9cadc6e389575eb" prot="protected" virt="non-virtual"><scope>SpriteProxy</scope><name>dx</name></member>
+      <member refid="class_sprite_proxy_1ab8b296a2c5f768542a15e9846db94edf" prot="protected" virt="non-virtual"><scope>SpriteProxy</scope><name>dy</name></member>
+      <member refid="class_sprite_proxy_1ad0c952c9a275a0862c3f25efc97f617a" prot="public" virt="non-virtual"><scope>SpriteProxy</scope><name>getDX</name></member>
+      <member refid="class_sprite_proxy_1a45019dc275f651b436e79b72be4c4296" prot="public" virt="non-virtual"><scope>SpriteProxy</scope><name>getDY</name></member>
+      <member refid="class_sprite_proxy_1aac44e21082672e751487fc9e57fadd81" prot="public" virt="non-virtual"><scope>SpriteProxy</scope><name>getHeight</name></member>
+      <member refid="class_sprite_proxy_1ad27c5ad34174bf9d269f0031226e77ee" prot="public" virt="non-virtual"><scope>SpriteProxy</scope><name>getTextureLocation</name></member>
+      <member refid="class_sprite_proxy_1acd0628df707093a24e9eeefe21fa13bf" prot="public" virt="non-virtual"><scope>SpriteProxy</scope><name>getWidth</name></member>
+      <member refid="class_sprite_proxy_1a0e84a7235e9fa53b54c7ae15c567b44d" prot="public" virt="non-virtual"><scope>SpriteProxy</scope><name>getX</name></member>
+      <member refid="class_sprite_proxy_1ad85cedf675d5f27f37095e2e74577dfe" prot="public" virt="non-virtual"><scope>SpriteProxy</scope><name>getY</name></member>
+      <member refid="class_sprite_proxy_1a7ba68cb31f2142980da736118ea43184" prot="protected" virt="non-virtual"><scope>SpriteProxy</scope><name>height</name></member>
+      <member refid="class_sprite_proxy_1a9a1489fffd7f224a02bbc491365d5fa5" prot="public" virt="non-virtual"><scope>SpriteProxy</scope><name>setDXY</name></member>
+      <member refid="class_sprite_proxy_1ac78ce8e42f131eac83a5116a9531c2e8" prot="public" virt="non-virtual"><scope>SpriteProxy</scope><name>setXY</name></member>
+      <member refid="class_sprite_proxy_1ac583daf0e2a7ce3f1cb2cfe2ec96f115" prot="public" virt="non-virtual"><scope>SpriteProxy</scope><name>SpriteProxy</name></member>
+      <member refid="class_sprite_proxy_1a066bf07e912cdfcadb3e28b9b2b9bc40" prot="public" virt="non-virtual"><scope>SpriteProxy</scope><name>SpriteProxy</name></member>
+      <member refid="class_sprite_proxy_1a638e48f6bdf4583a1d546bd20d0f600d" prot="protected" virt="non-virtual"><scope>SpriteProxy</scope><name>textureLoc</name></member>
+      <member refid="class_sprite_proxy_1aec6b8555563458f6ab937d09911722c2" prot="protected" virt="non-virtual"><scope>SpriteProxy</scope><name>width</name></member>
+      <member refid="class_sprite_proxy_1a0a98e6c64d0020e924a553051f73026f" prot="protected" virt="non-virtual"><scope>SpriteProxy</scope><name>x</name></member>
+      <member refid="class_sprite_proxy_1a4220cc99dc517ab7d0cf8a39fb94b9b0" prot="protected" virt="non-virtual"><scope>SpriteProxy</scope><name>y</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

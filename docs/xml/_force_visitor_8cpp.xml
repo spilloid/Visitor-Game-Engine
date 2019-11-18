@@ -1,0 +1,84 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.16">
+  <compounddef id="_force_visitor_8cpp" kind="file" language="C++">
+    <compoundname>ForceVisitor.cpp</compoundname>
+    <includes refid="_force_visitor_8h" local="yes">ForceVisitor.h</includes>
+    <incdepgraph>
+      <node id="3">
+        <label>Visitor.h</label>
+        <link refid="_visitor_8h_source"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>map</label>
+      </node>
+      <node id="2">
+        <label>ForceVisitor.h</label>
+        <link refid="_force_visitor_8h_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>math.h</label>
+      </node>
+      <node id="5">
+        <label>SpriteProxy.h</label>
+        <link refid="_sprite_proxy_8h_source"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>iostream</label>
+      </node>
+      <node id="1">
+        <label>classes/ForceVisitor.cpp</label>
+        <link refid="_force_visitor_8cpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>memory</label>
+      </node>
+    </incdepgraph>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;ForceVisitor.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>ForceVisitor::visit(std::shared_ptr&lt;SpriteProxy&gt;<sp/>s){</highlight></codeline>
+<codeline lineno="3"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//for<sp/>every<sp/>object<sp/>with<sp/>a<sp/>force<sp/>on<sp/>it</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>s-&gt;setXY(</highlight></codeline>
+<codeline lineno="5"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>s-&gt;getX()<sp/>+<sp/>s-&gt;getDX(),</highlight></codeline>
+<codeline lineno="6"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>s-&gt;getY()<sp/>+<sp/>s-&gt;getDY()</highlight></codeline>
+<codeline lineno="7"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>);</highlight></codeline>
+<codeline lineno="8"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10" refid="class_force_visitor_1a86c86353d83ce63e8e36c19f412d98d7" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_force_visitor_1a86c86353d83ce63e8e36c19f412d98d7" kindref="member">ForceVisitor::applyForce</ref>(std::shared_ptr&lt;SpriteProxy&gt;<sp/>s,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>magnitude,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>angle){</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>dx<sp/>=<sp/>s-&gt;getDX()<sp/>,<sp/>dy<sp/>=<sp/>s-&gt;getDY();</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//convert<sp/>to<sp/>radians<sp/>because<sp/>we&apos;re<sp/>math<sp/>people</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>radianAngle<sp/>=<sp/>(angle-90.f)<sp/>*<sp/>M_PI<sp/>/<sp/>180.f;</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//calc<sp/>dx<sp/>&amp;<sp/>dy<sp/>like<sp/>our<sp/>lord<sp/>and<sp/>savior<sp/>Pythagreous<sp/>taught<sp/>us</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/>dx<sp/>+=<sp/>magnitude<sp/>*<sp/>cos(radianAngle);</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/>dy<sp/>+=<sp/>magnitude<sp/>*<sp/>sin(radianAngle);</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/>s-&gt;setDXY(dx,dy);</highlight></codeline>
+<codeline lineno="18"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20" refid="class_force_visitor_1ab44d016e0899b5139c72855a388b18d2" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_force_visitor_1ab44d016e0899b5139c72855a388b18d2" kindref="member">ForceVisitor::stop</ref>(std::shared_ptr&lt;SpriteProxy&gt;<sp/>s){</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/>s-&gt;setDXY(0,0);</highlight></codeline>
+<codeline lineno="22"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="classes/ForceVisitor.cpp"/>
+  </compounddef>
+</doxygen>

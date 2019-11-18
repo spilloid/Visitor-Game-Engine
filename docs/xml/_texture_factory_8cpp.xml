@@ -1,0 +1,66 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.16">
+  <compounddef id="_texture_factory_8cpp" kind="file" language="C++">
+    <compoundname>TextureFactory.cpp</compoundname>
+    <includes refid="_texture_factory_8h" local="yes">TextureFactory.h</includes>
+    <incdepgraph>
+      <node id="5">
+        <label>SFML/Graphics.hpp</label>
+      </node>
+      <node id="3">
+        <label>map</label>
+      </node>
+      <node id="2">
+        <label>TextureFactory.h</label>
+        <link refid="_texture_factory_8h_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>classes/TextureFactory.cpp</label>
+        <link refid="_texture_factory_8cpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>memory</label>
+      </node>
+    </incdepgraph>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;TextureFactory.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal">TextureFactory::TextureFactory(){</highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6" refid="class_texture_factory_1af79f6706d47abaade1d99f915d5d92c1" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_texture_factory_1af79f6706d47abaade1d99f915d5d92c1" kindref="member">TextureFactory::loadTexture</ref>(std::string<sp/>fileLoc){</highlight></codeline>
+<codeline lineno="7"><highlight class="normal"><sp/><sp/>std::shared_ptr&lt;sf::Texture&gt;<sp/>tx<sp/>=<sp/>std::make_shared&lt;sf::Texture&gt;();</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(tx-&gt;loadFromFile(fileLoc)){</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>this-&gt;cache[fileLoc]<sp/>=<sp/>tx;</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/>}</highlight><highlight class="keywordflow">else</highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17" refid="class_texture_factory_1a425d42f75624dc52e8a5c2f2b48002dd" refkind="member"><highlight class="normal">std::shared_ptr&lt;sf::Texture&gt;<sp/><ref refid="class_texture_factory_1a425d42f75624dc52e8a5c2f2b48002dd" kindref="member">TextureFactory::getTexture</ref>(std::string<sp/>fileLoc){</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>f<sp/>=<sp/>this-&gt;cache.find(fileLoc);<sp/></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(f<sp/>==<sp/>this-&gt;cache.end()){</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//load<sp/>texture</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>this-&gt;<ref refid="class_texture_factory_1af79f6706d47abaade1d99f915d5d92c1" kindref="member">loadTexture</ref>(fileLoc);</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>this-&gt;cache[fileLoc];</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Consider:<sp/>use<sp/>f<sp/>instead<sp/>of<sp/>making<sp/>an<sp/>extra<sp/>call<sp/>to<sp/>the<sp/>map?</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="classes/TextureFactory.cpp"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,199 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.16">
+  <compounddef id="class_s_f_m_l_drawing_visitor" kind="class" language="C++" prot="public">
+    <compoundname>SFMLDrawingVisitor</compoundname>
+    <basecompoundref refid="class_abstract_drawing_visitor" prot="public" virt="non-virtual">AbstractDrawingVisitor</basecompoundref>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_s_f_m_l_drawing_visitor_1ab21ee8c66520da907582b25dd6a27269" prot="private" static="no" mutable="no">
+        <type>std::shared_ptr&lt; sf::RenderWindow &gt;</type>
+        <definition>std::shared_ptr&lt;sf::RenderWindow&gt; SFMLDrawingVisitor::window</definition>
+        <argsstring></argsstring>
+        <name>window</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="classes/SFMLDrawingVisitor.h" line="11" column="19" bodyfile="classes/SFMLDrawingVisitor.h" bodystart="11" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_s_f_m_l_drawing_visitor_1ab271f62a8566fefe8e3c631634c7721d" prot="private" static="no" mutable="no">
+        <type>std::map&lt; std::shared_ptr&lt; <ref refid="class_sprite_proxy" kindref="compound">SpriteProxy</ref> &gt;, std::shared_ptr&lt; sf::Sprite &gt; &gt;</type>
+        <definition>std::map&lt;std::shared_ptr&lt;SpriteProxy&gt;, std::shared_ptr&lt;sf::Sprite&gt; &gt; SFMLDrawingVisitor::renderList</definition>
+        <argsstring></argsstring>
+        <name>renderList</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="classes/SFMLDrawingVisitor.h" line="13" column="7" bodyfile="classes/SFMLDrawingVisitor.h" bodystart="13" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_s_f_m_l_drawing_visitor_1a6a073c4a9fb838ce093f1d1a788b7192" prot="private" static="no" mutable="no">
+        <type>std::shared_ptr&lt; <ref refid="class_texture_factory" kindref="compound">TextureFactory</ref> &gt;</type>
+        <definition>std::shared_ptr&lt;TextureFactory&gt; SFMLDrawingVisitor::tf</definition>
+        <argsstring></argsstring>
+        <name>tf</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="classes/SFMLDrawingVisitor.h" line="14" column="19" bodyfile="classes/SFMLDrawingVisitor.h" bodystart="14" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_s_f_m_l_drawing_visitor_1a78fa2dcdba6d8df19a67dba1a265f903" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool SFMLDrawingVisitor::open</definition>
+        <argsstring></argsstring>
+        <name>open</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="classes/SFMLDrawingVisitor.h" line="15" column="8" bodyfile="classes/SFMLDrawingVisitor.h" bodystart="15" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_s_f_m_l_drawing_visitor_1a68112df170f685e9da6a6fb1368ce37d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>SFMLDrawingVisitor::SFMLDrawingVisitor</definition>
+        <argsstring>(int width, int height)</argsstring>
+        <name>SFMLDrawingVisitor</name>
+        <param>
+          <type>int</type>
+          <declname>width</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>height</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="classes/SFMLDrawingVisitor.h" line="17" column="3" bodyfile="classes/SFMLDrawingVistor.cpp" bodystart="2" bodyend="7"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_f_m_l_drawing_visitor_1affc928db69d8762b84ca1c57c4d34c97" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void SFMLDrawingVisitor::visit</definition>
+        <argsstring>(std::shared_ptr&lt; SpriteProxy &gt; s)</argsstring>
+        <name>visit</name>
+        <reimplements refid="class_abstract_drawing_visitor_1ad2d22d0a5d3b0728368fdf0931bef103">visit</reimplements>
+        <param>
+          <type>std::shared_ptr&lt; <ref refid="class_sprite_proxy" kindref="compound">SpriteProxy</ref> &gt;</type>
+          <declname>s</declname>
+        </param>
+        <briefdescription>
+<para>Caches sprite and draws to sfml window. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>s</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="classes/SFMLDrawingVisitor.h" line="23" column="16" bodyfile="classes/SFMLDrawingVistor.cpp" bodystart="9" bodyend="36"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_f_m_l_drawing_visitor_1a65e69df1e108073052315b80eb0b5514" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>bool SFMLDrawingVisitor::isOpen</definition>
+        <argsstring>()</argsstring>
+        <name>isOpen</name>
+        <reimplements refid="class_abstract_drawing_visitor_1ae9abaeedd78440c6a0cccf6e36020602">isOpen</reimplements>
+        <briefdescription>
+<para>check if sfml window is open </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>true yep </para>
+</simplesect>
+<simplesect kind="return"><para>false nope </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="classes/SFMLDrawingVisitor.h" line="30" column="16" bodyfile="classes/SFMLDrawingVistor.cpp" bodystart="37" bodyend="37"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_f_m_l_drawing_visitor_1a26218dc60bc0a3f264ca11f9307a909f" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void SFMLDrawingVisitor::draw</definition>
+        <argsstring>()</argsstring>
+        <name>draw</name>
+        <reimplements refid="class_abstract_drawing_visitor_1a08ecda9a55f34afbfa1797be9bd115ea">draw</reimplements>
+        <briefdescription>
+<para>Draw cache to screen. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="classes/SFMLDrawingVisitor.h" line="31" column="16" bodyfile="classes/SFMLDrawingVistor.cpp" bodystart="39" bodyend="46"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>SFMLDrawingVisitor</label>
+        <link refid="class_s_f_m_l_drawing_visitor"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>Visitor</label>
+        <link refid="class_visitor"/>
+      </node>
+      <node id="2">
+        <label>AbstractDrawingVisitor</label>
+        <link refid="class_abstract_drawing_visitor"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>SFMLDrawingVisitor</label>
+        <link refid="class_s_f_m_l_drawing_visitor"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>Visitor</label>
+        <link refid="class_visitor"/>
+      </node>
+      <node id="2">
+        <label>AbstractDrawingVisitor</label>
+        <link refid="class_abstract_drawing_visitor"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="classes/SFMLDrawingVisitor.h" line="9" column="55" bodyfile="classes/SFMLDrawingVisitor.h" bodystart="9" bodyend="32"/>
+    <listofallmembers>
+      <member refid="class_s_f_m_l_drawing_visitor_1a26218dc60bc0a3f264ca11f9307a909f" prot="public" virt="virtual"><scope>SFMLDrawingVisitor</scope><name>draw</name></member>
+      <member refid="class_s_f_m_l_drawing_visitor_1a65e69df1e108073052315b80eb0b5514" prot="public" virt="virtual"><scope>SFMLDrawingVisitor</scope><name>isOpen</name></member>
+      <member refid="class_s_f_m_l_drawing_visitor_1a78fa2dcdba6d8df19a67dba1a265f903" prot="private" virt="non-virtual"><scope>SFMLDrawingVisitor</scope><name>open</name></member>
+      <member refid="class_s_f_m_l_drawing_visitor_1ab271f62a8566fefe8e3c631634c7721d" prot="private" virt="non-virtual"><scope>SFMLDrawingVisitor</scope><name>renderList</name></member>
+      <member refid="class_s_f_m_l_drawing_visitor_1a68112df170f685e9da6a6fb1368ce37d" prot="public" virt="non-virtual"><scope>SFMLDrawingVisitor</scope><name>SFMLDrawingVisitor</name></member>
+      <member refid="class_s_f_m_l_drawing_visitor_1a6a073c4a9fb838ce093f1d1a788b7192" prot="private" virt="non-virtual"><scope>SFMLDrawingVisitor</scope><name>tf</name></member>
+      <member refid="class_s_f_m_l_drawing_visitor_1affc928db69d8762b84ca1c57c4d34c97" prot="public" virt="virtual"><scope>SFMLDrawingVisitor</scope><name>visit</name></member>
+      <member refid="class_s_f_m_l_drawing_visitor_1ab21ee8c66520da907582b25dd6a27269" prot="private" virt="non-virtual"><scope>SFMLDrawingVisitor</scope><name>window</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

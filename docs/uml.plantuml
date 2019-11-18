@@ -1,4 +1,7 @@
 @startuml FinalProject
+class Game{
+    +void start()
+}
 class GameEngine {
     -list<Visitor> sceneVisitors
     -Scene scene
@@ -59,9 +62,12 @@ class GravityVisitor{
 class RayCastCollisionVisitor{
     void visit()
     }
-hello <--- GameEngine
-hello <--- Visitor
-hello <--- SpriteProxy
+hello <--- Game
+Game <|-- Pong
+Game <|-- Quoridor
+Game <--- GameEngine
+Game <--- Visitor
+Game <--- SpriteProxy
 GameEngine --> Visitor
 GameEngine --> Scene
 Scene --> SpriteProxy

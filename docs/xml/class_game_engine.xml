@@ -1,0 +1,130 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.16">
+  <compounddef id="class_game_engine" kind="class" language="C++" prot="public">
+    <compoundname>GameEngine</compoundname>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_game_engine_1af000ef22b47a5a58be4f49fa70fe01b7" prot="private" static="no" mutable="no">
+        <type>std::list&lt; std::shared_ptr&lt; <ref refid="class_visitor" kindref="compound">Visitor</ref> &gt; &gt;</type>
+        <definition>std::list&lt;std::shared_ptr&lt;Visitor&gt; &gt; GameEngine::sceneVisitors</definition>
+        <argsstring></argsstring>
+        <name>sceneVisitors</name>
+        <briefdescription>
+<para>visitors that operate on the scene as a whole </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="classes/GameEngine.h" line="13" column="19" bodyfile="classes/GameEngine.h" bodystart="13" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_game_engine_1aeb7214844ea85f7b031954573ec797b3" prot="private" static="no" mutable="no">
+        <type><ref refid="class_scene" kindref="compound">Scene</ref></type>
+        <definition>Scene GameEngine::scene</definition>
+        <argsstring></argsstring>
+        <name>scene</name>
+        <briefdescription>
+<para>scene which holds the sprites </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="classes/GameEngine.h" line="18" column="15" bodyfile="classes/GameEngine.h" bodystart="18" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_game_engine_1a64c430f74d72e2745646fdbffbd97930" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>GameEngine::GameEngine</definition>
+        <argsstring>()</argsstring>
+        <name>GameEngine</name>
+        <briefdescription>
+<para>Construct a new Game Engine object. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="classes/GameEngine.h" line="24" column="9" bodyfile="classes/GameEngine.cpp" bodystart="2" bodyend="2"/>
+      </memberdef>
+      <memberdef kind="function" id="class_game_engine_1a8e59d8341ef9d2dcc62eee1437e37f14" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>GameEngine::~GameEngine</definition>
+        <argsstring>()</argsstring>
+        <name>~GameEngine</name>
+        <briefdescription>
+<para>Destroy the Game Engine object. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="classes/GameEngine.h" line="29" column="9" bodyfile="classes/GameEngine.cpp" bodystart="3" bodyend="3"/>
+      </memberdef>
+      <memberdef kind="function" id="class_game_engine_1abf2bd8184324bd3d38058c71afe68dc3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void GameEngine::addVisitor</definition>
+        <argsstring>(std::shared_ptr&lt; Visitor &gt;)</argsstring>
+        <name>addVisitor</name>
+        <param>
+          <type>std::shared_ptr&lt; <ref refid="class_visitor" kindref="compound">Visitor</ref> &gt;</type>
+          <defname>v</defname>
+        </param>
+        <briefdescription>
+<para>Add visitor operation for scene. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="classes/GameEngine.h" line="34" column="14" bodyfile="classes/GameEngine.cpp" bodystart="4" bodyend="6"/>
+      </memberdef>
+      <memberdef kind="function" id="class_game_engine_1a574808fda9e9a3fb5d2a8a14a123d350" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void GameEngine::addSprite</definition>
+        <argsstring>(std::shared_ptr&lt; SpriteProxy &gt;)</argsstring>
+        <name>addSprite</name>
+        <param>
+          <type>std::shared_ptr&lt; <ref refid="class_sprite_proxy" kindref="compound">SpriteProxy</ref> &gt;</type>
+          <defname>s</defname>
+        </param>
+        <briefdescription>
+<para>Add Sprite to scene. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="classes/GameEngine.h" line="39" column="14" bodyfile="classes/GameEngine.cpp" bodystart="7" bodyend="9"/>
+      </memberdef>
+      <memberdef kind="function" id="class_game_engine_1ae03241b464040b659b6a91f27920e8c3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void GameEngine::update</definition>
+        <argsstring>()</argsstring>
+        <name>update</name>
+        <briefdescription>
+<para>Let visitors visit the scene. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="classes/GameEngine.h" line="49" column="14" bodyfile="classes/GameEngine.cpp" bodystart="10" bodyend="16"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="classes/GameEngine.h" line="7" column="17" bodyfile="classes/GameEngine.h" bodystart="7" bodyend="50"/>
+    <listofallmembers>
+      <member refid="class_game_engine_1a574808fda9e9a3fb5d2a8a14a123d350" prot="public" virt="non-virtual"><scope>GameEngine</scope><name>addSprite</name></member>
+      <member refid="class_game_engine_1abf2bd8184324bd3d38058c71afe68dc3" prot="public" virt="non-virtual"><scope>GameEngine</scope><name>addVisitor</name></member>
+      <member refid="class_game_engine_1a64c430f74d72e2745646fdbffbd97930" prot="public" virt="non-virtual"><scope>GameEngine</scope><name>GameEngine</name></member>
+      <member refid="class_game_engine_1aeb7214844ea85f7b031954573ec797b3" prot="private" virt="non-virtual"><scope>GameEngine</scope><name>scene</name></member>
+      <member refid="class_game_engine_1af000ef22b47a5a58be4f49fa70fe01b7" prot="private" virt="non-virtual"><scope>GameEngine</scope><name>sceneVisitors</name></member>
+      <member refid="class_game_engine_1ae03241b464040b659b6a91f27920e8c3" prot="public" virt="non-virtual"><scope>GameEngine</scope><name>update</name></member>
+      <member refid="class_game_engine_1a8e59d8341ef9d2dcc62eee1437e37f14" prot="public" virt="non-virtual"><scope>GameEngine</scope><name>~GameEngine</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

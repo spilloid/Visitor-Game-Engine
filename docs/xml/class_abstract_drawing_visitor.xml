@@ -1,0 +1,106 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.16">
+  <compounddef id="class_abstract_drawing_visitor" kind="class" language="C++" prot="public" abstract="yes">
+    <compoundname>AbstractDrawingVisitor</compoundname>
+    <basecompoundref refid="class_visitor" prot="public" virt="non-virtual">Visitor</basecompoundref>
+    <derivedcompoundref refid="class_s_f_m_l_drawing_visitor" prot="public" virt="non-virtual">SFMLDrawingVisitor</derivedcompoundref>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_abstract_drawing_visitor_1ad2d22d0a5d3b0728368fdf0931bef103" prot="private" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void AbstractDrawingVisitor::visit</definition>
+        <argsstring>(std::shared_ptr&lt; SpriteProxy &gt; s)=0</argsstring>
+        <name>visit</name>
+        <reimplements refid="class_visitor_1a27f944d3c965296299e354021ea8c82a">visit</reimplements>
+        <reimplementedby refid="class_s_f_m_l_drawing_visitor_1affc928db69d8762b84ca1c57c4d34c97">visit</reimplementedby>
+        <param>
+          <type>std::shared_ptr&lt; <ref refid="class_sprite_proxy" kindref="compound">SpriteProxy</ref> &gt;</type>
+          <declname>s</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="classes/AbstractDrawingVisitor.h" line="5" column="18"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_abstract_drawing_visitor_1a08ecda9a55f34afbfa1797be9bd115ea" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void AbstractDrawingVisitor::draw</definition>
+        <argsstring>()=0</argsstring>
+        <name>draw</name>
+        <reimplementedby refid="class_s_f_m_l_drawing_visitor_1a26218dc60bc0a3f264ca11f9307a909f">draw</reimplementedby>
+        <briefdescription>
+<para>Draw cache to screen. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="classes/AbstractDrawingVisitor.h" line="13" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="class_abstract_drawing_visitor_1ae9abaeedd78440c6a0cccf6e36020602" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>bool</type>
+        <definition>virtual bool AbstractDrawingVisitor::isOpen</definition>
+        <argsstring>()=0</argsstring>
+        <name>isOpen</name>
+        <reimplementedby refid="class_s_f_m_l_drawing_visitor_1a65e69df1e108073052315b80eb0b5514">isOpen</reimplementedby>
+        <briefdescription>
+<para>is the screen window open? </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>true </para>
+</simplesect>
+<simplesect kind="return"><para>false </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="classes/AbstractDrawingVisitor.h" line="20" column="18"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="3">
+        <label>SFMLDrawingVisitor</label>
+        <link refid="class_s_f_m_l_drawing_visitor"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>Visitor</label>
+        <link refid="class_visitor"/>
+      </node>
+      <node id="1">
+        <label>AbstractDrawingVisitor</label>
+        <link refid="class_abstract_drawing_visitor"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>Visitor</label>
+        <link refid="class_visitor"/>
+      </node>
+      <node id="1">
+        <label>AbstractDrawingVisitor</label>
+        <link refid="class_abstract_drawing_visitor"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="classes/AbstractDrawingVisitor.h" line="4" column="44" bodyfile="classes/AbstractDrawingVisitor.h" bodystart="4" bodyend="21"/>
+    <listofallmembers>
+      <member refid="class_abstract_drawing_visitor_1a08ecda9a55f34afbfa1797be9bd115ea" prot="public" virt="pure-virtual"><scope>AbstractDrawingVisitor</scope><name>draw</name></member>
+      <member refid="class_abstract_drawing_visitor_1ae9abaeedd78440c6a0cccf6e36020602" prot="public" virt="pure-virtual"><scope>AbstractDrawingVisitor</scope><name>isOpen</name></member>
+      <member refid="class_abstract_drawing_visitor_1ad2d22d0a5d3b0728368fdf0931bef103" prot="private" virt="pure-virtual"><scope>AbstractDrawingVisitor</scope><name>visit</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

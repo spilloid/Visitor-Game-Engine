@@ -1,0 +1,61 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.16">
+  <compounddef id="_ray_cast_collision_visitor_8cpp" kind="file" language="C++">
+    <compoundname>RayCastCollisionVisitor.cpp</compoundname>
+    <includes refid="_ray_cast_collision_visitor_8h" local="yes">RayCastCollisionVisitor.h</includes>
+    <incdepgraph>
+      <node id="3">
+        <label>Visitor.h</label>
+        <link refid="_visitor_8h_source"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>classes/RayCastCollisionVisitor.cpp</label>
+        <link refid="_ray_cast_collision_visitor_8cpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>RayCastCollisionVisitor.h</label>
+        <link refid="_ray_cast_collision_visitor_8h_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>SpriteProxy.h</label>
+        <link refid="_sprite_proxy_8h_source"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>iostream</label>
+      </node>
+      <node id="6">
+        <label>memory</label>
+      </node>
+    </incdepgraph>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;RayCastCollisionVisitor.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>RayCastCollisionVisitor::visit(std::shared_ptr&lt;SpriteProxy&gt;<sp/>s){</highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="comment">//TODO:<sp/>implement</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>RayCastCollisionVisitor::areColliding(std::shared_ptr&lt;SpriteProxy&gt;<sp/>s1,<sp/>std::shared_ptr&lt;SpriteProxy&gt;<sp/>s2){</highlight></codeline>
+<codeline lineno="6"><highlight class="normal"><sp/><sp/><sp/><sp/>s1-&gt;getX();</highlight></codeline>
+<codeline lineno="7"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//TODO:<sp/>implement</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="9"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="classes/RayCastCollisionVisitor.cpp"/>
+  </compounddef>
+</doxygen>

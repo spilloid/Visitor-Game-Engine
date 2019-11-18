@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['update_51',['update',['../class_game_engine.html#a2f0e84b7f70f82b9c6a8cf1b6c7715bf',1,'GameEngine']]]
+  ['isopen_53',['isOpen',['../class_abstract_drawing_visitor.html#ae9abaeedd78440c6a0cccf6e36020602',1,'AbstractDrawingVisitor::isOpen()'],['../class_s_f_m_l_drawing_visitor.html#a65e69df1e108073052315b80eb0b5514',1,'SFMLDrawingVisitor::isOpen()']]]
 ];

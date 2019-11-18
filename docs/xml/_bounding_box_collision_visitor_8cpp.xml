@@ -1,0 +1,96 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.16">
+  <compounddef id="_bounding_box_collision_visitor_8cpp" kind="file" language="C++">
+    <compoundname>BoundingBoxCollisionVisitor.cpp</compoundname>
+    <includes refid="_bounding_box_collision_visitor_8h" local="yes">BoundingBoxCollisionVisitor.h</includes>
+    <incdepgraph>
+      <node id="7">
+        <label>list</label>
+      </node>
+      <node id="3">
+        <label>Visitor.h</label>
+        <link refid="_visitor_8h_source"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>BoundingBoxCollisionVisitor.h</label>
+        <link refid="_bounding_box_collision_visitor_8h_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>classes/BoundingBoxCollisionVisitor.cpp</label>
+        <link refid="_bounding_box_collision_visitor_8cpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>SpriteProxy.h</label>
+        <link refid="_sprite_proxy_8h_source"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>iostream</label>
+      </node>
+      <node id="6">
+        <label>memory</label>
+      </node>
+    </incdepgraph>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;BoundingBoxCollisionVisitor.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2" refid="class_bounding_box_collision_visitor_1a36c48ca3b6f9f94d1113a17d27016b92" refkind="member"><highlight class="normal"><ref refid="class_bounding_box_collision_visitor_1a36c48ca3b6f9f94d1113a17d27016b92" kindref="member">BoundingBoxCollisionVisitor::BoundingBoxCollisionVisitor</ref>()<sp/>:<sp/>watched(nullptr)<sp/>{}</highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4" refid="class_bounding_box_collision_visitor_1a059b61d1100c84601cdb078931ca24d6" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_bounding_box_collision_visitor_1a059b61d1100c84601cdb078931ca24d6" kindref="member">BoundingBoxCollisionVisitor::visit</ref>(std::shared_ptr&lt;SpriteProxy&gt;<sp/>s)<sp/>{</highlight></codeline>
+<codeline lineno="5"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>if<sp/>watched<sp/>isnt<sp/>set<sp/>or<sp/>if<sp/>the<sp/>watched<sp/>is<sp/>visiting<sp/>himself<sp/>we<sp/>ignore<sp/>it</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(this-&gt;watched==</highlight><highlight class="keyword">nullptr</highlight><highlight class="normal"><sp/>||<sp/>s<sp/>==<sp/>this-&gt;watched)</highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="7"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>watched<sp/>attributes</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>ww<sp/>=<sp/>this-&gt;watched-&gt;getWidth();</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>wh<sp/>=<sp/>this-&gt;watched-&gt;getHeight();</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>wx<sp/>=<sp/>this-&gt;watched-&gt;getX();</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>wy<sp/>=<sp/>this-&gt;watched-&gt;getY();</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>visiting<sp/>sprite&apos;s<sp/>attributes</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>sw<sp/>=<sp/>s-&gt;getWidth();</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>sh<sp/>=<sp/>s-&gt;getHeight();</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>sx<sp/>=<sp/>s-&gt;getX();</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>sy<sp/>=<sp/>s-&gt;getY();</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(wx<sp/>&lt;<sp/>sx<sp/>+<sp/>sw)</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(wx<sp/>+<sp/>ww<sp/>&gt;<sp/>sx)</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(wy<sp/>&lt;<sp/>sy<sp/>+<sp/>sh)</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(wy<sp/>+<sp/>wh<sp/>&gt;<sp/>sy){</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::cout<sp/>&lt;&lt;<sp/>this-&gt;watched<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;<sp/>Collided<sp/>with<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>s<sp/>&lt;&lt;std::endl;</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>this-&gt;collisions.push_back(s);</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/>this-&gt;collisions.unique();</highlight></codeline>
+<codeline lineno="26"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28" refid="class_bounding_box_collision_visitor_1a49b58bc6806b472d3065f86e7a549782" refkind="member"><highlight class="normal"><ref refid="class_bounding_box_collision_visitor_1a36c48ca3b6f9f94d1113a17d27016b92" kindref="member">BoundingBoxCollisionVisitor::BoundingBoxCollisionVisitor</ref>(std::shared_ptr&lt;SpriteProxy&gt;<sp/>s)</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/>:<sp/>watched(s)<sp/>{}</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31" refid="class_bounding_box_collision_visitor_1a08106fb5198d18744a1d5a5d76b6743e" refkind="member"><highlight class="normal">std::list&lt;std::shared_ptr&lt;SpriteProxy<sp/>&gt;&gt;<sp/><ref refid="class_bounding_box_collision_visitor_1a08106fb5198d18744a1d5a5d76b6743e" kindref="member">BoundingBoxCollisionVisitor::getCollisions</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/>std::list&lt;std::shared_ptr&lt;SpriteProxy<sp/>&gt;&gt;<sp/>list<sp/>=<sp/>this-&gt;collisions;</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/>this-&gt;collisions.clear();</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>list;</highlight></codeline>
+<codeline lineno="35"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37" refid="class_bounding_box_collision_visitor_1a2926d24683596bb7630accdad159210e" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_bounding_box_collision_visitor_1a2926d24683596bb7630accdad159210e" kindref="member">BoundingBoxCollisionVisitor::setWatched</ref>(std::shared_ptr&lt;<sp/>SpriteProxy&gt;<sp/>s)<sp/>{</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/>this-&gt;watched<sp/>=<sp/>s;</highlight></codeline>
+<codeline lineno="39"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="classes/BoundingBoxCollisionVisitor.cpp"/>
+  </compounddef>
+</doxygen>
