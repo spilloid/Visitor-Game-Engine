@@ -41,18 +41,31 @@ class WrapBoundsVisitor{
 class BoundingBoxCollisionVisitor{
     void visit()
     }
-class AbstractDrawingVisitor{
-    +void draw()=0
-    +void visit()=0
-    +bool isOpen()=0
+class AbstractRenderer{
+    -bool open
+    +void draw(vector<SpriteProxy> sp)
+    +bool isOpen()
 }
-class SFMLDrawingVisitor{
+class SFMLRenderer{
+    -RenderWindow rw
+    -TextureFactory tf
+
+}
+class AbstractDrawingVisitor{
+    -AbstractRenderer renderer
+    +void draw()
+    +void visit()
+    +bool isOpen()
+}
+
+class SimpleDrawingVisitor{
     -sf::RenderWindow window
     -map<SpriteProxy,sf::Sprite> text
-    +void visit()
-    +void draw()
-    +bool isOpen()
     }
+class GridDrawingVisitor{
+    -int maxX
+    -int maxY
+}
 class ForceVisitor{
     void visit()
     }
@@ -65,13 +78,14 @@ class RayCastCollisionVisitor{
 hello <--- Game
 Game <|-- Pong
 Game <|-- Quoridor
-Game <--- GameEngine
-Game <--- Visitor
-Game <--- SpriteProxy
+Game ---> GameEngine
+Game ---> Visitor
+Game ---> SpriteProxy
 GameEngine --> Visitor
 GameEngine --> Scene
-Scene --> SpriteProxy
-Visitor -- SpriteProxy
+Scene <|--- LayeredScene
+Scene ---> SpriteProxy
+Visitor ---> SpriteProxy
 Visitor <|-- ForceVisitor
 Visitor <|-- GravityVisitor
 Visitor <|-- BounceBoundsVisitor
@@ -80,6 +94,9 @@ Visitor <|-- BoundingBoxCollisionVisitor
 Visitor <|-- RayCastCollisionVisitor
 Visitor <|-- AbstractDrawingVisitor
 Visitor<|-- AbstractDrawingVisitor
-AbstractDrawingVisitor <|-- SFMLDrawingVisitor
-SFMLDrawingVisitor <--- TextureFactory
+AbstractDrawingVisitor <|-- SimpleDrawingVisitor
+AbstractDrawingVisitor <|-- GridDrawingVisitor
+AbstractDrawingVisitor ---> AbstractRenderer
+AbstractRenderer <|--- SFMLRenderer
+AbstractRenderer ---> TextureFactory
 @enduml
