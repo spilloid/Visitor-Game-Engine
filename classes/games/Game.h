@@ -7,7 +7,9 @@
 #include "../WrapBoundsVisitor.h"
 #include "../ForceVisitor.h"
 #include "../BoundingBoxCollisionVisitor.h"
-#include "../SFMLDrawingVisitor.h"
+#include "../SimpleDrawingVisitor.h"
+#include "../GridDrawingVisitor.h"
+#include "../SFMLRenderer.h"
 #include <list>
 #include <memory>
 class Game{

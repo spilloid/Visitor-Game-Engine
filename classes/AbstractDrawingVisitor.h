@@ -1,10 +1,14 @@
 #ifndef ABSTRACTDRAWINGVISITOR_H
 #define ABSTRACTDRAWINGVISITOR_H
 #include "Visitor.h"
+#include "AbstractRenderer.h"
 class AbstractDrawingVisitor : public Visitor{
 
     private:
     //you'll probably want a cache of some kind here for drawing
+    protected:
+        bool open;
+        std::shared_ptr<AbstractRenderer> renderer;
     public: 
     /**
      * @brief Draw cache to screen

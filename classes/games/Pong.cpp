@@ -2,6 +2,7 @@
 
 void Pong::start()
 {
+    //constants
     const int MAXX=500,MINX=0,MAXY=500,MINY=0,
     paddleHeight=50,paddleWidth=10;
     const std::string black = "./assets/img/bbox.png";
@@ -16,11 +17,13 @@ void Pong::start()
         black,MAXX-10,0,5,MAXY*2);
     std::shared_ptr<SpriteProxy> ball = std::make_shared<SpriteProxy>(
         black,MAXX / 2,MAXY / 2,5,5);
+    //make a renderer for drawing to
+    std::shared_ptr<AbstractRenderer> ar = std::make_shared<SFMLRenderer>(MAXX,MAXY);
     //declare visitors
     std::shared_ptr<BounceBoundsVisitor> bv = std::make_shared<BounceBoundsVisitor>(MINX,MAXX,MINY,MAXY);
     std::shared_ptr<ForceVisitor> fv = std::make_shared<ForceVisitor>();
     std::shared_ptr<BoundingBoxCollisionVisitor> bbcv = std::make_shared<BoundingBoxCollisionVisitor>();
-    std::shared_ptr<SFMLDrawingVisitor> draw = std::make_shared<SFMLDrawingVisitor>(MAXX,MAXY);
+    std::shared_ptr<SimpleDrawingVisitor> draw = std::make_shared<SimpleDrawingVisitor>(ar);
 
     //declare game engine
     std::shared_ptr<GameEngine> ge = std::make_shared<GameEngine>();
@@ -103,4 +106,5 @@ void Pong::start()
             draw->draw();
         }
     }
+    std::cout << "PONG CLOSED" << std::endl;
 }

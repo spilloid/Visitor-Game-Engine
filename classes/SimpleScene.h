@@ -1,10 +1,7 @@
-#ifndef SCENE_H
-#define SCENE_H
-#include "SpriteProxy.h"
-#include "Visitor.h"
-#include <list>
-#include <memory>
-class Scene{
+#ifndef SIMPLESCENE_H
+#define SIMPLESCENE_H
+#include "AbstractScene.h"
+class SimpleScene : public AbstractScene{
     private:
     /**
      * @brief list of sprites in scene. could easily be a different data structure
@@ -16,12 +13,12 @@ class Scene{
      * @brief Construct a new Scene object
      * 
      */
-        Scene();
+        SimpleScene();
         /**
          * @brief Destroy the Scene object
          * 
          */
-        ~Scene();
+        ~SimpleScene();
         /**
          * @brief add a sprite to the scene
          * 

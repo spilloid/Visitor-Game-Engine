@@ -1,7 +1,8 @@
 #ifndef GAMEENGINE_H
 #define GAMEENGINE_H
 #include "Visitor.h"
-#include "Scene.h"
+#include "AbstractScene.h"
+#include "SimpleScene.h"
 #include <list>
 #include <thread>
 class GameEngine{
@@ -15,7 +16,7 @@ class GameEngine{
          * @brief scene which holds the sprites
          * 
          */
-        Scene scene;
+        std::shared_ptr<AbstractScene> scene;
     public:
     /**
      * @brief Construct a new Game Engine object
@@ -38,9 +39,11 @@ class GameEngine{
          */
         void addSprite(std::shared_ptr<SpriteProxy>);
         /**
+         * @brief Set the Scene object
          * 
+         * @param as 
          */
-
+        void setScene(std::shared_ptr<AbstractScene> as);
 
         /**
          * @brief Let visitors visit the scene
