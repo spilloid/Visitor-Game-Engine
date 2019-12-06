@@ -4,6 +4,8 @@
 #include "Visitor.h"
 #include <list>
 #include <memory>
+//TODO: implement a composite scene. 
+//TODO: BSP dungeon Generation ; andy's website
 class AbstractScene{
     private:
     public:
@@ -12,12 +14,12 @@ class AbstractScene{
          * 
          * @param s 
          */
-        void addSprite(std::shared_ptr<SpriteProxy> s)=0;
+        void virtual addSprite(std::shared_ptr<SpriteProxy> s)=0;
         /**
          * @brief iterate through sprites in scene letting each visitor visit sprites
          * 
          * @param v 
          */
-        void accept(std::shared_ptr<Visitor> v)=0;
+        void virtual accept(std::shared_ptr<Visitor> v)=0;
 };
 #endif

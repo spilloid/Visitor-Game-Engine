@@ -14,6 +14,7 @@ private:
      * 
      */
     int maxY;
+  std::vector<std::shared_ptr<SpriteProxy>> renderList;
 public:
 /**
  * @brief Construct a new Grid Drawing Visitor object

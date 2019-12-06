@@ -1,6 +1,9 @@
 #include "SFMLRenderer.h"
 SFMLRenderer::SFMLRenderer(int screenWidth, int screenHeight)
+:open(true)
 {
+    this->screenWidth = screenWidth;
+    this->screenHeight = screenHeight;
     this->window =
         std::make_shared<sf::RenderWindow>(sf::VideoMode(screenWidth, screenHeight), "Game");
 
@@ -8,10 +11,25 @@ SFMLRenderer::SFMLRenderer(int screenWidth, int screenHeight)
 }
 void SFMLRenderer::draw(std::vector<std::shared_ptr<SpriteProxy>> renderList)
 {
-    // NECESSARY: Check if window is still open
-    sf::Event event;
+    // 1. REFRESH SCREEN
+    this->window->clear(sf::Color::White);
+    //iterate over sprite list
+    for (auto spriteIterator = renderList.begin(); spriteIterator != renderList.end(); spriteIterator++)
+    {
+        std::shared_ptr<SpriteProxy> i = *spriteIterator;
+        std::shared_ptr<sf::Sprite> temp = std::make_shared<sf::Sprite>();
+        temp->setTexture(*this->tf->getTexture(i->getTextureLocation()));
+        temp->setTextureRect(sf::IntRect(0, 0, i->getWidth(), i->getHeight()));
+        temp->setPosition(i->getX(), i->getY());
+        this->window->draw(*temp);
+    }
+    this->window->display();
+}
+bool SFMLRenderer::isOpen()
+{
     if (this->window->isOpen())
     {
+        sf::Event event;
         // TODO: explore way to watch for events on window smarter....
         //perhaps multithreading?
         if (this->window->pollEvent(event))
@@ -22,23 +40,10 @@ void SFMLRenderer::draw(std::vector<std::shared_ptr<SpriteProxy>> renderList)
                 this->open = false;
             } // end if; window is closed
         }     // end if ; check event poll
-
-        // 1. REFRESH SCREEN
-        this->window->clear(sf::Color::White);
-        //iterate over sprite list
-        for (auto spriteIterator = renderList.begin(); spriteIterator != renderList.end(); spriteIterator++)
-        {
-            std::shared_ptr<SpriteProxy> i = *spriteIterator;
-            std::shared_ptr<sf::Sprite> temp = std::make_shared<sf::Sprite>();
-            temp->setTexture(*this->tf->getTexture(i->getTextureLocation()));
-            temp->setTextureRect(sf::IntRect(0, 0, i->getWidth(), i->getHeight()));
-            temp->setPosition(i->getX(), i->getY());
-            this->window->draw(*temp);
-        }
-        this->window->display();
+        return this->open;
+    }else
+    {
+        return false;
     }
-}
-bool SFMLRenderer::isOpen()
-{
-    return this->open;
+    
 }

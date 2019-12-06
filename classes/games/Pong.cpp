@@ -106,4 +106,5 @@ void Pong::start()
             draw->draw();
         }
     }
+    std::cout << "PONG CLOSED" << std::endl;
 }

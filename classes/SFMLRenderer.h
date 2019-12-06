@@ -5,6 +5,7 @@
 #include "AbstractRenderer.h"
 #include "TextureFactory.h"
 #include "SpriteProxy.h"
+#include <list>
 class SFMLRenderer : public AbstractRenderer
 {
 private:
@@ -30,5 +31,6 @@ public:
    //TODO: PUT IN ABSTRACT
    void draw(std::vector<std::shared_ptr<SpriteProxy>> renderList);
    bool isOpen();
+   
 };
 #endif // !1SFMLRENDERER_H

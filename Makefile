@@ -1,6 +1,6 @@
 CXX      := -c++
 CXXFLAGS :=  -ggdb
-LDFLAGS  := -L/usr/lib -lstdc++ -lsfml-graphics -lsfml-window -lsfml-system
+LDFLAGS  := -L/usr/lib -lstdc++ -lsfml-graphics -lsfml-window -lsfml-system -lpthread
 BUILD    := ./build
 OBJ_DIR  := $(BUILD)/objects
 APP_DIR  := $(BUILD)/apps

@@ -1,5 +1,7 @@
 #include "BoundingBoxCollisionVisitor.h"
-BoundingBoxCollisionVisitor::BoundingBoxCollisionVisitor() : watched(nullptr) {}
+BoundingBoxCollisionVisitor::BoundingBoxCollisionVisitor() {
+  this->watched = nullptr;
+}
 
 void BoundingBoxCollisionVisitor::visit(std::shared_ptr<SpriteProxy> s) {
     // if watched isnt set or if the watched is visiting himself we ignore it
@@ -19,21 +21,7 @@ void BoundingBoxCollisionVisitor::visit(std::shared_ptr<SpriteProxy> s) {
     if (wx + ww > sx)
       if (wy < sy + sh)
         if (wy + wh > sy){
-            std::cout << this->watched << " Collided with " << s <<std::endl;
             this->collisions.push_back(s);
         }
   this->collisions.unique();
-}
-
-BoundingBoxCollisionVisitor::BoundingBoxCollisionVisitor(std::shared_ptr<SpriteProxy> s)
-    : watched(s) {}
-
-std::list<std::shared_ptr<SpriteProxy >> BoundingBoxCollisionVisitor::getCollisions() {
-  std::list<std::shared_ptr<SpriteProxy >> list = this->collisions;
-  this->collisions.clear();
-  return list;
-}
-
-void BoundingBoxCollisionVisitor::setWatched(std::shared_ptr< SpriteProxy> s) {
-  this->watched = s;
 }

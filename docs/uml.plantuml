@@ -2,6 +2,17 @@
 class Game{
     +void start()
 }
+class EasyGameEngine{
+    -AbstractDrawingVisitor adv
+    -AbstractCollisionVisitor acv
+    -map<int,Scene> sceneList
+    +void setBoundingBoxCollisions()
+    +void setRayCastCollisions()
+    +void setForces(bool)
+    +void addScene(int,AbstractScene)
+    +void setScene(int)
+    +void setRendererer(AbstractRenderer)
+}
 class GameEngine {
     -list<Visitor> sceneVisitors
     -Scene scene
@@ -9,10 +20,17 @@ class GameEngine {
     +addSprite(SpriteProxy)
     +bool update()
 }
-class Scene{
-    -list<SpriteProxy> spriteList
+class AbstractScene{
     +void addSprite()
     +void accept()
+}
+class SimpleScene{
+    -list<SpriteProxy> spriteList
+
+}
+class LayeredScene{
+    -lis<list<SpriteProxy>> spriteList
+
 }
 class TextureFactory{
         +bool loadTexture(string);
@@ -37,10 +55,18 @@ class BounceBoundsVisitor{
 }
 class WrapBoundsVisitor{
     void visit()
-    }
+}
+class AbstractCollisionVisitor{
+
+}
 class BoundingBoxCollisionVisitor{
-    void visit()
-    }
+}
+class RayCastCollisionVisitor{
+
+}
+class CircularCollisionVisitor{
+
+}
 class AbstractRenderer{
     -bool open
     +void draw(vector<SpriteProxy> sp)
@@ -49,7 +75,7 @@ class AbstractRenderer{
 class SFMLRenderer{
     -RenderWindow rw
     -TextureFactory tf
-
+    +getInput()
 }
 class AbstractDrawingVisitor{
     -AbstractRenderer renderer
@@ -67,36 +93,35 @@ class GridDrawingVisitor{
     -int maxY
 }
 class ForceVisitor{
-    void visit()
     }
 class GravityVisitor{
-    void visit()
     }
-class RayCastCollisionVisitor{
-    void visit()
-    }
-hello <--- Game
 Game <|-- Pong
 Game <|-- Quoridor
 Game ---> GameEngine
 Game ---> Visitor
 Game ---> SpriteProxy
+Game ---> AbstractRenderer
+GameEngine <|-- EasyGameEngine
 GameEngine --> Visitor
-GameEngine --> Scene
-Scene <|--- LayeredScene
-Scene ---> SpriteProxy
+GameEngine --> AbstractScene
+AbstractScene <|--- LayeredScene
+AbstractScene <|--- SimpleScene
+AbstractScene ---> SpriteProxy
 Visitor ---> SpriteProxy
 Visitor <|-- ForceVisitor
 Visitor <|-- GravityVisitor
 Visitor <|-- BounceBoundsVisitor
 Visitor <|-- WrapBoundsVisitor
-Visitor <|-- BoundingBoxCollisionVisitor
-Visitor <|-- RayCastCollisionVisitor
 Visitor <|-- AbstractDrawingVisitor
 Visitor<|-- AbstractDrawingVisitor
+Visitor <|-- AbstractCollisionVisitor
+AbstractCollisionVisitor <|-- RayCastCollisionVisitor
+AbstractCollisionVisitor <|-- BoundingBoxCollisionVisitor
+AbstractCollisionVisitor <|-- CircularCollisionVisitor
 AbstractDrawingVisitor <|-- SimpleDrawingVisitor
 AbstractDrawingVisitor <|-- GridDrawingVisitor
 AbstractDrawingVisitor ---> AbstractRenderer
 AbstractRenderer <|--- SFMLRenderer
-AbstractRenderer ---> TextureFactory
+SFMLRenderer ---> TextureFactory
 @enduml
