@@ -31,6 +31,11 @@ public:
    //TODO: PUT IN ABSTRACT
    void draw(std::vector<std::shared_ptr<SpriteProxy>> renderList);
    bool isOpen();
-   
+   /**
+    * @brief Get the Window object
+    * 
+    * @return std::shared_ptr<sf::Window> 
+    */
+   std::shared_ptr<sf::Window> getWindow();
 };
 #endif // !1SFMLRENDERER_H

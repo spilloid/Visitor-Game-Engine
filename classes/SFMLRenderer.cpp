@@ -47,3 +47,6 @@ bool SFMLRenderer::isOpen()
     }
     
 }
+std::shared_ptr<sf::Window> SFMLRenderer::getWindow(){
+    return this->window;
+}

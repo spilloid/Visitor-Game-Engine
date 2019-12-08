@@ -10,6 +10,7 @@
 #include "../SimpleDrawingVisitor.h"
 #include "../GridDrawingVisitor.h"
 #include "../SFMLRenderer.h"
+#include "../SFMLInputWrapper.h"
 #include <list>
 #include <memory>
 class Game{

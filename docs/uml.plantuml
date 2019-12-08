@@ -20,6 +20,17 @@ class GameEngine {
     +addSprite(SpriteProxy)
     +bool update()
 }
+class click{
+    int x
+    int y
+    int isLeft
+}
+class AbstractInputWrapper {
+    +int[] getKeyPress()
+    +click getMousePress()
+}
+class SFMLInputWrapper {
+}
 class AbstractScene{
     +void addSprite()
     +void accept()
@@ -105,6 +116,8 @@ Game ---> AbstractRenderer
 GameEngine <|-- EasyGameEngine
 GameEngine --> Visitor
 GameEngine --> AbstractScene
+GameEngine --> AbstractInputWrapper
+AbstractInputWrapper <|--- SFMLInputWrapper
 AbstractScene <|--- LayeredScene
 AbstractScene <|--- SimpleScene
 AbstractScene ---> SpriteProxy
