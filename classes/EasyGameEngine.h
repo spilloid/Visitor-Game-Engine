@@ -1,5 +1,6 @@
-#ifndef EASYGAMEENGINE_H
-#define EASYGAMEENGINE_H
+#ifndef EASY_GAME_ENGINE_H
+#define EASY_GAME_ENGINE_H
+
 #include <iostream>
 #include <memory>
 #include <vector>
@@ -21,8 +22,8 @@ class EasyGameEngine{
         std::shared_ptr<AbstractCollisionVisitor> collisions;
         std::vector<std::shared_ptr<AbstractScene>> scenes;
         std::shared_ptr<ForceVisitor> forces;
-        int curScene;
-        bool forcesOn;
+    int curScene;
+    bool forcesOn{};
     public:
         EasyGameEngine();
         /**
@@ -30,30 +31,34 @@ class EasyGameEngine{
          * 
          */
         void setBoundingBoxCollisions();
-        /**
-         * @brief Set collision type to be raycasted
-         * 
-         */
+
+    /**
+     * @brief Set collision type to be ray-casted
+     *
+     */
         void setRayCastCollisions();
-        /**
-         * @brief turn on/off physics
-         * 
-         * @param yn 
-         */
-        void setForces(bool yn);
-        /**
-         * @brief 
-         * 
-         * @param scene 
-         * @return int Index of scene in Engine
-         */
-        int addScene(std::shared_ptr<AbstractScene> scene);
-        /**
-         * @brief Sets currently rendered scene
-         * 
-         * @param id 
-         */
-        void setScene(int id);
+
+    /**
+     * @brief turn on/off physics
+     *
+     * @param yn
+     */
+    void setForces(bool yn);
+
+    /**
+     * @brief
+     *
+     * @param scene
+     * @return int Index of scene in Engine
+     */
+    unsigned long addScene(std::shared_ptr<AbstractScene> scene);
+
+    /**
+     * @brief Sets currently rendered scene
+     *
+     * @param id
+     */
+    void setScene(int id);
         /**
          * @brief Set the Rendererer object
          * 

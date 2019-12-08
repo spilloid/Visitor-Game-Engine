@@ -4,11 +4,12 @@
 class BoundingBoxCollisionVisitor : public AbstractCollisionVisitor{
     public:
     BoundingBoxCollisionVisitor();
+
     /**
      * @brief update currently colliding list based on algorithm
      * 
      * @param s 
      */
-    virtual void visit(std::shared_ptr<SpriteProxy> s);
+    void visit(std::shared_ptr<Sprite> s) override;
 };
 #endif

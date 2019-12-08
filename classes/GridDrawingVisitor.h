@@ -14,7 +14,7 @@ private:
      * 
      */
     int maxY;
-  std::vector<std::shared_ptr<SpriteProxy>> renderList;
+    std::vector<std::shared_ptr<Sprite>> renderList;
 public:
 /**
  * @brief Construct a new Grid Drawing Visitor object
@@ -24,23 +24,26 @@ public:
  * @param ar : abstract renderer
  */
     GridDrawingVisitor(int maxX, int maxY, std::shared_ptr<AbstractRenderer> ar);
+
     /**
      * @brief Draw cache to screen
      * 
      */
-    virtual void draw();
+    void draw() override;
+
     /**
      * @brief is the screen window open?
      * 
      * @return true 
      * @return false 
      */
-    virtual bool isOpen();
+    bool isOpen() override;
+
     /**
      * @brief cache a sprite for later drawing
      * 
      * @param s 
      */
-    virtual void visit(std::shared_ptr<SpriteProxy> s);
+    void visit(std::shared_ptr<Sprite> s) override;
 };
 #endif

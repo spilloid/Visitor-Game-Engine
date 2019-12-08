@@ -16,19 +16,20 @@ void EasyGameEngine::setRayCastCollisions()
 {
     this->collisions = std::make_shared<RayCastCollisionVisitor>();
 }
-void EasyGameEngine::setForces(bool yn)
-{
+void EasyGameEngine::setForces(bool yn) {
 
     this->forcesOn = yn;
 }
-int EasyGameEngine::addScene(std::shared_ptr<AbstractScene> scene) {
+
+unsigned long EasyGameEngine::addScene(std::shared_ptr<AbstractScene> scene) {
     this->scenes.emplace_back(scene);
-    return this->scenes.size()-1;
+    return this->scenes.size() - 1;
 }
+
 void EasyGameEngine::setScene(int id) {
-    if(id < this->scenes.size())
+    if (id < this->scenes.size())
         this->curScene = id;
-    else 
+    else
         std::cout << "Invalid Scene Number!" << std::endl;
 }
 void EasyGameEngine::setRendererer(std::shared_ptr<AbstractRenderer> ar) {

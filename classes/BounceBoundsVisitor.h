@@ -16,12 +16,13 @@ class BounceBoundsVisitor : public Visitor{
      * @param minY minimum Y of sprite
      * @param maxY maximum Y of sprite
      */
-    BounceBoundsVisitor(int minX,int maxX, int minY, int maxY);
+    BounceBoundsVisitor(int minX, int maxX, int minY, int maxY);
+
     /**
      * @brief if sprite is outside of bounds, move it into bounds then have it BOUNCE
      * 
      * @param sp 
      */
-    void visit(std::shared_ptr<SpriteProxy> sp);
+    void visit(std::shared_ptr<Sprite> sp) override;
 };
 #endif

@@ -7,16 +7,16 @@ void Quoridor::start()
               wallHeight = 1, wallWidth = 2;
     const std::string black = "./assets/img/bbox.png";
     //declare sprites : texture, (x,y), (width,height)
-    std::shared_ptr<SpriteProxy> player1 = std::make_shared<SpriteProxy>(
-        black, MAXX / 2, MINY, playerWidth, playerHeight);
-    std::shared_ptr<SpriteProxy> player2 = std::make_shared<SpriteProxy>(
-        black, MAXX / 2, MAXY, playerWidth, playerHeight);
-    std::shared_ptr<SpriteProxy> player1Goal = std::make_shared<SpriteProxy>(
-        black, MINX, MAXY, MAXX, 1);
-    std::shared_ptr<SpriteProxy> player2Goal = std::make_shared<SpriteProxy>(
-        black, MINX, MINY, MAXX, 1);
-    std::shared_ptr<SpriteProxy> wall = std::make_shared<SpriteProxy>(
-        black, 0, 0, wallWidth, wallHeight);
+    std::shared_ptr<Sprite> player1 = std::make_shared<Sprite>(
+            black, MAXX / 2, MINY, playerWidth, playerHeight);
+    std::shared_ptr<Sprite> player2 = std::make_shared<Sprite>(
+            black, MAXX / 2, MAXY, playerWidth, playerHeight);
+    std::shared_ptr<Sprite> player1Goal = std::make_shared<Sprite>(
+            black, MINX, MAXY, MAXX, 1);
+    std::shared_ptr<Sprite> player2Goal = std::make_shared<Sprite>(
+            black, MINX, MINY, MAXX, 1);
+    std::shared_ptr<Sprite> wall = std::make_shared<Sprite>(
+            black, 0, 0, wallWidth, wallHeight);
     //declare renderer
     std::shared_ptr<SFMLRenderer> sr = std::make_shared<SFMLRenderer>(ScreenHeight, ScreenWidth);
     //declare visitors
@@ -45,7 +45,7 @@ void Quoridor::start()
     sf::Clock tick;
 
     //start the game
-    srand(time(NULL));
+    srand(time(nullptr));
     bool up = true;
     while (draw->isOpen())
     {

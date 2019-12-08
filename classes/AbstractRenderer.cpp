@@ -1,7 +1,8 @@
 #include "AbstractRenderer.h"
-int AbstractRenderer::getHeight(){
+unsigned int AbstractRenderer::getHeight() {
     return this->screenHeight;
 }
-int AbstractRenderer::getWidth(){
+
+unsigned int AbstractRenderer::getWidth() {
     return this->screenWidth;
 }

@@ -1,10 +1,10 @@
 #include "GravityVisitor.h"
 GravityVisitor::GravityVisitor(double intensity)
-:intensity(intensity)
-{  }
-void GravityVisitor::visit(std::shared_ptr<SpriteProxy> s){
+        : intensity(intensity) {}
+
+void GravityVisitor::visit(std::shared_ptr<Sprite> s) {
     s->setXY(
-        s->getX(),
-        s->getY() - this->intensity
+            s->getX(),
+            s->getY() - this->intensity
     );
 }

@@ -1,7 +1,7 @@
 #ifndef GAME_H
 #define GAME_H
 #include "../GameEngine.h"
-#include "../SpriteProxy.h"
+#include "../Sprite.h"
 #include "../GravityVisitor.h"
 #include "../BounceBoundsVisitor.h"
 #include "../WrapBoundsVisitor.h"

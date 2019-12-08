@@ -1,12 +1,12 @@
 #include "SFMLInputWrapper.h"
-std::vector<int> SFMLInputWrapper::getKeyPresses()
-{
+
+#include <utility>
+
+std::vector<int> SFMLInputWrapper::getKeyPresses() {
     std::vector<int> list;
     //50-151 care about
-    for (int i = 50; i < 151; i++)
-    {
-        if (sf::Keyboard::isKeyPressed((sf::Keyboard::Key)i))
-        {
+    for (int i = 50; i < 151; i++) {
+        if (sf::Keyboard::isKeyPressed((sf::Keyboard::Key) i)) {
             list.emplace_back(i);
         }
     }
@@ -23,5 +23,6 @@ click SFMLInputWrapper::getLastClick()
         sf::Mouse::isButtonPressed(sf::Mouse::Left)
     };
 }
-SFMLInputWrapper::SFMLInputWrapper(std::shared_ptr<sf::RenderWindow> w):window(w)
+
+SFMLInputWrapper::SFMLInputWrapper(std::shared_ptr<sf::RenderWindow> w) : window(std::move(w))
 {}

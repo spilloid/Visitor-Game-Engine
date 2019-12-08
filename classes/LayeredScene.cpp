@@ -1,19 +1,22 @@
 #include "LayeredScene.h"
-LayeredScene::LayeredScene(){
 
+LayeredScene::LayeredScene() = default;
+
+LayeredScene::~LayeredScene() = default;
+
+void LayeredScene::addSprite(std::shared_ptr<Sprite> s) {
+    this->addSprite(s, 0);
 }
-LayeredScene::~LayeredScene(){}
-void LayeredScene::addSprite(std::shared_ptr<SpriteProxy> s){
-    this->addSprite(s,0);
-}
-void LayeredScene::addSprite(std::shared_ptr<SpriteProxy> s, int layeredNum){
+
+void LayeredScene::addSprite(const std::shared_ptr<Sprite> &s, int layeredNum) {
     this->spriteList[layeredNum].emplace_back(s);
 }
-void LayeredScene::accept(std::shared_ptr<Visitor> v){
+
+void LayeredScene::accept(std::shared_ptr<Visitor> v) {
     //iterate over the list of lists in order 
-    for(auto i = this->spriteList.begin(); i!= this->spriteList.end(); i++){
-       for(auto j = i->begin(); j != i->end(); j++){
-           v->visit(*j);
-       } 
+    for (auto &i : this->spriteList) {
+        for (auto &j : i) {
+            v->visit(j);
+        }
     }
 }

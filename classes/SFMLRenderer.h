@@ -1,13 +1,14 @@
-#ifndef SFMLRENDERER_H
-#define SFMLRENDERER_H
+#ifndef SFML_RENDERER_H
+#define SFML_RENDERER_H
+
 #include <SFML/Graphics.hpp>
 #include <SFML/Graphics/Sprite.hpp>
 #include "AbstractRenderer.h"
 #include "TextureFactory.h"
-#include "SpriteProxy.h"
+#include "Sprite.h"
 #include <list>
-class SFMLRenderer : public AbstractRenderer
-{
+
+class SFMLRenderer : public AbstractRenderer {
 private:
     /**
  * @brief SFML window
@@ -19,7 +20,7 @@ private:
        * 
        */
     std::shared_ptr<TextureFactory> tf;
-   bool open;
+    bool open;
 public:
 /**
  * @brief Construct a new SFMLRenderer object
@@ -27,15 +28,28 @@ public:
  * @param screenWidth 
  * @param screenHeight 
  */
-   SFMLRenderer(int screenWidth, int screenHeight);
-   //TODO: PUT IN ABSTRACT
-   void draw(std::vector<std::shared_ptr<SpriteProxy>> renderList);
-   bool isOpen();
-   /**
-    * @brief Get the Window object
-    * 
-    * @return std::shared_ptr<sf::Window> 
-    */
-   std::shared_ptr<sf::Window> getWindow();
+    SFMLRenderer(unsigned int screenWidth, unsigned int screenHeight);
+    //TODO: PUT IN ABSTRACT
+
+    /**
+     *
+     * @param renderList draws all items in render list to screen
+     */
+    void draw(std::vector<std::shared_ptr<Sprite>> renderList) override;
+
+    /**
+     *
+     * @return is the window open?
+     */
+    bool isOpen() override;
+
+    /**
+     * @brief Get the Window object
+     *
+     * @return std::shared_ptr<sf::Window>
+     */
+    std::shared_ptr<sf::RenderWindow> getWindow();
+
 };
-#endif // !1SFMLRENDERER_H
+
+#endif // !1SFML_RENDERER_H
