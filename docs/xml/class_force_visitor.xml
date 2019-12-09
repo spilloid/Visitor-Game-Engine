@@ -1,0 +1,154 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.16">
+  <compounddef id="class_force_visitor" kind="class" language="C++" prot="public">
+    <compoundname>ForceVisitor</compoundname>
+    <basecompoundref refid="class_visitor" prot="public" virt="non-virtual">Visitor</basecompoundref>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_force_visitor_1a31b87fc4fa7f6ec429abd8d305189c7d" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void ForceVisitor::visit</definition>
+        <argsstring>(std::shared_ptr&lt; Sprite &gt; s) override</argsstring>
+        <name>visit</name>
+        <reimplements refid="class_visitor_1af941b9cd719ad5d43bb21310fb0795eb">visit</reimplements>
+        <param>
+          <type>std::shared_ptr&lt; <ref refid="class_sprite" kindref="compound">Sprite</ref> &gt;</type>
+          <declname>s</declname>
+        </param>
+        <briefdescription>
+<para>update force data on sprite (move it dx/dy) </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>s</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="classes/ForceVisitor.h" line="16" column="10" bodyfile="classes/ForceVisitor.cpp" bodystart="2" bodyend="8"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="class_force_visitor_1a2849e388698ccad7b92d70c9a62004c7" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ForceVisitor::applyForce</definition>
+        <argsstring>(const std::shared_ptr&lt; Sprite &gt; &amp;s, double magnitude, float angle)</argsstring>
+        <name>applyForce</name>
+        <param>
+          <type>const std::shared_ptr&lt; <ref refid="class_sprite" kindref="compound">Sprite</ref> &gt; &amp;</type>
+          <declname>s</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>magnitude</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>angle</declname>
+        </param>
+        <briefdescription>
+<para>apply a force to the sprite </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>s</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>sprite to be operated on </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>magnitude</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>force magnitude </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>angle</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>angle of operation, in degrees </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="classes/ForceVisitor.h" line="25" column="17" bodyfile="classes/ForceVisitor.cpp" bodystart="10" bodyend="18"/>
+      </memberdef>
+      <memberdef kind="function" id="class_force_visitor_1a1b541137dff68c59fb10e9d8ccf49631" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ForceVisitor::stop</definition>
+        <argsstring>(const std::shared_ptr&lt; Sprite &gt; &amp;s)</argsstring>
+        <name>stop</name>
+        <param>
+          <type>const std::shared_ptr&lt; <ref refid="class_sprite" kindref="compound">Sprite</ref> &gt; &amp;</type>
+          <declname>s</declname>
+        </param>
+        <briefdescription>
+<para>Stop the sprite from moving. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>s</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="classes/ForceVisitor.h" line="32" column="17" bodyfile="classes/ForceVisitor.cpp" bodystart="20" bodyend="22"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>Visitor</label>
+        <link refid="class_visitor"/>
+      </node>
+      <node id="1">
+        <label>ForceVisitor</label>
+        <link refid="class_force_visitor"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>Visitor</label>
+        <link refid="class_visitor"/>
+      </node>
+      <node id="1">
+        <label>ForceVisitor</label>
+        <link refid="class_force_visitor"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="classes/ForceVisitor.h" line="8" column="34" bodyfile="classes/ForceVisitor.h" bodystart="8" bodyend="33"/>
+    <listofallmembers>
+      <member refid="class_force_visitor_1a2849e388698ccad7b92d70c9a62004c7" prot="public" virt="non-virtual"><scope>ForceVisitor</scope><name>applyForce</name></member>
+      <member refid="class_force_visitor_1a1b541137dff68c59fb10e9d8ccf49631" prot="public" virt="non-virtual"><scope>ForceVisitor</scope><name>stop</name></member>
+      <member refid="class_force_visitor_1a31b87fc4fa7f6ec429abd8d305189c7d" prot="public" virt="virtual"><scope>ForceVisitor</scope><name>visit</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

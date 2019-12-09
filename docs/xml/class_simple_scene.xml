@@ -1,0 +1,147 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.16">
+  <compounddef id="class_simple_scene" kind="class" language="C++" prot="public">
+    <compoundname>SimpleScene</compoundname>
+    <basecompoundref refid="class_abstract_scene" prot="public" virt="non-virtual">AbstractScene</basecompoundref>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_simple_scene_1a235ac5e9196bb4b8e30624d15881565d" prot="private" static="no" mutable="no">
+        <type>std::list&lt; std::shared_ptr&lt; <ref refid="class_sprite" kindref="compound">Sprite</ref> &gt; &gt;</type>
+        <definition>std::list&lt;std::shared_ptr&lt;Sprite&gt; &gt; SimpleScene::spriteList</definition>
+        <argsstring></argsstring>
+        <name>spriteList</name>
+        <briefdescription>
+<para>list of sprites in scene. could easily be a different data structure </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="classes/SimpleScene.h" line="12" column="15" bodyfile="classes/SimpleScene.h" bodystart="12" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_simple_scene_1a4c1488dffd5429e86e1c595961cedd79" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>SimpleScene::SimpleScene</definition>
+        <argsstring>()</argsstring>
+        <name>SimpleScene</name>
+        <briefdescription>
+<para>Construct a new Scene object. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="classes/SimpleScene.h" line="18" column="9"/>
+      </memberdef>
+      <memberdef kind="function" id="class_simple_scene_1a50a4c34576a09596905a59f4db5802ea" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>SimpleScene::~SimpleScene</definition>
+        <argsstring>()</argsstring>
+        <name>~SimpleScene</name>
+        <briefdescription>
+<para>Destroy the Scene object. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="classes/SimpleScene.h" line="24" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="class_simple_scene_1a245e8567ad1a38d575596e7ed298d2c5" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void SimpleScene::addSprite</definition>
+        <argsstring>(std::shared_ptr&lt; Sprite &gt; s) override</argsstring>
+        <name>addSprite</name>
+        <reimplements refid="class_abstract_scene_1aa3915747c431f6428c02f0387dd6386e">addSprite</reimplements>
+        <param>
+          <type>std::shared_ptr&lt; <ref refid="class_sprite" kindref="compound">Sprite</ref> &gt;</type>
+          <declname>s</declname>
+        </param>
+        <briefdescription>
+<para>add a sprite to the scene </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>s</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="classes/SimpleScene.h" line="31" column="10" bodyfile="classes/SimpleScene.cpp" bodystart="13" bodyend="16"/>
+      </memberdef>
+      <memberdef kind="function" id="class_simple_scene_1a2f56ea6a9c5e2112bc77c30da72c7d64" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void SimpleScene::accept</definition>
+        <argsstring>(std::shared_ptr&lt; Visitor &gt; v) override</argsstring>
+        <name>accept</name>
+        <reimplements refid="class_abstract_scene_1a38f6278adc5d3235296ed8012ea66ea7">accept</reimplements>
+        <param>
+          <type>std::shared_ptr&lt; <ref refid="class_visitor" kindref="compound">Visitor</ref> &gt;</type>
+          <declname>v</declname>
+        </param>
+        <briefdescription>
+<para>iterate through sprites in scene letting each visitor visit sprites </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>v</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="classes/SimpleScene.h" line="38" column="10" bodyfile="classes/SimpleScene.cpp" bodystart="7" bodyend="11"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>AbstractScene</label>
+        <link refid="class_abstract_scene"/>
+      </node>
+      <node id="1">
+        <label>SimpleScene</label>
+        <link refid="class_simple_scene"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>AbstractScene</label>
+        <link refid="class_abstract_scene"/>
+      </node>
+      <node id="1">
+        <label>SimpleScene</label>
+        <link refid="class_simple_scene"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="classes/SimpleScene.h" line="6" column="39" bodyfile="classes/SimpleScene.h" bodystart="6" bodyend="39"/>
+    <listofallmembers>
+      <member refid="class_simple_scene_1a2f56ea6a9c5e2112bc77c30da72c7d64" prot="public" virt="virtual"><scope>SimpleScene</scope><name>accept</name></member>
+      <member refid="class_simple_scene_1a245e8567ad1a38d575596e7ed298d2c5" prot="public" virt="virtual"><scope>SimpleScene</scope><name>addSprite</name></member>
+      <member refid="class_simple_scene_1a4c1488dffd5429e86e1c595961cedd79" prot="public" virt="non-virtual"><scope>SimpleScene</scope><name>SimpleScene</name></member>
+      <member refid="class_simple_scene_1a235ac5e9196bb4b8e30624d15881565d" prot="private" virt="non-virtual"><scope>SimpleScene</scope><name>spriteList</name></member>
+      <member refid="class_simple_scene_1a50a4c34576a09596905a59f4db5802ea" prot="public" virt="non-virtual"><scope>SimpleScene</scope><name>~SimpleScene</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

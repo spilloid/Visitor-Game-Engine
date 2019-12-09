@@ -1,0 +1,172 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.16">
+  <compounddef id="class_abstract_collision_visitor" kind="class" language="C++" prot="public" abstract="yes">
+    <compoundname>AbstractCollisionVisitor</compoundname>
+    <basecompoundref refid="class_visitor" prot="public" virt="non-virtual">Visitor</basecompoundref>
+    <derivedcompoundref refid="class_bounding_box_collision_visitor" prot="public" virt="non-virtual">BoundingBoxCollisionVisitor</derivedcompoundref>
+    <derivedcompoundref refid="class_ray_cast_collision_visitor" prot="public" virt="non-virtual">RayCastCollisionVisitor</derivedcompoundref>
+    <includes refid="_abstract_collision_visitor_8h" local="no">AbstractCollisionVisitor.h</includes>
+      <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="class_abstract_collision_visitor_1a812239222979d680afd12fb35fe2e132" prot="protected" static="no" mutable="no">
+        <type>std::list&lt; std::shared_ptr&lt; <ref refid="class_sprite" kindref="compound">Sprite</ref> &gt; &gt;</type>
+        <definition>std::list&lt;std::shared_ptr&lt;Sprite&gt; &gt; AbstractCollisionVisitor::collisions</definition>
+        <argsstring></argsstring>
+        <name>collisions</name>
+        <briefdescription>
+<para>list of sprites colliding with watched since last check </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="classes/AbstractCollisionVisitor.h" line="15" column="15" bodyfile="classes/AbstractCollisionVisitor.h" bodystart="15" bodyend="-1"/>
+        <referencedby refid="class_abstract_collision_visitor_1afb4c52cacaaf486be84e8b527cec202a" compoundref="_abstract_collision_visitor_8cpp" startline="5" endline="10">getCollisions</referencedby>
+        <referencedby refid="class_bounding_box_collision_visitor_1a3c6f65b79cb857a00e75382d7cd1e365" compoundref="_bounding_box_collision_visitor_8cpp" startline="6" endline="27">BoundingBoxCollisionVisitor::visit</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_abstract_collision_visitor_1aeeaa2ebce5b6c29df1c3fcf285aa7d82" prot="protected" static="no" mutable="no">
+        <type>std::shared_ptr&lt; <ref refid="class_sprite" kindref="compound">Sprite</ref> &gt;</type>
+        <definition>std::shared_ptr&lt;Sprite&gt; AbstractCollisionVisitor::watched</definition>
+        <argsstring></argsstring>
+        <name>watched</name>
+        <briefdescription>
+<para>sprite to watch and compare for collisions </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="classes/AbstractCollisionVisitor.h" line="20" column="21" bodyfile="classes/AbstractCollisionVisitor.h" bodystart="20" bodyend="-1"/>
+        <referencedby refid="class_abstract_collision_visitor_1a17262b2403c9e1b0e11f25603dd415d6" compoundref="_abstract_collision_visitor_8cpp" startline="12" endline="14">setWatched</referencedby>
+        <referencedby refid="class_bounding_box_collision_visitor_1a3c6f65b79cb857a00e75382d7cd1e365" compoundref="_bounding_box_collision_visitor_8cpp" startline="6" endline="27">BoundingBoxCollisionVisitor::visit</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_abstract_collision_visitor_1a9ee08837ba4a531782bb9a1c8466a5b3" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>void AbstractCollisionVisitor::visit</definition>
+        <argsstring>(std::shared_ptr&lt; Sprite &gt; s) override=0</argsstring>
+        <name>visit</name>
+        <reimplements refid="class_visitor_1af941b9cd719ad5d43bb21310fb0795eb">visit</reimplements>
+        <reimplementedby refid="class_ray_cast_collision_visitor_1afb1a5555e21de45dabb25fd898835da4">visit</reimplementedby>
+        <reimplementedby refid="class_bounding_box_collision_visitor_1a3c6f65b79cb857a00e75382d7cd1e365">visit</reimplementedby>
+        <param>
+          <type>std::shared_ptr&lt; <ref refid="class_sprite" kindref="compound">Sprite</ref> &gt;</type>
+          <declname>s</declname>
+        </param>
+        <briefdescription>
+<para>update currently colliding list based on algorithm </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>s</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="classes/AbstractCollisionVisitor.h" line="27" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="class_abstract_collision_visitor_1afb4c52cacaaf486be84e8b527cec202a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::list&lt; std::shared_ptr&lt; <ref refid="class_sprite" kindref="compound">Sprite</ref> &gt; &gt;</type>
+        <definition>std::list&lt; std::shared_ptr&lt; Sprite &gt; &gt; AbstractCollisionVisitor::getCollisions</definition>
+        <argsstring>()</argsstring>
+        <name>getCollisions</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>std::list&lt;Sprite*&gt; list of all sprites that collided with watched since last check </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="classes/AbstractCollisionVisitor.h" line="34" column="15" bodyfile="classes/AbstractCollisionVisitor.cpp" bodystart="5" bodyend="10"/>
+        <references refid="class_abstract_collision_visitor_1a812239222979d680afd12fb35fe2e132" compoundref="_abstract_collision_visitor_8h" startline="15">collisions</references>
+      </memberdef>
+      <memberdef kind="function" id="class_abstract_collision_visitor_1a17262b2403c9e1b0e11f25603dd415d6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AbstractCollisionVisitor::setWatched</definition>
+        <argsstring>(std::shared_ptr&lt; Sprite &gt; s)</argsstring>
+        <name>setWatched</name>
+        <param>
+          <type>std::shared_ptr&lt; <ref refid="class_sprite" kindref="compound">Sprite</ref> &gt;</type>
+          <declname>s</declname>
+        </param>
+        <briefdescription>
+<para>Set the Watched object. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>s</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="classes/AbstractCollisionVisitor.h" line="41" column="10" bodyfile="classes/AbstractCollisionVisitor.cpp" bodystart="12" bodyend="14"/>
+        <references refid="class_abstract_collision_visitor_1aeeaa2ebce5b6c29df1c3fcf285aa7d82" compoundref="_abstract_collision_visitor_8h" startline="20">watched</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Provides an abstraction for handling visitor based collisions where algorithm is separate from visitation. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="3">
+        <label>BoundingBoxCollisionVisitor</label>
+        <link refid="class_bounding_box_collision_visitor"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>Visitor</label>
+        <link refid="class_visitor"/>
+      </node>
+      <node id="1">
+        <label>AbstractCollisionVisitor</label>
+        <link refid="class_abstract_collision_visitor"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>RayCastCollisionVisitor</label>
+        <link refid="class_ray_cast_collision_visitor"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>Visitor</label>
+        <link refid="class_visitor"/>
+      </node>
+      <node id="1">
+        <label>AbstractCollisionVisitor</label>
+        <link refid="class_abstract_collision_visitor"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="classes/AbstractCollisionVisitor.h" line="9" column="46" bodyfile="classes/AbstractCollisionVisitor.h" bodystart="9" bodyend="43"/>
+    <listofallmembers>
+      <member refid="class_abstract_collision_visitor_1a812239222979d680afd12fb35fe2e132" prot="protected" virt="non-virtual"><scope>AbstractCollisionVisitor</scope><name>collisions</name></member>
+      <member refid="class_abstract_collision_visitor_1afb4c52cacaaf486be84e8b527cec202a" prot="public" virt="non-virtual"><scope>AbstractCollisionVisitor</scope><name>getCollisions</name></member>
+      <member refid="class_abstract_collision_visitor_1a17262b2403c9e1b0e11f25603dd415d6" prot="public" virt="non-virtual"><scope>AbstractCollisionVisitor</scope><name>setWatched</name></member>
+      <member refid="class_abstract_collision_visitor_1a9ee08837ba4a531782bb9a1c8466a5b3" prot="public" virt="pure-virtual"><scope>AbstractCollisionVisitor</scope><name>visit</name></member>
+      <member refid="class_abstract_collision_visitor_1aeeaa2ebce5b6c29df1c3fcf285aa7d82" prot="protected" virt="non-virtual"><scope>AbstractCollisionVisitor</scope><name>watched</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

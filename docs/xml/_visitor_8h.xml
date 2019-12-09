@@ -1,0 +1,188 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.16">
+  <compounddef id="_visitor_8h" kind="file" language="C++">
+    <compoundname>Visitor.h</compoundname>
+    <includes local="no">iostream</includes>
+    <includes refid="_sprite_8h" local="yes">Sprite.h</includes>
+    <includes local="no">memory</includes>
+    <includedby refid="_abstract_collision_visitor_8h" local="yes">classes/AbstractCollisionVisitor.h</includedby>
+    <includedby refid="_abstract_drawing_visitor_8h" local="yes">classes/AbstractDrawingVisitor.h</includedby>
+    <includedby refid="_abstract_scene_8h" local="yes">classes/AbstractScene.h</includedby>
+    <includedby refid="_bounce_bounds_visitor_8h" local="yes">classes/BounceBoundsVisitor.h</includedby>
+    <includedby refid="_force_visitor_8h" local="yes">classes/ForceVisitor.h</includedby>
+    <includedby refid="_game_engine_8h" local="yes">classes/GameEngine.h</includedby>
+    <includedby refid="_gravity_visitor_8h" local="yes">classes/GravityVisitor.h</includedby>
+    <includedby refid="_wrap_bounds_visitor_8h" local="yes">classes/WrapBoundsVisitor.h</includedby>
+    <includedby refid="_visitor_8cpp" local="yes">classes/Visitor.cpp</includedby>
+    <incdepgraph>
+      <node id="1">
+        <label>classes/Visitor.h</label>
+        <link refid="_visitor_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>Sprite.h</label>
+        <link refid="_sprite_8h_source"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>iostream</label>
+      </node>
+      <node id="4">
+        <label>memory</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="4">
+        <label>classes/games/Game.h</label>
+        <link refid="_game_8h_source"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>classes/GameEngine.h</label>
+        <link refid="_game_engine_8h_source"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>classes/Visitor.h</label>
+        <link refid="_visitor_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+      </node>
+      <node id="17">
+        <label>classes/GravityVisitor.h</label>
+        <link refid="_gravity_visitor_8h_source"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>classes/BoundingBoxCollisionVisitor.h</label>
+        <link refid="_bounding_box_collision_visitor_8h_source"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>classes/SimpleDrawingVisitor.h</label>
+        <link refid="_simple_drawing_visitor_8h_source"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>classes/AbstractDrawingVisitor.h</label>
+        <link refid="_abstract_drawing_visitor_8h_source"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>classes/AbstractCollisionVisitor.h</label>
+        <link refid="_abstract_collision_visitor_8h_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="18">
+        <label>classes/WrapBoundsVisitor.h</label>
+        <link refid="_wrap_bounds_visitor_8h_source"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="14">
+        <label>classes/LayeredScene.h</label>
+        <link refid="_layered_scene_8h_source"/>
+      </node>
+      <node id="16">
+        <label>classes/ForceVisitor.h</label>
+        <link refid="_force_visitor_8h_source"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>classes/RayCastCollisionVisitor.h</label>
+        <link refid="_ray_cast_collision_visitor_8h_source"/>
+      </node>
+      <node id="13">
+        <label>classes/SimpleScene.h</label>
+        <link refid="_simple_scene_8h_source"/>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>classes/AbstractScene.h</label>
+        <link refid="_abstract_scene_8h_source"/>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>classes/games/Pong.h</label>
+        <link refid="_pong_8h_source"/>
+      </node>
+      <node id="15">
+        <label>classes/BounceBoundsVisitor.h</label>
+        <link refid="_bounce_bounds_visitor_8h_source"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>classes/GridDrawingVisitor.h</label>
+        <link refid="_grid_drawing_visitor_8h_source"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>classes/games/Quoridor.h</label>
+        <link refid="_quoridor_8h_source"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="class_visitor" prot="public">Visitor</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>VISITOR_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>VISITOR_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;iostream&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;Sprite.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;memory&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6" refid="class_visitor" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_visitor" kindref="compound">Visitor</ref>{</highlight></codeline>
+<codeline lineno="7"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_visitor_1af941b9cd719ad5d43bb21310fb0795eb" kindref="member">visit</ref>(std::shared_ptr&lt;Sprite&gt;<sp/>sp)<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="14"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="classes/Visitor.h"/>
+  </compounddef>
+</doxygen>

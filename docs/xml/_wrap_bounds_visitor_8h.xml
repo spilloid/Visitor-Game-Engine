@@ -1,0 +1,85 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.16">
+  <compounddef id="_wrap_bounds_visitor_8h" kind="file" language="C++">
+    <compoundname>WrapBoundsVisitor.h</compoundname>
+    <includes refid="_visitor_8h" local="yes">Visitor.h</includes>
+    <includedby refid="_game_8h" local="yes">classes/games/Game.h</includedby>
+    <includedby refid="_wrap_bounds_visitor_8cpp" local="yes">classes/WrapBoundsVisitor.cpp</includedby>
+    <incdepgraph>
+      <node id="2">
+        <label>Visitor.h</label>
+        <link refid="_visitor_8h_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>classes/WrapBoundsVisitor.h</label>
+        <link refid="_wrap_bounds_visitor_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>Sprite.h</label>
+        <link refid="_sprite_8h_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>iostream</label>
+      </node>
+      <node id="5">
+        <label>memory</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="2">
+        <label>classes/games/Game.h</label>
+        <link refid="_game_8h_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>classes/WrapBoundsVisitor.h</label>
+        <link refid="_wrap_bounds_visitor_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>classes/games/Pong.h</label>
+        <link refid="_pong_8h_source"/>
+      </node>
+      <node id="4">
+        <label>classes/games/Quoridor.h</label>
+        <link refid="_quoridor_8h_source"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="class_wrap_bounds_visitor" prot="public">WrapBoundsVisitor</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>WRAPBOUNDSVISITOR_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>WRAPBOUNDSVISITOR_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;Visitor.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4" refid="class_wrap_bounds_visitor" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_wrap_bounds_visitor" kindref="compound">WrapBoundsVisitor</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="class_visitor" kindref="compound">Visitor</ref>{</highlight></codeline>
+<codeline lineno="5"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>minX,maxX,minY,maxY;</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_wrap_bounds_visitor_1a988575b85dc0c37c9dc24773e9259fc7" kindref="member">WrapBoundsVisitor</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>minX,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>maxX,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>minY,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>maxY);</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_wrap_bounds_visitor_1a46f7e9f34d56ae845b38b71fe928cca9" kindref="member">visit</ref>(std::shared_ptr&lt;Sprite&gt;<sp/>s)<sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="28"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="classes/WrapBoundsVisitor.h"/>
+  </compounddef>
+</doxygen>

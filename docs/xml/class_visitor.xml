@@ -1,0 +1,126 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.16">
+  <compounddef id="class_visitor" kind="class" language="C++" prot="public" abstract="yes">
+    <compoundname>Visitor</compoundname>
+    <derivedcompoundref refid="class_abstract_collision_visitor" prot="public" virt="non-virtual">AbstractCollisionVisitor</derivedcompoundref>
+    <derivedcompoundref refid="class_abstract_drawing_visitor" prot="public" virt="non-virtual">AbstractDrawingVisitor</derivedcompoundref>
+    <derivedcompoundref refid="class_bounce_bounds_visitor" prot="public" virt="non-virtual">BounceBoundsVisitor</derivedcompoundref>
+    <derivedcompoundref refid="class_force_visitor" prot="public" virt="non-virtual">ForceVisitor</derivedcompoundref>
+    <derivedcompoundref refid="class_gravity_visitor" prot="public" virt="non-virtual">GravityVisitor</derivedcompoundref>
+    <derivedcompoundref refid="class_wrap_bounds_visitor" prot="public" virt="non-virtual">WrapBoundsVisitor</derivedcompoundref>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_visitor_1af941b9cd719ad5d43bb21310fb0795eb" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void Visitor::visit</definition>
+        <argsstring>(std::shared_ptr&lt; Sprite &gt; sp)=0</argsstring>
+        <name>visit</name>
+        <reimplementedby refid="class_ray_cast_collision_visitor_1afb1a5555e21de45dabb25fd898835da4">visit</reimplementedby>
+        <reimplementedby refid="class_bounding_box_collision_visitor_1a3c6f65b79cb857a00e75382d7cd1e365">visit</reimplementedby>
+        <reimplementedby refid="class_force_visitor_1a31b87fc4fa7f6ec429abd8d305189c7d">visit</reimplementedby>
+        <reimplementedby refid="class_wrap_bounds_visitor_1a46f7e9f34d56ae845b38b71fe928cca9">visit</reimplementedby>
+        <reimplementedby refid="class_simple_drawing_visitor_1ad87126c3a56da728da1cf72d326d28ee">visit</reimplementedby>
+        <reimplementedby refid="class_grid_drawing_visitor_1acdf1185e8a82d2a8495d8c18b65ee2b2">visit</reimplementedby>
+        <reimplementedby refid="class_abstract_collision_visitor_1a9ee08837ba4a531782bb9a1c8466a5b3">visit</reimplementedby>
+        <reimplementedby refid="class_abstract_drawing_visitor_1a173022c880329a1203eb8243816dbcd4">visit</reimplementedby>
+        <reimplementedby refid="class_bounce_bounds_visitor_1a155ab3b2fd3f187daf63e640a08e74eb">visit</reimplementedby>
+        <reimplementedby refid="class_gravity_visitor_1ae4b8bb78b47d9ab88d5c4b03d0d3816b">visit</reimplementedby>
+        <param>
+          <type>std::shared_ptr&lt; <ref refid="class_sprite" kindref="compound">Sprite</ref> &gt;</type>
+          <declname>sp</declname>
+        </param>
+        <briefdescription>
+<para>visit sprite </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>sp</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="classes/Visitor.h" line="13" column="18"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="10">
+        <label>GravityVisitor</label>
+        <link refid="class_gravity_visitor"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>SimpleDrawingVisitor</label>
+        <link refid="class_simple_drawing_visitor"/>
+        <childnode refid="5" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>GridDrawingVisitor</label>
+        <link refid="class_grid_drawing_visitor"/>
+        <childnode refid="5" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>BoundingBoxCollisionVisitor</label>
+        <link refid="class_bounding_box_collision_visitor"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>WrapBoundsVisitor</label>
+        <link refid="class_wrap_bounds_visitor"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>Visitor</label>
+        <link refid="class_visitor"/>
+      </node>
+      <node id="8">
+        <label>BounceBoundsVisitor</label>
+        <link refid="class_bounce_bounds_visitor"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>AbstractCollisionVisitor</label>
+        <link refid="class_abstract_collision_visitor"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>RayCastCollisionVisitor</label>
+        <link refid="class_ray_cast_collision_visitor"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>ForceVisitor</label>
+        <link refid="class_force_visitor"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>AbstractDrawingVisitor</label>
+        <link refid="class_abstract_drawing_visitor"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <location file="classes/Visitor.h" line="6" column="14" bodyfile="classes/Visitor.h" bodystart="6" bodyend="14"/>
+    <listofallmembers>
+      <member refid="class_visitor_1af941b9cd719ad5d43bb21310fb0795eb" prot="public" virt="pure-virtual"><scope>Visitor</scope><name>visit</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

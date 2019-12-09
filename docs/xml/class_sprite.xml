@@ -1,0 +1,448 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.16">
+  <compounddef id="class_sprite" kind="class" language="C++" prot="public">
+    <compoundname>Sprite</compoundname>
+      <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="class_sprite_1abb2fa14e95603ee91d7acf652f1a9714" prot="protected" static="no" mutable="no">
+        <type>double</type>
+        <definition>double Sprite::x</definition>
+        <argsstring></argsstring>
+        <name>x</name>
+        <initializer>{}</initializer>
+        <briefdescription>
+<para>x position </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="classes/Sprite.h" line="13" column="12" bodyfile="classes/Sprite.h" bodystart="13" bodyend="-1"/>
+        <referencedby refid="class_sprite_1a836a8eccd754b6b47015bf7135a45822" compoundref="_sprite_8cpp" startline="7" endline="7">getX</referencedby>
+        <referencedby refid="class_sprite_1a4371a6d9f2d115792e0162e1b081d1d3" compoundref="_sprite_8cpp" startline="15" endline="18">setXY</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_sprite_1a43563b440ecac191e24423f6aa6cac0e" prot="protected" static="no" mutable="no">
+        <type>double</type>
+        <definition>double Sprite::dx</definition>
+        <argsstring></argsstring>
+        <name>dx</name>
+        <initializer>{}</initializer>
+        <briefdescription>
+<para>change in x ; updated on interval in forceVisitor </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="classes/Sprite.h" line="18" column="12" bodyfile="classes/Sprite.h" bodystart="18" bodyend="-1"/>
+        <referencedby refid="class_sprite_1ac91a9c290d04131dcf58dbc16a8a0087" compoundref="_sprite_8cpp" startline="9" endline="9">getDX</referencedby>
+        <referencedby refid="class_sprite_1a22c2404f812d8c85a722c662f23526cb" compoundref="_sprite_8cpp" startline="20" endline="23">setDXY</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_sprite_1a9d25f913409312b76b63e2f4e70c9635" prot="protected" static="no" mutable="no">
+        <type>double</type>
+        <definition>double Sprite::y</definition>
+        <argsstring></argsstring>
+        <name>y</name>
+        <initializer>{}</initializer>
+        <briefdescription>
+<para>y position </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="classes/Sprite.h" line="23" column="12" bodyfile="classes/Sprite.h" bodystart="23" bodyend="-1"/>
+        <referencedby refid="class_sprite_1a1ee7bf62ec0827a9b9d0cf110e72a0f9" compoundref="_sprite_8cpp" startline="11" endline="11">getY</referencedby>
+        <referencedby refid="class_sprite_1a4371a6d9f2d115792e0162e1b081d1d3" compoundref="_sprite_8cpp" startline="15" endline="18">setXY</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_sprite_1a5b7e4e3eddfdc561a5782e39a3887145" prot="protected" static="no" mutable="no">
+        <type>double</type>
+        <definition>double Sprite::dy</definition>
+        <argsstring></argsstring>
+        <name>dy</name>
+        <initializer>{}</initializer>
+        <briefdescription>
+<para>change in y ; updated on interval in forceVisitor TODO: perhaps update dy not on force visitor? </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="classes/Sprite.h" line="29" column="12" bodyfile="classes/Sprite.h" bodystart="29" bodyend="-1"/>
+        <referencedby refid="class_sprite_1a1ed4900e5552ef0c825f8ef44b6924f1" compoundref="_sprite_8cpp" startline="13" endline="13">getDY</referencedby>
+        <referencedby refid="class_sprite_1a22c2404f812d8c85a722c662f23526cb" compoundref="_sprite_8cpp" startline="20" endline="23">setDXY</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_sprite_1a064ac3cdbeaab442437614b89cc3fbdf" prot="protected" static="no" mutable="no">
+        <type>double</type>
+        <definition>double Sprite::height</definition>
+        <argsstring></argsstring>
+        <name>height</name>
+        <initializer>{}</initializer>
+        <briefdescription>
+<para>height of sprite </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="classes/Sprite.h" line="34" column="12" bodyfile="classes/Sprite.h" bodystart="34" bodyend="-1"/>
+        <referencedby refid="class_sprite_1ad873b213ffef762022bed0a7345788f5" compoundref="_sprite_8cpp" startline="25" endline="25">getHeight</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_sprite_1a11f560edfc52252310a1d1926c35e624" prot="protected" static="no" mutable="no">
+        <type>double</type>
+        <definition>double Sprite::width</definition>
+        <argsstring></argsstring>
+        <name>width</name>
+        <initializer>{}</initializer>
+        <briefdescription>
+<para>width of sprite </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="classes/Sprite.h" line="39" column="12" bodyfile="classes/Sprite.h" bodystart="39" bodyend="-1"/>
+        <referencedby refid="class_sprite_1ac99e1dda38ec34aad46dd323e55a1c17" compoundref="_sprite_8cpp" startline="27" endline="27">getWidth</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_sprite_1a593e7e858553d0d8c381c5465aafe2d5" prot="protected" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string Sprite::textureLoc</definition>
+        <argsstring></argsstring>
+        <name>textureLoc</name>
+        <briefdescription>
+<para>location of image for sprite texture </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="classes/Sprite.h" line="44" column="17" bodyfile="classes/Sprite.h" bodystart="44" bodyend="-1"/>
+        <referencedby refid="class_sprite_1a8f21d4ce51d3b96cfb7df1a8ad03ce27" compoundref="_sprite_8cpp" startline="29" endline="29">getTextureLocation</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_sprite_1a12cba3ac1868418add3c4d95ce87e615" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Sprite::Sprite</definition>
+        <argsstring>()</argsstring>
+        <name>Sprite</name>
+        <briefdescription>
+<para>Construct a new <ref refid="class_sprite" kindref="compound">Sprite</ref> object. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="classes/Sprite.h" line="50" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="class_sprite_1a7e4993a9c9a455eed275619044ea8dc3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Sprite::Sprite</definition>
+        <argsstring>(std::string textureLoc, double x, double y, double width, double height)</argsstring>
+        <name>Sprite</name>
+        <param>
+          <type>std::string</type>
+          <declname>textureLoc</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>y</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>width</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>height</declname>
+        </param>
+        <briefdescription>
+<para>Construct a new <ref refid="class_sprite" kindref="compound">Sprite</ref> object. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>textureLoc</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>: file location for texture </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>x</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>: x location of sprite relative to size of window </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>y</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>: y location of sprite relative to size of window </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>width</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>: width of sprite in pixels </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>height</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>: height of sprite in pixels </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="classes/Sprite.h" line="60" column="5" bodyfile="classes/Sprite.cpp" bodystart="31" bodyend="32"/>
+      </memberdef>
+      <memberdef kind="function" id="class_sprite_1a836a8eccd754b6b47015bf7135a45822" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double Sprite::getX</definition>
+        <argsstring>()</argsstring>
+        <name>getX</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>int x position of sprite </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="classes/Sprite.h" line="67" column="12" bodyfile="classes/Sprite.cpp" bodystart="7" bodyend="7"/>
+        <references refid="class_sprite_1abb2fa14e95603ee91d7acf652f1a9714" compoundref="_sprite_8h" startline="13">x</references>
+      </memberdef>
+      <memberdef kind="function" id="class_sprite_1a1ee7bf62ec0827a9b9d0cf110e72a0f9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double Sprite::getY</definition>
+        <argsstring>()</argsstring>
+        <name>getY</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>int y Position of sprite </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="classes/Sprite.h" line="74" column="12" bodyfile="classes/Sprite.cpp" bodystart="11" bodyend="11"/>
+        <references refid="class_sprite_1a9d25f913409312b76b63e2f4e70c9635" compoundref="_sprite_8h" startline="23">y</references>
+      </memberdef>
+      <memberdef kind="function" id="class_sprite_1a4371a6d9f2d115792e0162e1b081d1d3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Sprite::setXY</definition>
+        <argsstring>(double X, double Y)</argsstring>
+        <name>setXY</name>
+        <param>
+          <type>double</type>
+          <declname>X</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>Y</declname>
+        </param>
+        <briefdescription>
+<para>set new coords of sprite </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>X</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>new X value of <ref refid="class_sprite" kindref="compound">Sprite</ref> </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Y</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>new Y value of <ref refid="class_sprite" kindref="compound">Sprite</ref> </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="classes/Sprite.h" line="82" column="10" bodyfile="classes/Sprite.cpp" bodystart="15" bodyend="18"/>
+        <references refid="class_sprite_1abb2fa14e95603ee91d7acf652f1a9714" compoundref="_sprite_8h" startline="13">x</references>
+        <references refid="class_sprite_1a9d25f913409312b76b63e2f4e70c9635" compoundref="_sprite_8h" startline="23">y</references>
+      </memberdef>
+      <memberdef kind="function" id="class_sprite_1ac91a9c290d04131dcf58dbc16a8a0087" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double Sprite::getDX</definition>
+        <argsstring>()</argsstring>
+        <name>getDX</name>
+        <briefdescription>
+<para>get dx </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>double </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="classes/Sprite.h" line="89" column="12" bodyfile="classes/Sprite.cpp" bodystart="9" bodyend="9"/>
+        <references refid="class_sprite_1a43563b440ecac191e24423f6aa6cac0e" compoundref="_sprite_8h" startline="18">dx</references>
+      </memberdef>
+      <memberdef kind="function" id="class_sprite_1a1ed4900e5552ef0c825f8ef44b6924f1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double Sprite::getDY</definition>
+        <argsstring>()</argsstring>
+        <name>getDY</name>
+        <briefdescription>
+<para>get dy </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>double </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="classes/Sprite.h" line="95" column="10" bodyfile="classes/Sprite.cpp" bodystart="13" bodyend="13"/>
+        <references refid="class_sprite_1a5b7e4e3eddfdc561a5782e39a3887145" compoundref="_sprite_8h" startline="29">dy</references>
+      </memberdef>
+      <memberdef kind="function" id="class_sprite_1a22c2404f812d8c85a722c662f23526cb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Sprite::setDXY</definition>
+        <argsstring>(double x, double y)</argsstring>
+        <name>setDXY</name>
+        <param>
+          <type>double</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>y</declname>
+        </param>
+        <briefdescription>
+<para>set dx and dy </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>x</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>new dx </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>y</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>new dy </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="classes/Sprite.h" line="103" column="10" bodyfile="classes/Sprite.cpp" bodystart="20" bodyend="23"/>
+        <references refid="class_sprite_1a43563b440ecac191e24423f6aa6cac0e" compoundref="_sprite_8h" startline="18">dx</references>
+        <references refid="class_sprite_1a5b7e4e3eddfdc561a5782e39a3887145" compoundref="_sprite_8h" startline="29">dy</references>
+      </memberdef>
+      <memberdef kind="function" id="class_sprite_1ad873b213ffef762022bed0a7345788f5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double Sprite::getHeight</definition>
+        <argsstring>()</argsstring>
+        <name>getHeight</name>
+        <briefdescription>
+<para>Get the Height object. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>int </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="classes/Sprite.h" line="110" column="12" bodyfile="classes/Sprite.cpp" bodystart="25" bodyend="25"/>
+        <references refid="class_sprite_1a064ac3cdbeaab442437614b89cc3fbdf" compoundref="_sprite_8h" startline="34">height</references>
+      </memberdef>
+      <memberdef kind="function" id="class_sprite_1ac99e1dda38ec34aad46dd323e55a1c17" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double Sprite::getWidth</definition>
+        <argsstring>()</argsstring>
+        <name>getWidth</name>
+        <briefdescription>
+<para>Get the Width object. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>int </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="classes/Sprite.h" line="117" column="12" bodyfile="classes/Sprite.cpp" bodystart="27" bodyend="27"/>
+        <references refid="class_sprite_1a11f560edfc52252310a1d1926c35e624" compoundref="_sprite_8h" startline="39">width</references>
+      </memberdef>
+      <memberdef kind="function" id="class_sprite_1a8f21d4ce51d3b96cfb7df1a8ad03ce27" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string Sprite::getTextureLocation</definition>
+        <argsstring>()</argsstring>
+        <name>getTextureLocation</name>
+        <briefdescription>
+<para>Get the Texture Location object. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>std::string </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="classes/Sprite.h" line="124" column="17" bodyfile="classes/Sprite.cpp" bodystart="29" bodyend="29"/>
+        <references refid="class_sprite_1a593e7e858553d0d8c381c5465aafe2d5" compoundref="_sprite_8h" startline="44">textureLoc</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="classes/Sprite.h" line="7" column="13" bodyfile="classes/Sprite.h" bodystart="7" bodyend="125"/>
+    <listofallmembers>
+      <member refid="class_sprite_1a43563b440ecac191e24423f6aa6cac0e" prot="protected" virt="non-virtual"><scope>Sprite</scope><name>dx</name></member>
+      <member refid="class_sprite_1a5b7e4e3eddfdc561a5782e39a3887145" prot="protected" virt="non-virtual"><scope>Sprite</scope><name>dy</name></member>
+      <member refid="class_sprite_1ac91a9c290d04131dcf58dbc16a8a0087" prot="public" virt="non-virtual"><scope>Sprite</scope><name>getDX</name></member>
+      <member refid="class_sprite_1a1ed4900e5552ef0c825f8ef44b6924f1" prot="public" virt="non-virtual"><scope>Sprite</scope><name>getDY</name></member>
+      <member refid="class_sprite_1ad873b213ffef762022bed0a7345788f5" prot="public" virt="non-virtual"><scope>Sprite</scope><name>getHeight</name></member>
+      <member refid="class_sprite_1a8f21d4ce51d3b96cfb7df1a8ad03ce27" prot="public" virt="non-virtual"><scope>Sprite</scope><name>getTextureLocation</name></member>
+      <member refid="class_sprite_1ac99e1dda38ec34aad46dd323e55a1c17" prot="public" virt="non-virtual"><scope>Sprite</scope><name>getWidth</name></member>
+      <member refid="class_sprite_1a836a8eccd754b6b47015bf7135a45822" prot="public" virt="non-virtual"><scope>Sprite</scope><name>getX</name></member>
+      <member refid="class_sprite_1a1ee7bf62ec0827a9b9d0cf110e72a0f9" prot="public" virt="non-virtual"><scope>Sprite</scope><name>getY</name></member>
+      <member refid="class_sprite_1a064ac3cdbeaab442437614b89cc3fbdf" prot="protected" virt="non-virtual"><scope>Sprite</scope><name>height</name></member>
+      <member refid="class_sprite_1a22c2404f812d8c85a722c662f23526cb" prot="public" virt="non-virtual"><scope>Sprite</scope><name>setDXY</name></member>
+      <member refid="class_sprite_1a4371a6d9f2d115792e0162e1b081d1d3" prot="public" virt="non-virtual"><scope>Sprite</scope><name>setXY</name></member>
+      <member refid="class_sprite_1a12cba3ac1868418add3c4d95ce87e615" prot="public" virt="non-virtual"><scope>Sprite</scope><name>Sprite</name></member>
+      <member refid="class_sprite_1a7e4993a9c9a455eed275619044ea8dc3" prot="public" virt="non-virtual"><scope>Sprite</scope><name>Sprite</name></member>
+      <member refid="class_sprite_1a593e7e858553d0d8c381c5465aafe2d5" prot="protected" virt="non-virtual"><scope>Sprite</scope><name>textureLoc</name></member>
+      <member refid="class_sprite_1a11f560edfc52252310a1d1926c35e624" prot="protected" virt="non-virtual"><scope>Sprite</scope><name>width</name></member>
+      <member refid="class_sprite_1abb2fa14e95603ee91d7acf652f1a9714" prot="protected" virt="non-virtual"><scope>Sprite</scope><name>x</name></member>
+      <member refid="class_sprite_1a9d25f913409312b76b63e2f4e70c9635" prot="protected" virt="non-virtual"><scope>Sprite</scope><name>y</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

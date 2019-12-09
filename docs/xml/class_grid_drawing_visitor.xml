@@ -1,0 +1,220 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.16">
+  <compounddef id="class_grid_drawing_visitor" kind="class" language="C++" prot="public">
+    <compoundname>GridDrawingVisitor</compoundname>
+    <basecompoundref refid="class_abstract_drawing_visitor" prot="public" virt="non-virtual">AbstractDrawingVisitor</basecompoundref>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_grid_drawing_visitor_1a59f1e57b427c96a532a4704de1e3acf1" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int GridDrawingVisitor::maxX</definition>
+        <argsstring></argsstring>
+        <name>maxX</name>
+        <briefdescription>
+<para>maximum number of squares in X direction </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="classes/GridDrawingVisitor.h" line="11" column="9" bodyfile="classes/GridDrawingVisitor.h" bodystart="11" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_grid_drawing_visitor_1a51bd9dfb7f29fdf067424885a3608d37" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int GridDrawingVisitor::maxY</definition>
+        <argsstring></argsstring>
+        <name>maxY</name>
+        <briefdescription>
+<para>maximum number of squares in Y direction </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="classes/GridDrawingVisitor.h" line="16" column="9" bodyfile="classes/GridDrawingVisitor.h" bodystart="16" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_grid_drawing_visitor_1a201a3ab3478b4cf180e266bc2e3b533b" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; std::shared_ptr&lt; <ref refid="class_sprite" kindref="compound">Sprite</ref> &gt; &gt;</type>
+        <definition>std::vector&lt;std::shared_ptr&lt;Sprite&gt; &gt; GridDrawingVisitor::renderList</definition>
+        <argsstring></argsstring>
+        <name>renderList</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="classes/GridDrawingVisitor.h" line="17" column="17" bodyfile="classes/GridDrawingVisitor.h" bodystart="17" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_grid_drawing_visitor_1a0ca662fa97695ca52caab304e8610a9d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>GridDrawingVisitor::GridDrawingVisitor</definition>
+        <argsstring>(int maxX, int maxY, std::shared_ptr&lt; AbstractRenderer &gt; ar)</argsstring>
+        <name>GridDrawingVisitor</name>
+        <param>
+          <type>int</type>
+          <declname>maxX</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>maxY</declname>
+        </param>
+        <param>
+          <type>std::shared_ptr&lt; <ref refid="class_abstract_renderer" kindref="compound">AbstractRenderer</ref> &gt;</type>
+          <declname>ar</declname>
+        </param>
+        <briefdescription>
+<para>Construct a new Grid Drawing <ref refid="class_visitor" kindref="compound">Visitor</ref> object. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>maxX</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>: size of grid for X direction </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>maxY</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>: size of grid for Y direction </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>ar</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>: abstract renderer </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="classes/GridDrawingVisitor.h" line="26" column="5" bodyfile="classes/GridDrawingVisitor.cpp" bodystart="5" bodyend="8"/>
+      </memberdef>
+      <memberdef kind="function" id="class_grid_drawing_visitor_1a7f0ac122f11dd3b5918e99b10da1f920" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void GridDrawingVisitor::draw</definition>
+        <argsstring>() override</argsstring>
+        <name>draw</name>
+        <reimplements refid="class_abstract_drawing_visitor_1a08ecda9a55f34afbfa1797be9bd115ea">draw</reimplements>
+        <briefdescription>
+<para>Draw cache to screen. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="classes/GridDrawingVisitor.h" line="32" column="10" bodyfile="classes/GridDrawingVisitor.cpp" bodystart="10" bodyend="33"/>
+      </memberdef>
+      <memberdef kind="function" id="class_grid_drawing_visitor_1ab81d77ac87bdff6eb945767686eebf70" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>bool GridDrawingVisitor::isOpen</definition>
+        <argsstring>() override</argsstring>
+        <name>isOpen</name>
+        <reimplements refid="class_abstract_drawing_visitor_1ae9abaeedd78440c6a0cccf6e36020602">isOpen</reimplements>
+        <briefdescription>
+<para>is the screen window open? </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>true </para>
+</simplesect>
+<simplesect kind="return"><para>false </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="classes/GridDrawingVisitor.h" line="40" column="10" bodyfile="classes/GridDrawingVisitor.cpp" bodystart="35" bodyend="37"/>
+      </memberdef>
+      <memberdef kind="function" id="class_grid_drawing_visitor_1acdf1185e8a82d2a8495d8c18b65ee2b2" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void GridDrawingVisitor::visit</definition>
+        <argsstring>(std::shared_ptr&lt; Sprite &gt; s) override</argsstring>
+        <name>visit</name>
+        <reimplements refid="class_abstract_drawing_visitor_1a173022c880329a1203eb8243816dbcd4">visit</reimplements>
+        <param>
+          <type>std::shared_ptr&lt; <ref refid="class_sprite" kindref="compound">Sprite</ref> &gt;</type>
+          <declname>s</declname>
+        </param>
+        <briefdescription>
+<para>cache a sprite for later drawing </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>s</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="classes/GridDrawingVisitor.h" line="47" column="10" bodyfile="classes/GridDrawingVisitor.cpp" bodystart="39" bodyend="41"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>GridDrawingVisitor</label>
+        <link refid="class_grid_drawing_visitor"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>Visitor</label>
+        <link refid="class_visitor"/>
+      </node>
+      <node id="2">
+        <label>AbstractDrawingVisitor</label>
+        <link refid="class_abstract_drawing_visitor"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>GridDrawingVisitor</label>
+        <link refid="class_grid_drawing_visitor"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>Visitor</label>
+        <link refid="class_visitor"/>
+      </node>
+      <node id="2">
+        <label>AbstractDrawingVisitor</label>
+        <link refid="class_abstract_drawing_visitor"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="classes/GridDrawingVisitor.h" line="5" column="1" bodyfile="classes/GridDrawingVisitor.h" bodystart="4" bodyend="48"/>
+    <listofallmembers>
+      <member refid="class_grid_drawing_visitor_1a7f0ac122f11dd3b5918e99b10da1f920" prot="public" virt="virtual"><scope>GridDrawingVisitor</scope><name>draw</name></member>
+      <member refid="class_grid_drawing_visitor_1a0ca662fa97695ca52caab304e8610a9d" prot="public" virt="non-virtual"><scope>GridDrawingVisitor</scope><name>GridDrawingVisitor</name></member>
+      <member refid="class_grid_drawing_visitor_1ab81d77ac87bdff6eb945767686eebf70" prot="public" virt="virtual"><scope>GridDrawingVisitor</scope><name>isOpen</name></member>
+      <member refid="class_grid_drawing_visitor_1a59f1e57b427c96a532a4704de1e3acf1" prot="private" virt="non-virtual"><scope>GridDrawingVisitor</scope><name>maxX</name></member>
+      <member refid="class_grid_drawing_visitor_1a51bd9dfb7f29fdf067424885a3608d37" prot="private" virt="non-virtual"><scope>GridDrawingVisitor</scope><name>maxY</name></member>
+      <member refid="class_abstract_drawing_visitor_1ab7279a5b1e74c95b06fb086614727b2d" prot="protected" virt="non-virtual"><scope>GridDrawingVisitor</scope><name>open</name></member>
+      <member refid="class_abstract_drawing_visitor_1a0a43744af979bff82123dee3faf68c8d" prot="protected" virt="non-virtual"><scope>GridDrawingVisitor</scope><name>renderer</name></member>
+      <member refid="class_grid_drawing_visitor_1a201a3ab3478b4cf180e266bc2e3b533b" prot="private" virt="non-virtual"><scope>GridDrawingVisitor</scope><name>renderList</name></member>
+      <member refid="class_grid_drawing_visitor_1acdf1185e8a82d2a8495d8c18b65ee2b2" prot="public" virt="virtual"><scope>GridDrawingVisitor</scope><name>visit</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

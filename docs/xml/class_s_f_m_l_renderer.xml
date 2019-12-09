@@ -1,0 +1,196 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.16">
+  <compounddef id="class_s_f_m_l_renderer" kind="class" language="C++" prot="public">
+    <compoundname>SFMLRenderer</compoundname>
+    <basecompoundref refid="class_abstract_renderer" prot="public" virt="non-virtual">AbstractRenderer</basecompoundref>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_s_f_m_l_renderer_1ac758285a3cc6a8d3946a7cdc1be296bc" prot="private" static="no" mutable="no">
+        <type>std::shared_ptr&lt; sf::RenderWindow &gt;</type>
+        <definition>std::shared_ptr&lt;sf::RenderWindow&gt; SFMLRenderer::window</definition>
+        <argsstring></argsstring>
+        <name>window</name>
+        <briefdescription>
+<para>SFML window. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="classes/SFMLRenderer.h" line="17" column="21" bodyfile="classes/SFMLRenderer.h" bodystart="17" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_s_f_m_l_renderer_1ad0e6dd983544a0a784442fe4f4da7b00" prot="private" static="no" mutable="no">
+        <type>std::shared_ptr&lt; <ref refid="class_texture_factory" kindref="compound">TextureFactory</ref> &gt;</type>
+        <definition>std::shared_ptr&lt;TextureFactory&gt; SFMLRenderer::tf</definition>
+        <argsstring></argsstring>
+        <name>tf</name>
+        <briefdescription>
+<para>Factory for grabbing textures. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="classes/SFMLRenderer.h" line="22" column="21" bodyfile="classes/SFMLRenderer.h" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_s_f_m_l_renderer_1a93dc345283826b19137770a28ded106f" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool SFMLRenderer::open</definition>
+        <argsstring></argsstring>
+        <name>open</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="classes/SFMLRenderer.h" line="23" column="10" bodyfile="classes/SFMLRenderer.h" bodystart="23" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_s_f_m_l_renderer_1a8a3902b191d793e1899c1e72c47adc34" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>SFMLRenderer::SFMLRenderer</definition>
+        <argsstring>(unsigned int screenWidth, unsigned int screenHeight)</argsstring>
+        <name>SFMLRenderer</name>
+        <param>
+          <type>unsigned int</type>
+          <declname>screenWidth</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>screenHeight</declname>
+        </param>
+        <briefdescription>
+<para>Construct a new <ref refid="class_s_f_m_l_renderer" kindref="compound">SFMLRenderer</ref> object. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>screenWidth</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>screenHeight</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="classes/SFMLRenderer.h" line="31" column="5" bodyfile="classes/SFMLRenderer.cpp" bodystart="2" bodyend="10"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_f_m_l_renderer_1abc1185a02b26ea1758d48e89f0e81e39" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void SFMLRenderer::draw</definition>
+        <argsstring>(std::vector&lt; std::shared_ptr&lt; Sprite &gt;&gt; renderList) override</argsstring>
+        <name>draw</name>
+        <reimplements refid="class_abstract_renderer_1a0007e3bb5ccabf279a2db89182a0efdb">draw</reimplements>
+        <param>
+          <type>std::vector&lt; std::shared_ptr&lt; <ref refid="class_sprite" kindref="compound">Sprite</ref> &gt;&gt;</type>
+          <declname>renderList</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>renderList</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>draws all items in render list to screen </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="classes/SFMLRenderer.h" line="38" column="10" bodyfile="classes/SFMLRenderer.cpp" bodystart="12" bodyend="24"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_f_m_l_renderer_1a5b89b3ce189fe0156759c8f667470942" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>bool SFMLRenderer::isOpen</definition>
+        <argsstring>() override</argsstring>
+        <name>isOpen</name>
+        <reimplements refid="class_abstract_renderer_1a9342a6cd4986f8362b54f6c13e7ae0d3">isOpen</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>is the window open? </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="classes/SFMLRenderer.h" line="44" column="10" bodyfile="classes/SFMLRenderer.cpp" bodystart="25" bodyend="45"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_f_m_l_renderer_1a935c28d7fba581c65990eeacf547eb0e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::shared_ptr&lt; sf::RenderWindow &gt;</type>
+        <definition>std::shared_ptr&lt; sf::RenderWindow &gt; SFMLRenderer::getWindow</definition>
+        <argsstring>()</argsstring>
+        <name>getWindow</name>
+        <briefdescription>
+<para>Get the Window object. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>std::shared_ptr&lt;sf::Window&gt; </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="classes/SFMLRenderer.h" line="51" column="21" bodyfile="classes/SFMLRenderer.cpp" bodystart="47" bodyend="49"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>AbstractRenderer</label>
+        <link refid="class_abstract_renderer"/>
+      </node>
+      <node id="1">
+        <label>SFMLRenderer</label>
+        <link refid="class_s_f_m_l_renderer"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>AbstractRenderer</label>
+        <link refid="class_abstract_renderer"/>
+      </node>
+      <node id="1">
+        <label>SFMLRenderer</label>
+        <link refid="class_s_f_m_l_renderer"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="classes/SFMLRenderer.h" line="11" column="43" bodyfile="classes/SFMLRenderer.h" bodystart="11" bodyend="53"/>
+    <listofallmembers>
+      <member refid="class_s_f_m_l_renderer_1abc1185a02b26ea1758d48e89f0e81e39" prot="public" virt="virtual"><scope>SFMLRenderer</scope><name>draw</name></member>
+      <member refid="class_abstract_renderer_1a18a159d52012a3958c7c127de659d122" prot="public" virt="virtual"><scope>SFMLRenderer</scope><name>getHeight</name></member>
+      <member refid="class_abstract_renderer_1a3804773250d1c39f1d1fc29e6f72efe3" prot="public" virt="virtual"><scope>SFMLRenderer</scope><name>getWidth</name></member>
+      <member refid="class_s_f_m_l_renderer_1a935c28d7fba581c65990eeacf547eb0e" prot="public" virt="non-virtual"><scope>SFMLRenderer</scope><name>getWindow</name></member>
+      <member refid="class_s_f_m_l_renderer_1a5b89b3ce189fe0156759c8f667470942" prot="public" virt="virtual"><scope>SFMLRenderer</scope><name>isOpen</name></member>
+      <member refid="class_s_f_m_l_renderer_1a93dc345283826b19137770a28ded106f" prot="private" virt="non-virtual"><scope>SFMLRenderer</scope><name>open</name></member>
+      <member refid="class_abstract_renderer_1a4cab2964f09c3873d8dac8d8baa60661" prot="protected" virt="non-virtual"><scope>SFMLRenderer</scope><name>screenHeight</name></member>
+      <member refid="class_abstract_renderer_1a7001efd6b8a6d30927f6a0149a13cb01" prot="protected" virt="non-virtual"><scope>SFMLRenderer</scope><name>screenWidth</name></member>
+      <member refid="class_s_f_m_l_renderer_1a8a3902b191d793e1899c1e72c47adc34" prot="public" virt="non-virtual"><scope>SFMLRenderer</scope><name>SFMLRenderer</name></member>
+      <member refid="class_s_f_m_l_renderer_1ad0e6dd983544a0a784442fe4f4da7b00" prot="private" virt="non-virtual"><scope>SFMLRenderer</scope><name>tf</name></member>
+      <member refid="class_s_f_m_l_renderer_1ac758285a3cc6a8d3946a7cdc1be296bc" prot="private" virt="non-virtual"><scope>SFMLRenderer</scope><name>window</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

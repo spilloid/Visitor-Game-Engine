@@ -1,0 +1,51 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.16">
+  <compounddef id="dir_b02e4219757ae4e3a0f1714873865bbf" kind="dir">
+    <compoundname>classes</compoundname>
+    <innerdir refid="dir_3bc2084d280d3143bc3d7467cfd69a30">classes/games</innerdir>
+    <innerfile refid="_abstract_collision_visitor_8cpp">AbstractCollisionVisitor.cpp</innerfile>
+    <innerfile refid="_abstract_collision_visitor_8h">AbstractCollisionVisitor.h</innerfile>
+    <innerfile refid="_abstract_drawing_visitor_8h">AbstractDrawingVisitor.h</innerfile>
+    <innerfile refid="_abstract_input_wrapper_8h">AbstractInputWrapper.h</innerfile>
+    <innerfile refid="_abstract_renderer_8cpp">AbstractRenderer.cpp</innerfile>
+    <innerfile refid="_abstract_renderer_8h">AbstractRenderer.h</innerfile>
+    <innerfile refid="_abstract_scene_8h">AbstractScene.h</innerfile>
+    <innerfile refid="_bounce_bounds_visitor_8cpp">BounceBoundsVisitor.cpp</innerfile>
+    <innerfile refid="_bounce_bounds_visitor_8h">BounceBoundsVisitor.h</innerfile>
+    <innerfile refid="_bounding_box_collision_visitor_8cpp">BoundingBoxCollisionVisitor.cpp</innerfile>
+    <innerfile refid="_bounding_box_collision_visitor_8h">BoundingBoxCollisionVisitor.h</innerfile>
+    <innerfile refid="_force_visitor_8cpp">ForceVisitor.cpp</innerfile>
+    <innerfile refid="_force_visitor_8h">ForceVisitor.h</innerfile>
+    <innerfile refid="_game_engine_8cpp">GameEngine.cpp</innerfile>
+    <innerfile refid="_game_engine_8h">GameEngine.h</innerfile>
+    <innerfile refid="_gravity_visitor_8cpp">GravityVisitor.cpp</innerfile>
+    <innerfile refid="_gravity_visitor_8h">GravityVisitor.h</innerfile>
+    <innerfile refid="_grid_drawing_visitor_8cpp">GridDrawingVisitor.cpp</innerfile>
+    <innerfile refid="_grid_drawing_visitor_8h">GridDrawingVisitor.h</innerfile>
+    <innerfile refid="_layered_scene_8cpp">LayeredScene.cpp</innerfile>
+    <innerfile refid="_layered_scene_8h">LayeredScene.h</innerfile>
+    <innerfile refid="_ray_cast_collision_visitor_8cpp">RayCastCollisionVisitor.cpp</innerfile>
+    <innerfile refid="_ray_cast_collision_visitor_8h">RayCastCollisionVisitor.h</innerfile>
+    <innerfile refid="_s_f_m_l_input_wrapper_8cpp">SFMLInputWrapper.cpp</innerfile>
+    <innerfile refid="_s_f_m_l_input_wrapper_8h">SFMLInputWrapper.h</innerfile>
+    <innerfile refid="_s_f_m_l_renderer_8cpp">SFMLRenderer.cpp</innerfile>
+    <innerfile refid="_s_f_m_l_renderer_8h">SFMLRenderer.h</innerfile>
+    <innerfile refid="_simple_drawing_visitor_8cpp">SimpleDrawingVisitor.cpp</innerfile>
+    <innerfile refid="_simple_drawing_visitor_8h">SimpleDrawingVisitor.h</innerfile>
+    <innerfile refid="_simple_scene_8cpp">SimpleScene.cpp</innerfile>
+    <innerfile refid="_simple_scene_8h">SimpleScene.h</innerfile>
+    <innerfile refid="_sprite_8cpp">Sprite.cpp</innerfile>
+    <innerfile refid="_sprite_8h">Sprite.h</innerfile>
+    <innerfile refid="_texture_factory_8cpp">TextureFactory.cpp</innerfile>
+    <innerfile refid="_texture_factory_8h">TextureFactory.h</innerfile>
+    <innerfile refid="_visitor_8cpp">Visitor.cpp</innerfile>
+    <innerfile refid="_visitor_8h">Visitor.h</innerfile>
+    <innerfile refid="_wrap_bounds_visitor_8cpp">WrapBoundsVisitor.cpp</innerfile>
+    <innerfile refid="_wrap_bounds_visitor_8h">WrapBoundsVisitor.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="classes/"/>
+  </compounddef>
+</doxygen>

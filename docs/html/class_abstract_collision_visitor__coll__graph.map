@@ -1,0 +1,4 @@
+<map id="AbstractCollisionVisitor" name="AbstractCollisionVisitor">
+<area shape="rect" id="node1" title="Provides an abstraction for handling visitor based collisions where algorithm is separate from visita..." alt="" coords="5,80,180,107"/>
+<area shape="rect" id="node2" href="$class_visitor.html" title=" " alt="" coords="61,5,125,32"/>
+</map>

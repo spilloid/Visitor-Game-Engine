@@ -1,0 +1,85 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.16">
+  <compounddef id="_gravity_visitor_8h" kind="file" language="C++">
+    <compoundname>GravityVisitor.h</compoundname>
+    <includes refid="_visitor_8h" local="yes">Visitor.h</includes>
+    <includedby refid="_game_8h" local="yes">classes/games/Game.h</includedby>
+    <includedby refid="_gravity_visitor_8cpp" local="yes">classes/GravityVisitor.cpp</includedby>
+    <incdepgraph>
+      <node id="2">
+        <label>Visitor.h</label>
+        <link refid="_visitor_8h_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>classes/GravityVisitor.h</label>
+        <link refid="_gravity_visitor_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>Sprite.h</label>
+        <link refid="_sprite_8h_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>iostream</label>
+      </node>
+      <node id="5">
+        <label>memory</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="2">
+        <label>classes/games/Game.h</label>
+        <link refid="_game_8h_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>classes/GravityVisitor.h</label>
+        <link refid="_gravity_visitor_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>classes/games/Pong.h</label>
+        <link refid="_pong_8h_source"/>
+      </node>
+      <node id="4">
+        <label>classes/games/Quoridor.h</label>
+        <link refid="_quoridor_8h_source"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="class_gravity_visitor" prot="public">GravityVisitor</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>GRAVITYVISITOR_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>GRAVITYVISITOR_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;Visitor.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4" refid="class_gravity_visitor" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_gravity_visitor" kindref="compound">GravityVisitor</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="class_visitor" kindref="compound">Visitor</ref>{</highlight></codeline>
+<codeline lineno="5"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="6"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>intensity;</highlight></codeline>
+<codeline lineno="7"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">explicit</highlight><highlight class="normal"><sp/><ref refid="class_gravity_visitor_1ae22e7ba086e20c0e33849798dc1898a4" kindref="member">GravityVisitor</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>intensity);</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_gravity_visitor_1ae4b8bb78b47d9ab88d5c4b03d0d3816b" kindref="member">visit</ref>(std::shared_ptr&lt;Sprite&gt;)<sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="20"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="classes/GravityVisitor.h"/>
+  </compounddef>
+</doxygen>

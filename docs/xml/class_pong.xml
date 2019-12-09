@@ -1,0 +1,55 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.16">
+  <compounddef id="class_pong" kind="class" language="C++" prot="public">
+    <compoundname>Pong</compoundname>
+    <basecompoundref refid="class_game" prot="public" virt="non-virtual">Game</basecompoundref>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_pong_1aedea8d7ebbf15c0687e7b933eb9d2938" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void Pong::start</definition>
+        <argsstring>() override</argsstring>
+        <name>start</name>
+        <reimplements refid="class_game_1add988158041df85337995e36f06756aa">start</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="classes/games/Pong.h" line="7" column="14" bodyfile="classes/games/Pong.cpp" bodystart="3" bodyend="139"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>Game</label>
+        <link refid="class_game"/>
+      </node>
+      <node id="1">
+        <label>Pong</label>
+        <link refid="class_pong"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>Game</label>
+        <link refid="class_game"/>
+      </node>
+      <node id="1">
+        <label>Pong</label>
+        <link refid="class_pong"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="classes/games/Pong.h" line="4" column="23" bodyfile="classes/games/Pong.h" bodystart="4" bodyend="8"/>
+    <listofallmembers>
+      <member refid="class_pong_1aedea8d7ebbf15c0687e7b933eb9d2938" prot="public" virt="virtual"><scope>Pong</scope><name>start</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

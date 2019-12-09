@@ -1,0 +1,77 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.16">
+  <compounddef id="_abstract_collision_visitor_8cpp" kind="file" language="C++">
+    <compoundname>AbstractCollisionVisitor.cpp</compoundname>
+    <includes refid="_abstract_collision_visitor_8h" local="yes">AbstractCollisionVisitor.h</includes>
+    <includes local="no">utility</includes>
+    <incdepgraph>
+      <node id="7">
+        <label>list</label>
+      </node>
+      <node id="3">
+        <label>Visitor.h</label>
+        <link refid="_visitor_8h_source"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>classes/AbstractCollisionVisitor.cpp</label>
+        <link refid="_abstract_collision_visitor_8cpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>AbstractCollisionVisitor.h</label>
+        <link refid="_abstract_collision_visitor_8h_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>Sprite.h</label>
+        <link refid="_sprite_8h_source"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>utility</label>
+      </node>
+      <node id="4">
+        <label>iostream</label>
+      </node>
+      <node id="6">
+        <label>memory</label>
+      </node>
+    </incdepgraph>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;AbstractCollisionVisitor.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;utility&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5" refid="class_abstract_collision_visitor_1afb4c52cacaaf486be84e8b527cec202a" refkind="member"><highlight class="normal">std::list&lt;std::shared_ptr&lt;Sprite&gt;&gt;<sp/><ref refid="class_abstract_collision_visitor_1afb4c52cacaaf486be84e8b527cec202a" kindref="member">AbstractCollisionVisitor::getCollisions</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="6"><highlight class="normal"><sp/><sp/><sp/><sp/>std::list&lt;std::shared_ptr&lt;Sprite<sp/>&gt;&gt;<sp/>list<sp/>=<sp/>this-&gt;<ref refid="class_abstract_collision_visitor_1a812239222979d680afd12fb35fe2e132" kindref="member">collisions</ref>;</highlight></codeline>
+<codeline lineno="7"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;<ref refid="class_abstract_collision_visitor_1a812239222979d680afd12fb35fe2e132" kindref="member">collisions</ref>.clear();</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>list;</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12" refid="class_abstract_collision_visitor_1a17262b2403c9e1b0e11f25603dd415d6" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_abstract_collision_visitor_1a17262b2403c9e1b0e11f25603dd415d6" kindref="member">AbstractCollisionVisitor::setWatched</ref>(std::shared_ptr&lt;Sprite&gt;<sp/>s)<sp/>{</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;<ref refid="class_abstract_collision_visitor_1aeeaa2ebce5b6c29df1c3fcf285aa7d82" kindref="member">watched</ref><sp/>=<sp/>std::move(s);</highlight></codeline>
+<codeline lineno="14"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="classes/AbstractCollisionVisitor.cpp"/>
+  </compounddef>
+</doxygen>

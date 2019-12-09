@@ -1,0 +1,110 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.16">
+  <compounddef id="class_texture_factory" kind="class" language="C++" prot="public">
+    <compoundname>TextureFactory</compoundname>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_texture_factory_1a66990edae00aba344c794d3b28597cc4" prot="private" static="no" mutable="no">
+        <type>std::map&lt; std::string, std::shared_ptr&lt; sf::Texture &gt; &gt;</type>
+        <definition>std::map&lt;std::string,std::shared_ptr&lt;sf::Texture&gt; &gt; TextureFactory::cache</definition>
+        <argsstring></argsstring>
+        <name>cache</name>
+        <briefdescription>
+<para>cache of textures to minimize ram usage </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="classes/TextureFactory.h" line="12" column="19" bodyfile="classes/TextureFactory.h" bodystart="12" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_texture_factory_1a8f929f76381d8b9790188b0ceb1bce62" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TextureFactory::TextureFactory</definition>
+        <argsstring>()</argsstring>
+        <name>TextureFactory</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="classes/TextureFactory.h" line="14" column="9"/>
+      </memberdef>
+      <memberdef kind="function" id="class_texture_factory_1aab66db80def7130338f9f0862717ac5b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool TextureFactory::loadTexture</definition>
+        <argsstring>(const std::string &amp;s)</argsstring>
+        <name>loadTexture</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>s</declname>
+        </param>
+        <briefdescription>
+<para>cache the texture for access later, hard loads on each call </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>s</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>file location </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>bool True on success </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="classes/TextureFactory.h" line="22" column="10" bodyfile="classes/TextureFactory.cpp" bodystart="4" bodyend="13"/>
+        <referencedby refid="class_texture_factory_1ad01083de75eea082788b29dcbf5605df" compoundref="_texture_factory_8cpp" startline="15" endline="23">getTexture</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_texture_factory_1ad01083de75eea082788b29dcbf5605df" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::shared_ptr&lt; sf::Texture &gt;</type>
+        <definition>std::shared_ptr&lt; sf::Texture &gt; TextureFactory::getTexture</definition>
+        <argsstring>(const std::string &amp;s)</argsstring>
+        <name>getTexture</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>s</declname>
+        </param>
+        <briefdescription>
+<para>Get the Texture object, check if cached first. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>s</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>file location </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>std::shared_ptr&lt;sf::Texture&gt; Texture loaded from file </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="classes/TextureFactory.h" line="30" column="21" bodyfile="classes/TextureFactory.cpp" bodystart="15" bodyend="23"/>
+        <references refid="class_texture_factory_1aab66db80def7130338f9f0862717ac5b" compoundref="_texture_factory_8cpp" startline="4" endline="13">loadTexture</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="classes/TextureFactory.h" line="6" column="21" bodyfile="classes/TextureFactory.h" bodystart="6" bodyend="31"/>
+    <listofallmembers>
+      <member refid="class_texture_factory_1a66990edae00aba344c794d3b28597cc4" prot="private" virt="non-virtual"><scope>TextureFactory</scope><name>cache</name></member>
+      <member refid="class_texture_factory_1ad01083de75eea082788b29dcbf5605df" prot="public" virt="non-virtual"><scope>TextureFactory</scope><name>getTexture</name></member>
+      <member refid="class_texture_factory_1aab66db80def7130338f9f0862717ac5b" prot="public" virt="non-virtual"><scope>TextureFactory</scope><name>loadTexture</name></member>
+      <member refid="class_texture_factory_1a8f929f76381d8b9790188b0ceb1bce62" prot="public" virt="non-virtual"><scope>TextureFactory</scope><name>TextureFactory</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,181 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.16">
+  <compounddef id="class_simple_drawing_visitor" kind="class" language="C++" prot="public">
+    <compoundname>SimpleDrawingVisitor</compoundname>
+    <basecompoundref refid="class_abstract_drawing_visitor" prot="public" virt="non-virtual">AbstractDrawingVisitor</basecompoundref>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_simple_drawing_visitor_1a4714fe39d82a3b0f45ef9061facbaf49" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; std::shared_ptr&lt; <ref refid="class_sprite" kindref="compound">Sprite</ref> &gt; &gt;</type>
+        <definition>std::vector&lt;std::shared_ptr&lt;Sprite&gt; &gt; SimpleDrawingVisitor::renderList</definition>
+        <argsstring></argsstring>
+        <name>renderList</name>
+        <briefdescription>
+<para>cache for what to draw to screen </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="classes/SimpleDrawingVisitor.h" line="13" column="15" bodyfile="classes/SimpleDrawingVisitor.h" bodystart="13" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_simple_drawing_visitor_1a4a058a3a86f60a519f32add7925c70be" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool SimpleDrawingVisitor::open</definition>
+        <argsstring></argsstring>
+        <name>open</name>
+        <briefdescription>
+<para>Status of window. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="classes/SimpleDrawingVisitor.h" line="18" column="10" bodyfile="classes/SimpleDrawingVisitor.h" bodystart="18" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_simple_drawing_visitor_1a81fbd8aa6a098d1dad0152658a15d103" prot="public" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>SimpleDrawingVisitor::SimpleDrawingVisitor</definition>
+        <argsstring>(std::shared_ptr&lt; AbstractRenderer &gt; renderer)</argsstring>
+        <name>SimpleDrawingVisitor</name>
+        <param>
+          <type>std::shared_ptr&lt; <ref refid="class_abstract_renderer" kindref="compound">AbstractRenderer</ref> &gt;</type>
+          <declname>renderer</declname>
+        </param>
+        <briefdescription>
+<para>Construct a new <ref refid="class_simple_drawing_visitor" kindref="compound">SimpleDrawingVisitor</ref> object. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>renderer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>that which draws to things </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="classes/SimpleDrawingVisitor.h" line="25" column="14" bodyfile="classes/SimpleDrawingVisitor.cpp" bodystart="5" bodyend="8"/>
+      </memberdef>
+      <memberdef kind="function" id="class_simple_drawing_visitor_1ad87126c3a56da728da1cf72d326d28ee" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void SimpleDrawingVisitor::visit</definition>
+        <argsstring>(std::shared_ptr&lt; Sprite &gt; s) override</argsstring>
+        <name>visit</name>
+        <reimplements refid="class_abstract_drawing_visitor_1a173022c880329a1203eb8243816dbcd4">visit</reimplements>
+        <param>
+          <type>std::shared_ptr&lt; <ref refid="class_sprite" kindref="compound">Sprite</ref> &gt;</type>
+          <declname>s</declname>
+        </param>
+        <briefdescription>
+<para>Caches sprite for next draw. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>s</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>sprite to visit </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="classes/SimpleDrawingVisitor.h" line="32" column="10" bodyfile="classes/SimpleDrawingVisitor.cpp" bodystart="10" bodyend="12"/>
+      </memberdef>
+      <memberdef kind="function" id="class_simple_drawing_visitor_1af73054a881c2cd62e2482e05e767bb7c" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>bool SimpleDrawingVisitor::isOpen</definition>
+        <argsstring>() override</argsstring>
+        <name>isOpen</name>
+        <reimplements refid="class_abstract_drawing_visitor_1ae9abaeedd78440c6a0cccf6e36020602">isOpen</reimplements>
+        <briefdescription>
+<para>check if window is open </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>true yep </para>
+</simplesect>
+<simplesect kind="return"><para>false nope </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="classes/SimpleDrawingVisitor.h" line="40" column="10" bodyfile="classes/SimpleDrawingVisitor.cpp" bodystart="14" bodyend="14"/>
+      </memberdef>
+      <memberdef kind="function" id="class_simple_drawing_visitor_1a36a45596ebf8c96e6e9e60b84caf404f" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void SimpleDrawingVisitor::draw</definition>
+        <argsstring>() override</argsstring>
+        <name>draw</name>
+        <reimplements refid="class_abstract_drawing_visitor_1a08ecda9a55f34afbfa1797be9bd115ea">draw</reimplements>
+        <briefdescription>
+<para>draw all sprites from scene to screen; clears renderList </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="classes/SimpleDrawingVisitor.h" line="46" column="10" bodyfile="classes/SimpleDrawingVisitor.cpp" bodystart="16" bodyend="19"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>SimpleDrawingVisitor</label>
+        <link refid="class_simple_drawing_visitor"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>Visitor</label>
+        <link refid="class_visitor"/>
+      </node>
+      <node id="2">
+        <label>AbstractDrawingVisitor</label>
+        <link refid="class_abstract_drawing_visitor"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>SimpleDrawingVisitor</label>
+        <link refid="class_simple_drawing_visitor"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>Visitor</label>
+        <link refid="class_visitor"/>
+      </node>
+      <node id="2">
+        <label>AbstractDrawingVisitor</label>
+        <link refid="class_abstract_drawing_visitor"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="classes/SimpleDrawingVisitor.h" line="7" column="57" bodyfile="classes/SimpleDrawingVisitor.h" bodystart="7" bodyend="47"/>
+    <listofallmembers>
+      <member refid="class_simple_drawing_visitor_1a36a45596ebf8c96e6e9e60b84caf404f" prot="public" virt="virtual"><scope>SimpleDrawingVisitor</scope><name>draw</name></member>
+      <member refid="class_simple_drawing_visitor_1af73054a881c2cd62e2482e05e767bb7c" prot="public" virt="virtual"><scope>SimpleDrawingVisitor</scope><name>isOpen</name></member>
+      <member refid="class_simple_drawing_visitor_1a4a058a3a86f60a519f32add7925c70be" prot="private" virt="non-virtual"><scope>SimpleDrawingVisitor</scope><name>open</name></member>
+      <member refid="class_abstract_drawing_visitor_1a0a43744af979bff82123dee3faf68c8d" prot="protected" virt="non-virtual"><scope>SimpleDrawingVisitor</scope><name>renderer</name></member>
+      <member refid="class_simple_drawing_visitor_1a4714fe39d82a3b0f45ef9061facbaf49" prot="private" virt="non-virtual"><scope>SimpleDrawingVisitor</scope><name>renderList</name></member>
+      <member refid="class_simple_drawing_visitor_1a81fbd8aa6a098d1dad0152658a15d103" prot="public" virt="non-virtual"><scope>SimpleDrawingVisitor</scope><name>SimpleDrawingVisitor</name></member>
+      <member refid="class_simple_drawing_visitor_1ad87126c3a56da728da1cf72d326d28ee" prot="public" virt="virtual"><scope>SimpleDrawingVisitor</scope><name>visit</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

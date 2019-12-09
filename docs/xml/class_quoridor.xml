@@ -1,0 +1,55 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.16">
+  <compounddef id="class_quoridor" kind="class" language="C++" prot="public">
+    <compoundname>Quoridor</compoundname>
+    <basecompoundref refid="class_game" prot="public" virt="non-virtual">Game</basecompoundref>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_quoridor_1a12cd1cc83689e0920e2a4c92f510e4d7" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void Quoridor::start</definition>
+        <argsstring>() override</argsstring>
+        <name>start</name>
+        <reimplements refid="class_game_1add988158041df85337995e36f06756aa">start</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="classes/games/Quoridor.h" line="8" column="10" bodyfile="classes/games/Quoridor.cpp" bodystart="2" bodyend="86"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>Game</label>
+        <link refid="class_game"/>
+      </node>
+      <node id="1">
+        <label>Quoridor</label>
+        <link refid="class_quoridor"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>Game</label>
+        <link refid="class_game"/>
+      </node>
+      <node id="1">
+        <label>Quoridor</label>
+        <link refid="class_quoridor"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="classes/games/Quoridor.h" line="5" column="27" bodyfile="classes/games/Quoridor.h" bodystart="5" bodyend="9"/>
+    <listofallmembers>
+      <member refid="class_quoridor_1a12cd1cc83689e0920e2a4c92f510e4d7" prot="public" virt="virtual"><scope>Quoridor</scope><name>start</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

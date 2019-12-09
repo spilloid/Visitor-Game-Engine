@@ -1,0 +1,97 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.16">
+  <compounddef id="class_abstract_scene" kind="class" language="C++" prot="public" abstract="yes">
+    <compoundname>AbstractScene</compoundname>
+    <derivedcompoundref refid="class_layered_scene" prot="public" virt="non-virtual">LayeredScene</derivedcompoundref>
+    <derivedcompoundref refid="class_simple_scene" prot="public" virt="non-virtual">SimpleScene</derivedcompoundref>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_abstract_scene_1aa3915747c431f6428c02f0387dd6386e" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void AbstractScene::addSprite</definition>
+        <argsstring>(std::shared_ptr&lt; Sprite &gt; s)=0</argsstring>
+        <name>addSprite</name>
+        <reimplementedby refid="class_layered_scene_1aa7749be2c9d1a016b56ac6dc65e5437f">addSprite</reimplementedby>
+        <reimplementedby refid="class_simple_scene_1a245e8567ad1a38d575596e7ed298d2c5">addSprite</reimplementedby>
+        <param>
+          <type>std::shared_ptr&lt; <ref refid="class_sprite" kindref="compound">Sprite</ref> &gt;</type>
+          <declname>s</declname>
+        </param>
+        <briefdescription>
+<para>add a sprite to the scene </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>s</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="classes/AbstractScene.h" line="19" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="class_abstract_scene_1a38f6278adc5d3235296ed8012ea66ea7" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void AbstractScene::accept</definition>
+        <argsstring>(std::shared_ptr&lt; Visitor &gt; v)=0</argsstring>
+        <name>accept</name>
+        <reimplementedby refid="class_simple_scene_1a2f56ea6a9c5e2112bc77c30da72c7d64">accept</reimplementedby>
+        <reimplementedby refid="class_layered_scene_1a1e82a368797fb3e6fff57549707bd56e">accept</reimplementedby>
+        <param>
+          <type>std::shared_ptr&lt; <ref refid="class_visitor" kindref="compound">Visitor</ref> &gt;</type>
+          <declname>v</declname>
+        </param>
+        <briefdescription>
+<para>iterate through sprites in scene letting each visitor visit sprites </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>v</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="classes/AbstractScene.h" line="26" column="18"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>AbstractScene</label>
+        <link refid="class_abstract_scene"/>
+      </node>
+      <node id="2">
+        <label>LayeredScene</label>
+        <link refid="class_layered_scene"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>SimpleScene</label>
+        <link refid="class_simple_scene"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <location file="classes/AbstractScene.h" line="11" column="20" bodyfile="classes/AbstractScene.h" bodystart="11" bodyend="27"/>
+    <listofallmembers>
+      <member refid="class_abstract_scene_1a38f6278adc5d3235296ed8012ea66ea7" prot="public" virt="pure-virtual"><scope>AbstractScene</scope><name>accept</name></member>
+      <member refid="class_abstract_scene_1aa3915747c431f6428c02f0387dd6386e" prot="public" virt="pure-virtual"><scope>AbstractScene</scope><name>addSprite</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

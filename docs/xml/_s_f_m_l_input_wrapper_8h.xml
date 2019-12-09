@@ -1,0 +1,94 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.16">
+  <compounddef id="_s_f_m_l_input_wrapper_8h" kind="file" language="C++">
+    <compoundname>SFMLInputWrapper.h</compoundname>
+    <includes refid="_abstract_input_wrapper_8h" local="yes">AbstractInputWrapper.h</includes>
+    <includes local="no">SFML/Window.hpp</includes>
+    <includes local="no">SFML/Graphics.hpp</includes>
+    <includedby refid="_game_8h" local="yes">classes/games/Game.h</includedby>
+    <includedby refid="_s_f_m_l_input_wrapper_8cpp" local="yes">classes/SFMLInputWrapper.cpp</includedby>
+    <incdepgraph>
+      <node id="6">
+        <label>SFML/Graphics.hpp</label>
+      </node>
+      <node id="2">
+        <label>AbstractInputWrapper.h</label>
+        <link refid="_abstract_input_wrapper_8h_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>SFML/Window.hpp</label>
+      </node>
+      <node id="4">
+        <label>vector</label>
+      </node>
+      <node id="1">
+        <label>classes/SFMLInputWrapper.h</label>
+        <link refid="_s_f_m_l_input_wrapper_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>memory</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="2">
+        <label>classes/games/Game.h</label>
+        <link refid="_game_8h_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>classes/SFMLInputWrapper.h</label>
+        <link refid="_s_f_m_l_input_wrapper_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>classes/games/Pong.h</label>
+        <link refid="_pong_8h_source"/>
+      </node>
+      <node id="4">
+        <label>classes/games/Quoridor.h</label>
+        <link refid="_quoridor_8h_source"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="class_s_f_m_l_input_wrapper" prot="public">SFMLInputWrapper</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>SFML_INPUT_WRAPPER</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SFML_INPUT_WRAPPER</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;AbstractInputWrapper.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;SFML/Window.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;SFML/Graphics.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8" refid="class_s_f_m_l_input_wrapper" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_s_f_m_l_input_wrapper" kindref="compound">SFMLInputWrapper</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="class_abstract_input_wrapper" kindref="compound">AbstractInputWrapper</ref><sp/>{</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/>std::shared_ptr&lt;sf::RenderWindow&gt;<sp/>window;</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">explicit</highlight><highlight class="normal"><sp/><ref refid="class_s_f_m_l_input_wrapper" kindref="compound">SFMLInputWrapper</ref>(std::shared_ptr&lt;sf::RenderWindow&gt;<sp/>w);</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;int&gt;<sp/><ref refid="class_s_f_m_l_input_wrapper_1a2641351dc60c62da230d195c27eae25f" kindref="member">getKeyPresses</ref>()<sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structclick" kindref="compound">click</ref><sp/><ref refid="class_s_f_m_l_input_wrapper_1aa836315c75ec30a561e769b2cb8b28bc" kindref="member">getLastClick</ref>()<sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="17"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//INPUT_WRAPPER</highlight></codeline>
+    </programlisting>
+    <location file="classes/SFMLInputWrapper.h"/>
+  </compounddef>
+</doxygen>

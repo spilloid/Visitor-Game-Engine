@@ -1,0 +1,137 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.16">
+  <compounddef id="class_abstract_renderer" kind="class" language="C++" prot="public" abstract="yes">
+    <compoundname>AbstractRenderer</compoundname>
+    <derivedcompoundref refid="class_s_f_m_l_renderer" prot="public" virt="non-virtual">SFMLRenderer</derivedcompoundref>
+      <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="class_abstract_renderer_1a7de8e73874d912196d1dda80548ec044" prot="protected" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool AbstractRenderer::open</definition>
+        <argsstring></argsstring>
+        <name>open</name>
+        <initializer>{}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="classes/AbstractRenderer.h" line="10" column="10" bodyfile="classes/AbstractRenderer.h" bodystart="10" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_abstract_renderer_1a4cab2964f09c3873d8dac8d8baa60661" prot="protected" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int AbstractRenderer::screenHeight</definition>
+        <argsstring></argsstring>
+        <name>screenHeight</name>
+        <initializer>{}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="classes/AbstractRenderer.h" line="11" column="18" bodyfile="classes/AbstractRenderer.h" bodystart="11" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_abstract_renderer_1a7001efd6b8a6d30927f6a0149a13cb01" prot="protected" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int AbstractRenderer::screenWidth</definition>
+        <argsstring></argsstring>
+        <name>screenWidth</name>
+        <initializer>{}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="classes/AbstractRenderer.h" line="12" column="18" bodyfile="classes/AbstractRenderer.h" bodystart="12" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_abstract_renderer_1a18a159d52012a3958c7c127de659d122" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>unsigned int</type>
+        <definition>unsigned int AbstractRenderer::getHeight</definition>
+        <argsstring>()</argsstring>
+        <name>getHeight</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="classes/AbstractRenderer.h" line="14" column="26" bodyfile="classes/AbstractRenderer.cpp" bodystart="2" bodyend="4"/>
+      </memberdef>
+      <memberdef kind="function" id="class_abstract_renderer_1a3804773250d1c39f1d1fc29e6f72efe3" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>unsigned int</type>
+        <definition>unsigned int AbstractRenderer::getWidth</definition>
+        <argsstring>()</argsstring>
+        <name>getWidth</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="classes/AbstractRenderer.h" line="16" column="26" bodyfile="classes/AbstractRenderer.cpp" bodystart="6" bodyend="8"/>
+      </memberdef>
+      <memberdef kind="function" id="class_abstract_renderer_1a9342a6cd4986f8362b54f6c13e7ae0d3" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>bool</type>
+        <definition>virtual bool AbstractRenderer::isOpen</definition>
+        <argsstring>()=0</argsstring>
+        <name>isOpen</name>
+        <reimplementedby refid="class_s_f_m_l_renderer_1a5b89b3ce189fe0156759c8f667470942">isOpen</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="classes/AbstractRenderer.h" line="18" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="class_abstract_renderer_1a0007e3bb5ccabf279a2db89182a0efdb" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void AbstractRenderer::draw</definition>
+        <argsstring>(std::vector&lt; std::shared_ptr&lt; Sprite &gt;&gt; renderList)=0</argsstring>
+        <name>draw</name>
+        <reimplementedby refid="class_s_f_m_l_renderer_1abc1185a02b26ea1758d48e89f0e81e39">draw</reimplementedby>
+        <param>
+          <type>std::vector&lt; std::shared_ptr&lt; <ref refid="class_sprite" kindref="compound">Sprite</ref> &gt;&gt;</type>
+          <declname>renderList</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="classes/AbstractRenderer.h" line="20" column="18"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>AbstractRenderer</label>
+        <link refid="class_abstract_renderer"/>
+      </node>
+      <node id="2">
+        <label>SFMLRenderer</label>
+        <link refid="class_s_f_m_l_renderer"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <location file="classes/AbstractRenderer.h" line="8" column="23" bodyfile="classes/AbstractRenderer.h" bodystart="8" bodyend="21"/>
+    <listofallmembers>
+      <member refid="class_abstract_renderer_1a0007e3bb5ccabf279a2db89182a0efdb" prot="public" virt="pure-virtual"><scope>AbstractRenderer</scope><name>draw</name></member>
+      <member refid="class_abstract_renderer_1a18a159d52012a3958c7c127de659d122" prot="public" virt="virtual"><scope>AbstractRenderer</scope><name>getHeight</name></member>
+      <member refid="class_abstract_renderer_1a3804773250d1c39f1d1fc29e6f72efe3" prot="public" virt="virtual"><scope>AbstractRenderer</scope><name>getWidth</name></member>
+      <member refid="class_abstract_renderer_1a9342a6cd4986f8362b54f6c13e7ae0d3" prot="public" virt="pure-virtual"><scope>AbstractRenderer</scope><name>isOpen</name></member>
+      <member refid="class_abstract_renderer_1a7de8e73874d912196d1dda80548ec044" prot="protected" virt="non-virtual"><scope>AbstractRenderer</scope><name>open</name></member>
+      <member refid="class_abstract_renderer_1a4cab2964f09c3873d8dac8d8baa60661" prot="protected" virt="non-virtual"><scope>AbstractRenderer</scope><name>screenHeight</name></member>
+      <member refid="class_abstract_renderer_1a7001efd6b8a6d30927f6a0149a13cb01" prot="protected" virt="non-virtual"><scope>AbstractRenderer</scope><name>screenWidth</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

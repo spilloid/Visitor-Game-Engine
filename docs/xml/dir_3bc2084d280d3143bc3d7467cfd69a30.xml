@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.16">
+  <compounddef id="dir_3bc2084d280d3143bc3d7467cfd69a30" kind="dir">
+    <compoundname>classes/games</compoundname>
+    <innerfile refid="_game_8h">Game.h</innerfile>
+    <innerfile refid="_pong_8cpp">Pong.cpp</innerfile>
+    <innerfile refid="_pong_8h">Pong.h</innerfile>
+    <innerfile refid="_quoridor_8cpp">Quoridor.cpp</innerfile>
+    <innerfile refid="_quoridor_8h">Quoridor.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="classes/games/"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,113 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.16">
+  <compounddef id="_grid_drawing_visitor_8h" kind="file" language="C++">
+    <compoundname>GridDrawingVisitor.h</compoundname>
+    <includes refid="_abstract_drawing_visitor_8h" local="yes">AbstractDrawingVisitor.h</includes>
+    <includedby refid="_game_8h" local="yes">classes/games/Game.h</includedby>
+    <includedby refid="_grid_drawing_visitor_8cpp" local="yes">classes/GridDrawingVisitor.cpp</includedby>
+    <incdepgraph>
+      <node id="3">
+        <label>Visitor.h</label>
+        <link refid="_visitor_8h_source"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>AbstractRenderer.h</label>
+        <link refid="_abstract_renderer_8h_source"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>AbstractDrawingVisitor.h</label>
+        <link refid="_abstract_drawing_visitor_8h_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>Sprite.h</label>
+        <link refid="_sprite_8h_source"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>vector</label>
+      </node>
+      <node id="4">
+        <label>iostream</label>
+      </node>
+      <node id="1">
+        <label>classes/GridDrawingVisitor.h</label>
+        <link refid="_grid_drawing_visitor_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>memory</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="2">
+        <label>classes/games/Game.h</label>
+        <link refid="_game_8h_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>classes/games/Pong.h</label>
+        <link refid="_pong_8h_source"/>
+      </node>
+      <node id="1">
+        <label>classes/GridDrawingVisitor.h</label>
+        <link refid="_grid_drawing_visitor_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>classes/games/Quoridor.h</label>
+        <link refid="_quoridor_8h_source"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="class_grid_drawing_visitor" prot="public">GridDrawingVisitor</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>GRIDDRAWINGVISITOR_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>GRIDDRAWINGVISITOR_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;AbstractDrawingVisitor.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4" refid="class_grid_drawing_visitor" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_grid_drawing_visitor" kindref="compound">GridDrawingVisitor</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="class_abstract_drawing_visitor" kindref="compound">AbstractDrawingVisitor</ref></highlight></codeline>
+<codeline lineno="5"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>maxX;</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>maxY;</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;std::shared_ptr&lt;Sprite&gt;&gt;<sp/>renderList;</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_grid_drawing_visitor_1a0ca662fa97695ca52caab304e8610a9d" kindref="member">GridDrawingVisitor</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>maxX,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>maxY,<sp/>std::shared_ptr&lt;AbstractRenderer&gt;<sp/>ar);</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_grid_drawing_visitor_1a7f0ac122f11dd3b5918e99b10da1f920" kindref="member">draw</ref>()<sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_grid_drawing_visitor_1ab81d77ac87bdff6eb945767686eebf70" kindref="member">isOpen</ref>()<sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_grid_drawing_visitor_1acdf1185e8a82d2a8495d8c18b65ee2b2" kindref="member">visit</ref>(std::shared_ptr&lt;Sprite&gt;<sp/>s)<sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="48"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="classes/GridDrawingVisitor.h"/>
+  </compounddef>
+</doxygen>

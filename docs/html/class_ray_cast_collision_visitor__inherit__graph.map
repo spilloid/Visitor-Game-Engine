@@ -1,0 +1,5 @@
+<map id="RayCastCollisionVisitor" name="RayCastCollisionVisitor">
+<area shape="rect" id="node1" title=" " alt="" coords="5,155,180,181"/>
+<area shape="rect" id="node2" href="$class_abstract_collision_visitor.html" title="Provides an abstraction for handling visitor based collisions where algorithm is separate from visita..." alt="" coords="5,80,180,107"/>
+<area shape="rect" id="node3" href="$class_visitor.html" title=" " alt="" coords="61,5,125,32"/>
+</map>

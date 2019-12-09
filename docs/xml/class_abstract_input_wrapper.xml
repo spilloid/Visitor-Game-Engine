@@ -1,0 +1,66 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.16">
+  <compounddef id="class_abstract_input_wrapper" kind="class" language="C++" prot="public" abstract="yes">
+    <compoundname>AbstractInputWrapper</compoundname>
+    <derivedcompoundref refid="class_s_f_m_l_input_wrapper" prot="public" virt="non-virtual">SFMLInputWrapper</derivedcompoundref>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_abstract_input_wrapper_1a4eaf73d4e5ff75eeec6083224c390eae" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>std::vector&lt; int &gt;</type>
+        <definition>virtual std::vector&lt;int&gt; AbstractInputWrapper::getKeyPresses</definition>
+        <argsstring>()=0</argsstring>
+        <name>getKeyPresses</name>
+        <reimplementedby refid="class_s_f_m_l_input_wrapper_1a2641351dc60c62da230d195c27eae25f">getKeyPresses</reimplementedby>
+        <briefdescription>
+<para>Get keypresses as keycode since last check. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>std::shared_ptr&lt;int&gt; : array of keypresses pushed since last check </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="classes/AbstractInputWrapper.h" line="21" column="29"/>
+      </memberdef>
+      <memberdef kind="function" id="class_abstract_input_wrapper_1a7d57574afd1e141d95daea824f2e870f" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type><ref refid="structclick" kindref="compound">click</ref></type>
+        <definition>virtual click AbstractInputWrapper::getLastClick</definition>
+        <argsstring>()=0</argsstring>
+        <name>getLastClick</name>
+        <reimplementedby refid="class_s_f_m_l_input_wrapper_1aa836315c75ec30a561e769b2cb8b28bc">getLastClick</reimplementedby>
+        <briefdescription>
+<para>gets last click to occur, as an object </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>click </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="classes/AbstractInputWrapper.h" line="27" column="23"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>AbstractInputWrapper</label>
+        <link refid="class_abstract_input_wrapper"/>
+      </node>
+      <node id="2">
+        <label>SFMLInputWrapper</label>
+        <link refid="class_s_f_m_l_input_wrapper"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <location file="classes/AbstractInputWrapper.h" line="13" column="27" bodyfile="classes/AbstractInputWrapper.h" bodystart="13" bodyend="28"/>
+    <listofallmembers>
+      <member refid="class_abstract_input_wrapper_1a4eaf73d4e5ff75eeec6083224c390eae" prot="public" virt="pure-virtual"><scope>AbstractInputWrapper</scope><name>getKeyPresses</name></member>
+      <member refid="class_abstract_input_wrapper_1a7d57574afd1e141d95daea824f2e870f" prot="public" virt="pure-virtual"><scope>AbstractInputWrapper</scope><name>getLastClick</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

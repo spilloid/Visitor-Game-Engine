@@ -1,0 +1,109 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.16">
+  <compounddef id="_abstract_collision_visitor_8h" kind="file" language="C++">
+    <compoundname>AbstractCollisionVisitor.h</compoundname>
+    <includes refid="_visitor_8h" local="yes">Visitor.h</includes>
+    <includes local="no">list</includes>
+    <includedby refid="_abstract_collision_visitor_8cpp" local="yes">classes/AbstractCollisionVisitor.cpp</includedby>
+    <includedby refid="_bounding_box_collision_visitor_8h" local="yes">classes/BoundingBoxCollisionVisitor.h</includedby>
+    <includedby refid="_ray_cast_collision_visitor_8h" local="yes">classes/RayCastCollisionVisitor.h</includedby>
+    <incdepgraph>
+      <node id="6">
+        <label>list</label>
+      </node>
+      <node id="2">
+        <label>Visitor.h</label>
+        <link refid="_visitor_8h_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>classes/AbstractCollisionVisitor.h</label>
+        <link refid="_abstract_collision_visitor_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>Sprite.h</label>
+        <link refid="_sprite_8h_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>iostream</label>
+      </node>
+      <node id="5">
+        <label>memory</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="3">
+        <label>classes/games/Game.h</label>
+        <link refid="_game_8h_source"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>classes/BoundingBoxCollisionVisitor.h</label>
+        <link refid="_bounding_box_collision_visitor_8h_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>classes/AbstractCollisionVisitor.h</label>
+        <link refid="_abstract_collision_visitor_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>classes/RayCastCollisionVisitor.h</label>
+        <link refid="_ray_cast_collision_visitor_8h_source"/>
+      </node>
+      <node id="4">
+        <label>classes/games/Pong.h</label>
+        <link refid="_pong_8h_source"/>
+      </node>
+      <node id="5">
+        <label>classes/games/Quoridor.h</label>
+        <link refid="_quoridor_8h_source"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="class_abstract_collision_visitor" prot="public">AbstractCollisionVisitor</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>ABSTRACTCOLLISIONVISITOR_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ABSTRACTCOLLISIONVISITOR_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;Visitor.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;list&gt;</highlight></codeline>
+<codeline lineno="9" refid="class_abstract_collision_visitor" refkind="compound"><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_abstract_collision_visitor" kindref="compound">AbstractCollisionVisitor</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="class_visitor" kindref="compound">Visitor</ref>{</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="15" refid="class_abstract_collision_visitor_1a812239222979d680afd12fb35fe2e132" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>std::list&lt;std::shared_ptr&lt;Sprite&gt;&gt;<sp/><ref refid="class_abstract_collision_visitor_1a812239222979d680afd12fb35fe2e132" kindref="member">collisions</ref>;</highlight></codeline>
+<codeline lineno="20" refid="class_abstract_collision_visitor_1aeeaa2ebce5b6c29df1c3fcf285aa7d82" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>std::shared_ptr&lt;Sprite&gt;<sp/><ref refid="class_abstract_collision_visitor_1aeeaa2ebce5b6c29df1c3fcf285aa7d82" kindref="member">watched</ref>;</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_abstract_collision_visitor_1a9ee08837ba4a531782bb9a1c8466a5b3" kindref="member">visit</ref>(std::shared_ptr&lt;Sprite&gt;<sp/>s)<sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal"><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/>std::list&lt;std::shared_ptr&lt;Sprite&gt;&gt;<sp/><ref refid="class_abstract_collision_visitor_1afb4c52cacaaf486be84e8b527cec202a" kindref="member">getCollisions</ref>();</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_abstract_collision_visitor_1a17262b2403c9e1b0e11f25603dd415d6" kindref="member">setWatched</ref>(std::shared_ptr&lt;Sprite&gt;<sp/>s);</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="classes/AbstractCollisionVisitor.h"/>
+  </compounddef>
+</doxygen>

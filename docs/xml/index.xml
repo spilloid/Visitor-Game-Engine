@@ -1,0 +1,260 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.8.16">
+  <compound refid="class_abstract_collision_visitor" kind="class"><name>AbstractCollisionVisitor</name>
+    <member refid="class_abstract_collision_visitor_1a812239222979d680afd12fb35fe2e132" kind="variable"><name>collisions</name></member>
+    <member refid="class_abstract_collision_visitor_1aeeaa2ebce5b6c29df1c3fcf285aa7d82" kind="variable"><name>watched</name></member>
+    <member refid="class_abstract_collision_visitor_1a9ee08837ba4a531782bb9a1c8466a5b3" kind="function"><name>visit</name></member>
+    <member refid="class_abstract_collision_visitor_1afb4c52cacaaf486be84e8b527cec202a" kind="function"><name>getCollisions</name></member>
+    <member refid="class_abstract_collision_visitor_1a17262b2403c9e1b0e11f25603dd415d6" kind="function"><name>setWatched</name></member>
+  </compound>
+  <compound refid="class_abstract_drawing_visitor" kind="class"><name>AbstractDrawingVisitor</name>
+    <member refid="class_abstract_drawing_visitor_1ab7279a5b1e74c95b06fb086614727b2d" kind="variable"><name>open</name></member>
+    <member refid="class_abstract_drawing_visitor_1a0a43744af979bff82123dee3faf68c8d" kind="variable"><name>renderer</name></member>
+    <member refid="class_abstract_drawing_visitor_1a08ecda9a55f34afbfa1797be9bd115ea" kind="function"><name>draw</name></member>
+    <member refid="class_abstract_drawing_visitor_1ae9abaeedd78440c6a0cccf6e36020602" kind="function"><name>isOpen</name></member>
+    <member refid="class_abstract_drawing_visitor_1a173022c880329a1203eb8243816dbcd4" kind="function"><name>visit</name></member>
+  </compound>
+  <compound refid="class_abstract_input_wrapper" kind="class"><name>AbstractInputWrapper</name>
+    <member refid="class_abstract_input_wrapper_1a4eaf73d4e5ff75eeec6083224c390eae" kind="function"><name>getKeyPresses</name></member>
+    <member refid="class_abstract_input_wrapper_1a7d57574afd1e141d95daea824f2e870f" kind="function"><name>getLastClick</name></member>
+  </compound>
+  <compound refid="class_abstract_renderer" kind="class"><name>AbstractRenderer</name>
+    <member refid="class_abstract_renderer_1a7de8e73874d912196d1dda80548ec044" kind="variable"><name>open</name></member>
+    <member refid="class_abstract_renderer_1a4cab2964f09c3873d8dac8d8baa60661" kind="variable"><name>screenHeight</name></member>
+    <member refid="class_abstract_renderer_1a7001efd6b8a6d30927f6a0149a13cb01" kind="variable"><name>screenWidth</name></member>
+    <member refid="class_abstract_renderer_1a18a159d52012a3958c7c127de659d122" kind="function"><name>getHeight</name></member>
+    <member refid="class_abstract_renderer_1a3804773250d1c39f1d1fc29e6f72efe3" kind="function"><name>getWidth</name></member>
+    <member refid="class_abstract_renderer_1a9342a6cd4986f8362b54f6c13e7ae0d3" kind="function"><name>isOpen</name></member>
+    <member refid="class_abstract_renderer_1a0007e3bb5ccabf279a2db89182a0efdb" kind="function"><name>draw</name></member>
+  </compound>
+  <compound refid="class_abstract_scene" kind="class"><name>AbstractScene</name>
+    <member refid="class_abstract_scene_1aa3915747c431f6428c02f0387dd6386e" kind="function"><name>addSprite</name></member>
+    <member refid="class_abstract_scene_1a38f6278adc5d3235296ed8012ea66ea7" kind="function"><name>accept</name></member>
+  </compound>
+  <compound refid="class_bounce_bounds_visitor" kind="class"><name>BounceBoundsVisitor</name>
+    <member refid="class_bounce_bounds_visitor_1a9ec75b7b4ae57d9847a252da651e64e8" kind="variable"><name>minX</name></member>
+    <member refid="class_bounce_bounds_visitor_1a1ca8f44248445c22ae6bb96c8172845d" kind="variable"><name>maxX</name></member>
+    <member refid="class_bounce_bounds_visitor_1a3a729af5e0f6a2ff1f915c7f83748f94" kind="variable"><name>minY</name></member>
+    <member refid="class_bounce_bounds_visitor_1adc21f77c34cd7a6560f7682165346d2f" kind="variable"><name>maxY</name></member>
+    <member refid="class_bounce_bounds_visitor_1a7123995ee7023ec20cab4b188e9602ff" kind="function"><name>BounceBoundsVisitor</name></member>
+    <member refid="class_bounce_bounds_visitor_1a155ab3b2fd3f187daf63e640a08e74eb" kind="function"><name>visit</name></member>
+  </compound>
+  <compound refid="class_bounding_box_collision_visitor" kind="class"><name>BoundingBoxCollisionVisitor</name>
+    <member refid="class_bounding_box_collision_visitor_1a36c48ca3b6f9f94d1113a17d27016b92" kind="function"><name>BoundingBoxCollisionVisitor</name></member>
+    <member refid="class_bounding_box_collision_visitor_1a3c6f65b79cb857a00e75382d7cd1e365" kind="function"><name>visit</name></member>
+  </compound>
+  <compound refid="structclick" kind="struct"><name>click</name>
+    <member refid="structclick_1ace0a043b01ba0201a7bf319ee511aa6f" kind="variable"><name>x</name></member>
+    <member refid="structclick_1a747cb0368ce437c51113a728d1acfcf4" kind="variable"><name>y</name></member>
+    <member refid="structclick_1a9a03ddebc7e2f3b973e8accb0d486044" kind="variable"><name>isLeft</name></member>
+  </compound>
+  <compound refid="class_force_visitor" kind="class"><name>ForceVisitor</name>
+    <member refid="class_force_visitor_1a31b87fc4fa7f6ec429abd8d305189c7d" kind="function"><name>visit</name></member>
+    <member refid="class_force_visitor_1a2849e388698ccad7b92d70c9a62004c7" kind="function"><name>applyForce</name></member>
+    <member refid="class_force_visitor_1a1b541137dff68c59fb10e9d8ccf49631" kind="function"><name>stop</name></member>
+  </compound>
+  <compound refid="class_game" kind="class"><name>Game</name>
+    <member refid="class_game_1add988158041df85337995e36f06756aa" kind="function"><name>start</name></member>
+  </compound>
+  <compound refid="class_game_engine" kind="class"><name>GameEngine</name>
+    <member refid="class_game_engine_1af000ef22b47a5a58be4f49fa70fe01b7" kind="variable"><name>sceneVisitors</name></member>
+    <member refid="class_game_engine_1afa6ce55580be9466743943b1c847a991" kind="variable"><name>scene</name></member>
+    <member refid="class_game_engine_1a64c430f74d72e2745646fdbffbd97930" kind="function"><name>GameEngine</name></member>
+    <member refid="class_game_engine_1a8e59d8341ef9d2dcc62eee1437e37f14" kind="function"><name>~GameEngine</name></member>
+    <member refid="class_game_engine_1aab3035fb0f041131db9d237b3ebc5a7e" kind="function"><name>addVisitor</name></member>
+    <member refid="class_game_engine_1a353327a50e1016a448156d93a6941b8e" kind="function"><name>addSprite</name></member>
+    <member refid="class_game_engine_1a3144fb41f147af39a281e18e41e84121" kind="function"><name>setScene</name></member>
+    <member refid="class_game_engine_1ae03241b464040b659b6a91f27920e8c3" kind="function"><name>update</name></member>
+  </compound>
+  <compound refid="class_gravity_visitor" kind="class"><name>GravityVisitor</name>
+    <member refid="class_gravity_visitor_1a86500ad7d5715a0da6293532c8a6ecc7" kind="variable"><name>intensity</name></member>
+    <member refid="class_gravity_visitor_1ae22e7ba086e20c0e33849798dc1898a4" kind="function"><name>GravityVisitor</name></member>
+    <member refid="class_gravity_visitor_1ae4b8bb78b47d9ab88d5c4b03d0d3816b" kind="function"><name>visit</name></member>
+  </compound>
+  <compound refid="class_grid_drawing_visitor" kind="class"><name>GridDrawingVisitor</name>
+    <member refid="class_grid_drawing_visitor_1a59f1e57b427c96a532a4704de1e3acf1" kind="variable"><name>maxX</name></member>
+    <member refid="class_grid_drawing_visitor_1a51bd9dfb7f29fdf067424885a3608d37" kind="variable"><name>maxY</name></member>
+    <member refid="class_grid_drawing_visitor_1a201a3ab3478b4cf180e266bc2e3b533b" kind="variable"><name>renderList</name></member>
+    <member refid="class_grid_drawing_visitor_1a0ca662fa97695ca52caab304e8610a9d" kind="function"><name>GridDrawingVisitor</name></member>
+    <member refid="class_grid_drawing_visitor_1a7f0ac122f11dd3b5918e99b10da1f920" kind="function"><name>draw</name></member>
+    <member refid="class_grid_drawing_visitor_1ab81d77ac87bdff6eb945767686eebf70" kind="function"><name>isOpen</name></member>
+    <member refid="class_grid_drawing_visitor_1acdf1185e8a82d2a8495d8c18b65ee2b2" kind="function"><name>visit</name></member>
+  </compound>
+  <compound refid="class_layered_scene" kind="class"><name>LayeredScene</name>
+    <member refid="class_layered_scene_1a0a60db336fa778c2700c6d2122f05323" kind="variable"><name>spriteList</name></member>
+    <member refid="class_layered_scene_1ab8bcd5423dfc6e867ae09a59b750807e" kind="function"><name>LayeredScene</name></member>
+    <member refid="class_layered_scene_1a019d144e8b2797dd3eb83293046b0625" kind="function"><name>~LayeredScene</name></member>
+    <member refid="class_layered_scene_1aa7749be2c9d1a016b56ac6dc65e5437f" kind="function"><name>addSprite</name></member>
+    <member refid="class_layered_scene_1a4845c313e50329c70495b7a72d4aa2ec" kind="function"><name>addSprite</name></member>
+    <member refid="class_layered_scene_1a1e82a368797fb3e6fff57549707bd56e" kind="function"><name>accept</name></member>
+  </compound>
+  <compound refid="class_pong" kind="class"><name>Pong</name>
+    <member refid="class_pong_1aedea8d7ebbf15c0687e7b933eb9d2938" kind="function"><name>start</name></member>
+  </compound>
+  <compound refid="class_quoridor" kind="class"><name>Quoridor</name>
+    <member refid="class_quoridor_1a12cd1cc83689e0920e2a4c92f510e4d7" kind="function"><name>start</name></member>
+  </compound>
+  <compound refid="class_ray_cast_collision_visitor" kind="class"><name>RayCastCollisionVisitor</name>
+    <member refid="class_ray_cast_collision_visitor_1afb1a5555e21de45dabb25fd898835da4" kind="function"><name>visit</name></member>
+  </compound>
+  <compound refid="class_s_f_m_l_input_wrapper" kind="class"><name>SFMLInputWrapper</name>
+    <member refid="class_s_f_m_l_input_wrapper_1a8942e31702a844771bc3358495b808f5" kind="variable"><name>window</name></member>
+    <member refid="class_s_f_m_l_input_wrapper_1abd471813dada36d96cd9d11fd285bbe5" kind="function"><name>SFMLInputWrapper</name></member>
+    <member refid="class_s_f_m_l_input_wrapper_1a2641351dc60c62da230d195c27eae25f" kind="function"><name>getKeyPresses</name></member>
+    <member refid="class_s_f_m_l_input_wrapper_1aa836315c75ec30a561e769b2cb8b28bc" kind="function"><name>getLastClick</name></member>
+  </compound>
+  <compound refid="class_s_f_m_l_renderer" kind="class"><name>SFMLRenderer</name>
+    <member refid="class_s_f_m_l_renderer_1ac758285a3cc6a8d3946a7cdc1be296bc" kind="variable"><name>window</name></member>
+    <member refid="class_s_f_m_l_renderer_1ad0e6dd983544a0a784442fe4f4da7b00" kind="variable"><name>tf</name></member>
+    <member refid="class_s_f_m_l_renderer_1a93dc345283826b19137770a28ded106f" kind="variable"><name>open</name></member>
+    <member refid="class_s_f_m_l_renderer_1a8a3902b191d793e1899c1e72c47adc34" kind="function"><name>SFMLRenderer</name></member>
+    <member refid="class_s_f_m_l_renderer_1abc1185a02b26ea1758d48e89f0e81e39" kind="function"><name>draw</name></member>
+    <member refid="class_s_f_m_l_renderer_1a5b89b3ce189fe0156759c8f667470942" kind="function"><name>isOpen</name></member>
+    <member refid="class_s_f_m_l_renderer_1a935c28d7fba581c65990eeacf547eb0e" kind="function"><name>getWindow</name></member>
+  </compound>
+  <compound refid="class_simple_drawing_visitor" kind="class"><name>SimpleDrawingVisitor</name>
+    <member refid="class_simple_drawing_visitor_1a4714fe39d82a3b0f45ef9061facbaf49" kind="variable"><name>renderList</name></member>
+    <member refid="class_simple_drawing_visitor_1a4a058a3a86f60a519f32add7925c70be" kind="variable"><name>open</name></member>
+    <member refid="class_simple_drawing_visitor_1a81fbd8aa6a098d1dad0152658a15d103" kind="function"><name>SimpleDrawingVisitor</name></member>
+    <member refid="class_simple_drawing_visitor_1ad87126c3a56da728da1cf72d326d28ee" kind="function"><name>visit</name></member>
+    <member refid="class_simple_drawing_visitor_1af73054a881c2cd62e2482e05e767bb7c" kind="function"><name>isOpen</name></member>
+    <member refid="class_simple_drawing_visitor_1a36a45596ebf8c96e6e9e60b84caf404f" kind="function"><name>draw</name></member>
+  </compound>
+  <compound refid="class_simple_scene" kind="class"><name>SimpleScene</name>
+    <member refid="class_simple_scene_1a235ac5e9196bb4b8e30624d15881565d" kind="variable"><name>spriteList</name></member>
+    <member refid="class_simple_scene_1a4c1488dffd5429e86e1c595961cedd79" kind="function"><name>SimpleScene</name></member>
+    <member refid="class_simple_scene_1a50a4c34576a09596905a59f4db5802ea" kind="function"><name>~SimpleScene</name></member>
+    <member refid="class_simple_scene_1a245e8567ad1a38d575596e7ed298d2c5" kind="function"><name>addSprite</name></member>
+    <member refid="class_simple_scene_1a2f56ea6a9c5e2112bc77c30da72c7d64" kind="function"><name>accept</name></member>
+  </compound>
+  <compound refid="class_sprite" kind="class"><name>Sprite</name>
+    <member refid="class_sprite_1abb2fa14e95603ee91d7acf652f1a9714" kind="variable"><name>x</name></member>
+    <member refid="class_sprite_1a43563b440ecac191e24423f6aa6cac0e" kind="variable"><name>dx</name></member>
+    <member refid="class_sprite_1a9d25f913409312b76b63e2f4e70c9635" kind="variable"><name>y</name></member>
+    <member refid="class_sprite_1a5b7e4e3eddfdc561a5782e39a3887145" kind="variable"><name>dy</name></member>
+    <member refid="class_sprite_1a064ac3cdbeaab442437614b89cc3fbdf" kind="variable"><name>height</name></member>
+    <member refid="class_sprite_1a11f560edfc52252310a1d1926c35e624" kind="variable"><name>width</name></member>
+    <member refid="class_sprite_1a593e7e858553d0d8c381c5465aafe2d5" kind="variable"><name>textureLoc</name></member>
+    <member refid="class_sprite_1a12cba3ac1868418add3c4d95ce87e615" kind="function"><name>Sprite</name></member>
+    <member refid="class_sprite_1a7e4993a9c9a455eed275619044ea8dc3" kind="function"><name>Sprite</name></member>
+    <member refid="class_sprite_1a836a8eccd754b6b47015bf7135a45822" kind="function"><name>getX</name></member>
+    <member refid="class_sprite_1a1ee7bf62ec0827a9b9d0cf110e72a0f9" kind="function"><name>getY</name></member>
+    <member refid="class_sprite_1a4371a6d9f2d115792e0162e1b081d1d3" kind="function"><name>setXY</name></member>
+    <member refid="class_sprite_1ac91a9c290d04131dcf58dbc16a8a0087" kind="function"><name>getDX</name></member>
+    <member refid="class_sprite_1a1ed4900e5552ef0c825f8ef44b6924f1" kind="function"><name>getDY</name></member>
+    <member refid="class_sprite_1a22c2404f812d8c85a722c662f23526cb" kind="function"><name>setDXY</name></member>
+    <member refid="class_sprite_1ad873b213ffef762022bed0a7345788f5" kind="function"><name>getHeight</name></member>
+    <member refid="class_sprite_1ac99e1dda38ec34aad46dd323e55a1c17" kind="function"><name>getWidth</name></member>
+    <member refid="class_sprite_1a8f21d4ce51d3b96cfb7df1a8ad03ce27" kind="function"><name>getTextureLocation</name></member>
+  </compound>
+  <compound refid="class_texture_factory" kind="class"><name>TextureFactory</name>
+    <member refid="class_texture_factory_1a66990edae00aba344c794d3b28597cc4" kind="variable"><name>cache</name></member>
+    <member refid="class_texture_factory_1a8f929f76381d8b9790188b0ceb1bce62" kind="function"><name>TextureFactory</name></member>
+    <member refid="class_texture_factory_1aab66db80def7130338f9f0862717ac5b" kind="function"><name>loadTexture</name></member>
+    <member refid="class_texture_factory_1ad01083de75eea082788b29dcbf5605df" kind="function"><name>getTexture</name></member>
+  </compound>
+  <compound refid="class_visitor" kind="class"><name>Visitor</name>
+    <member refid="class_visitor_1af941b9cd719ad5d43bb21310fb0795eb" kind="function"><name>visit</name></member>
+  </compound>
+  <compound refid="class_wrap_bounds_visitor" kind="class"><name>WrapBoundsVisitor</name>
+    <member refid="class_wrap_bounds_visitor_1ab2023397f67a92b5f959c20e8f2f4fde" kind="variable"><name>minX</name></member>
+    <member refid="class_wrap_bounds_visitor_1a4433090797575ccad8e1781106b90a3f" kind="variable"><name>maxX</name></member>
+    <member refid="class_wrap_bounds_visitor_1a77073cba8b253b479bcf29e67492c722" kind="variable"><name>minY</name></member>
+    <member refid="class_wrap_bounds_visitor_1ad284c94b30794f901eb000c37dc1137f" kind="variable"><name>maxY</name></member>
+    <member refid="class_wrap_bounds_visitor_1a988575b85dc0c37c9dc24773e9259fc7" kind="function"><name>WrapBoundsVisitor</name></member>
+    <member refid="class_wrap_bounds_visitor_1a46f7e9f34d56ae845b38b71fe928cca9" kind="function"><name>visit</name></member>
+  </compound>
+  <compound refid="_abstract_collision_visitor_8cpp" kind="file"><name>AbstractCollisionVisitor.cpp</name>
+  </compound>
+  <compound refid="_abstract_collision_visitor_8h" kind="file"><name>AbstractCollisionVisitor.h</name>
+  </compound>
+  <compound refid="_abstract_drawing_visitor_8h" kind="file"><name>AbstractDrawingVisitor.h</name>
+  </compound>
+  <compound refid="_abstract_input_wrapper_8h" kind="file"><name>AbstractInputWrapper.h</name>
+    <member refid="_abstract_input_wrapper_8h_1a15b3c0742ae22eeb79ba8b653d0baf81" kind="define"><name>ABSTRACT_INPUT_WRAPPER</name></member>
+  </compound>
+  <compound refid="_abstract_renderer_8cpp" kind="file"><name>AbstractRenderer.cpp</name>
+  </compound>
+  <compound refid="_abstract_renderer_8h" kind="file"><name>AbstractRenderer.h</name>
+  </compound>
+  <compound refid="_abstract_scene_8h" kind="file"><name>AbstractScene.h</name>
+  </compound>
+  <compound refid="_bounce_bounds_visitor_8cpp" kind="file"><name>BounceBoundsVisitor.cpp</name>
+  </compound>
+  <compound refid="_bounce_bounds_visitor_8h" kind="file"><name>BounceBoundsVisitor.h</name>
+  </compound>
+  <compound refid="_bounding_box_collision_visitor_8cpp" kind="file"><name>BoundingBoxCollisionVisitor.cpp</name>
+  </compound>
+  <compound refid="_bounding_box_collision_visitor_8h" kind="file"><name>BoundingBoxCollisionVisitor.h</name>
+  </compound>
+  <compound refid="_force_visitor_8cpp" kind="file"><name>ForceVisitor.cpp</name>
+  </compound>
+  <compound refid="_force_visitor_8h" kind="file"><name>ForceVisitor.h</name>
+  </compound>
+  <compound refid="_game_engine_8cpp" kind="file"><name>GameEngine.cpp</name>
+  </compound>
+  <compound refid="_game_engine_8h" kind="file"><name>GameEngine.h</name>
+  </compound>
+  <compound refid="_game_8h" kind="file"><name>Game.h</name>
+  </compound>
+  <compound refid="_pong_8cpp" kind="file"><name>Pong.cpp</name>
+  </compound>
+  <compound refid="_pong_8h" kind="file"><name>Pong.h</name>
+  </compound>
+  <compound refid="_quoridor_8cpp" kind="file"><name>Quoridor.cpp</name>
+  </compound>
+  <compound refid="_quoridor_8h" kind="file"><name>Quoridor.h</name>
+  </compound>
+  <compound refid="_gravity_visitor_8cpp" kind="file"><name>GravityVisitor.cpp</name>
+  </compound>
+  <compound refid="_gravity_visitor_8h" kind="file"><name>GravityVisitor.h</name>
+  </compound>
+  <compound refid="_grid_drawing_visitor_8cpp" kind="file"><name>GridDrawingVisitor.cpp</name>
+  </compound>
+  <compound refid="_grid_drawing_visitor_8h" kind="file"><name>GridDrawingVisitor.h</name>
+  </compound>
+  <compound refid="_layered_scene_8cpp" kind="file"><name>LayeredScene.cpp</name>
+  </compound>
+  <compound refid="_layered_scene_8h" kind="file"><name>LayeredScene.h</name>
+  </compound>
+  <compound refid="_ray_cast_collision_visitor_8cpp" kind="file"><name>RayCastCollisionVisitor.cpp</name>
+  </compound>
+  <compound refid="_ray_cast_collision_visitor_8h" kind="file"><name>RayCastCollisionVisitor.h</name>
+  </compound>
+  <compound refid="_s_f_m_l_input_wrapper_8cpp" kind="file"><name>SFMLInputWrapper.cpp</name>
+  </compound>
+  <compound refid="_s_f_m_l_input_wrapper_8h" kind="file"><name>SFMLInputWrapper.h</name>
+  </compound>
+  <compound refid="_s_f_m_l_renderer_8cpp" kind="file"><name>SFMLRenderer.cpp</name>
+  </compound>
+  <compound refid="_s_f_m_l_renderer_8h" kind="file"><name>SFMLRenderer.h</name>
+  </compound>
+  <compound refid="_simple_drawing_visitor_8cpp" kind="file"><name>SimpleDrawingVisitor.cpp</name>
+  </compound>
+  <compound refid="_simple_drawing_visitor_8h" kind="file"><name>SimpleDrawingVisitor.h</name>
+  </compound>
+  <compound refid="_simple_scene_8cpp" kind="file"><name>SimpleScene.cpp</name>
+  </compound>
+  <compound refid="_simple_scene_8h" kind="file"><name>SimpleScene.h</name>
+  </compound>
+  <compound refid="_sprite_8cpp" kind="file"><name>Sprite.cpp</name>
+  </compound>
+  <compound refid="_sprite_8h" kind="file"><name>Sprite.h</name>
+  </compound>
+  <compound refid="_texture_factory_8cpp" kind="file"><name>TextureFactory.cpp</name>
+  </compound>
+  <compound refid="_texture_factory_8h" kind="file"><name>TextureFactory.h</name>
+  </compound>
+  <compound refid="_visitor_8cpp" kind="file"><name>Visitor.cpp</name>
+  </compound>
+  <compound refid="_visitor_8h" kind="file"><name>Visitor.h</name>
+  </compound>
+  <compound refid="_wrap_bounds_visitor_8cpp" kind="file"><name>WrapBoundsVisitor.cpp</name>
+  </compound>
+  <compound refid="_wrap_bounds_visitor_8h" kind="file"><name>WrapBoundsVisitor.h</name>
+  </compound>
+  <compound refid="dir_b02e4219757ae4e3a0f1714873865bbf" kind="dir"><name>classes</name>
+  </compound>
+  <compound refid="dir_3bc2084d280d3143bc3d7467cfd69a30" kind="dir"><name>classes/games</name>
+  </compound>
+</doxygenindex>

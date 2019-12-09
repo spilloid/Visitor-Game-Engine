@@ -1,0 +1,105 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.16">
+  <compounddef id="class_gravity_visitor" kind="class" language="C++" prot="public">
+    <compoundname>GravityVisitor</compoundname>
+    <basecompoundref refid="class_visitor" prot="public" virt="non-virtual">Visitor</basecompoundref>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_gravity_visitor_1a86500ad7d5715a0da6293532c8a6ecc7" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double GravityVisitor::intensity</definition>
+        <argsstring></argsstring>
+        <name>intensity</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="classes/GravityVisitor.h" line="6" column="12" bodyfile="classes/GravityVisitor.h" bodystart="6" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_gravity_visitor_1ae22e7ba086e20c0e33849798dc1898a4" prot="public" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>GravityVisitor::GravityVisitor</definition>
+        <argsstring>(double intensity)</argsstring>
+        <name>GravityVisitor</name>
+        <param>
+          <type>double</type>
+          <declname>intensity</declname>
+        </param>
+        <briefdescription>
+<para>Construct a new Gravity <ref refid="class_visitor" kindref="compound">Visitor</ref> object. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>intensity</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>intensity of gravity </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="classes/GravityVisitor.h" line="13" column="14" bodyfile="classes/GravityVisitor.cpp" bodystart="2" bodyend="3"/>
+      </memberdef>
+      <memberdef kind="function" id="class_gravity_visitor_1ae4b8bb78b47d9ab88d5c4b03d0d3816b" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void GravityVisitor::visit</definition>
+        <argsstring>(std::shared_ptr&lt; Sprite &gt;) override</argsstring>
+        <name>visit</name>
+        <reimplements refid="class_visitor_1af941b9cd719ad5d43bb21310fb0795eb">visit</reimplements>
+        <param>
+          <type>std::shared_ptr&lt; <ref refid="class_sprite" kindref="compound">Sprite</ref> &gt;</type>
+          <defname>s</defname>
+        </param>
+        <briefdescription>
+<para>add arbitrary dy up to move sprite simulating gravity </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="classes/GravityVisitor.h" line="19" column="10" bodyfile="classes/GravityVisitor.cpp" bodystart="5" bodyend="10"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>GravityVisitor</label>
+        <link refid="class_gravity_visitor"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>Visitor</label>
+        <link refid="class_visitor"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>GravityVisitor</label>
+        <link refid="class_gravity_visitor"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>Visitor</label>
+        <link refid="class_visitor"/>
+      </node>
+    </collaborationgraph>
+    <location file="classes/GravityVisitor.h" line="4" column="36" bodyfile="classes/GravityVisitor.h" bodystart="4" bodyend="20"/>
+    <listofallmembers>
+      <member refid="class_gravity_visitor_1ae22e7ba086e20c0e33849798dc1898a4" prot="public" virt="non-virtual"><scope>GravityVisitor</scope><name>GravityVisitor</name></member>
+      <member refid="class_gravity_visitor_1a86500ad7d5715a0da6293532c8a6ecc7" prot="private" virt="non-virtual"><scope>GravityVisitor</scope><name>intensity</name></member>
+      <member refid="class_gravity_visitor_1ae4b8bb78b47d9ab88d5c4b03d0d3816b" prot="public" virt="virtual"><scope>GravityVisitor</scope><name>visit</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

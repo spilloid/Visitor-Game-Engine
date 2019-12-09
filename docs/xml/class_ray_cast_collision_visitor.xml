@@ -1,0 +1,86 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.16">
+  <compounddef id="class_ray_cast_collision_visitor" kind="class" language="C++" prot="public">
+    <compoundname>RayCastCollisionVisitor</compoundname>
+    <basecompoundref refid="class_abstract_collision_visitor" prot="public" virt="non-virtual">AbstractCollisionVisitor</basecompoundref>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_ray_cast_collision_visitor_1afb1a5555e21de45dabb25fd898835da4" prot="private" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void RayCastCollisionVisitor::visit</definition>
+        <argsstring>(std::shared_ptr&lt; Sprite &gt; s) override</argsstring>
+        <name>visit</name>
+        <reimplements refid="class_abstract_collision_visitor_1a9ee08837ba4a531782bb9a1c8466a5b3">visit</reimplements>
+        <param>
+          <type>std::shared_ptr&lt; <ref refid="class_sprite" kindref="compound">Sprite</ref> &gt;</type>
+          <declname>s</declname>
+        </param>
+        <briefdescription>
+<para>update currently colliding list based on algorithm </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>s</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="classes/RayCastCollisionVisitor.h" line="8" column="10" bodyfile="classes/RayCastCollisionVisitor.cpp" bodystart="2" bodyend="4"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="3">
+        <label>Visitor</label>
+        <link refid="class_visitor"/>
+      </node>
+      <node id="2">
+        <label>AbstractCollisionVisitor</label>
+        <link refid="class_abstract_collision_visitor"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>RayCastCollisionVisitor</label>
+        <link refid="class_ray_cast_collision_visitor"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="3">
+        <label>Visitor</label>
+        <link refid="class_visitor"/>
+      </node>
+      <node id="2">
+        <label>AbstractCollisionVisitor</label>
+        <link refid="class_abstract_collision_visitor"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>RayCastCollisionVisitor</label>
+        <link refid="class_ray_cast_collision_visitor"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="classes/RayCastCollisionVisitor.h" line="7" column="62" bodyfile="classes/RayCastCollisionVisitor.h" bodystart="7" bodyend="9"/>
+    <listofallmembers>
+      <member refid="class_abstract_collision_visitor_1a812239222979d680afd12fb35fe2e132" prot="protected" virt="non-virtual"><scope>RayCastCollisionVisitor</scope><name>collisions</name></member>
+      <member refid="class_abstract_collision_visitor_1afb4c52cacaaf486be84e8b527cec202a" prot="public" virt="non-virtual"><scope>RayCastCollisionVisitor</scope><name>getCollisions</name></member>
+      <member refid="class_abstract_collision_visitor_1a17262b2403c9e1b0e11f25603dd415d6" prot="public" virt="non-virtual"><scope>RayCastCollisionVisitor</scope><name>setWatched</name></member>
+      <member refid="class_ray_cast_collision_visitor_1afb1a5555e21de45dabb25fd898835da4" prot="private" virt="virtual"><scope>RayCastCollisionVisitor</scope><name>visit</name></member>
+      <member refid="class_abstract_collision_visitor_1aeeaa2ebce5b6c29df1c3fcf285aa7d82" prot="protected" virt="non-virtual"><scope>RayCastCollisionVisitor</scope><name>watched</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

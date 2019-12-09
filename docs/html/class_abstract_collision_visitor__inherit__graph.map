@@ -1,0 +1,6 @@
+<map id="AbstractCollisionVisitor" name="AbstractCollisionVisitor">
+<area shape="rect" id="node1" title="Provides an abstraction for handling visitor based collisions where algorithm is separate from visita..." alt="" coords="128,80,303,107"/>
+<area shape="rect" id="node3" href="$class_bounding_box_collision_visitor.html" title=" " alt="" coords="5,155,212,181"/>
+<area shape="rect" id="node4" href="$class_ray_cast_collision_visitor.html" title=" " alt="" coords="236,155,411,181"/>
+<area shape="rect" id="node2" href="$class_visitor.html" title=" " alt="" coords="183,5,247,32"/>
+</map>

@@ -1,0 +1,112 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.16">
+  <compounddef id="class_s_f_m_l_input_wrapper" kind="class" language="C++" prot="public">
+    <compoundname>SFMLInputWrapper</compoundname>
+    <basecompoundref refid="class_abstract_input_wrapper" prot="public" virt="non-virtual">AbstractInputWrapper</basecompoundref>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_s_f_m_l_input_wrapper_1a8942e31702a844771bc3358495b808f5" prot="private" static="no" mutable="no">
+        <type>std::shared_ptr&lt; sf::RenderWindow &gt;</type>
+        <definition>std::shared_ptr&lt;sf::RenderWindow&gt; SFMLInputWrapper::window</definition>
+        <argsstring></argsstring>
+        <name>window</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="classes/SFMLInputWrapper.h" line="10" column="21" bodyfile="classes/SFMLInputWrapper.h" bodystart="10" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_s_f_m_l_input_wrapper_1abd471813dada36d96cd9d11fd285bbe5" prot="public" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>SFMLInputWrapper::SFMLInputWrapper</definition>
+        <argsstring>(std::shared_ptr&lt; sf::RenderWindow &gt; w)</argsstring>
+        <name>SFMLInputWrapper</name>
+        <param>
+          <type>std::shared_ptr&lt; sf::RenderWindow &gt;</type>
+          <declname>w</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="classes/SFMLInputWrapper.h" line="12" column="14" bodyfile="classes/SFMLInputWrapper.cpp" bodystart="27" bodyend="28"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_f_m_l_input_wrapper_1a2641351dc60c62da230d195c27eae25f" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>std::vector&lt; int &gt;</type>
+        <definition>std::vector&lt; int &gt; SFMLInputWrapper::getKeyPresses</definition>
+        <argsstring>() override</argsstring>
+        <name>getKeyPresses</name>
+        <reimplements refid="class_abstract_input_wrapper_1a4eaf73d4e5ff75eeec6083224c390eae">getKeyPresses</reimplements>
+        <briefdescription>
+<para>Get keypresses as keycode since last check. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>std::shared_ptr&lt;int&gt; : array of keypresses pushed since last check </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="classes/SFMLInputWrapper.h" line="14" column="17" bodyfile="classes/SFMLInputWrapper.cpp" bodystart="5" bodyend="14"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_f_m_l_input_wrapper_1aa836315c75ec30a561e769b2cb8b28bc" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="structclick" kindref="compound">click</ref></type>
+        <definition>click SFMLInputWrapper::getLastClick</definition>
+        <argsstring>() override</argsstring>
+        <name>getLastClick</name>
+        <reimplements refid="class_abstract_input_wrapper_1a7d57574afd1e141d95daea824f2e870f">getLastClick</reimplements>
+        <briefdescription>
+<para>gets last click to occur, as an object </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>click </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="classes/SFMLInputWrapper.h" line="16" column="11" bodyfile="classes/SFMLInputWrapper.cpp" bodystart="15" bodyend="25"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>AbstractInputWrapper</label>
+        <link refid="class_abstract_input_wrapper"/>
+      </node>
+      <node id="1">
+        <label>SFMLInputWrapper</label>
+        <link refid="class_s_f_m_l_input_wrapper"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>AbstractInputWrapper</label>
+        <link refid="class_abstract_input_wrapper"/>
+      </node>
+      <node id="1">
+        <label>SFMLInputWrapper</label>
+        <link refid="class_s_f_m_l_input_wrapper"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="classes/SFMLInputWrapper.h" line="8" column="51" bodyfile="classes/SFMLInputWrapper.h" bodystart="8" bodyend="17"/>
+    <listofallmembers>
+      <member refid="class_s_f_m_l_input_wrapper_1a2641351dc60c62da230d195c27eae25f" prot="public" virt="virtual"><scope>SFMLInputWrapper</scope><name>getKeyPresses</name></member>
+      <member refid="class_s_f_m_l_input_wrapper_1aa836315c75ec30a561e769b2cb8b28bc" prot="public" virt="virtual"><scope>SFMLInputWrapper</scope><name>getLastClick</name></member>
+      <member refid="class_s_f_m_l_input_wrapper_1abd471813dada36d96cd9d11fd285bbe5" prot="public" virt="non-virtual"><scope>SFMLInputWrapper</scope><name>SFMLInputWrapper</name></member>
+      <member refid="class_s_f_m_l_input_wrapper_1a8942e31702a844771bc3358495b808f5" prot="private" virt="non-virtual"><scope>SFMLInputWrapper</scope><name>window</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,102 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.16">
+  <compounddef id="class_bounding_box_collision_visitor" kind="class" language="C++" prot="public">
+    <compoundname>BoundingBoxCollisionVisitor</compoundname>
+    <basecompoundref refid="class_abstract_collision_visitor" prot="public" virt="non-virtual">AbstractCollisionVisitor</basecompoundref>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_bounding_box_collision_visitor_1a36c48ca3b6f9f94d1113a17d27016b92" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>BoundingBoxCollisionVisitor::BoundingBoxCollisionVisitor</definition>
+        <argsstring>()</argsstring>
+        <name>BoundingBoxCollisionVisitor</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="classes/BoundingBoxCollisionVisitor.h" line="6" column="5" bodyfile="classes/BoundingBoxCollisionVisitor.cpp" bodystart="2" bodyend="4"/>
+      </memberdef>
+      <memberdef kind="function" id="class_bounding_box_collision_visitor_1a3c6f65b79cb857a00e75382d7cd1e365" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void BoundingBoxCollisionVisitor::visit</definition>
+        <argsstring>(std::shared_ptr&lt; Sprite &gt; s) override</argsstring>
+        <name>visit</name>
+        <reimplements refid="class_abstract_collision_visitor_1a9ee08837ba4a531782bb9a1c8466a5b3">visit</reimplements>
+        <param>
+          <type>std::shared_ptr&lt; <ref refid="class_sprite" kindref="compound">Sprite</ref> &gt;</type>
+          <declname>s</declname>
+        </param>
+        <briefdescription>
+<para>update currently colliding list based on algorithm </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>s</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="classes/BoundingBoxCollisionVisitor.h" line="13" column="10" bodyfile="classes/BoundingBoxCollisionVisitor.cpp" bodystart="6" bodyend="27"/>
+        <references refid="class_abstract_collision_visitor_1a812239222979d680afd12fb35fe2e132" compoundref="_abstract_collision_visitor_8h" startline="15">AbstractCollisionVisitor::collisions</references>
+        <references refid="class_abstract_collision_visitor_1aeeaa2ebce5b6c29df1c3fcf285aa7d82" compoundref="_abstract_collision_visitor_8h" startline="20">AbstractCollisionVisitor::watched</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>BoundingBoxCollisionVisitor</label>
+        <link refid="class_bounding_box_collision_visitor"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>Visitor</label>
+        <link refid="class_visitor"/>
+      </node>
+      <node id="2">
+        <label>AbstractCollisionVisitor</label>
+        <link refid="class_abstract_collision_visitor"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>BoundingBoxCollisionVisitor</label>
+        <link refid="class_bounding_box_collision_visitor"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>Visitor</label>
+        <link refid="class_visitor"/>
+      </node>
+      <node id="2">
+        <label>AbstractCollisionVisitor</label>
+        <link refid="class_abstract_collision_visitor"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="classes/BoundingBoxCollisionVisitor.h" line="4" column="66" bodyfile="classes/BoundingBoxCollisionVisitor.h" bodystart="4" bodyend="14"/>
+    <listofallmembers>
+      <member refid="class_bounding_box_collision_visitor_1a36c48ca3b6f9f94d1113a17d27016b92" prot="public" virt="non-virtual"><scope>BoundingBoxCollisionVisitor</scope><name>BoundingBoxCollisionVisitor</name></member>
+      <member refid="class_abstract_collision_visitor_1a812239222979d680afd12fb35fe2e132" prot="protected" virt="non-virtual"><scope>BoundingBoxCollisionVisitor</scope><name>collisions</name></member>
+      <member refid="class_abstract_collision_visitor_1afb4c52cacaaf486be84e8b527cec202a" prot="public" virt="non-virtual"><scope>BoundingBoxCollisionVisitor</scope><name>getCollisions</name></member>
+      <member refid="class_abstract_collision_visitor_1a17262b2403c9e1b0e11f25603dd415d6" prot="public" virt="non-virtual"><scope>BoundingBoxCollisionVisitor</scope><name>setWatched</name></member>
+      <member refid="class_bounding_box_collision_visitor_1a3c6f65b79cb857a00e75382d7cd1e365" prot="public" virt="virtual"><scope>BoundingBoxCollisionVisitor</scope><name>visit</name></member>
+      <member refid="class_abstract_collision_visitor_1aeeaa2ebce5b6c29df1c3fcf285aa7d82" prot="protected" virt="non-virtual"><scope>BoundingBoxCollisionVisitor</scope><name>watched</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

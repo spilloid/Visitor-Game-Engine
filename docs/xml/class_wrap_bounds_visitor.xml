@@ -1,0 +1,194 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.16">
+  <compounddef id="class_wrap_bounds_visitor" kind="class" language="C++" prot="public">
+    <compoundname>WrapBoundsVisitor</compoundname>
+    <basecompoundref refid="class_visitor" prot="public" virt="non-virtual">Visitor</basecompoundref>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_wrap_bounds_visitor_1ab2023397f67a92b5f959c20e8f2f4fde" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int WrapBoundsVisitor::minX</definition>
+        <argsstring></argsstring>
+        <name>minX</name>
+        <briefdescription>
+<para>bounds of scene </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="classes/WrapBoundsVisitor.h" line="10" column="9" bodyfile="classes/WrapBoundsVisitor.h" bodystart="10" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_wrap_bounds_visitor_1a4433090797575ccad8e1781106b90a3f" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int WrapBoundsVisitor::maxX</definition>
+        <argsstring></argsstring>
+        <name>maxX</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="classes/WrapBoundsVisitor.h" line="10" column="13" bodyfile="classes/WrapBoundsVisitor.h" bodystart="10" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_wrap_bounds_visitor_1a77073cba8b253b479bcf29e67492c722" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int WrapBoundsVisitor::minY</definition>
+        <argsstring></argsstring>
+        <name>minY</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="classes/WrapBoundsVisitor.h" line="10" column="17" bodyfile="classes/WrapBoundsVisitor.h" bodystart="10" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_wrap_bounds_visitor_1ad284c94b30794f901eb000c37dc1137f" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int WrapBoundsVisitor::maxY</definition>
+        <argsstring></argsstring>
+        <name>maxY</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="classes/WrapBoundsVisitor.h" line="10" column="21" bodyfile="classes/WrapBoundsVisitor.h" bodystart="10" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_wrap_bounds_visitor_1a988575b85dc0c37c9dc24773e9259fc7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>WrapBoundsVisitor::WrapBoundsVisitor</definition>
+        <argsstring>(int minX, int maxX, int minY, int maxY)</argsstring>
+        <name>WrapBoundsVisitor</name>
+        <param>
+          <type>int</type>
+          <declname>minX</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>maxX</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>minY</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>maxY</declname>
+        </param>
+        <briefdescription>
+<para>Construct a new Wrap Bounds <ref refid="class_visitor" kindref="compound">Visitor</ref> object. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>minX</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>minimum X of sprite </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>maxX</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>maximum X of sprite </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>minY</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>minimum Y of sprite </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>maxY</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>maximum Y of sprite </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="classes/WrapBoundsVisitor.h" line="20" column="5" bodyfile="classes/WrapBoundsVisitor.cpp" bodystart="2" bodyend="3"/>
+      </memberdef>
+      <memberdef kind="function" id="class_wrap_bounds_visitor_1a46f7e9f34d56ae845b38b71fe928cca9" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void WrapBoundsVisitor::visit</definition>
+        <argsstring>(std::shared_ptr&lt; Sprite &gt; s) override</argsstring>
+        <name>visit</name>
+        <reimplements refid="class_visitor_1af941b9cd719ad5d43bb21310fb0795eb">visit</reimplements>
+        <param>
+          <type>std::shared_ptr&lt; <ref refid="class_sprite" kindref="compound">Sprite</ref> &gt;</type>
+          <declname>s</declname>
+        </param>
+        <briefdescription>
+<para>if sprite is outside of bounds, move it into bounds then have it WRAP </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>s</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="classes/WrapBoundsVisitor.h" line="27" column="10" bodyfile="classes/WrapBoundsVisitor.cpp" bodystart="5" bodyend="20"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>WrapBoundsVisitor</label>
+        <link refid="class_wrap_bounds_visitor"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>Visitor</label>
+        <link refid="class_visitor"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>WrapBoundsVisitor</label>
+        <link refid="class_wrap_bounds_visitor"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>Visitor</label>
+        <link refid="class_visitor"/>
+      </node>
+    </collaborationgraph>
+    <location file="classes/WrapBoundsVisitor.h" line="4" column="39" bodyfile="classes/WrapBoundsVisitor.h" bodystart="4" bodyend="28"/>
+    <listofallmembers>
+      <member refid="class_wrap_bounds_visitor_1a4433090797575ccad8e1781106b90a3f" prot="private" virt="non-virtual"><scope>WrapBoundsVisitor</scope><name>maxX</name></member>
+      <member refid="class_wrap_bounds_visitor_1ad284c94b30794f901eb000c37dc1137f" prot="private" virt="non-virtual"><scope>WrapBoundsVisitor</scope><name>maxY</name></member>
+      <member refid="class_wrap_bounds_visitor_1ab2023397f67a92b5f959c20e8f2f4fde" prot="private" virt="non-virtual"><scope>WrapBoundsVisitor</scope><name>minX</name></member>
+      <member refid="class_wrap_bounds_visitor_1a77073cba8b253b479bcf29e67492c722" prot="private" virt="non-virtual"><scope>WrapBoundsVisitor</scope><name>minY</name></member>
+      <member refid="class_wrap_bounds_visitor_1a46f7e9f34d56ae845b38b71fe928cca9" prot="public" virt="virtual"><scope>WrapBoundsVisitor</scope><name>visit</name></member>
+      <member refid="class_wrap_bounds_visitor_1a988575b85dc0c37c9dc24773e9259fc7" prot="public" virt="non-virtual"><scope>WrapBoundsVisitor</scope><name>WrapBoundsVisitor</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>
