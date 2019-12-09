@@ -1,22 +1,22 @@
 #include "BounceBoundsVisitor.h"
-    BounceBoundsVisitor::BounceBoundsVisitor(int minX,int maxX, int minY, int maxY)
-    :minX(minX),maxX(maxX),minY(minY),maxY(maxY)
-    { }
-    void BounceBoundsVisitor::visit(std::shared_ptr<SpriteProxy> sp ){
-        int ox = sp->getX();
-        int oy = sp->getY();
-        int nx = ox;
-        int ny = oy;
-        //flip on boundary hit
-        int ix = 1, iy = 1;
-        //check bounds of x and y coords, setting to max/min of breaking threshold
-        //TODO: make the dx / dy bounce!
-        if(ox > maxX){
-            nx = this->maxX;
-            ix = -1;
-        }
-        else if(ox < minX){
-            nx = this->minX;
+
+BounceBoundsVisitor::BounceBoundsVisitor(int minX, int maxX, int minY, int maxY)
+        : minX(minX), maxX(maxX), minY(minY), maxY(maxY) {}
+
+void BounceBoundsVisitor::visit(std::shared_ptr<Sprite> sp) {
+    double ox = sp->getX();
+    double oy = sp->getY();
+    double nx = ox;
+    double ny = oy;
+    //flip on boundary hit
+    double ix = 1, iy = 1;
+    //check bounds of x and y coords, setting to max/min of breaking threshold
+    //TODO: make the dx / dy bounce!
+    if (ox > maxX) {
+        nx = this->maxX;
+        ix = -1;
+    } else if (ox < minX) {
+        nx = this->minX;
             ix = -1;
         }
         if(oy > maxY){

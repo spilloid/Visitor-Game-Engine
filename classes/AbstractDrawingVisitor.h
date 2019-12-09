@@ -21,12 +21,13 @@ class AbstractDrawingVisitor : public Visitor{
      * @return true 
      * @return false 
      */
-    virtual bool isOpen()=0;
+    virtual bool isOpen() = 0;
+
     /**
      * @brief cache a sprite for later drawing
      * 
      * @param s 
      */
-    virtual void visit(std::shared_ptr<SpriteProxy> s)=0;
+    void visit(std::shared_ptr<Sprite> s) override = 0;
 };
 #endif // ABSTRACTDRAWINGVISITOR_H

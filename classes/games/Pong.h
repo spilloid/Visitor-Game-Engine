@@ -4,6 +4,6 @@
 class Pong : public Game{
     private:
     public:
-        void start();
+        void start() override;
 };
 #endif

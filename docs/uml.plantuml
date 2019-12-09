@@ -17,26 +17,37 @@ class GameEngine {
     -list<Visitor> sceneVisitors
     -Scene scene
     +addVisitor(Visitor)
-    +addSprite(SpriteProxy)
+    +addSprite(Sprite)
     +bool update()
+}
+class click{
+    int x
+    int y
+    int isLeft
+}
+class AbstractInputWrapper {
+    +int[] getKeyPress()
+    +click getMousePress()
+}
+class SFMLInputWrapper {
 }
 class AbstractScene{
     +void addSprite()
     +void accept()
 }
 class SimpleScene{
-    -list<SpriteProxy> spriteList
+    -list<Sprite> spriteList
 
 }
 class LayeredScene{
-    -lis<list<SpriteProxy>> spriteList
+    -lis<list<Sprite>> spriteList
 
 }
 class TextureFactory{
         +bool loadTexture(string);
         +sf::Texture> getTexture(string);
 }
-class SpriteProxy{
+class Sprite{
     -int x
     -int y
     -int dy
@@ -48,7 +59,7 @@ class SpriteProxy{
     +setters()
 }
 class Visitor{
-    +virtual void visit(SpriteProxy)
+    +virtual void visit(Sprite)
 }
 class BounceBoundsVisitor{
     void visit()
@@ -69,7 +80,7 @@ class CircularCollisionVisitor{
 }
 class AbstractRenderer{
     -bool open
-    +void draw(vector<SpriteProxy> sp)
+    +void draw(vector<Sprite> sp)
     +bool isOpen()
 }
 class SFMLRenderer{
@@ -86,7 +97,7 @@ class AbstractDrawingVisitor{
 
 class SimpleDrawingVisitor{
     -sf::RenderWindow window
-    -map<SpriteProxy,sf::Sprite> text
+    -map<Sprite,sf::Sprite> text
     }
 class GridDrawingVisitor{
     -int maxX
@@ -100,15 +111,17 @@ Game <|-- Pong
 Game <|-- Quoridor
 Game ---> GameEngine
 Game ---> Visitor
-Game ---> SpriteProxy
+Game ---> Sprite
 Game ---> AbstractRenderer
 GameEngine <|-- EasyGameEngine
 GameEngine --> Visitor
 GameEngine --> AbstractScene
+GameEngine --> AbstractInputWrapper
+AbstractInputWrapper <|--- SFMLInputWrapper
 AbstractScene <|--- LayeredScene
 AbstractScene <|--- SimpleScene
-AbstractScene ---> SpriteProxy
-Visitor ---> SpriteProxy
+AbstractScene ---> Sprite
+Visitor ---> Sprite
 Visitor <|-- ForceVisitor
 Visitor <|-- GravityVisitor
 Visitor <|-- BounceBoundsVisitor

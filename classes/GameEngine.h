@@ -28,22 +28,25 @@ class GameEngine{
          * 
          */
         ~GameEngine();
-        /**
-         * @brief Add visitor operation for scene
-         * 
-         */
-        void addVisitor(std::shared_ptr<Visitor>);
-        /**
-         * @brief Add Sprite to scene
-         * 
-         */
-        void addSprite(std::shared_ptr<SpriteProxy>);
-        /**
-         * @brief Set the Scene object
-         * 
-         * @param as 
-         */
-        void setScene(std::shared_ptr<AbstractScene> as);
+
+    /**
+     * @brief Add visitor operation for scene
+     *
+     */
+    void addVisitor(const std::shared_ptr<Visitor> &);
+
+    /**
+     * @brief Add Sprite to scene
+     *
+     */
+    void addSprite(std::shared_ptr<Sprite>);
+
+    /**
+     * @brief Set the Scene object
+     *
+     * @param as
+     */
+    void setScene(std::shared_ptr<AbstractScene> as);
 
         /**
          * @brief Let visitors visit the scene

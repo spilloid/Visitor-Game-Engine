@@ -1,17 +1,22 @@
-#ifndef ABSTRACTRENDERER_H
-#define ABSTRACTRENDERER_H
+#ifndef ABSTRACT_RENDERER_H
+#define ABSTRACT_RENDERER_H
+
 #include <vector>
 #include <memory>
-#include "SpriteProxy.h"
-class AbstractRenderer{
-   protected:
-   bool open;
-   int screenHeight;
-   int screenWidth;
-   public: 
-   virtual int getHeight();
-   virtual int getWidth();
-   virtual bool isOpen()=0;
-   virtual void draw(std::vector<std::shared_ptr<SpriteProxy>> renderList)=0;
+#include "Sprite.h"
+
+class AbstractRenderer {
+protected:
+    bool open{};
+    unsigned int screenHeight{};
+    unsigned int screenWidth{};
+public:
+    virtual unsigned int getHeight();
+
+    virtual unsigned int getWidth();
+
+    virtual bool isOpen() = 0;
+
+    virtual void draw(std::vector<std::shared_ptr<Sprite>> renderList) = 0;
 };
 #endif // !1RENDERER_H
