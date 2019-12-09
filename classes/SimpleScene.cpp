@@ -11,5 +11,6 @@ void SimpleScene::accept(std::shared_ptr<Visitor> v) {
 }
 
 void SimpleScene::addSprite(std::shared_ptr<Sprite> s) {
+
     this->spriteList.push_back(s);
 }

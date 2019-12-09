@@ -1,14 +1,16 @@
-#ifndef SIMPLESCENE_H
-#define SIMPLESCENE_H
+#ifndef SIMPLE_SCENE_H
+#define SIMPLE_SCENE_H
+
 #include "AbstractScene.h"
-class SimpleScene : public AbstractScene{
-    private:
+
+class SimpleScene : public AbstractScene {
+private:
     /**
      * @brief list of sprites in scene. could easily be a different data structure
      * 
      */
     std::list<std::shared_ptr<Sprite>> spriteList;
-    public:
+public:
     /**
      * @brief Construct a new Scene object
      * 

@@ -1,15 +1,18 @@
-#ifndef AbSTRACTINPUTWRAPPER
-#define ABSTRACTINPUTWRAPPER
+#ifndef AbSTRACT_INPUT_WRAPPER
+#define ABSTRACT_INPUT_WRAPPER
+
 #include <memory>
 #include <vector>
-struct click{
+
+struct click {
     int x;
-    int y; 
+    int y;
     int isLeft;
 };
-class AbstractInputWrapper{
-    protected:
-    public:
+
+class AbstractInputWrapper {
+protected:
+public:
         /**
          * @brief Get keypresses as keycode since last check
          * 
@@ -24,4 +27,4 @@ class AbstractInputWrapper{
         virtual click getLastClick()=0;
 };
 
-#endif // !1AbSTRACTINPUTWRAPPER
+#endif // !1ABSTRACT_INPUT_WRAPPER

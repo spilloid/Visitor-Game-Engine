@@ -31,9 +31,7 @@ add_executable(VisitorGameEngine hello.cpp
         ./classes/SimpleDrawingVisitor.cpp
         ./classes/BoundingBoxCollisionVisitor.h
         ./classes/SimpleScene.cpp
-        ./classes/EasyGameEngine.cpp
         ./classes/SimpleScene.h
-        ./classes/EasyGameEngine.h
         classes/Sprite.cpp
         ./classes/ForceVisitor.cpp
         classes/Sprite.h

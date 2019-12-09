@@ -4,7 +4,7 @@ void Pong::start()
 {
     //constants
     const int MAXX = 500, MINX = 0, MAXY = 500, MINY = 0,
-            paddleHeight = 50, paddleWidth = 10;
+            paddleHeight = 50, paddleWidth = 10, PADDLESPRING = 20;
     const std::string black = "./assets/img/bbox.png";
     //declare sprites : texture, (x,y), (width,height)
     std::shared_ptr<Sprite> player1 = std::make_shared<Sprite>(
@@ -51,11 +51,13 @@ void Pong::start()
     ge->addVisitor(draw);
 
     //I want a clock
+    //TODO: break sfml coupling
     sf::Clock tick;
 
     //start the game
     srand(time(nullptr));
     bool up = true;
+    int p1points = 0, p2points = 0;
     while (draw->isOpen())
     {
         if (tick.getElapsedTime().asMilliseconds() > 50) {
@@ -89,9 +91,11 @@ void Pong::start()
             for (auto &c : l) {
                 bool reset = false;
                 if (c == player1Goal) {
+                    p2points++;
                     //player 2 scores
                     reset = true;
                 } else if (c == player2Goal) {
+                    p1points++;
                     //player 1 scores
                     reset = true;
                     //by golly, we hit a paddle
@@ -100,19 +104,24 @@ void Pong::start()
                     //push ball off to stop multiple collisions
                     ball->setXY(ball->getX() + paddleWidth, ball->getY());
                     ball->setDXY(
-                            ball->getDX() * -1,
-                            ball->getDY());
+                            fabs(ball->getDX()),
+                            PADDLESPRING * ((ball->getY() - player1->getY()) / paddleHeight - 0.5f)
+                    );
+                    std::cout << ball->getDX() << " " << ball->getDY() << std::endl;
                 } else if (c == player2) {
                     ball->setXY(ball->getX() - paddleWidth, ball->getY());
                     ball->setDXY(
-                            ball->getDX() * -1,
-                            ball->getDY());
+                            -fabs(ball->getDX()),
+                            PADDLESPRING * ((ball->getY() - player2->getY()) / paddleHeight - 0.5f)
+                    );
+                    std::cout << ball->getDX() << " " << ball->getDY() << std::endl;
                 }
                 //game over? next round!
                 if (reset) {
                     ball->setXY(MAXX / 2, MAXY / 2);
-                    player1->setXY(MAXX / 2, MAXY / 2);
-                    player2->setXY(MAXX / 2, MAXY / 2);
+                    ball->setDXY(0, 0);
+                    player1->setXY(player1->getX(), MAXY / 2);
+                    player2->setXY(player2->getX(), MAXY / 2);
                     fv->applyForce(ball, 10, rand() % 180);
                     std::cout << "POINT!" << std::endl;
                     //silly wait to pause game shortly
@@ -120,7 +129,9 @@ void Pong::start()
                     //start the next round
                 }
             }
-            player2->setXY(player2->getX(), ball->getY());
+            //perfect "AI"
+            player2->setXY(player2->getX(), ball->getY() - paddleHeight / 2 - 20);
+
             draw->draw();
         }
     }

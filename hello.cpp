@@ -25,6 +25,7 @@ int main() {
                 std::cout << "HUH?????" << std::endl;
                 break;
         }
-        g->start();
+        if (keepGoing)
+            g->start();
     }
 }
