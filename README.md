@@ -8,6 +8,13 @@ I wanted to make a game engine which stored all sprites in an abstract data stru
 * Use the makefile to compile (need sfml), 
 * look at the [Wiki](https://github.iu.edu/jdspille/Visitor-Game-Engine/wiki) for documentation 
 
+# Canvas Documentation Requirements
+
+* Game Design Document - See [Wiki](https://github.iu.edu/jdspille/Visitor-Game-Engine/wiki), specifically [UML Diagram](https://github.iu.edu/jdspille/Visitor-Game-Engine/wiki/UML-Diagram)
+* Software Engineering Plan - I do everything since no one wanted to work on my engine D:
+* State Transition Diagram - N/A ?
+* User Instructions - This <3
+
 
 # Acknowledged Issues:
 * Sprite creation/manipulation on grids is flaky
