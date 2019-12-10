@@ -1,12 +1,15 @@
-#About
+# About
 I wanted to make a game engine which stored all sprites in an abstract data structure "scene", and then have all game based operations stored in visitors which operate on the scene. I also thought it would be fun to abstract away all implementation specific code into a "renderer" and "inputWrapper" so this could be easily ported to SFML, Web Assembly, or otherwise.
+## Games
+* pong - full game
+* Quoridor - grid visitor demo
+* TicTacToe - Unfinished. 
+# Gotchas
+* Use the makefile to compile (need sfml), 
+* look at the [Wiki](https://github.iu.edu/jdspille/Visitor-Game-Engine/wiki) for documentation 
 
-#Gotchas
-##Use the makefile to compile (need sfml), 
-##look at the [Wiki](https://github.iu.edu/jdspille/Visitor-Game-Engine/wiki) for documentation 
 
-
-#Acknowledged Issues:
+# Acknowledged Issues:
 * Sprite creation/manipulation on grids is flaky
 * Game Engine is unsure of where to go. Either make it do more or get rid of it since all it does is tightly couple scene with visitors 
 * sf clock use in games tightly couples sfml with games
