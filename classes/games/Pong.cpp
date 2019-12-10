@@ -16,7 +16,7 @@ void Pong::start()
     std::shared_ptr<Sprite> player2Goal = std::make_shared<Sprite>(
             black, MAXX - 10, 0, 5, MAXY * 2);
     std::shared_ptr<Sprite> ball = std::make_shared<Sprite>(
-            black, MAXX / 2, MAXY / 2, 5, 5);
+            black, MAXX / 2, MAXY / 2, 10, 10);
     //make a renderer for drawing to
     //std::shared_ptr<AbstractRenderer> ar = std::make_shared<SFMLRenderer>(MAXX,MAXY);
     std::shared_ptr<SFMLRenderer> ar = std::make_shared<SFMLRenderer>(MAXX, MAXY);
@@ -122,8 +122,8 @@ void Pong::start()
                     ball->setDXY(0, 0);
                     player1->setXY(player1->getX(), MAXY / 2);
                     player2->setXY(player2->getX(), MAXY / 2);
-                    fv->applyForce(ball, 10, rand() % 180);
-                    std::cout << "POINT!" << std::endl;
+                    fv->applyForce(ball, 10, rand()%45+90 );
+                    std::cout << "POINT! Score : Player 1: " << p1points << " | Player 2: " << p2points << std::endl;
                     //silly wait to pause game shortly
                     while (tick.getElapsedTime().asSeconds() < 2);
                     //start the next round
