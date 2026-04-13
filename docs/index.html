@@ -1,0 +1,998 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Visitor Game Engine</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Inter:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
+  <link
+    href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css"
+    rel="stylesheet"
+  />
+  <style>
+    /* ── Reset & base ────────────────────────────────── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg:        #060910;
+      --surface:   #0d1117;
+      --card:      #111820;
+      --border:    #1e2730;
+      --border-hi: #2d3f52;
+      --text:      #cdd9e5;
+      --muted:     #768390;
+      --accent:    #4f9cf9;
+      --accent-lo: rgba(79, 156, 249, 0.12);
+      --orange:    #f0883e;
+      --green:     #3fb950;
+      --red:       #f47067;
+      --mono:      'JetBrains Mono', monospace;
+      --sans:      'Inter', system-ui, sans-serif;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: var(--sans);
+      font-size: 16px;
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    /* ── Nav ─────────────────────────────────────────── */
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+      padding: 0 2.5rem;
+      height: 56px;
+      background: rgba(6, 9, 16, 0.85);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .nav-brand {
+      font-family: var(--mono);
+      font-weight: 600;
+      font-size: 0.9rem;
+      color: var(--text);
+      letter-spacing: 0.03em;
+      margin-right: auto;
+    }
+    .nav-brand span { color: var(--accent); }
+
+    nav a {
+      font-size: 0.82rem;
+      font-weight: 500;
+      color: var(--muted);
+      transition: color 0.2s;
+      letter-spacing: 0.01em;
+    }
+    nav a:hover { color: var(--text); text-decoration: none; }
+
+    .nav-cta {
+      padding: 0.35rem 1rem;
+      border: 1px solid var(--border-hi);
+      border-radius: 6px;
+      color: var(--text) !important;
+      font-size: 0.82rem;
+      transition: border-color 0.2s, background 0.2s;
+    }
+    .nav-cta:hover { border-color: var(--accent); background: var(--accent-lo); }
+
+    /* ── Layout helpers ──────────────────────────────── */
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 0 2rem;
+    }
+
+    section { padding: 5rem 0; }
+    section + section { border-top: 1px solid var(--border); }
+
+    .label {
+      display: inline-block;
+      font-family: var(--mono);
+      font-size: 0.72rem;
+      font-weight: 500;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 1rem;
+    }
+
+    h2 {
+      font-size: clamp(1.5rem, 3vw, 2rem);
+      font-weight: 700;
+      color: #e6edf3;
+      margin-bottom: 1.25rem;
+      line-height: 1.25;
+    }
+
+    h3 {
+      font-size: 1.05rem;
+      font-weight: 600;
+      color: #e6edf3;
+      margin-bottom: 0.6rem;
+      margin-top: 2rem;
+    }
+
+    p { color: var(--text); max-width: 68ch; margin-bottom: 1rem; }
+    p:last-child { margin-bottom: 0; }
+
+    /* ── Hero ────────────────────────────────────────── */
+    #hero {
+      position: relative;
+      min-height: 88vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      border-top: none;
+      overflow: hidden;
+    }
+
+    .hero-grid {
+      position: absolute;
+      inset: 0;
+      background-image:
+        linear-gradient(var(--border) 1px, transparent 1px),
+        linear-gradient(90deg, var(--border) 1px, transparent 1px);
+      background-size: 48px 48px;
+      opacity: 0.35;
+      mask-image: radial-gradient(ellipse 80% 60% at 50% 40%, black 30%, transparent 100%);
+      -webkit-mask-image: radial-gradient(ellipse 80% 60% at 50% 40%, black 30%, transparent 100%);
+    }
+
+    .hero-glow {
+      position: absolute;
+      top: 10%;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 600px;
+      height: 400px;
+      background: radial-gradient(ellipse, rgba(79, 156, 249, 0.08) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    #hero .container { position: relative; }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.3rem 0.85rem;
+      background: var(--accent-lo);
+      border: 1px solid rgba(79, 156, 249, 0.3);
+      border-radius: 100px;
+      font-family: var(--mono);
+      font-size: 0.72rem;
+      color: var(--accent);
+      margin-bottom: 2rem;
+      letter-spacing: 0.05em;
+    }
+    .hero-badge::before {
+      content: '';
+      display: block;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--green);
+      box-shadow: 0 0 6px var(--green);
+      animation: pulse 2s ease-in-out infinite;
+    }
+    @keyframes pulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.4; }
+    }
+
+    h1 {
+      font-size: clamp(2.4rem, 6vw, 4rem);
+      font-weight: 700;
+      line-height: 1.1;
+      letter-spacing: -0.02em;
+      color: #e6edf3;
+      margin-bottom: 1.25rem;
+    }
+
+    h1 em {
+      font-style: normal;
+      background: linear-gradient(120deg, var(--accent) 0%, #a5d6ff 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .hero-sub {
+      font-size: 1.15rem;
+      font-weight: 300;
+      color: var(--muted);
+      max-width: 54ch;
+      margin-bottom: 2.5rem;
+    }
+
+    .hero-actions { display: flex; gap: 1rem; flex-wrap: wrap; }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.65rem 1.4rem;
+      border-radius: 8px;
+      font-size: 0.9rem;
+      font-weight: 500;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .btn-primary {
+      background: var(--accent);
+      color: #060910;
+    }
+    .btn-primary:hover { background: #79b8ff; text-decoration: none; }
+
+    .btn-secondary {
+      background: transparent;
+      color: var(--text);
+      border: 1px solid var(--border-hi);
+    }
+    .btn-secondary:hover { border-color: var(--accent); color: var(--accent); background: var(--accent-lo); text-decoration: none; }
+
+    .hero-stats {
+      display: flex;
+      gap: 3rem;
+      margin-top: 4rem;
+      padding-top: 2rem;
+      border-top: 1px solid var(--border);
+    }
+    .stat-val {
+      display: block;
+      font-family: var(--mono);
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: #e6edf3;
+    }
+    .stat-lbl {
+      font-size: 0.8rem;
+      color: var(--muted);
+    }
+
+    /* ── Code windows ────────────────────────────────── */
+    .code-window {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      overflow: hidden;
+      margin: 1.75rem 0;
+    }
+    .code-window-bar {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.7rem 1rem;
+      background: var(--card);
+      border-bottom: 1px solid var(--border);
+    }
+    .dot { width: 10px; height: 10px; border-radius: 50%; }
+    .dot-r { background: #f47067; }
+    .dot-y { background: #e3b341; }
+    .dot-g { background: #3fb950; }
+    .code-window-title {
+      font-family: var(--mono);
+      font-size: 0.72rem;
+      color: var(--muted);
+      margin-left: 0.5rem;
+    }
+
+    .code-window pre[class*="language-"] {
+      margin: 0 !important;
+      border-radius: 0 !important;
+      background: var(--surface) !important;
+      padding: 1.25rem 1.5rem !important;
+      font-size: 0.82rem !important;
+      line-height: 1.65 !important;
+      overflow-x: auto;
+    }
+
+    /* ── Cards ───────────────────────────────────────── */
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+      gap: 1px;
+      background: var(--border);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      overflow: hidden;
+      margin-top: 2rem;
+    }
+    .card {
+      background: var(--surface);
+      padding: 1.5rem;
+      transition: background 0.2s;
+    }
+    .card:hover { background: var(--card); }
+    .card-icon {
+      font-size: 1.4rem;
+      margin-bottom: 0.75rem;
+    }
+    .card h4 {
+      font-family: var(--mono);
+      font-size: 0.8rem;
+      font-weight: 500;
+      color: var(--accent);
+      margin-bottom: 0.4rem;
+    }
+    .card p {
+      font-size: 0.82rem;
+      color: var(--muted);
+      margin: 0;
+      max-width: none;
+    }
+
+    /* ── Dispatch diagram ────────────────────────────── */
+    .dispatch-diagram {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 2rem 2rem 1.75rem;
+      margin: 2rem 0;
+      overflow-x: auto;
+    }
+    .dispatch-diagram pre {
+      font-family: var(--mono);
+      font-size: 0.78rem;
+      line-height: 1.8;
+      color: var(--text);
+      white-space: pre;
+    }
+    .dispatch-diagram .hl  { color: var(--accent); }
+    .dispatch-diagram .hl2 { color: var(--orange); }
+    .dispatch-diagram .dim { color: var(--muted); }
+    .dispatch-diagram .ok  { color: var(--green); }
+
+    /* ── Visitor table ───────────────────────────────── */
+    .visitor-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 2rem;
+      font-size: 0.88rem;
+    }
+    .visitor-table th {
+      text-align: left;
+      font-family: var(--mono);
+      font-size: 0.72rem;
+      font-weight: 500;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--muted);
+      padding: 0.6rem 1rem;
+      border-bottom: 1px solid var(--border);
+    }
+    .visitor-table td {
+      padding: 0.75rem 1rem;
+      border-bottom: 1px solid var(--border);
+      vertical-align: top;
+    }
+    .visitor-table tr:last-child td { border-bottom: none; }
+    .visitor-table tr:hover td { background: var(--card); }
+    .visitor-table code {
+      font-family: var(--mono);
+      font-size: 0.8rem;
+      color: var(--orange);
+      background: rgba(240, 136, 62, 0.1);
+      padding: 0.1rem 0.4rem;
+      border-radius: 4px;
+    }
+    .badge {
+      display: inline-block;
+      font-family: var(--mono);
+      font-size: 0.68rem;
+      padding: 0.15rem 0.5rem;
+      border-radius: 4px;
+      font-weight: 500;
+    }
+    .badge-blue { background: rgba(79,156,249,0.15); color: var(--accent); }
+    .badge-orange { background: rgba(240,136,62,0.15); color: var(--orange); }
+    .badge-green { background: rgba(63,185,80,0.15); color: var(--green); }
+    .badge-muted { background: rgba(118,131,144,0.15); color: var(--muted); }
+
+    /* ── Games section ───────────────────────────────── */
+    .games-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 1rem;
+      margin-top: 2rem;
+    }
+    .game-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 1.5rem;
+      transition: border-color 0.2s, background 0.2s;
+    }
+    .game-card:hover { border-color: var(--border-hi); background: var(--card); }
+    .game-card h4 {
+      font-size: 1rem;
+      font-weight: 600;
+      color: #e6edf3;
+      margin-bottom: 0.4rem;
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+    }
+    .game-card p { font-size: 0.84rem; color: var(--muted); margin: 0.5rem 0 0; }
+
+    /* ── Build section ───────────────────────────────── */
+    .build-steps {
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+      margin-top: 2rem;
+    }
+    .build-step {
+      display: flex;
+      align-items: flex-start;
+      gap: 1rem;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 1rem 1.25rem;
+    }
+    .step-num {
+      flex-shrink: 0;
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      background: var(--accent-lo);
+      border: 1px solid rgba(79,156,249,0.3);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--mono);
+      font-size: 0.72rem;
+      color: var(--accent);
+      font-weight: 600;
+    }
+    .step-body { flex: 1; }
+    .step-body strong { color: #e6edf3; font-size: 0.88rem; display: block; margin-bottom: 0.25rem; }
+    .step-body code {
+      font-family: var(--mono);
+      font-size: 0.8rem;
+      color: var(--green);
+    }
+
+    /* ── Inline code ─────────────────────────────────── */
+    p code, li code {
+      font-family: var(--mono);
+      font-size: 0.82em;
+      color: var(--orange);
+      background: rgba(240, 136, 62, 0.1);
+      padding: 0.1rem 0.4rem;
+      border-radius: 4px;
+    }
+
+    /* ── Callout ─────────────────────────────────────── */
+    .callout {
+      display: flex;
+      gap: 1rem;
+      background: var(--accent-lo);
+      border: 1px solid rgba(79,156,249,0.2);
+      border-radius: 8px;
+      padding: 1rem 1.25rem;
+      margin: 1.5rem 0;
+      font-size: 0.88rem;
+      color: var(--text);
+      max-width: none;
+    }
+    .callout-icon { flex-shrink: 0; color: var(--accent); }
+
+    /* ── Footer ──────────────────────────────────────── */
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 2.5rem 0;
+      text-align: center;
+      font-size: 0.8rem;
+      color: var(--muted);
+    }
+    footer a { color: var(--muted); }
+    footer a:hover { color: var(--text); }
+
+    /* ── Responsive ──────────────────────────────────── */
+    @media (max-width: 640px) {
+      nav { padding: 0 1.25rem; gap: 1rem; }
+      nav a:not(.nav-cta):not(.nav-brand) { display: none; }
+      .container { padding: 0 1.25rem; }
+      .hero-stats { gap: 1.5rem; flex-wrap: wrap; }
+      .dispatch-diagram { padding: 1.25rem; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ── Nav ─────────────────────────────────────────────── -->
+<nav>
+  <span class="nav-brand">visitor<span>::</span>engine</span>
+  <a href="#idea">The Idea</a>
+  <a href="#dispatch">Dispatch</a>
+  <a href="#visitors">Visitors</a>
+  <a href="#pong">Pong</a>
+  <a href="#build">Build</a>
+  <a href="html/index.html" class="nav-cta">API Docs →</a>
+</nav>
+
+<!-- ── Hero ────────────────────────────────────────────── -->
+<section id="hero">
+  <div class="hero-grid"></div>
+  <div class="hero-glow"></div>
+  <div class="container">
+    <div class="hero-badge">C++ · SFML · Visitor Pattern</div>
+    <h1>Behavior by <em>composition</em>,<br>not inheritance.</h1>
+    <p class="hero-sub">
+      A game engine where every operation is a Visitor and every entity is a Sprite.
+      No entity subclasses. No type switches. Just double dispatch — two vtable lookups per sprite per frame.
+    </p>
+    <div class="hero-actions">
+      <a href="https://github.com/jdspille/Visitor-Game-Engine" class="btn btn-primary">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
+        View on GitHub
+      </a>
+      <a href="#idea" class="btn btn-secondary">
+        How it works ↓
+      </a>
+    </div>
+
+    <div class="hero-stats">
+      <div>
+        <span class="stat-val">2</span>
+        <span class="stat-lbl">virtual calls per sprite</span>
+      </div>
+      <div>
+        <span class="stat-val">8</span>
+        <span class="stat-lbl">composable visitors</span>
+      </div>
+      <div>
+        <span class="stat-val">0</span>
+        <span class="stat-lbl">entity subclasses</span>
+      </div>
+      <div>
+        <span class="stat-val">0</span>
+        <span class="stat-lbl">dynamic_cast calls</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── The Idea ─────────────────────────────────────────── -->
+<section id="idea">
+  <div class="container">
+    <span class="label">The Idea</span>
+    <h2>Everything is a Visitor.<br>Sprites are just data.</h2>
+    <p>
+      Most game engines reach for inheritance: <code>Enemy extends Character</code>,
+      <code>FlyingEnemy extends Enemy</code>, until the hierarchy collapses under its own weight.
+      This engine takes the opposite stance.
+    </p>
+    <p>
+      <strong style="color:#e6edf3">Sprites hold state. Visitors hold behavior.</strong>
+      A <code>Sprite</code> is nothing but position, velocity, size, and a texture path.
+      It knows nothing about physics, rendering, or collision. All of that lives in Visitors —
+      small, single-purpose objects that are composed at runtime by adding them to the engine.
+    </p>
+
+    <div class="card-grid">
+      <div class="card">
+        <div class="card-icon">📦</div>
+        <h4>Open/Closed</h4>
+        <p>Add new behavior by writing a new Visitor. <code>Sprite</code>, <code>Scene</code>, and <code>GameEngine</code> never change.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">⚡</div>
+        <h4>No RTTI</h4>
+        <p>No <code>dynamic_cast</code>, no <code>typeid</code>, no if-else chains on entity type. Just vtable dispatch.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">🧩</div>
+        <h4>Composable</h4>
+        <p>Gravity + Bounce + Draw? Three visitors, added in order. Remove gravity — just don't add it.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">🔁</div>
+        <h4>Swappable backends</h4>
+        <p>Renderer and input are abstract. SFML today, WebAssembly or SDL2 tomorrow.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── Double Dispatch ──────────────────────────────────── -->
+<section id="dispatch">
+  <div class="container">
+    <span class="label">Double Dispatch</span>
+    <h2>Two pointer dereferences.<br>That's the whole engine loop.</h2>
+    <p>
+      The term "double dispatch" sounds heavy. It isn't. The entire update loop is five lines,
+      and each frame does exactly two virtual calls per sprite — one to pick the scene, one to pick the visitor.
+    </p>
+
+    <div class="code-window">
+      <div class="code-window-bar">
+        <span class="dot dot-r"></span>
+        <span class="dot dot-y"></span>
+        <span class="dot dot-g"></span>
+        <span class="code-window-title">GameEngine.cpp</span>
+      </div>
+      <pre class="language-cpp"><code class="language-cpp">void GameEngine::update() {
+    for (auto &amp;visitor : this-&gt;sceneVisitors)
+        this-&gt;scene-&gt;accept(visitor); // ← dispatch #1: which scene?
+}</code></pre>
+    </div>
+
+    <p>
+      <code>scene->accept()</code> is a virtual call. The vtable resolves whether this is a
+      <code>SimpleScene</code>, <code>LayeredScene</code>, or anything else. Inside the scene:
+    </p>
+
+    <div class="code-window">
+      <div class="code-window-bar">
+        <span class="dot dot-r"></span>
+        <span class="dot dot-y"></span>
+        <span class="dot dot-g"></span>
+        <span class="code-window-title">SimpleScene.cpp</span>
+      </div>
+      <pre class="language-cpp"><code class="language-cpp">void SimpleScene::accept(std::shared_ptr&lt;Visitor&gt; v) {
+    for (auto &amp;sprite : this-&gt;spriteList)
+        v-&gt;visit(sprite); // ← dispatch #2: which visitor?
+}</code></pre>
+    </div>
+
+    <p>
+      <code>v->visit()</code> is the second virtual call. Each concrete Visitor implements its
+      own <code>visit()</code> — physics, collision, drawing — and the vtable picks the right one.
+      The CPU branch predictor gets very good at this loop very quickly.
+    </p>
+
+    <div class="dispatch-diagram">
+      <pre><span class="dim">GameEngine::update()</span>
+  <span class="dim">├── for each Visitor in sceneVisitors:</span>
+  <span class="dim">│       │</span>
+  <span class="dim">│       └── </span><span class="hl">scene->accept(visitor)</span>          <span class="dim">← vtable[scene]</span>
+  <span class="dim">│                   │</span>
+  <span class="dim">│                   └── for each Sprite in spriteList:</span>
+  <span class="dim">│                               │</span>
+  <span class="dim">│                               └── </span><span class="hl2">visitor->visit(sprite)</span>   <span class="dim">← vtable[visitor]</span>
+  <span class="dim">│</span>
+  <span class="ok">  ✓  No dynamic_cast   ✓  No typeid   ✓  No if-else chains</span></pre>
+    </div>
+
+    <div class="callout">
+      <span class="callout-icon">→</span>
+      <span>
+        Adding a new behavior — say, a <code>MagnetVisitor</code> that attracts sprites toward a point —
+        means writing one new class with one method. Nothing else changes.
+        The engine is open for extension and closed for modification in the most literal sense.
+      </span>
+    </div>
+  </div>
+</section>
+
+<!-- ── Architecture ─────────────────────────────────────── -->
+<section id="architecture">
+  <div class="container">
+    <span class="label">Architecture</span>
+    <h2>The full picture.</h2>
+    <p>
+      The engine sits at the center, composing a scene with a list of visitors.
+      The renderer and input handler are fully abstracted behind interfaces.
+    </p>
+
+    <div class="dispatch-diagram">
+      <pre><span class="hl">GameEngine</span>
+  <span class="dim">│</span>
+  <span class="dim">├── scene ──►</span> <span class="hl2">AbstractScene</span>
+  <span class="dim">│               ├── SimpleScene       </span><span class="dim">(flat sprite list)</span>
+  <span class="dim">│               └── LayeredScene      </span><span class="dim">(z-ordered layers)</span>
+  <span class="dim">│</span>
+  <span class="dim">└── visitors ──► list&lt;Visitor&gt;</span>
+  <span class="dim">                 │</span>
+  <span class="dim">                 ├── </span><span class="ok">SimpleDrawingVisitor</span>         <span class="dim">rendering</span>
+  <span class="dim">                 ├── </span><span class="ok">GridDrawingVisitor</span>           <span class="dim">grid → pixel coords</span>
+  <span class="dim">                 ├── </span><span class="ok">BoundingBoxCollisionVisitor</span>  <span class="dim">AABB hit test</span>
+  <span class="dim">                 ├── </span><span class="ok">ForceVisitor</span>                 <span class="dim">apply velocity</span>
+  <span class="dim">                 ├── </span><span class="ok">BounceBoundsVisitor</span>          <span class="dim">reflect at boundary</span>
+  <span class="dim">                 ├── </span><span class="ok">WrapBoundsVisitor</span>            <span class="dim">teleport at boundary</span>
+  <span class="dim">                 └── </span><span class="ok">GravityVisitor</span>               <span class="dim">accelerate downward</span>
+
+<span class="dim">AbstractRenderer ──► SFMLRenderer         </span><span class="dim">(or SDL2, WASM, …)</span>
+<span class="dim">AbstractInputWrapper ──► SFMLInputWrapper</span></pre>
+    </div>
+  </div>
+</section>
+
+<!-- ── Visitor Catalog ──────────────────────────────────── -->
+<section id="visitors">
+  <div class="container">
+    <span class="label">Visitor Catalog</span>
+    <h2>Eight behaviors. Zero entity subclasses.</h2>
+    <p>Every behavior in the engine is a Visitor. Compose them freely at game startup.</p>
+
+    <table class="visitor-table">
+      <thead>
+        <tr>
+          <th>Visitor</th>
+          <th>Category</th>
+          <th>What it does</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><code>SimpleDrawingVisitor</code></td>
+          <td><span class="badge badge-blue">Rendering</span></td>
+          <td>Draws each sprite at its <code>(x, y)</code> position using the renderer.</td>
+        </tr>
+        <tr>
+          <td><code>GridDrawingVisitor</code></td>
+          <td><span class="badge badge-blue">Rendering</span></td>
+          <td>Same as above, but converts grid coordinates to pixel space first. Used by Quoridor.</td>
+        </tr>
+        <tr>
+          <td><code>BoundingBoxCollisionVisitor</code></td>
+          <td><span class="badge badge-orange">Collision</span></td>
+          <td>AABB test against a single watched sprite. Accumulates hits; drain with <code>getCollisions()</code>.</td>
+        </tr>
+        <tr>
+          <td><code>ForceVisitor</code></td>
+          <td><span class="badge badge-green">Physics</span></td>
+          <td>Moves sprites by their <code>(dx, dy)</code> each frame. <code>applyForce(s, magnitude, angle)</code> converts polar to Cartesian.</td>
+        </tr>
+        <tr>
+          <td><code>BounceBoundsVisitor</code></td>
+          <td><span class="badge badge-green">Physics</span></td>
+          <td>Reflects <code>dx</code>/<code>dy</code> when a sprite exits the scene boundary.</td>
+        </tr>
+        <tr>
+          <td><code>WrapBoundsVisitor</code></td>
+          <td><span class="badge badge-green">Physics</span></td>
+          <td>Teleports sprites from one edge to the opposite (Pac-Man style).</td>
+        </tr>
+        <tr>
+          <td><code>GravityVisitor</code></td>
+          <td><span class="badge badge-green">Physics</span></td>
+          <td>Adds a constant acceleration to <code>dy</code> each frame.</td>
+        </tr>
+        <tr>
+          <td><code>RayCastCollisionVisitor</code></td>
+          <td><span class="badge badge-muted">Stub</span></td>
+          <td>Unimplemented. Interface is in place for future ray-based collision detection.</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- ── Pong ─────────────────────────────────────────────── -->
+<section id="pong">
+  <div class="container">
+    <span class="label">Building a Game</span>
+    <h2>Pong in 40 lines of setup.</h2>
+    <p>
+      Pong is the flagship demo. It shows how the visitor composition model maps directly to a real
+      game: entities are plain sprites, behaviors are visitors wired into the engine, and the game loop
+      is just <code>ge->update()</code> plus collision response.
+    </p>
+
+    <h3>1 — Sprites are data</h3>
+    <p>
+      There is no <code>Ball</code> class. No <code>Paddle</code> class. Every game object is a
+      <code>Sprite</code> constructed with a texture, position, and size.
+    </p>
+    <div class="code-window">
+      <div class="code-window-bar">
+        <span class="dot dot-r"></span><span class="dot dot-y"></span><span class="dot dot-g"></span>
+        <span class="code-window-title">Pong.cpp — sprite declarations</span>
+      </div>
+      <pre class="language-cpp"><code class="language-cpp">auto player1     = make_shared&lt;Sprite&gt;(tex, MINX+100, MAXY/2, paddleW, paddleH);
+auto player2     = make_shared&lt;Sprite&gt;(tex, MAXX-100, MAXY/2, paddleW, paddleH);
+auto player1Goal = make_shared&lt;Sprite&gt;(tex, MINX+10,  0,      5,       MAXY*2);
+auto player2Goal = make_shared&lt;Sprite&gt;(tex, MAXX-10,  0,      5,       MAXY*2);
+auto ball        = make_shared&lt;Sprite&gt;(tex, MAXX/2,   MAXY/2, 10,      10);</code></pre>
+    </div>
+
+    <h3>2 — Visitors are behavior</h3>
+    <p>Each visitor is one responsibility. Compose them at startup:</p>
+    <div class="code-window">
+      <div class="code-window-bar">
+        <span class="dot dot-r"></span><span class="dot dot-y"></span><span class="dot dot-g"></span>
+        <span class="code-window-title">Pong.cpp — visitor setup</span>
+      </div>
+      <pre class="language-cpp"><code class="language-cpp">auto bounce = make_shared&lt;BounceBoundsVisitor&gt;(MINX, MAXX, MINY, MAXY);
+auto force  = make_shared&lt;ForceVisitor&gt;();
+auto collide = make_shared&lt;BoundingBoxCollisionVisitor&gt;();
+auto draw   = make_shared&lt;SimpleDrawingVisitor&gt;(renderer);
+
+auto ge = make_shared&lt;GameEngine&gt;();
+
+// sprites into scene
+ge-&gt;addSprite(player1);  ge-&gt;addSprite(player2);
+ge-&gt;addSprite(player1Goal); ge-&gt;addSprite(player2Goal);
+ge-&gt;addSprite(ball);
+
+// visitors run in order — draw must come last
+ge-&gt;addVisitor(collide);
+ge-&gt;addVisitor(force);
+ge-&gt;addVisitor(bounce);
+ge-&gt;addVisitor(draw);
+
+collide-&gt;setWatched(ball);        // track ball against everything else
+force-&gt;applyForce(ball, 10, rand()); // kick off at a random angle</code></pre>
+    </div>
+
+    <h3>3 — Game loop</h3>
+    <p>
+      <code>ge->update()</code> runs all visitors over all sprites.
+      After that, drain the collision list and respond. The engine knows nothing about paddles or goals —
+      that logic lives in game code, where it belongs.
+    </p>
+    <div class="code-window">
+      <div class="code-window-bar">
+        <span class="dot dot-r"></span><span class="dot dot-y"></span><span class="dot dot-g"></span>
+        <span class="code-window-title">Pong.cpp — game loop</span>
+      </div>
+      <pre class="language-cpp"><code class="language-cpp">while (draw-&gt;isOpen()) {
+    ge-&gt;update(); // runs every visitor across every sprite
+
+    // input
+    for (int key : input-&gt;getKeyPresses()) {
+        if (key == 73) force-&gt;applyForce(player1, 1, 0);   // up
+        if (key == 74) force-&gt;applyForce(player1, 1, 180); // down
+    }
+
+    // collision response
+    for (auto &amp;hit : collide-&gt;getCollisions()) {
+        if (hit == player1Goal) { p2score++; resetRound(); }
+        if (hit == player2Goal) { p1score++; resetRound(); }
+        if (hit == player1) {
+            // angle off the paddle face based on where the ball hit
+            ball-&gt;setDXY(
+                fabs(ball-&gt;getDX()),
+                SPRING * ((ball-&gt;getY() - player1-&gt;getY()) / paddleH - 0.5f)
+            );
+        }
+    }
+
+    // perfect AI: just track the ball
+    player2-&gt;setXY(player2-&gt;getX(), ball-&gt;getY() - paddleH/2);
+
+    draw-&gt;draw();
+}</code></pre>
+    </div>
+
+    <div class="callout">
+      <span class="callout-icon">→</span>
+      <span>
+        The paddle angle-response math — <code>SPRING * (hit_offset - 0.5)</code> — is the most
+        interesting moment in Pong. Hit the top of the paddle: ball goes up. Hit the center: straight.
+        Hit the bottom: ball goes down. All without any knowledge of a "paddle type" anywhere in the engine.
+      </span>
+    </div>
+  </div>
+</section>
+
+<!-- ── Games ────────────────────────────────────────────── -->
+<section id="games">
+  <div class="container">
+    <span class="label">Games</span>
+    <h2>Three demos. One engine.</h2>
+    <div class="games-grid">
+      <div class="game-card">
+        <h4>🏓 Pong <span class="badge badge-green" style="font-size:0.65rem">Complete</span></h4>
+        <p>
+          Two paddles, a ball, goals. Player 1 on keyboard, perfect-tracking AI on player 2.
+          Full score counting and round resets. The flagship demo.
+        </p>
+      </div>
+      <div class="game-card">
+        <h4>♟ Quoridor <span class="badge badge-orange" style="font-size:0.65rem">Demo</span></h4>
+        <p>
+          Two players on a 24×24 grid. Shows <code>GridDrawingVisitor</code> converting grid
+          coordinates to pixels. Movement works; win condition absent.
+        </p>
+      </div>
+      <div class="game-card">
+        <h4>❌ TicTacToe <span class="badge badge-muted" style="font-size:0.65rem">Unfinished</span></h4>
+        <p>
+          3×3 grid renders via <code>GridDrawingVisitor</code>. No game logic implemented —
+          mostly a scaffold for future work.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── Build ─────────────────────────────────────────────── -->
+<section id="build">
+  <div class="container">
+    <span class="label">Build &amp; Run</span>
+    <h2>One dependency. Three commands.</h2>
+    <p>Requires <a href="https://www.sfml-dev.org/download.php">SFML</a> (<code>libsfml-graphics</code>, <code>libsfml-window</code>, <code>libsfml-system</code>).</p>
+
+    <div class="build-steps">
+      <div class="build-step">
+        <div class="step-num">1</div>
+        <div class="step-body">
+          <strong>Clone the repo</strong>
+          <code>git clone https://github.com/jdspille/Visitor-Game-Engine.git</code>
+        </div>
+      </div>
+      <div class="build-step">
+        <div class="step-num">2</div>
+        <div class="step-body">
+          <strong>Build</strong>
+          <code>make</code> &nbsp;·&nbsp; or <code>make release</code> for an optimized build
+        </div>
+      </div>
+      <div class="build-step">
+        <div class="step-num">3</div>
+        <div class="step-body">
+          <strong>Run</strong>
+          <code>make run</code> &nbsp;·&nbsp; launches an interactive game-select menu
+        </div>
+      </div>
+    </div>
+
+    <h3 style="margin-top:2.5rem">Known Limitations</h3>
+    <p>
+      This engine was built as a learning project, and the rough edges are part of the record.
+    </p>
+    <ul style="font-size:0.88rem; color:var(--muted); padding-left:1.4rem; line-height:2;">
+      <li><strong style="color:var(--text)">SFML clock in game code</strong> — <code>sf::Clock</code> leaks the SFML dependency into game logic. A <code>GameEngine::setTargetFPS()</code> would fix this.</li>
+      <li><strong style="color:var(--text)">Raw keycodes</strong> — input uses integer literals (<code>73 = up</code>) instead of a named enum. Works, but fragile.</li>
+      <li><strong style="color:var(--text)">GravityVisitor direction</strong> — subtracts from <code>dy</code>, which is upward in SFML's coordinate space. Correct behavior, counter-intuitive name.</li>
+      <li><strong style="color:var(--text)">LayeredScene bounds</strong> — no bounds check on layer index; an out-of-range layer silently discards the sprite.</li>
+      <li><strong style="color:var(--text)">Text rendering</strong> — not implemented. <code>AbstractRenderer</code> has no text API.</li>
+      <li><strong style="color:var(--text)">Click events</strong> — input wrapper returns the last-observed click position rather than a queue, so rapid clicks can be missed.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ── Footer ───────────────────────────────────────────── -->
+<footer>
+  <div class="container">
+    <p style="max-width:none">
+      Built in CS400 Game Development &nbsp;·&nbsp;
+      <a href="html/index.html">API Reference (Doxygen)</a> &nbsp;·&nbsp;
+      <a href="https://github.com/jdspille/Visitor-Game-Engine">GitHub</a>
+    </p>
+  </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-cpp.min.js"></script>
+<script>
+  // Highlight active nav link on scroll
+  const sections = document.querySelectorAll('section[id]');
+  const navLinks = document.querySelectorAll('nav a[href^="#"]');
+  const obs = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        navLinks.forEach(a => {
+          a.style.color = a.getAttribute('href') === '#' + e.target.id
+            ? 'var(--text)' : '';
+        });
+      }
+    });
+  }, { threshold: 0.35 });
+  sections.forEach(s => obs.observe(s));
+</script>
+
+</body>
+</html>
