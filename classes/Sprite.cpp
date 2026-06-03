@@ -28,5 +28,7 @@ double Sprite::getWidth() { return this->width; }
 
 std::string Sprite::getTextureLocation() { return this->textureLoc; }
 
+void Sprite::setTextureLocation(std::string textureLoc) { this->textureLoc = std::move(textureLoc); }
+
 Sprite::Sprite(std::string textureLoc, double x, double y, double width, double height)
         : textureLoc(std::move(textureLoc)), x(x), y(y), dx(0), dy(0), width(width), height(height) {}

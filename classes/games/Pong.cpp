@@ -17,9 +17,10 @@ void Pong::start()
             black, MAXX - 10, 0, 5, MAXY * 2);
     std::shared_ptr<Sprite> ball = std::make_shared<Sprite>(
             black, MAXX / 2, MAXY / 2, 10, 10);
-    //make a renderer for drawing to
-    //std::shared_ptr<AbstractRenderer> ar = std::make_shared<SFMLRenderer>(MAXX,MAXY);
-    std::shared_ptr<SFMLRenderer> ar = std::make_shared<SFMLRenderer>(MAXX, MAXY);
+    //open a window via the build-time backend (SDL2, SFML, ...)
+    std::shared_ptr<Backend> backend = createDefaultBackend();
+    Platform platform = backend->create(MAXX, MAXY, "Pong");
+    std::shared_ptr<AbstractRenderer> ar = platform.renderer;
     //declare visitors
     std::shared_ptr<BounceBoundsVisitor> bv = std::make_shared<BounceBoundsVisitor>(MINX, MAXX, MINY, MAXY);
     std::shared_ptr<ForceVisitor> fv = std::make_shared<ForceVisitor>();
@@ -29,8 +30,8 @@ void Pong::start()
     //declare game engine
     std::shared_ptr<GameEngine> ge = std::make_shared<GameEngine>();
 
-    //declare input wrapper
-    std::shared_ptr<SFMLInputWrapper> in = std::make_shared<SFMLInputWrapper>(ar->getWindow());
+    //input wrapper comes from the same backend, already wired to the window
+    std::shared_ptr<AbstractInputWrapper> in = platform.input;
 
     //add sprites to scene
     ge->addSprite(player1);
@@ -50,39 +51,37 @@ void Pong::start()
     //gotta add the drawing visitor last
     ge->addVisitor(draw);
 
-    //I want a clock
-    //TODO: break sfml coupling
-    sf::Clock tick;
+    //backend-neutral stopwatch (std::chrono under the hood)
+    Clock tick;
 
     //start the game
     srand(time(nullptr));
-    bool up = true;
     int p1points = 0, p2points = 0;
     while (draw->isOpen())
     {
-        if (tick.getElapsedTime().asMilliseconds() > 50) {
+        frameYield(16); // browser: yield to the event loop; native: no-op
+        if (tick.getElapsedMilliseconds() > 50) {
             //update engine
             ge->update();
             //handle clock
             tick.restart();
 
-            //handle keypress
-            std::vector<int> keys = in->getKeyPresses();
+            //handle keypress (Up/W move the paddle up, Down/S move it down)
+            std::vector<Key> keys = in->getKeyPresses();
             if (keys.empty())
                 fv->stop(player1);
             else
-                for (int &key : keys) {
+                for (Key &key : keys) {
                     switch (key) {
-                        case 57: //space
-                            break;
-                        case 73://up
+                        case Key::Up:
+                        case Key::W:
                             fv->applyForce(player1, 1, 0);
                             break;
-                        case 74://down
+                        case Key::Down:
+                        case Key::S:
                             fv->applyForce(player1, 1, 180);
                             break;
                         default:
-                            std::cout << "Unsupported keypress: " << key << std::endl;
                             break;
                     }
                 }
@@ -124,8 +123,8 @@ void Pong::start()
                     player2->setXY(player2->getX(), MAXY / 2);
                     fv->applyForce(ball, 10, rand()%45+90 );
                     std::cout << "POINT! Score : Player 1: " << p1points << " | Player 2: " << p2points << std::endl;
-                    //silly wait to pause game shortly
-                    while (tick.getElapsedTime().asSeconds() < 2);
+                    //silly wait to pause game shortly (yielding so the browser stays alive)
+                    while (tick.getElapsedSeconds() < 2) frameYield(16);
                     //start the next round
                 }
             }

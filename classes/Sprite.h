@@ -122,6 +122,13 @@ public:
      * @return std::string
      */
     std::string getTextureLocation();
+
+    /**
+     * @brief Swap the sprite's texture at runtime (e.g. an empty cell becoming an X).
+     *
+     * @param textureLoc new texture file location
+     */
+    void setTextureLocation(std::string textureLoc);
 };
 
 #endif

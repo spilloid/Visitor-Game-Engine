@@ -9,13 +9,15 @@
 #include "../BoundingBoxCollisionVisitor.h"
 #include "../SimpleDrawingVisitor.h"
 #include "../GridDrawingVisitor.h"
-#include "../SFMLRenderer.h"
-#include "../SFMLInputWrapper.h"
+#include "../Backend.h"
+#include "../Clock.h"
+#include "../Yield.h"
 #include <list>
 #include <memory>
 class Game{
     private:
     public:
+        virtual ~Game() = default;
         virtual void start()=0;
 };
 #endif

@@ -522,6 +522,7 @@
 <!-- ── Nav ─────────────────────────────────────────────── -->
 <nav>
   <span class="nav-brand">visitor<span>::</span>engine</span>
+  <a href="#play">Play</a>
   <a href="#idea">The Idea</a>
   <a href="#dispatch">Dispatch</a>
   <a href="#visitors">Visitors</a>
@@ -572,6 +573,70 @@
   </div>
 </section>
 
+<!-- ── Play (WebAssembly demos) ─────────────────────────── -->
+<section id="play">
+  <style>
+    #play .demo-tabs { display:flex; gap:.5rem; flex-wrap:wrap; margin:1.5rem 0 1rem; }
+    #play .demo-tab {
+      font-family: var(--mono); font-size:.85rem; cursor:pointer;
+      color: var(--muted); background: var(--card);
+      border:1px solid var(--border); border-radius:6px; padding:.5rem 1rem;
+      transition: all .15s ease;
+    }
+    #play .demo-tab:hover { color: var(--text); border-color: var(--border-hi); }
+    #play .demo-tab.is-active { color:#fff; border-color: var(--accent); background: var(--accent-lo); }
+    #play .demo-stage {
+      display:flex; justify-content:center;
+      background: var(--surface); border:1px solid var(--border);
+      border-radius:10px; padding:1.25rem;
+    }
+    #play .demo-stage iframe { border:0; width:520px; height:580px; max-width:100%; }
+    #play .demo-controls { margin-top:1rem; color: var(--muted); font-size:.9rem; }
+    #play .demo-note { margin-top:.5rem; color: var(--muted); font-size:.8rem; }
+  </style>
+  <div class="container">
+    <span class="label">Play</span>
+    <h2>The engine, in your browser.</h2>
+    <p>
+      These are the <em>same</em> C++ games above, compiled to WebAssembly with Emscripten.
+      No rewrite — the SDL2 backend simply slots in behind the same <code>AbstractRenderer</code>
+      and <code>AbstractInputWrapper</code> seams the native build uses. Double dispatch, in a browser tab.
+    </p>
+
+    <div class="demo-tabs" role="tablist">
+      <button class="demo-tab is-active" data-demo="demos/pong.html">Pong</button>
+      <button class="demo-tab" data-demo="demos/tictactoe.html">Tic&nbsp;Tac&nbsp;Toe</button>
+      <button class="demo-tab" data-demo="demos/quoridor.html">Quoridor</button>
+    </div>
+
+    <div class="demo-stage">
+      <iframe id="demo-frame" src="demos/pong.html" title="Visitor Game Engine — playable WASM demo"
+              loading="lazy" allow="autoplay"></iframe>
+    </div>
+
+    <p class="demo-controls">
+      <strong>Pong</strong>&nbsp;— ↑/↓ or W/S move your paddle &nbsp;·&nbsp;
+      <strong>Tic&nbsp;Tac&nbsp;Toe</strong>&nbsp;— click a cell &nbsp;·&nbsp;
+      <strong>Quoridor</strong>&nbsp;— arrows (P1) &amp; WASD (P2) race to the far row
+    </p>
+    <p class="demo-note">Click the canvas first so it captures keyboard focus.</p>
+  </div>
+
+  <script>
+    (function () {
+      var frame = document.getElementById('demo-frame');
+      document.querySelectorAll('#play .demo-tab').forEach(function (tab) {
+        tab.addEventListener('click', function () {
+          document.querySelectorAll('#play .demo-tab').forEach(function (t) { t.classList.remove('is-active'); });
+          tab.classList.add('is-active');
+          // Reload the iframe with the chosen game (one WASM module at a time).
+          frame.src = tab.getAttribute('data-demo');
+        });
+      });
+    })();
+  </script>
+</section>
+
 <!-- ── The Idea ─────────────────────────────────────────── -->
 <section id="idea">
   <div class="container">
@@ -608,7 +673,7 @@
       <div class="card">
         <div class="card-icon">🔁</div>
         <h4>Swappable backends</h4>
-        <p>Renderer and input are abstract. SFML today, WebAssembly or SDL2 tomorrow.</p>
+        <p>Renderer and input are abstract. Native SDL2, SFML, or WebAssembly — chosen at build time, same game code.</p>
       </div>
     </div>
   </div>

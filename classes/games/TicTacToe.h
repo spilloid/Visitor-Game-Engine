@@ -2,6 +2,7 @@
 #define TICTACTOE
 #include "Game.h"
 class TicTacToe : public Game{
-    void start();
+    public:
+        void start() override;
 };
 #endif
